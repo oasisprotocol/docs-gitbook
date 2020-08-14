@@ -2,6 +2,10 @@
 
 [Ledger](https://www.ledger.com/) is a popular hardware wallet that is supported on the Oasis Network.
 
+{% hint style="warning" %}
+**This documentation section is out of date and needs to be updated to work with Oasis Core 20.9 and later.**
+{% endhint %}
+
 ## Prerequisites
 
 Before following this guide, make sure you've followed the [Operator Docs' Prerequisites Guide](../operator-docs/prerequisites-guide.md#installing-using-oasis-node) to install the `oasis-node` binary.
