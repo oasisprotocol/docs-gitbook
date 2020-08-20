@@ -443,7 +443,7 @@ The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on th
 
 ### Generating Entity Registration Transaction
 
-After you submit your escrow account, you'll need to register your entity so that your node registers properly. You could do this process _after_ you submit the escrow transaction, however, to save steps we prepare everything before hand.
+Before you can run your node successfully, you'll need to register your [entity](network-architecture-overview.md#entities-and-key-management) so that your node registers properly. You could do this process _after_ you submit the escrow transaction, however, to save steps we prepare everything before hand.
 
 Before generating the register transaction, you need to set the following environment variables:
 
