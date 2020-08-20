@@ -222,12 +222,7 @@ Currently, we provide two options for signing transactions:
 
 * **Ledger device.**
 
-  You will need to set it up as described in our [Ledger docs](../wallet-support/ledger.md) and set the following flags:
-
-  * `--signer.backend ledger`: Specifies use of the Ledger signer.
-  * `--signer.ledger.address`: The `Oasis App Address` that identifies the Ledger device you want to use for signing. You can omit this flag and oasis-node will try to connect to any available Ledger device.
-  * `--signer.ledger.index`: Account index used to derive the staking account address on the Ledger device.
-  * `--signer.dir`: Path to entity's artifacts directory on the `localhost`, e.g. `/localhostdir/entity/`.
+  You will need to set it up as described in our [Ledger docs](https://docs.oasis.dev/oasis-core-ledger/usage/transactions).
 
 * **Entity's private key stored in a file.**
 

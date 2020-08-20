@@ -71,7 +71,7 @@ This will be needed later when generating transactions.
 
 ### Initializing an Entity
 
-As described in the [Architecture Overview](network-architecture-overview.md#entities-and-key-management), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. Once support is available, we suggest that you use an HSM or Ledger device to protect your entity private key.
+As described in the [Architecture Overview](network-architecture-overview.md#entities-and-key-management), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. Once support is available, we suggest that you use an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
 
 {% hint style="danger" %}
 We strongly suggest that you do not use any entity that is generated with the current process on the Mainnet.
@@ -202,7 +202,7 @@ We will also need to have the public entity artifacts from the `/localhostdir` p
 
 #### Copying the Genesis File to the server
 
-The latest Genesis file can be found in the \[Current Testnet Parameters\]\[ params\]. You should download the latest `genesis.json` file and copy it to `/serverdir/etc/genesis.json` on the `server`.
+The latest Genesis file can be found in the [Current Testnet Parameters](../networks/amber-network/current-parameters.md). You should download the latest `genesis.json` file and copy it to `/serverdir/etc/genesis.json` on the `server`.
 
 #### Configuring the Oasis Node
 

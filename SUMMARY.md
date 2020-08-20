@@ -31,7 +31,7 @@
 
 ## Wallet Support
 
-* [Ledger](wallet-support/ledger.md)
+* [Ledger](https://docs.oasis.dev/oasis-core-ledger)
 
 ## Developer Resources
 
