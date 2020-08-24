@@ -21,6 +21,7 @@
   * [Wiping Node State](operator-docs/maintenance-guides/wiping-node-state.md)
   * [Handling Network Upgrades](operator-docs/maintenance-guides/handling-network-upgrades.md)
   * [Adding or Removing Nodes](operator-docs/maintenance-guides/adding-or-removing-nodes.md)
+* [Oasis Network FAQ](operator-docs/oasis-network-faq.md)
 
 ## Networks
 
@@ -31,7 +32,8 @@
 
 ## Wallet Support
 
-* [Ledger](https://docs.oasis.dev/oasis-core-ledger)
+* [Wallet App: Oasis Core Ledger](https://docs.oasis.dev/oasis-core-ledger)
+* [Wallet Tester Program for Node Operators](wallet-support/wallet-tester-program.md)
 
 ## Developer Resources
 
