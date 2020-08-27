@@ -40,10 +40,6 @@ Everything in this section should be done on the `localhost` as there are sensit
 
 During this entity initialization process, we will create keys and other important artifacts that are necessary for the deployment of nodes on the network. It is important that you save and protect the generated artifacts in this directory if you intend to use them to register your entity and nodes.
 
-{% hint style="info" %}
-Everything in this section should be done on the `localhost` as there are sensitive items that will be created.
-{% endhint %}
-
 Inside `/localhostdir` you should create the following directories:
 
 * `entity`: This will store your entity. The private contents in this directory are safest if used on a machine kept disconnected from the internet.
@@ -76,10 +72,12 @@ This will be needed later when generating transactions.
 
 As described in the [Architecture Overview](../../welcome-to-oasis/network-architecture-overview.md#entities-and-key-management), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. Once support is available, we suggest that you use an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
 
-{% hint style="danger" %}
-We strongly suggest that you do not use any entity that is generated with the current process on the Mainnet.
+#### Using a File-based Signer
 
-We would also suggest that you generate the entity on a system that has no network connection to provide rudimentary protection for the entity key. However, it is up to you to determine your own security practices.
+{% hint style="danger" %}
+We strongly suggest that you do not use any entity that is generated with the file-based signer on the Mainnet.
+
+When using the file-based signer the use of an [offline/air-gapped machine](https://en.wikipedia.org/wiki/Air_gap_%28networking%29) for this purpose is highly recommended. Gaining access to the entity private key can compromise your tokens.
 {% endhint %}
 
 To initialize an entity simply run the following from `/localhostdir/entity`:
@@ -94,19 +92,69 @@ This will generate three files in `/localhostdir/entity`:
 * `entity.json`: The entity descriptor. This is the JSON of the unsigned information to be sent to the registry application on the network.
 * `entity_genesis.json`: This JSON object contains the entity descriptor that has been signed with entity's private key, i.e. `entity.pem`. This is meant to be shared for inclusion in the Genesis block.
 
+#### Using a Plugin Signer
+
+{% hint style="info" %}
+At least version **20.9.1** of Oasis Core is required for the below process to work.
+{% endhint %}
+
+It is also possible to use an signer plugin to generate/sign your entity descriptors. The [Oasis Core Ledger plugin](https://docs.oasis.dev/oasis-core-ledger) is an example of such a plugin which can be used to store keys on a Ledger device. The used example will therefore assume that you are using the Ledger signer plugin, but a similar process can be used with any other signer plugin \(the major difference being the plugin configuration\).
+
+{% hint style="info" %}
+Make sure you set the following environment variables:
+
+* `LEDGER_SIGNER_PATH`: Location of the `ledger-signer` binary.
+
+  See [Setup](https://docs.oasis.dev/oasis-core-ledger/usage/setup) for more details.
+
+* `LEDGER_WALLET_ID`: ID of the Ledger wallet to use.
+
+  See [Identifying Ledger Devices](https://docs.oasis.dev/oasis-core-ledger/usage/devices) for more details.
+
+* `LEDGER_INDEX`: Index \(0-based\) of the account on the Ledger device to use.
+{% endhint %}
+
+To initialize an entity simply run the following from `/localhostdir/entity`:
+
+```bash
+oasis-node registry entity init \
+    --signer.backend plugin \
+    --signer.plugin.name ledger \
+    --signer.plugin.path $LEDGER_SIGNER_PATH \
+    --signer.plugin.config "wallet_id:$LEDGER_WALLET_ID,index:$LEDGER_INDEX"
+```
+
+You will need to confirm the signing operation on the Ledger device.
+
+This will then generate two files in `/localhostdir/entity`:
+
+* `entity.json`: The entity descriptor. This is the JSON of the unsigned information to be sent to the registry application on the network.
+* `entity_genesis.json`: This JSON object contains the entity descriptor that has been signed with entity's private key. This is meant to be shared for inclusion in the Genesis block.
+
+Note the absence of `entity.pem` as the private key is stored on the Ledger device.
+
 ### Initializing a Node
 
 A node registers itself to the network when the node starts up. However, in order to validate itself, the entity signs a public key associated with the node. This allows the node registration to happen without the uploading entity's private key to the internet.
 
+{% hint style="info" %}
+To get the `$ENTITY_ID` needed below check the value of the `id` field in `entity.json`, e.g. with the following content in `entity.json`:
+
+```text
+{"v":1,"id":"2D5nSE3uFGvp2UkUY3w8OSjnCCYmQX/3JpJ77+aJGUQ="}
+```
+
+the entity ID is `2D5nSE3uFGvp2UkUY3w8OSjnCCYmQX/3JpJ77+aJGUQ=`.
+{% endhint %}
+
 To initialize a validator node, take note of the static IP of the server where your node will run, and issue the following commands from the `/localhostdir/node` directory:
 
 ```bash
+ENTITY_ID=<YOUR-ENTITY-ID>
 STATIC_IP=<YOUR-STATIC-IP>
 oasis-node registry node init \
-  --signer.backend file \
-  --signer.dir /localhostdir/entity \
+  --node.entity_id $ENTITY_ID \
   --node.consensus_address $STATIC_IP:26656 \
-  --node.is_self_signed \
   --node.role validator
 ```
 
@@ -136,14 +184,24 @@ The command will generate the following files:
 
 #### Adding the Node to the Entity Descriptor
 
-Once the node has been initialized, we need to add it to the entity descriptor so that it can properly register itself when the node starts up.
+Once the node has been initialized, we need to add it to the entity descriptor so that it can properly register itself when the node starts up. The instructions differ based on what kind of signer was used to generate the entity.
 
-Execute the following command in the `/localhostdir/node` directory:
+* **If using the file-based signer**, execute the following command in the `/localhostdir/entity` directory:
 
 ```bash
 oasis-node registry entity update \
-  --signer.dir /localhostdir/entity \
-  --entity.node.descriptor node_genesis.json
+  --entity.node.descriptor /localhost/node/node_genesis.json
+```
+
+* **If using the plugin-based signer,** execute the following command in the `/localhostdir/entity` directory \(again this assumes the use of the Ledger signer plugin in which case you will need to then confirm the signing operation on the Ledger device\):
+
+```bash
+oasis-node registry entity update \
+    --signer.backend plugin \
+    --signer.plugin.name ledger \
+    --signer.plugin.path $LEDGER_SIGNER_PATH \
+    --signer.plugin.config "wallet_id:$LEDGER_WALLET_ID,index:$LEDGER_INDEX" \
+    --entity.node.descriptor /localhost/node/node_genesis.json
 ```
 
 This will update the entity descriptor in `entity.json` and subsequently the `entity_genesis.json` file that contains the signed entity descriptor payload.
