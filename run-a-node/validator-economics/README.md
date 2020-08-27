@@ -1,4 +1,2 @@
 # Validator Economics
 
-Va
-
