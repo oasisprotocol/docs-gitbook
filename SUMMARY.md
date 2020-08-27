@@ -42,7 +42,7 @@
 
 * [Network Governance](contribute-to-the-network/network-governance.md)
 * [Contribution Guidelines](contribute-to-the-network/contribution-guidelines.md)
-* [Visit our GitHub](https://github.com/oasisprotocol)
+* [Visit Our GitHub](https://github.com/oasisprotocol)
 
 ## Pre-Mainnet Initiatives <a id="pre-mainnet"></a>
 
@@ -59,7 +59,7 @@
 
 ## Community Resources
 
-* [Connect with Us](community-resources/connect-with-us.md)
+* [Connect With Us](community-resources/connect-with-us.md)
 * [Community-Made Tools](community-resources/community-made-resources.md)
 
 ## Frequently Asked Questions <a id="faq"></a>
