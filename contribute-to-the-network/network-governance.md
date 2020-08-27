@@ -1,7 +1,7 @@
 # Network Governance
 
 {% hint style="info" %}
-The proposed governance model is still being finalized. Please check back for updates. If you have a general question on how to use and deploy our software, please read our Operator Docs or join our community Slack. All community members are welcom e and encouraged to commit code to the platform. Contribution guidelines can be found [here](contribution-guidelines.md).
+The proposed governance model is still being finalized. Please check back for updates. If you have a general question on how to use and deploy our software, please read our [Operator Docs](../run-a-node/set-up-your-machine/node-operator-overview.md) or join our [community Slack](https://join.slack.com/t/oasiscommunity/shared_invite/enQtNjQ5MTA3NTgyOTkzLWIxNTg1ZWZmOTIwNmQ2MTg1YmU0MzgyMzk3OWM2ZWQ4NTQ0ZDJkNTBmMTdlM2JhODllYjg5YmJkODc2NzgwNTg). All community members are welcome and encouraged to commit code, documentation and enhancement proposals to the platform. Contribution guidelines can be found [here](contribution-guidelines.md).
 {% endhint %}
 
 ### Proposed Governance Model Overview
@@ -14,35 +14,45 @@ In order for the community to balance distributed ownership and participation wi
 2. Major Feature Requests
 3. Bug Fixes
 
+### Decision Making Process
+
+Moving forward, our proposed process for reviewing and approving major protocol updates is:
+
+* **Proposals** for features and roadmap updates can come from anyone in the community in the form of issues \([for minor features](network-governance.md#minor-feature-requests)\) or [Architectural Decision Records](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/index.md) \(ADRs, [for major features](network-governance.md#major-feature-requests)\).
+* **Review and discussion of the proposals.** Decisions about the future of the project are made through discussion with all members of the community, from the newest user to the most experienced. All non-sensitive project management discussion takes place in the Oasis Protocol GitHub via issues \([for minor features](network-governance.md#minor-feature-requests)\) and ADRs \([for major features](network-governance.md#major-feature-requests)\).
+* **Decision making process.** In order to ensure that the project is not bogged down by endless discussion and continual voting, the project operates a policy of lazy consensus. This allows the majority of decisions to be made without resorting to a formal vote.  
+
+
+  In general, as long as nobody explicitly opposes a proposal or patch, it is recognised as having the support of the community. For lazy consensus to be effective, it is necessary to allow at least 72 hours before assuming that there are no objections to the proposal. This requirement ensures that everyone is given enough time to read, digest and respond to the proposal.
+
+
+
+  In case consensus is not reached through discussion, the [project committers](https://github.com/oasisprotocol/oasis-core/blob/master/GOVERNANCE.md#committers) may vote to either accept the proposal or reject it. Votes are cast using comments in the proposal pull request. The proposal is accepted by a simple majority vote.
+
+* **Final vote for approval.** Once built, the community votes to approve each upgrade and the corresponding features that are included in the proposal. This voting process may initially be done off-chain but will eventually become an on-chain process. Entities holding stake will vote to approve changes, with each entity's voting power being proportional to their share of tokens staked relative to the total tokens staked.
+* **Upgrade.** Node operators autonomously upgrade their system to run the new version of the software.
+
 ### Minor Feature Requests
 
 To request new functionality, there are two primary approaches that will be most effective at receiving input and making progress.
 
-If the feature is small - a change to a single piece of functionality, or an addition that can be expressed clearly and succinctly in a few sentences, then the most appropriate place to [propose it is as a new feature request](https://github.com/oasisprotocol/oasis-core/issues/new?template=feature_request.md) in this repository.
+If the feature is small - a change to a single piece of functionality, or an addition that can be expressed clearly and succinctly in a few sentences, then the most appropriate place to [propose it is as a new feature request](https://github.com/oasisprotocol/oasis-core/issues/new?template=feature_request.md) in the Oasis Core repository.
 
 ### Major Feature Requests
 
-If the feature is more complicated, involves protocol changes, or has potential safety or performance implications, then consider [proposing an ADR](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/index.md) and submit it as a pull request ot this repository. This will allow a structured review and commenting of the proposed changes. You should aim to get the ADR accepted and merged before starting on implementation. Please keep in mind that the project's committers still have the final word on what is accepted into the project.
+If the feature is more complicated, involves protocol changes, or has potential safety or performance implications, then consider [proposing an Architectural Decision Record \(ADR\)](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/index.md) and submit it as a pull request to the Oasis Core repository. This will allow a structured review and commenting of the proposed changes. You should aim to get the ADR accepted and merged before starting on implementation. Please keep in mind that the project's committers still have the final word on what is accepted into the project.
 
 {% hint style="info" %}
-We recommend that major protocol updates including a need to hard fork, and roadmap and feature planning be conducted with recommendations from the Oasis Foundation and its technical advisory committee.
+We recommend that major protocol updates including a need to hard fork, roadmap and feature planning be conducted with recommendations from the Oasis Protocol Foundation and its technical advisory committee.
 {% endhint %}
-
-Moving forward, our proposed process for reviewing and approving major protocol updates is:
-
-* **Proposals** for features and roadmap updates can come from anyone in the community. These proposals are agreed upon by committee and then shared with the community and open for additional comments for a minimum of 1 month.
-* **Review / Comments period** where anyone can provide input, comments, and suggestions. In the case of major roadmap updates, a comment period would be 2 weeks; for major bugs this would be 24 hours.
-* **Technical steering committee approval.** If not independently taken by any community member, the technical steering committee can adopt the proposal and, if feasible, assign an engineering team \(see [RFC process](https://github.com/oasislabs/private-rfcs)\).
-* **Final vote for approval.** Once built, the community votes to approve each upgrade and the corresponding features that are included in the proposal. This voting process may initially be done off-chain but will eventually become an on-chain process. Nodes in the validator set for the network’s consensus model will vote to approve changes, with each node’s voting power being proportional to their share of tokens staked relative to the total tokens staked in the validator set.
-* **Upgrade.** Node operators autonomously upgrade their system to run the new version of the software.
 
 ### Urgent Bug Fixes
 
-Urgent bug fixes will primarily be handled off-chain to optimize for speed in addressing any issues that are critical to the immediate health of the network. The Oasis Network community as a whole is collectively responsible for identifying and addressing bugs. As bugs are identified, the Oasis Protocol Foundation can serve as a line of first defense to triage these bugs and coordinate security patches for quick release.
+Urgent bug fixes will primarily be coordinated off-chain to optimize for speed in addressing any issues that are critical to the immediate health of the network. The Oasis Network community as a whole is collectively responsible for identifying and addressing bugs. As bugs are identified, the Oasis Protocol Foundation can serve as a line of first defense to triage these bugs and coordinate security patches for quick release.
 
 Bugs are a reality for any software project. We can't fix what we don't know about!
 
-If you believe a bug report presents a security risk, please follow [responsible disclosure](https://en.wikipedia.org/wiki/Responsible_disclosure) and report it directly to [security@oasislabs.com](mailto:security@oasislabs.com)instead of filing a public issue or posting it to a public forum.
+If you believe a bug report presents a security risk, please follow [responsible disclosure](https://en.wikipedia.org/wiki/Responsible_disclosure) and report it by following the [security disclosure information](https://oasisprotocol.org/security) instead of filing a public issue or posting it to a public forum.
 
 We will get back to you promptly.
 

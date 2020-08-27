@@ -55,7 +55,7 @@
 ## Developer Resources
 
 * [Oasis Core Documentation](https://docs.oasis.dev/oasis-core)
-* [Oasis Network GitHub](https://github.com/oasisprotocol)
+* [GitHub](https://github.com/oasisprotocol)
 
 ## Community Resources
 
