@@ -14,7 +14,7 @@ The Wallet Tester Program is currently available to Node Operators who:
 2. Have a balance of AMBER tokens in their account
 3. Have a Ledger hardware wallet
 
-{% hint style="danger" %}
+{% hint style="info" %}
 We hope to expand this program beyond Node Operators in coming weeks. Check back for more information.
 {% endhint %}
 
@@ -33,11 +33,11 @@ The program is pretty simple:
    * Confirm all of these actions have been completed successfully \(or identify any problems that arise\) via [this feedback form](https://oasisfoundation.typeform.com/to/gzezJNFB).
 6. [File issues](https://github.com/oasisprotocol/oasis-core/issues/new/choose) and help improve the Oasis wallet experience.
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 Throughout the process, please keep a record of each address you send or delegate tokens to, as well as the number of tokens that you transmit. Since the wallet app is still in beta and some errors could arise, please only send a small number of tokens per transaction \(1 or 2 tokens per transaction should be enough for testing purposes\).
 {% endhint %}
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 The Oasis wallet app on the Ledger hardware wallet platform and all associated activities and rewards, including the Wallet Tester Program, are not available to all participants, and eligibility requirements apply. For additional details, [see the Amber Network Terms available here](https://docsend.com/view/zv5cfia). This article does not guarantee anyone the right to participate in the Wallet Tester Program or to receive rewards. The Wallet Tester Program is currently only available to select Node Operators. Details about a Wallet Tester Program available to a broader range of Oasis Network community members will be shared at a later date.
 {% endhint %}
 
