@@ -7,6 +7,8 @@
 * [What is the Oasis Network?](welcome-to-oasis/overview.md)
 * [Network Architecture Overview](welcome-to-oasis/network-architecture-overview.md)
 * [Papers](https://oasisprotocol.org/papers)
+* [Oasis Network Primer](https://docs.oasis.dev/oasis-network-primer/)
+* [Token Metrics and Distribution](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution)
 
 ## Run a Node
 
