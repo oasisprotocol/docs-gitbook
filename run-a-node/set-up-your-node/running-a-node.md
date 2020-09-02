@@ -120,7 +120,7 @@ To initialize an entity simply run the following from `/localhostdir/entity`:
 oasis-node registry entity init \
     --signer.backend plugin \
     --signer.plugin.name ledger \
-    --signer.plugin.path $LEDGER_SIGNER_PATH \
+    --signer.plugin.path "$LEDGER_SIGNER_PATH" \
     --signer.plugin.config "wallet_id:$LEDGER_WALLET_ID,index:$LEDGER_INDEX"
 ```
 
@@ -199,7 +199,7 @@ oasis-node registry entity update \
 oasis-node registry entity update \
     --signer.backend plugin \
     --signer.plugin.name ledger \
-    --signer.plugin.path $LEDGER_SIGNER_PATH \
+    --signer.plugin.path "$LEDGER_SIGNER_PATH" \
     --signer.plugin.config "wallet_id:$LEDGER_WALLET_ID,index:$LEDGER_INDEX" \
     --entity.node.descriptor /localhost/node/node_genesis.json
 ```
