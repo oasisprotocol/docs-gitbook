@@ -4,7 +4,8 @@
 Entity packages are only required at the beginning of a network. If the network is already running then this will no longer be used.
 {% endhint %}
 
-In order to join at the beginning of the Amber Network, or at the beginning of any network \(including Oasis Mainnet\), we require that you send an Entity Package so that we can create the genesis document for a either network.
+In order to join at the beginning of the Mainnet, we require that you send an Entity
+Package so that a genesis document can be created for the network.
 
 ## Details
 
