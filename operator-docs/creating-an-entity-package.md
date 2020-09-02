@@ -27,10 +27,10 @@ cp /localhostdir/node/node_genesis.json package/node
 cd package && tar -zcvf ../<YOUR-GITHUB-USERNAME>-entity.tar.gz entity node
 ```
 
-## Submitting Your Entity Package \(For the Amber Network\)
+## Submitting Your Entity Package \(For Mainnet\)
 
 {% hint style="warning" %}
-The deadline for Amber Network Entity Packages is 2020-06-15T23:59:00 UTC.
+The deadline for Mainnet Entity Packages is 2020-09-03T23:59 UTC.
 {% endhint %}
 
 To submit your Entity Package, we've created a repository that will consume and validate the Entity packages.
