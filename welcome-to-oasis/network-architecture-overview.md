@@ -8,13 +8,13 @@ As an operator of a Node on the Oasis Network, it is suggested that you have an 
 
 ## Decentralized Consensus Layer <a id="decentralized-consensus-layer"></a>
 
-The Oasis Network is based on a Proof-of-Stake \(PoS\) consensus model. Tokens can be self-delegated directly by each node operator or delegated to a node operator by other token holders. While the Oasis Network is designed with a modular architecture that can use any consensus system that satisfies these properties, it currently uses [Tendermint](https://github.com/tendermint/tendermint) as its consensus algorithm. To run a node yourself you can find information on operating a node on the Amber Network [here](https://docs.oasis.dev/operators/running-node-on-amber-network.html).
+The Oasis Network is based on a Proof-of-Stake \(PoS\) consensus model. Tokens can be self-delegated directly by each node operator or delegated to a node operator by other token holders. While the Oasis Network is designed with a modular architecture that can use any consensus system that satisfies these properties, it currently uses [Tendermint](https://github.com/tendermint/tendermint) as its consensus algorithm. To run a node yourself you can find information on operating a node on the Amber Network [here](../run-a-node/set-up-your-node/running-a-node.md).
 
 Participating in consensus is one of two critical ways that node operators can help run and be part of the network. Validators will be able to sign blocks, earn transaction fees, stake, and receive delegation. Similar to the PoS design implemented by Cosmos, up to 100 validators with the most stake can participate in the consensus process.
 
 The system will disincentivize bad behavior via slashing for double-signing, as well as via the cost to dominate the network, in terms of the number of staked tokens.
 
-A complete proposal of staking, delegation and the incentives that align to both on the consensus layer can be found [here](https://docs.oasis.dev/operators/incentives-proposal.html).
+A complete proposal of staking, delegation and the incentives that align to both on the consensus layer can be found [here](../run-a-node/validator-economics/network-incentives-proposal.md).
 
 ## Oasis Network Parallel-Runtimes \(ParaTimes\) <a id="oasis-network-parallel-runtimes-paratimes"></a>
 
