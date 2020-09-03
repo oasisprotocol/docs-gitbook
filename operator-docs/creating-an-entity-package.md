@@ -4,7 +4,8 @@
 Entity packages are only required at the beginning of a network. If the network is already running then this will no longer be used.
 {% endhint %}
 
-In order to join at the beginning of the Amber Network, or at the beginning of any network \(including Oasis Mainnet\), we require that you send an Entity Package so that we can create the genesis document for a either network.
+In order to join at the beginning of the Mainnet, we require that you send an Entity
+Package so that a genesis document can be created for the network.
 
 ## Details
 
@@ -27,24 +28,24 @@ cp /localhostdir/node/node_genesis.json package/node
 cd package && tar -zcvf ../<YOUR-GITHUB-USERNAME>-entity.tar.gz entity node
 ```
 
-## Submitting Your Entity Package \(For the Amber Network\)
+## Submitting Your Entity Package \(For Mainnet\)
 
 {% hint style="warning" %}
-The deadline for Amber Network Entity Packages is 2020-06-15T23:59:00 UTC.
+The deadline for Mainnet Entity Packages is 2020-09-03T23:59 UTC.
 {% endhint %}
 
 To submit your Entity Package, we've created a repository that will consume and validate the Entity packages.
 
-1. Fork the [oasisprotocol/amber-network-entities](https://github.com/oasisprotocol/amber-network-entities) repository.
+1. Fork the [oasisprotocol/mainnet-entities] repository.
 2. Add your Entity Package to the `entities/` directory of the repository.
-3. Create a pull request against the `master` branch of the [oasisprotocol/amber-network-entities](https://github.com/oasisprotocol/amber-network-entities) repository.  
+3. Create a pull request against the `master` branch of the
+   [oasisprotocol/mainnet-entities] repository.
 
-
-   Once your Entity Package passes all validation checks we will handle the merging of your pull request.
-
-You can see an example of a submission in [this PR](https://github.com/oasisprotocol/amber-network-entities/pull/1).
+Once your Entity Package passes all validation checks we will handle the merging of your pull request.
 
 {% hint style="info" %}
 If there are any issues, you can always resubmit your entity package.
 {% endhint %}
 
+
+[oasisprotocol/mainnet-entities]: https://github.com/oasisprotocol/mainnet-entities
