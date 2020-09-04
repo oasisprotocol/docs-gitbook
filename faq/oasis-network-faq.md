@@ -31,6 +31,8 @@ Yes! We are still taking grant applications. You can apply any time [here](https
 
 The Oasis Network is currently running a release candidate for Mainnet -- the [Amber Network](https://medium.com/oasis-protocol-project/introducing-the-amber-network-a-release-candidate-for-mainnet-7fe9c8d6a5c5?source=false---------0). The next version of Mainnet is coming soon!  
 
+![](../.gitbook/assets/image%20%283%29.png)
+
 ## **Architecture**
 
 ### **What kind of blockchain is the Oasis Network? Does it use sidechains?**
