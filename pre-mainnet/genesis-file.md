@@ -82,7 +82,7 @@ These key parameters are related to staking and rewards on the network:
 * **min\_delegation** - The minimum amount of tokens required in a delegation. The value is set to 100000000000 nanoROSE, or 100 ROSE tokens.
 * **fee\_split\_weight\_propose** - The block proposer's share of transaction fees, set to a value of 2.
 * **fee\_split\_weight\_next\_propose** - The next proposer's share of transaction fees, set to a value of 1.
-* **c** - Each signer’s/voter’s share of transaction fees, set to a value of 1.
+* **fee\_split\_weight\_vote** - A signer’s/voter’s share of transaction fees, set to a value of 1.
 * **reward\_factor\_epoch\_signed** - The factor for rewards distributed to validators who signed at least threshold blocks in a given epoch, set to a value of 1. 
 * **reward\_factor\_block\_proposed** - The factor for rewards earned for block proposal. Set to 0, indicating validators get no extra staking rewards for proposing block.
 
