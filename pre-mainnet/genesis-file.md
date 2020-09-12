@@ -52,7 +52,7 @@ If you are an operator who successfully completed the KYC process and submitted 
 
 ## Gas Costs
 
-The following parameters define the gas costs for various transactions and actions on the network: 
+The following parameters define the gas costs for various types of transactions on the network: 
 
 * **compute\_commit** - The cost for a compute commit for a ParaTime. The value is set to 10000 gas.
 * **merge\_commit** - The cost for a merge commit. The value is set to 10000 gas.
@@ -72,17 +72,17 @@ There are also minimum thresholds for registering new runtimes. The minimum thre
 
 These key parameters are related to staking and rewards on the network:
 
-* **debonding\_interval** - The period of time \(in epochs\) that must pass before staked or delegated tokens requested to be withdrawn are debonded, at which point they are returned to the account's general balance. The value is set to 336 epochs, which is expected to be approximately 14 days.
+* **debonding\_interval** - The period of time \(in epochs\) that must pass before staked or delegated tokens that are requested to be withdrawn are returned to the account's general balance. The value is set to 336 epochs, which is expected to be approximately 14 days.
 * **reward\_schedule** - The staking reward schedule, indicating how the staking reward rate changes over time, defined at an epoch-by-epoch granular basis. The reward schedule uses a tapering formula with higher rewards being paid out at earlier epochs and then gradually decreasing over time.
 * **signing\_reward\_threshold\_numerator** and **signing\_reward\_threshold\_denominator** - These parameters define the proportion of blocks that a validator must sign during each epoch to receive staking rewards. A proportion of 3/4 means that a validator must maintain an uptime of at least 75% during an epoch in order to receive staking rewards for that period.
 * **rate\_change\_interval** - The granularity at which at rate changes can be specified in a commission schedule. This limits the complexity of the commission schedule; the value is set to 1, indicating that the commission rate can change once per epoch.
 * **rate\_bound\_lead** - The minimum lead time \(in epochs\) needed for changes to commission rate bounds. Operators need to wait before any rate bound changes go into effect. The value is set to 336, which is expected to be approximately 14 days. 
 * **max\_rate\_steps** - The maximum allowed number of rate step changes in a commission schedule.The value is set to 10, indicating that the commission schedule can have a maximum of 10 rate steps.
 * **max\_bound\_steps** - The maximum allowed number of commission rate bound step changes in the commission schedule. The value is set to 10, indicating that the commission schedule can have a maximum of 10 bound steps.
-* **min\_delegation** - The minimum number of tokens required in a delegation. The value is set to 100000000000 nanoROSE, or 100 ROSE tokens.
-* **fee\_split\_weight\_propose** - The block proposer's share of transaction fees, set to a value of 2 \(out of 4\).
-* **fee\_split\_weight\_next\_propose** - The next proposer's share of transaction fees, set to a value of 1 \(out of 4\).
-* **fee\_split\_weight\_vote** - The signer’s/voter’s share of transaction fees, set to a value of 1 \(out of 4\).
+* **min\_delegation** - The minimum amount of tokens required in a delegation. The value is set to 100000000000 nanoROSE, or 100 ROSE tokens.
+* **fee\_split\_weight\_propose** - The block proposer's share of transaction fees, set to a value of 2.
+* **fee\_split\_weight\_next\_propose** - The next proposer's share of transaction fees, set to a value of 1.
+* **c** - Each signer’s/voter’s share of transaction fees, set to a value of 1.
 * **reward\_factor\_epoch\_signed** - The factor for rewards distributed to validators who signed at least threshold blocks in a given epoch, set to a value of 1. 
 * **reward\_factor\_block\_proposed** - The factor for rewards earned for block proposal. Set to 0, indicating validators get no extra staking rewards for proposing block.
 
