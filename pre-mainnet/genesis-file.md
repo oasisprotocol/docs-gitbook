@@ -120,6 +120,10 @@ The following parameters are used to define key values for the network's consens
 * **max\_block\_gas** - Maximum block gas, set to 0, which specifies an unlimited amount of gas. 
 * **public\_key\_blacklist** - A list of the public keys that cannot be used on the network.
 
+## Transfers
+
+Please note that transfers will be disabled for Mainnet Beta and we expect once proposed by the community and adopted enabled to begin Mainnet. Transfers are enabled on Mainnet Dry Run to test this feature out completely.
+
 ## Feedback
 
 We look forward to receiving the community’s feedback on the Oasis Network’s genesis file! If you have any specific feedback or questions, please let us know via the genesis file [feedback form](https://oasisfoundation.typeform.com/to/yG4pp57W). 
