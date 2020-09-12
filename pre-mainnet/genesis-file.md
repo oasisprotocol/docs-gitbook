@@ -11,7 +11,7 @@ The full genesis file is posted in the Oasis Protocol Foundation's GitHub repo [
 We are sharing this information with the Oasis Network community to collect feedback and answer any questions that arise. Please fill out [this form](https://oasisfoundation.typeform.com/to/yG4pp57W) to share feedback and submit your questions regarding the Oasis Network’s genesis file. 
 
 {% hint style="warning" %}
-Please note that the parameters and corresponding values in the genesis file are subject to change prior to the Oasis Network Mainnet launch. The information in this document applies to the upcoming Oasis Network Mainnet Dry Run. After a successful Mainnet Dry Run, we expect most of the parameters and corresponding values we have outlined in this document to carry over directly without any changes when we launch the Oasis Network Mainnet. We welcome any and all feedback from the community as we craft a genesis file that provides a strong foundation for the long-term success of our network.
+Please note that the parameters and corresponding values in the genesis file are subject to change prior to the Oasis Network Mainnet launch. The information in this document applies to the upcoming Oasis Network Mainnet Dry Run. After a successful Mainnet Dry Run, we expect most of the parameters and corresponding values we have outlined in this document to carry over directly without any changes when we launch the Oasis Network Mainnet Beta \(transfers disabled\) and then Mainnet \(transfers enabled\). We welcome any and all feedback from the community as we craft a genesis file that provides a strong foundation for the long-term success of our network.
 {% endhint %}
 
 ## What is a Genesis File?
