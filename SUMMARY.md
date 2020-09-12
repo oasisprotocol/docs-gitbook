@@ -6,9 +6,9 @@
 
 * [What is the Oasis Network?](welcome-to-oasis/overview.md)
 * [Network Architecture Overview](welcome-to-oasis/network-architecture-overview.md)
-* [Papers](https://oasisprotocol.org/papers)
 * [Oasis Network Primer](https://docs.oasis.dev/oasis-network-primer/)
 * [Token Metrics and Distribution](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution)
+* [Papers](https://oasisprotocol.org/papers)
 
 ## Run a Node
 
@@ -48,6 +48,7 @@
 
 ## Pre-Mainnet Initiatives <a id="pre-mainnet"></a>
 
+* [Genesis File Overview](pre-mainnet/genesis-file.md)
 * [Amber Network](pre-mainnet/amber-network-1/README.md)
   * [What is the Amber Network?](pre-mainnet/amber-network-1/amber-network.md)
 * [The Quest](pre-mainnet/the-quest/README.md)
