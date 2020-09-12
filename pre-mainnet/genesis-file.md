@@ -54,8 +54,8 @@ If you are an operator who successfully completed the KYC process and submitted 
 
 The following parameters define the gas costs for various types of transactions on the network: 
 
-* **compute\_commit** - The cost for a compute commit for a ParaTime. The value is set to 10000 gas.
-* **merge\_commit** - The cost for a merge commit. The value is set to 10000 gas.
+* **compute\_commit** - The cost for a compute commit for a ParaTime node. The value is set to 10000 gas.
+* **merge\_commit** - The cost for a ParaTime merge commit. The value is set to 10000 gas.
 * **add\_escrow** - The cost for an add\_escrow \(staking\) transaction. The value is set to 1000 gas.
 * **burn** - The cost for a burn transaction. The value is set to 1000 gas.
 * **reclaim\_escrow** - The cost for a reclaim\_escrow transaction \(for withdrawing staked tokens\). The value is set to 1000 gas.
@@ -122,7 +122,7 @@ The following parameters are used to define key values for the network's consens
 
 ## Feedback
 
-We look forward to receiving the community’s feedback on the Oasis Network’s genesis file. If you have any specific feedback or questions, please let us know via the genesis file [feedback form](https://oasisfoundation.typeform.com/to/yG4pp57W). 
+We look forward to receiving the community’s feedback on the Oasis Network’s genesis file! If you have any specific feedback or questions, please let us know via the genesis file [feedback form](https://oasisfoundation.typeform.com/to/yG4pp57W). 
 
 ## 
 
