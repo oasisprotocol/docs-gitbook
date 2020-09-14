@@ -6,7 +6,7 @@ description: >-
 
 # Genesis File Overview
 
-The full genesis file is posted in the Oasis Protocol Foundation's GitHub repo [here](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json).   
+The full genesis file is posted in the Oasis Protocol Foundation's GitHub repo [here](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-09-22).   
   
 We are sharing this information with the Oasis Network community to collect feedback and answer any questions that arise. Please fill out [this form](https://oasisfoundation.typeform.com/to/yG4pp57W) to share feedback and submit your questions regarding the Oasis Network’s genesis file. 
 
