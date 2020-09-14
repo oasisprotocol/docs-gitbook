@@ -6,8 +6,12 @@ description: >-
 
 # Genesis File Overview
 
-The full genesis file is posted in the Oasis Protocol Foundation's GitHub repo [here](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-09-22).   
-  
+The full genesis file is posted in the [Oasis Protocol Foundation's GitHub](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-09-22):
+
+* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json)
+  * SHA1: `84b9b9df7fbb344192c8add9058b9494646da007`
+  * SHA256: `72d8af62c93eecc43a6fcbddbae599405ee952af47d2ba7455b2f6307b45c6e9`
+
 We are sharing this information with the Oasis Network community to collect feedback and answer any questions that arise. Please fill out [this form](https://oasisfoundation.typeform.com/to/yG4pp57W) to share feedback and submit your questions regarding the Oasis Network’s genesis file. 
 
 {% hint style="warning" %}
@@ -31,7 +35,7 @@ The **chain\_id** is a unique identifier for a blockchain. It also helps differe
 For the Mainnet Dry Run:
 
 * genesis\_time: "2020-09-22T16:00:00.000000000Z"
-* chain\_id: "mainnet-dryrun-2020-09-22-1600790400”
+* chain\_id: "mainnet-dryrun-2020-09-22-1600790400"
 
 ## Epoch Time
 
