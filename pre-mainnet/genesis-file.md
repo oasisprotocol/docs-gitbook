@@ -103,6 +103,10 @@ The following parameters specify the total token supply, total token pool reserv
 If you are an operator who successfully completed the KYC process and submitted your entity package by the deadline in early September, your account should be included in the genesis file, with an account general balance and escrow amount reflecting any grants, rewards, and Amber Network delegations you have received leading up to Mainnet. Please review the ledger section of the genesis file [here](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json) to make sure that your account is included in the genesis file if you were expecting it to be included. Keep in mind that token balances are enumerated in nanoROSE, with 1 billion nanoROSE being equivalent to 1 ROSE token. You can search for account node in the ledger section of the genesis file by searching for your staking address, which is a Bech32-encoded address with the prefix "oasis". If you encounter any issues with finding your account in the ledger, please let us know via the genesis file [feedback form](https://oasisfoundation.typeform.com/to/yG4pp57W).
 {% endhint %}
 
+{% hint style="info" %}
+**Interpreting your account balance in the ledger:** Your **general** balance includes all of your tokens that have not been staked or delegated. This will be set to 100 tokens at genesis to cover gas, as most of your tokens \(except that general balance of 100 tokens\) will initially be staked \(i.e. self-delegated\) on your behalf. Within the **escrow** field, your **active** parameter shows the total tokens that have been allocated or delegated to you.
+{% endhint %}
+
 ## Slashing 
 
 These parameters specify key values for the network's slashing mechanism:
