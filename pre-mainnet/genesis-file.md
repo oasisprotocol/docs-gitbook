@@ -119,7 +119,7 @@ These parameters specify key values for the network's slashing mechanism:
 The following parameters are used to define key values for the network's consensus protocol:
 
 * **min\_validators** - The minimum size for the consensus committee, set to 15 validators.
-* **max\_validators** - The maximum size for consensus committee, set to 70 validators.
+* **max\_validators** - The maximum size for consensus committee, set to 80 validators.
 * **max\_validators\_per\_entity** - The maximum number of nodes from a given entity that can be in the consensus committee at any time. Set to a value of 1.
 * **backend** - Defines the backend consensus protocol. Specified as "tendermint".
 * **timeout\_commit** - Specifies long to wait after committing a block before starting a new block height, in nanoseconds \(this affects block interval\). Set to 5000000000 nanoseconds, or 5 seconds.
