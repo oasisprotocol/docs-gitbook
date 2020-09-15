@@ -49,6 +49,7 @@
 ## Pre-Mainnet Initiatives <a id="pre-mainnet"></a>
 
 * [Genesis File Overview](pre-mainnet/genesis-file.md)
+* [The Testnet](pre-mainnet/testnet.md)
 * [Amber Network](pre-mainnet/amber-network-1/README.md)
   * [What is the Amber Network?](pre-mainnet/amber-network-1/amber-network.md)
 * [The Quest](pre-mainnet/the-quest/README.md)
