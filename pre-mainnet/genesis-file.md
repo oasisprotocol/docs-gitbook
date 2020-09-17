@@ -159,6 +159,10 @@ This section is structured as a map of maps, with the outer key representing the
 Each entry specifies a number of shares in that operator's entity's active escrow pool.
 In the proposed genesis file, all escrow pools are initialized to have one share worth one nanoROSE.
 
+> Under the proposed initial delegations, how many validators will it take to start the network?
+
+It will take at least 36 validators to reach the +2/3 signature threshold.
+
 ## Slashing 
 
 These parameters specify key values for the network's slashing mechanism:
