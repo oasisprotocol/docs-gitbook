@@ -48,6 +48,7 @@
 
 ## Pre-Mainnet Initiatives <a id="pre-mainnet"></a>
 
+* [Mainnet Dry Run Overview](pre-mainnet/dry-run-overview.md)
 * [Genesis File Overview](pre-mainnet/genesis-file.md)
 * [The Testnet](pre-mainnet/testnet.md)
 * [Amber Network](pre-mainnet/amber-network-1/README.md)
