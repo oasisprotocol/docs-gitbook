@@ -7,7 +7,7 @@ description: >-
 # Mainnet Dry Run Overview
 
 {% hint style="warning" %}
-MAINNET DRY RUN WILL KICK-OFF ON SEPTEMBER 22 AT 16:00:00 UTC.
+**MAINNET DRY RUN WILL KICK-OFF ON SEPTEMBER 22 AT 16:00:00 UTC.**
 {% endhint %}
 
 ## What is the Mainnet Dry Run?
@@ -24,7 +24,7 @@ For the network parameters needed for the Mainnet Dry Run, please see the update
 
 ## Why do a Mainnet Dry Run?
 
-The primary goal of the Dry Run is to make sure the network goes live without any problems. **WE ASK THAT ALL NODES IN THE GENESIS FILE TO PARTICIPATE.** The Mainnet Dry Run ensures that we continue making progress toward the Mainnet launch while being transparent, open, and receptive to continued feedback from the Oasis Network community. This incremental process will help to set a strong foundation for the long-term success of the Oasis Network!
+The primary goal of the Dry Run is to make sure the network goes live without any problems. **WE ASK THAT ALL NODES IN THE GENESIS FILE PARTICIPATE.** The Mainnet Dry Run ensures that we continue making progress toward the Mainnet launch while being transparent, open, and receptive to continued feedback from the Oasis Network community. This incremental process will help to set a strong foundation for the long-term success of the Oasis Network!
 
 ## Dry Run Timeline
 
@@ -63,7 +63,7 @@ You can verify the file with the following hashes:
 * SHA1: `84b9b9df7fbb344192c8add9058b9494646da007`
 * SHA256: `72d8af62c93eecc43a6fcbddbae599405ee952af47d2ba7455b2f6307b45c6e9`
 
-For additional information about the genesis file and key parameters, please refer to [the Genesis File Overview document](https://docs.oasis.dev/general/pre-mainnet/genesis-file).
+For additional information about the genesis file and key parameters, please refer to [the Genesis File Overview document](genesis-file.md).
 
 ## Key Components for Node Operators to Test
 
@@ -71,12 +71,12 @@ Node operators will play a key role in the success of the Mainnet Dry Run. In ad
 
 Please check the following are working correctly:
 
-* Set up your node on the network by following the instructions in [the Set Up Your Node documentation](https://docs.oasis.dev/general/run-a-node/set-up-your-node/running-a-node).
+* Set up your node on the network by following the instructions in [the Set Up Your Node documentation](../run-a-node/set-up-your-node/running-a-node.md).
 * Use the 100 unstaked, unbonded tokens in your general balance if you have an allocation.
-  * Stake a couple of tokens to your own node with the **escrow** transaction as described [here](https://docs.oasis.dev/general/run-a-node/set-up-your-node/stake-management#escrowing-tokens).
-  * Delegate a couple of tokens to another node with the **escrow** transaction as described [here](https://docs.oasis.dev/general/run-a-node/set-up-your-node/stake-management#escrowing-tokens).
-  * Send a couple of tokens to another user with the **transfer** transaction as described [here](https://docs.oasis.dev/general/run-a-node/set-up-your-node/stake-management#transferring-tokens).
-* Make adjustments to your commission schedule by following the instructions [here](https://docs.oasis.dev/general/run-a-node/set-up-your-node/stake-management#amending-a-commission-schedule).
+  * Stake a couple of tokens to your own node with the **escrow** transaction as described [here](../run-a-node/set-up-your-node/stake-management.md#escrowing-tokens).
+  * Delegate a couple of tokens to another node with the **escrow** transaction as described [here](../run-a-node/set-up-your-node/stake-management.md#escrowing-tokens).
+  * Send a couple of tokens to another user with the **transfer** transaction as described [here](../run-a-node/set-up-your-node/stake-management.md#transferring-tokens).
+* Make adjustments to your commission schedule by following the instructions [here](../run-a-node/set-up-your-node/stake-management.md#amending-a-commission-schedule).
 
 ## Dry Run Support
 
