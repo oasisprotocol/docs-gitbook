@@ -1,29 +1,41 @@
 ---
 description: >-
   This document provides an overview of the Dry Run test network, a key step
-  leading up to the Oasis Network Mainnet launch. MAINNET DRY RUN WILL KICK-OFF
-  ON SEPTEMBER 22 AT 16:00:00 UTC.
+  leading up to the Oasis Network Mainnet launch.
 ---
 
 # Mainnet Dry Run Overview
 
+{% hint style="warning" %}
+MAINNET DRY RUN WILL KICK-OFF ON SEPTEMBER 22 AT 16:00:00 UTC.
+{% endhint %}
+
 ## What is the Mainnet Dry Run?
 
-The Mainnet Dry Run is the final pre-Mainnet test network. It is intended to emulate Mainnet as closely as possible, including the proposed genesis file with all intended Mainnet parameters and token allocations, but is not the real Mainnet. Mainnet Dry Run will be used solely for testing purposes, so no real tokens or staking rewards will be associated with the network. Running the Mainnet Dry Run will enable the Oasis Network team and node operators to test-launch the network in a low-risk environment.
+The Mainnet Dry Run is the final pre-Mainnet test network. It is intended to emulate Mainnet as closely as possible, including the proposed [genesis file] with all intended Mainnet parameters and token allocations, but is not the real Mainnet.
 
-To differentiate the Mainnet Dry Run from other test networks and Mainnet itself, the Dry Run network’s Chain ID will be mainnet-dryrun-\[GENESIS\_DATE\_AND\_TIME\].
+Mainnet Dry Run will be used solely for testing purposes, so no real tokens or staking rewards will be associated with the network. Running the Mainnet Dry Run will enable the Oasis Network team and node operators to test-launch the network in a low-risk environment.
+
+To differentiate the Mainnet Dry Run from other test networks and Mainnet itself, the Dry Run network’s Chain ID will be
+`mainnet-dryrun-<GENESIS-DATE-AND-TIME>`.
 
 {% hint style="info" %}
 For the network parameters needed for the Mainnet Dry Run, please see the updated [Network Parameters](../run-a-node/set-up-your-machine/current-parameters.md) document.
 {% endhint %}
 
+[genesis file]: genesis-file.md
+
 ## Why do a Mainnet Dry Run?
 
-The primary goal of the Dry Run is to make sure the network goes live without any problems. **WE ASK THAT ALL NODES IN THE GENESIS FILE PARTICIPATE.** The Mainnet Dry Run ensures that we continue making progress toward the Mainnet launch while being transparent, open, and receptive to continued feedback from the Oasis Network community. This incremental process will help to set a strong foundation for the long-term success of the Oasis Network!
+The primary goal of the Dry Run is to make sure the network goes live without any problems. **WE ASK THAT ALL NODES IN THE GENESIS FILE TO PARTICIPATE.** The Mainnet Dry Run ensures that we continue making progress toward the Mainnet launch while being transparent, open, and receptive to continued feedback from the Oasis Network community. This incremental process will help to set a strong foundation for the long-term success of the Oasis Network!
 
 ## Dry Run Timeline
 
-The Mainnet Dry Run is intended to be a short-lived network used primarily for testing purposes. The Dry Run’s halt\_epoch parameter, which indicates when the network will turn off automatically, is set to just 336 epochs, which is approximately 14 days. The process of test-launching the Mainnet Dry Run will likely be shorter than 14 days, so the halt\_epoch parameter will likely end up being a conservative estimate of the time that is needed to test the network and collect feedback from the community.
+The Mainnet Dry Run is intended to be a short-lived network used primarily for testing purposes.
+
+The Dry Run’s `halt_epoch` parameter, which indicates when the network will turn off automatically, is set to just 336 epochs, which is approximately 14 days.
+
+The process of test-launching the Mainnet Dry Run will likely be shorter than 14 days, so the `halt_epoch` parameter will likely end up being a conservative estimate of the time that is needed to test the network and collect feedback from the community.
 
 ## Mainnet Dry Run vs. Mainnet Beta
 
@@ -62,14 +74,17 @@ Node operators will play a key role in the success of the Mainnet Dry Run. In ad
 
 Please check the following are working correctly:
 
-* Set up your node on the network by following the instructions in [the Oasis Network documentation](https://docs.oasis.dev/general/run-a-node/set-up-your-node/running-a-node).
+* Set up your node on the network by following the instructions in [the Set Up Your Node documentation](https://docs.oasis.dev/general/run-a-node/set-up-your-node/running-a-node).
 * Use the 100 unstaked, unbonded tokens in your general balance if you have an allocation.
   * Stake a couple of tokens to your own node with the **escrow** transaction as described [here](https://docs.oasis.dev/general/run-a-node/set-up-your-node/stake-management#escrowing-tokens).
   * Delegate a couple of tokens to another node with the **escrow** transaction as described [here](https://docs.oasis.dev/general/run-a-node/set-up-your-node/stake-management#escrowing-tokens).
   * Send a couple of tokens to another user with the **transfer** transaction as described [here](https://docs.oasis.dev/general/run-a-node/set-up-your-node/stake-management#transferring-tokens).
-* Make adjustments to your commission schedule by following the instructions [here](https://docs.oasis.dev/oasis-core/high-level-components/index/services/staking#amend-commission-schedule).
+* Make adjustments to your commission schedule by following the instructions [here](https://docs.oasis.dev/general/run-a-node/set-up-your-node/stake-management#amending-a-commission-schedule).
 
 ## Dry Run Support
 
-The Oasis team will be offering live video support during the Dry Run. Video call link and calendar details will be shared with node operators via email and Slack. For any additional support, please reach out via the [**\#nodeoperators** Oasis Community Slack channel](../community-resources/connect-with-us.md) with your questions, comments, and feedback related to the Dry Run.
+The Oasis team will be offering live video support during the Dry Run.
+Video call link and calendar details will be shared with node operators via email and Slack.
 
+For any additional support, please reach out via the
+[**\#nodeoperators** Oasis Community Slack channel](../community-resources/connect-with-us.md) with your questions, comments, and feedback related to the Dry Run.
