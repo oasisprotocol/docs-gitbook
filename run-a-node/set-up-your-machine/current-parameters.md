@@ -16,7 +16,7 @@ This page is meant to be kept up to date with the information from the currently
   * SHA1: `84b9b9df7fbb344192c8add9058b9494646da007`
   * SHA256: `72d8af62c93eecc43a6fcbddbae599405ee952af47d2ba7455b2f6307b45c6e9`
 * Oasis Seed Node Address:
-  * _TBD_
+  * `E27F6B7A350B4CC2B48A6CBE94B0A02B0DCB0BF3@35.199.49.168:26656`
 
 {% hint style="success" %}
 Feel free to use other seed nodes besides the one provided here.
