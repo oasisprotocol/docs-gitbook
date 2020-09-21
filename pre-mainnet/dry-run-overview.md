@@ -10,6 +10,10 @@ description: >-
 **MAINNET DRY RUN WILL KICK-OFF ON SEPTEMBER 22 AT 16:00:00 UTC.**
 {% endhint %}
 
+{% hint style="info" %}
+**WE ASK THAT ALL NODES IN THE GENESIS FILE PARTICIPATE IN THE DRY RUN**
+{% endhint %}
+
 ## What is the Mainnet Dry Run?
 
 The Mainnet Dry Run is the final pre-Mainnet test network. It is intended to emulate Mainnet as closely as possible, including the proposed [genesis file](genesis-file.md) with all intended Mainnet parameters and token allocations, but is not the real Mainnet.
@@ -24,7 +28,7 @@ For the network parameters needed for the Mainnet Dry Run, please see the update
 
 ## Why do a Mainnet Dry Run?
 
-The primary goal of the Dry Run is to make sure the network goes live without any problems. **WE ASK THAT ALL NODES IN THE GENESIS FILE PARTICIPATE.** The Mainnet Dry Run ensures that we continue making progress toward the Mainnet launch while being transparent, open, and receptive to continued feedback from the Oasis Network community. This incremental process will help to set a strong foundation for the long-term success of the Oasis Network!
+The primary goal of the Dry Run is to make sure the network goes live without any problems. The Mainnet Dry Run ensures that we continue making progress toward the Mainnet launch while being transparent, open, and receptive to continued feedback from the Oasis Network community. This incremental process will help to set a strong foundation for the long-term success of the Oasis Network!
 
 ## Dry Run Timeline
 
