@@ -13,6 +13,10 @@ The Mainnet Dry Run is the final pre-Mainnet test network. It is intended to emu
 
 To differentiate the Mainnet Dry Run from other test networks and Mainnet itself, the Dry Run network’s Chain ID will be mainnet-dryrun-\[GENESIS\_DATE\_AND\_TIME\].
 
+{% hint style="info" %}
+For the network parameters needed for the Mainnet Dry Run, please see the updated [Network Parameters](../run-a-node/set-up-your-machine/current-parameters.md) document.
+{% endhint %}
+
 ## Why do a Mainnet Dry Run?
 
 The primary goal of the Dry Run is to make sure the network goes live without any problems. **WE ASK THAT ALL NODES IN THE GENESIS FILE PARTICIPATE.** The Mainnet Dry Run ensures that we continue making progress toward the Mainnet launch while being transparent, open, and receptive to continued feedback from the Oasis Network community. This incremental process will help to set a strong foundation for the long-term success of the Oasis Network!
