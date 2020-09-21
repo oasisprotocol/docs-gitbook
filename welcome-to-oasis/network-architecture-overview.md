@@ -14,7 +14,7 @@ Participating in consensus is one of two critical ways that node operators can h
 
 The system will disincentivize bad behavior via slashing for double-signing, as well as via the cost to dominate the network, in terms of the number of staked tokens.
 
-A complete proposal of staking, delegation and the incentives that align to both on the consensus layer can be found [here](../run-a-node/validator-economics/network-incentives-proposal.md).
+A complete proposal of staking, delegation and the incentives that align to both on the consensus layer can be found [here]().
 
 ## Oasis Network Parallel-Runtimes \(ParaTimes\) <a id="oasis-network-parallel-runtimes-paratimes"></a>
 

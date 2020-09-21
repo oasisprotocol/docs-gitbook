@@ -26,9 +26,6 @@
   * [Wiping Node State](run-a-node/maintenance-guides/wiping-node-state.md)
   * [Handling Network Upgrades](run-a-node/maintenance-guides/handling-network-upgrades.md)
   * [Adding or Removing Nodes](run-a-node/maintenance-guides/adding-or-removing-nodes.md)
-* [Validator Economics](run-a-node/validator-economics/README.md)
-  * [Network Incentives Proposal](run-a-node/validator-economics/network-incentives-proposal.md)
-* [Community Node Program](run-a-node/community-node-program.md)
 * [Node Troubleshooting](run-a-node/troubleshooting.md)
 
 ## Wallet Support
@@ -51,11 +48,6 @@
 * [Mainnet Dry Run Overview](pre-mainnet/dry-run-overview.md)
 * [Genesis File Overview](pre-mainnet/genesis-file.md)
 * [The Testnet](pre-mainnet/testnet.md)
-* [Amber Network](pre-mainnet/amber-network-1/README.md)
-  * [What is the Amber Network?](pre-mainnet/amber-network-1/amber-network.md)
-* [The Quest](pre-mainnet/the-quest/README.md)
-  * [What is The Quest?](pre-mainnet/the-quest/quest-network.md)
-  * [Quest Network Parameters](pre-mainnet/the-quest/current-parameters.md)
 
 ## Developer Resources
 

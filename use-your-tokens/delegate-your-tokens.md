@@ -40,5 +40,5 @@ You will need to set it up as described in our [Ledger docs](https://docs.oasis.
 
 ### Rewards and Slashing
 
-By delegating your tokens to someone else's node, you can earn a portion of the rewards earned by that node through its participation in the Oasis Network. Your delegated tokens can also be slashed if that node gets slashed for double signing. You can learn more about how rewards and slashing impact delegators in our [incentives document](../run-a-node/validator-economics/network-incentives-proposal.md).
+By delegating your tokens to someone else's node, you can earn a portion of the rewards earned by that node through its participation in the Oasis Network. Your delegated tokens can also be slashed if that node gets slashed for double signing. You can learn more about how rewards and slashing impact delegators in our [incentives document]().
 

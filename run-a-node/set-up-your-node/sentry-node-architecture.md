@@ -10,7 +10,7 @@ This is only an example of a Sentry node deployment, and we take no responsibili
 
 ## Prerequisites
 
-Before following this guide, make sure you've read the [Prerequisites](../set-up-your-machine/prerequisites-guide.md) and [Running a Node on the Amber Network](running-a-node.md) guides and created your Entity.
+Before following this guide, make sure you've read the [Prerequisites](../set-up-your-machine/prerequisites-guide.md) and [Running a Node on the Network](running-a-node.md) guides and created your Entity.
 
 ## Configuring the Oasis Sentry Node
 
@@ -33,7 +33,7 @@ An example of full `YAML` configuration of a sentry node is below.
 Before using this configuration you should collect the following information to replace the  variables present in the configuration file:
 
 * `{{ external_address }}`: This is the external IP on which sentry node will be reachable.
-* `{{ seed_node_address }}`: This the seed node address of the form `ID@IP:port`. You can find the current Oasis Seed Node address in the [Current Testnet Parameters](../set-up-your-machine/current-parameters.md).
+* `{{ seed_node_address }}`: This the seed node address of the form `ID@IP:port`. You can find the current Oasis Seed Node address in the [Network Parameters](../set-up-your-machine/current-parameters.md).
 * `{{ validator_tendermint_id }}`: This is the Tendermint ID \(address\) of the Oasis validator node that will be protected by the sentry node. This address can be obtained by running:
 
   ```bash
@@ -111,26 +111,27 @@ worker:
         - {{ validator_sentry_client_grpc_public_key }}
 
 # Tendermint backend configuration.
-tendermint:
-  abci:
-    prune:
-      strategy: keep_n
-      # Keep ~1 hour of data since block production is ~1 block every 6 seconds.
-      # (3600/6 = 600)
-      num_kept: 600
-  core:
-    listen_address: tcp://0.0.0.0:26656
-    external_address: tcp://{{ external_address }}:26656
-
-  # List of seed nodes to connect to.
-  # NOTE: You can add additional seed nodes to this list if you want.
-  p2p:
-    seed:
-      - "{{ seed_node_address }}"
-
-  sentry:
-    upstream_address:
-      - "{{ validator_tendermint_id }}@{{ validator_private_address }}:26656"
+consensus:
+  tendermint:
+    abci:
+      prune:
+        strategy: keep_n
+        # Keep ~1 hour of data since block production is ~1 block every 6 seconds.
+        # (3600/6 = 600)
+        num_kept: 600
+    core:
+      listen_address: tcp://0.0.0.0:26656
+      external_address: tcp://{{ external_address }}:26656
+  
+    # List of seed nodes to connect to.
+    # NOTE: You can add additional seed nodes to this list if you want.
+    p2p:
+      seed:
+        - "{{ seed_node_address }}"
+  
+    sentry:
+      upstream_address:
+        - "{{ validator_tendermint_id }}@{{ validator_private_address }}:26656"
 ```
 
 {% hint style="success" %}
@@ -273,21 +274,19 @@ consensus:
   # to register as a validator.
   validator: True
 
-# Tendermint backend configuration.
-tendermint:
-  abci:
-    prune:
-      strategy: keep_n
-      # Keep ~7 days of data since block production is ~1 block every 6 seconds.
-      # (7*24*3600/6 = 100800)
-      num_kept: 100800
-  core:
-    listen_address: tcp://0.0.0.0:26656
-  p2p:
-    persistent_peer:
-      - "{{ sentry_node_tendermint_id }}@{{ sentry_node_private_ip }}:26656"
-    disable_peer_exchange: True
-  db:
-    backend: badger
+  # Tendermint backend configuration.
+  tendermint:
+    abci:
+      prune:
+        strategy: keep_n
+        # Keep ~7 days of data since block production is ~1 block every 6 seconds.
+        # (7*24*3600/6 = 100800)
+        num_kept: 100800
+    core:
+      listen_address: tcp://0.0.0.0:26656
+    p2p:
+      persistent_peer:
+        - "{{ sentry_node_tendermint_id }}@{{ sentry_node_private_ip }}:26656"
+      disable_peer_exchange: True
 ```
 

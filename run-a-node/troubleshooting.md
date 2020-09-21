@@ -5,7 +5,7 @@
 
 Before you begin troubleshooting we suggest you check all of the following:
 
-* Check that your current binary version is the latest listed on the [current testnet parameters](set-up-your-machine/current-parameters.md)
+* Check that your current binary version is the latest listed on the [Current Network Parameters](set-up-your-machine/current-parameters.md)
   * Check the version on your localhost using `oasis-node --version`
   * Check the version on your server using `oasis-node --version`
 * If upgrading, make sure that you've wiped state \(unless that is explicitly not

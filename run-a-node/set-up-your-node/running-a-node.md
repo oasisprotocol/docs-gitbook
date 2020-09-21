@@ -1,21 +1,10 @@
 ---
-description: >-
-  This page describes how to run a node on the Amber Network, a release
-  candidate for the Oasis Network Mainnet. These instructions may change by the
-  time of mainnet launch.
+description: This page describes how to run a node on the Oasis Network.
 ---
 
 # Run a Node on the Network
 
-This guide will cover setting up your node for the Amber Network. The Oasis Amber Network is a release candidate for Mainnet and includes all the core features of the network you can expect at Mainnet launch. For more details see the [Amber Network](../../pre-mainnet/amber-network-1/amber-network.md) docs.
-
-This guide assumes some basic knowledge on the use of command line tools.
-
-{% hint style="warning" %}
-**DISCLAIMER**
-
-Participating as a node operator in the Amber Network requires AMBER test tokens, which will be allocated to operators based on their winnings in The Quest. Oasis will not be distributing AMBER test tokens to new node operators. See the [Amber Network Rules](../../pre-mainnet/amber-network-1/amber-network.md) for other ways to participate.
-{% endhint %}
+This guide will cover setting up your node for the Oasis Network. This guide assumes some basic knowledge on the use of command line tools.
 
 ## Prerequisites
 
@@ -28,7 +17,7 @@ This guide assumes that you have two different physical machines that you will u
 * Your local system, henceforth called the `localhost`.
 * A remote system to run as an Oasis node, henceforth called the `server`.
 
-The reason for this is to ensure protection of the keys used to setup your node. This guide does not include the use of HSMs, but they should be used in the future.
+The reason for this is to ensure protection of the keys used to setup your node. Use of HSMs to store keys is highly recommended.
 
 ## Creating Your Entity
 
@@ -60,7 +49,7 @@ mkdir -m700 -p {entity,node}
 
 ### Copying the Genesis File
 
-The latest genesis file can be found in [Current Testnet Parameters](../set-up-your-machine/current-parameters.md). You should download the latest `genesis.json` file, copy it to the working directory and set the following environment variable pointing to its path:
+The latest genesis file can be found in [Network Parameters](../set-up-your-machine/current-parameters.md). You should download the latest `genesis.json` file, copy it to the working directory and set the following environment variable pointing to its path:
 
 ```bash
 GENESIS_FILE_PATH=/localhostdir/genesis.json
@@ -70,27 +59,7 @@ This will be needed later when generating transactions.
 
 ### Initializing an Entity
 
-As described in the [Architecture Overview](../../welcome-to-oasis/network-architecture-overview.md#entities-and-key-management), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. Once support is available, we suggest that you use an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
-
-#### Using a File-based Signer
-
-{% hint style="danger" %}
-We strongly suggest that you do not use any entity that is generated with the file-based signer on the Mainnet.
-
-When using the file-based signer the use of an [offline/air-gapped machine](https://en.wikipedia.org/wiki/Air_gap_%28networking%29) for this purpose is highly recommended. Gaining access to the entity private key can compromise your tokens.
-{% endhint %}
-
-To initialize an entity simply run the following from `/localhostdir/entity`:
-
-```bash
-oasis-node registry entity init
-```
-
-This will generate three files in `/localhostdir/entity`:
-
-* `entity.pem`: The private key of the entity. **NEVER SHARE THIS AS IT CAN BE USED TO TRANSFER STAKE.**
-* `entity.json`: The entity descriptor. This is the JSON of the unsigned information to be sent to the registry application on the network.
-* `entity_genesis.json`: This JSON object contains the entity descriptor that has been signed with entity's private key, i.e. `entity.pem`. This is meant to be shared for inclusion in the Genesis block.
+As described in the [Architecture Overview](../../welcome-to-oasis/network-architecture-overview.md#entities-and-key-management), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. We highly recommend using an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
 
 #### Using a Plugin Signer
 
@@ -98,7 +67,7 @@ This will generate three files in `/localhostdir/entity`:
 At least version **20.9.1** of Oasis Core is required for the below process to work.
 {% endhint %}
 
-It is also possible to use an signer plugin to generate/sign your entity descriptors. The [Oasis Core Ledger plugin](https://docs.oasis.dev/oasis-core-ledger) is an example of such a plugin which can be used to store keys on a Ledger device. The used example will therefore assume that you are using the Ledger signer plugin, but a similar process can be used with any other signer plugin \(the major difference being the plugin configuration\).
+It is possible to use a signer plugin to generate/sign your entity descriptors. The [Oasis Core Ledger plugin](https://docs.oasis.dev/oasis-core-ledger) is an example of such a plugin which can be used to store keys on a Ledger device. The used example will therefore assume that you are using the Ledger signer plugin, but a similar process can be used with any other signer plugin \(the major difference being the plugin configuration\).
 
 {% hint style="info" %}
 Make sure you set the following environment variables:
@@ -132,6 +101,26 @@ This will then generate two files in `/localhostdir/entity`:
 * `entity_genesis.json`: This JSON object contains the entity descriptor that has been signed with entity's private key. This is meant to be shared for inclusion in the Genesis block.
 
 Note the absence of `entity.pem` as the private key is stored on the Ledger device.
+
+#### Using a File-based Signer
+
+{% hint style="danger" %}
+We strongly suggest that you do not use any entity that is generated with the file-based signer on the Mainnet.
+
+When using the file-based signer the use of an [offline/air-gapped machine](https://en.wikipedia.org/wiki/Air_gap_%28networking%29) for this purpose is highly recommended. Gaining access to the entity private key can compromise your tokens.
+{% endhint %}
+
+To initialize an entity simply run the following from `/localhostdir/entity`:
+
+```bash
+oasis-node registry entity init
+```
+
+This will generate three files in `/localhostdir/entity`:
+
+* `entity.pem`: The private key of the entity. **NEVER SHARE THIS AS IT CAN BE USED TO TRANSFER STAKE.**
+* `entity.json`: The entity descriptor. This is the JSON of the unsigned information to be sent to the registry application on the network.
+* `entity_genesis.json`: This JSON object contains the entity descriptor that has been signed with entity's private key, i.e. `entity.pem`. This is meant to be shared for inclusion in the Genesis block.
 
 ### Initializing a Node
 
@@ -186,13 +175,6 @@ The command will generate the following files:
 
 Once the node has been initialized, we need to add it to the entity descriptor so that it can properly register itself when the node starts up. The instructions differ based on what kind of signer was used to generate the entity.
 
-* **If using the file-based signer**, execute the following command in the `/localhostdir/entity` directory:
-
-```bash
-oasis-node registry entity update \
-  --entity.node.descriptor /localhost/node/node_genesis.json
-```
-
 * **If using the plugin-based signer,** execute the following command in the `/localhostdir/entity` directory \(again this assumes the use of the Ledger signer plugin in which case you will need to then confirm the signing operation on the Ledger device\):
 
 ```bash
@@ -202,6 +184,13 @@ oasis-node registry entity update \
     --signer.plugin.path "$LEDGER_SIGNER_PATH" \
     --signer.plugin.config "wallet_id:$LEDGER_WALLET_ID,index:$LEDGER_INDEX" \
     --entity.node.descriptor /localhost/node/node_genesis.json
+```
+
+* **If using the file-based signer**, execute the following command in the `/localhostdir/entity` directory:
+
+```bash
+oasis-node registry entity update \
+  --entity.node.descriptor /localhost/node/node_genesis.json
 ```
 
 This will update the entity descriptor in `entity.json` and subsequently the `entity_genesis.json` file that contains the signed entity descriptor payload.
@@ -263,7 +252,7 @@ We will also need to have the public entity artifacts from the `/localhostdir` p
 
 #### Copying the Genesis File to the server
 
-The latest Genesis file can be found in the [Current Testnet Parameters](../set-up-your-machine/current-parameters.md). You should download the latest `genesis.json` file and copy it to `/serverdir/etc/genesis.json` on the `server`.
+The latest Genesis file can be found in the [Network Parameters](../set-up-your-machine/current-parameters.md). You should download the latest `genesis.json` file and copy it to `/serverdir/etc/genesis.json` on the `server`.
 
 #### Configuring the Oasis Node
 
@@ -420,7 +409,7 @@ DVobZ8bWlOv2J6oHO0uITr5FPO5rIY2irdPNhByprHk=
 D2hqhJcmZnBmhw9TodOdoFPAjmRkpRatANCNHxIDHgA=
 ```
 
-Once you get to a node that's connected you can move on to the next section as your node is not yet registered as a validator on the Oasis Testnet.
+Once you get to a node that's connected you can move on to the next section as your node is not yet registered as a validator on the Oasis Network.
 
 ## Staking and Registering
 
@@ -574,12 +563,12 @@ If your node is registered and a validator, the above command should output \(so
 
 ```javascript
 {
-  "software_version": "20.9",
+  "software_version": "20.10",
   "identity": {
     ...
   },
   "consensus": {
-    "consensus_version": "0.26.0",
+    "consensus_version": "1.0.0",
     "backend": "tendermint",
     "features": 3,
     "node_peers": [
@@ -605,7 +594,15 @@ If your node is registered and a validator, the above command should output \(so
 
 Pay attention to the `is_validator` field which should have the value of `true`.
 
+{% hint style="info" %}
+Nodes are only elected into the validator set at epoch transitions, so you may need to wait for up to an epoch before being considered.
+{% endhint %}
+
+{% hint style="warning" %}
+Note that in order to be elected in the validator set you need to have enough stake to be in the top K entities \(where K is a network-specific parameter specified by the `scheduler.max_validators` field in the genesis document\).
+{% endhint %}
+
 ## You're a Validator!
 
-If you've made it this far, you've properly connected your node to the network and you're now a validator on the Amber Network.
+If you've made it this far, you've properly connected your node to the network and you're now a validator on the Oasis Network.
 

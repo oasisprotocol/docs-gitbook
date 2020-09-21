@@ -226,7 +226,7 @@ Currently, we provide two options for signing transactions:
 
 * **Entity's private key stored in a file.**
 
-  You will need to create your Entity as described in [Running a Node on the Amber Network](running-a-node.md#creating-your-entity) docs and set the following flags:
+  You will need to create your Entity as described in [Running a Node on the Network](running-a-node.md#creating-your-entity) docs and set the following flags:
 
   * `--signer.backend file`: Specifies use of the file signer.
   * `--signer.dir`: Path to entity's artifacts directory on the `localhost`, e.g. `/localhostdir/entity/`.

@@ -6,15 +6,13 @@ Following this guide when there is no network upgrade will result in you losing 
 
 The following guide should be used when the network has agreed to do a software upgrade.
 
-To see the latest upgrade schedule, see [Deployment Change Log](../set-up-your-machine/current-parameters.md#deployment-change-log) \(Amber Network\).
-
 ## Dumping Blockchain State
 
 {% hint style="info" %}
 Do not stop your `oasis-node` process just yet.
 {% endhint %}
 
-Before an upgrade we will update the [Upgrade Parameters](../set-up-your-machine/current-parameters.md) \(Amber Network\) to specify the block height at which to dump.
+Before an upgrade we will update the [Network Parameters](../set-up-your-machine/current-parameters.md) to specify the block height at which to dump.
 
 To dump the state of the network to a genesis file, run:
 
@@ -42,7 +40,7 @@ Once [Oasis Core \#2757](https://github.com/oasisprotocol/oasis-core/issues/2757
 
 ## Downloading and Verifying the Provided Genesis Document
 
-Download the genesis document linked in the [Deployment Change Log](../set-up-your-machine/current-parameters.md) \(Amber Network\) and save it as `/serverdir/etc/genesis.json`.
+Download the genesis document linked in the [Deployment Change Log](../set-up-your-machine/current-parameters.md) and save it as `/serverdir/etc/genesis.json`.
 
 Pretty-print the dumped state \(set indent to 2\) so you will be able to easily compare it to the provided genesis document.
 
@@ -158,11 +156,11 @@ Before restarting your node you should wipe consensus state. The process for thi
 
 ## Updating Configuration
 
-If the [Deployment Change Log](../set-up-your-machine/current-parameters.md#deployment-change-log) \(Amber Network\) provides instructions for updating your node's configuration, update the `/serverdir/etc/config.yml` file accordingly.
+If the [Deployment Change Log](../set-up-your-machine/current-parameters.md#deployment-change-log) provides instructions for updating your node's configuration, update the `/serverdir/etc/config.yml` file accordingly.
 
 ## Upgrading Oasis Core
 
-Before starting your node again, make sure you upgrade your `oasis-node` binary to the current version specified in the [Current Testnet Parameters](../set-up-your-machine/current-parameters.md) \(Amber Network\).
+Before starting your node again, make sure you upgrade your `oasis-node` binary to the current version specified in the [Network Parameters](../set-up-your-machine/current-parameters.md).
 
 ## Starting the Node
 

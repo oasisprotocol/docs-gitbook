@@ -23,7 +23,7 @@ The Mainnet Dry Run is intended to be a short-lived network used primarily for t
 
 ## Mainnet Dry Run vs. Mainnet Beta
 
-After a successful Mainnet Dry Run, we will launch Mainnet Beta, and soon after we will propose the launch the actual Mainnet with the enabling of transfers for the Oasis Network via a network upgrade. Any genesis file parameter changes arising from the Mainnet Dry Run process will be incorporated into Mainnet Beta, ensuring that Mainnet Beta is the most up-to-date and complete Oasis Network test network prior to Mainnet launch.
+After a successful Mainnet Dry Run, we will launch Mainnet Beta, and soon after we will propose the launch of the actual Mainnet with the enabling of transfers for the Oasis Network via a network upgrade. Any genesis file parameter changes arising from the Mainnet Dry Run process will be incorporated into Mainnet Beta, ensuring that Mainnet Beta is the most up-to-date and complete Oasis Network test network prior to Mainnet launch.
 
 All account balances from Mainnet Beta will carry over to Mainnet when the network is upgraded and transfers are enabled. The reward schedule will be reset for Mainnet, but the rewards earned during Mainnet Beta will persist.
 
@@ -33,22 +33,22 @@ We will let the Dry Run network run for 48 hours after the network has started \
 
 We will determine that the Dry Run testing has been successful and we are ready to launch Mainnet Beta when the following conditions have been met:
 
-* Validators representing more than 2/3 of stake in the initial consensus committee successfully get online
-* Dry Run network runs successfully for 48 hours, during which node operators test key network processes and components, as outlined in the test section of this document
-* Top 10 nodes by stake issue a confirmation that everything is working as intended
+* Validators representing more than 2/3 of stake in the initial consensus committee successfully get online.
+* Dry Run network runs successfully for 48 hours, during which node operators test key network processes and components, as outlined in the test section of this document.
+* Top 10 nodes by stake issue a confirmation that everything is working as intended.
 
-The Oasis Protocol Foundation will communicate to node operators that the Dry Run has wrapped up successfully by sharing an email and a message in the \#nodeoperator Oasis Community Slack channel. This communication will include details regarding the launch date and logistics for Mainnet Beta.
+The Oasis Protocol Foundation will communicate to node operators that the Dry Run has wrapped up successfully by sharing an email and a message in the [**\#nodeoperators** Oasis Community Slack channel](../community-resources/connect-with-us.md). This communication will include details regarding the launch date and logistics for Mainnet Beta.
 
 ## Mainnet Dry Run Genesis File
 
 One of the key components we are testing in the Dry Run network is the proposed genesis file, which contains a set of parameters that outline the initial state of the Oasis Network blockchain.
 
-You can view the proposed genesis file in [the Oasis Protocol Foundation GitHub repo](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json).
+You can view the proposed genesis file in [the Oasis Protocol Foundation GitHub repository](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json).
 
 You can verify the file with the following hashes:
 
-* SHA1: 84b9b9df7fbb344192c8add9058b9494646da007
-* SHA256: 72d8af62c93eecc43a6fcbddbae599405ee952af47d2ba7455b2f6307b45c6e9
+* SHA1: `84b9b9df7fbb344192c8add9058b9494646da007`
+* SHA256: `72d8af62c93eecc43a6fcbddbae599405ee952af47d2ba7455b2f6307b45c6e9`
 
 For additional information about the genesis file and key parameters, please refer to [the Genesis File Overview document](https://docs.oasis.dev/general/pre-mainnet/genesis-file).
 
@@ -67,5 +67,5 @@ Please check the following are working correctly:
 
 ## Dry Run Support
 
-The Oasis team will be offering live video support during the Dry Run. Video call link and calendar details will be shared with node operators via email and Slack. For any additional support, please reach out via the \#nodeoperator Oasis Community Slack channel with your questions, comments, and feedback related to the Dry Run.
+The Oasis team will be offering live video support during the Dry Run. Video call link and calendar details will be shared with node operators via email and Slack. For any additional support, please reach out via the [**\#nodeoperators** Oasis Community Slack channel](../community-resources/connect-with-us.md) with your questions, comments, and feedback related to the Dry Run.
 
