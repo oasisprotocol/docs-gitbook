@@ -21,7 +21,6 @@
   * [Run a Node on the Network](run-a-node/set-up-your-node/running-a-node.md)
   * [Create an Entity Package](run-a-node/set-up-your-node/creating-an-entity-package.md)
   * [Sentry Node Architecture](run-a-node/set-up-your-node/sentry-node-architecture.md)
-  * [Manage Your Stake](run-a-node/set-up-your-node/stake-management.md)
 * [Node Maintenance](run-a-node/maintenance-guides/README.md)
   * [Wiping Node State](run-a-node/maintenance-guides/wiping-node-state.md)
   * [Handling Network Upgrades](run-a-node/maintenance-guides/handling-network-upgrades.md)
@@ -35,7 +34,9 @@
 
 ## Use Your Tokens
 
+* [Terminology](use-your-tokens/terminology.md)
 * [Delegate Your Tokens](use-your-tokens/delegate-your-tokens.md)
+* [Manage Your Stake](run-a-node/set-up-your-node/stake-management.md)
 
 ## Contribute to the Network
 
