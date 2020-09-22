@@ -4,7 +4,7 @@
 This example assumes you have read and followed the instructions in the [Prerequisites](prerequisites.md) and [Setup](setup.md) sections.
 {% endhint %}
 
-Let's assume we have a staking account with address `oasis1qr6swa6gsp2ukfjcdmka8wrkrwz294t7ev39nrw6` and we want to transfer tokens to another staking account, e.g. `oasis1qr3jc2yfhszpyy0daha2l9xjlkrxnzas0uaje4t3`.
+Let's assume we have a staking account with the address `oasis1qr6swa6gsp2ukfjcdmka8wrkrwz294t7ev39nrw6` and we want to transfer tokens to another staking account, e.g. `oasis1qr3jc2yfhszpyy0daha2l9xjlkrxnzas0uaje4t3`.
 
 {% hint style="info" %}
 To convert your entity's ID to a staking account address, see the [Obtain Account Address From Entity's ID](accounts/address.md#obtain-account-address-from-entitys-id) section.
@@ -22,10 +22,10 @@ oasis-node stake account info \
 ```
 
 {% hint style="info" %}
-For a detailed explanation on querying account information, see [Account Info](accounts/get-info.md) section.
+For a detailed explanation on querying account information, see [t](accounts/get-info.md)he [Get Info](accounts/get-info.md) section.
 {% endhint %}
 
-At the beginning, this outputs:
+Before the transfer transaction, this outputs:
 
 ```javascript
 {

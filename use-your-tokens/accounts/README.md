@@ -5,7 +5,7 @@ A **staking account** is an entry in the staking ledger.
 It has two \(sub\)accounts:
 
 * **general account**
-* **escrow sub-account**
+* **escrow account**
 
 Each staking account has an address. For more information, see:
 
