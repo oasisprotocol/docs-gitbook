@@ -48,25 +48,27 @@ Hence, we recommend avoiding its usage until this issue is resolved.
 All commands for generating and signing transactions need the following base flags set:
 
 * `--genesis.file`: Path to the genesis file on the `localhost`, e.g. `/localhostdir/genesis.json`.
+* `--signer.dir`: Path to entity's artifacts directory on the `localhost`, e.g.  `entity-$LEDGER_INDEX`
+
+  or `/localhostdir/entity/`
 
 ### Signer Flags
 
 Currently, we provide two options for signing transactions:
 
-* **Ledger device.**
+* **Ledger-based signer.**
 
-  You will need to set it up as described in our [Ledger docs](https://docs.oasis.dev/oasis-core-ledger/usage/transactions).
+  You will need to set it up as described in our [Oasis Core Ledger](https://docs.oasis.dev/oasis-core-ledger/usage/transactions) docs.
 
-* **Entity's private key stored in a file.**
+* **File-based signer.**
 
   You will need to create your Entity as described in [Running a Node on the Network](../run-a-node/set-up-your-node/running-a-node.md#creating-your-entity) docs and set the following flags:
 
   * `--signer.backend file`: Specifies use of the file signer.
-  * `--signer.dir`: Path to entity's artifacts directory on the `localhost`, e.g. `/localhostdir/entity/`.
 
 ### Storing Base and Signer flags in an Environment Variable
 
-To make the transaction commands shorter and avoid typing errors, one can set an environment variable, e.g. `TX_FLAGS`, with all the [Base Flags](setup.md#base-flags) and [Signer Flags](setup.md#signer-flags) configured for his particular set up.
+To make the transaction commands shorter and avoid typing errors, one can create an environment variable, e.g. `TX_FLAGS`, with all the [Base Flags](setup.md#base-flags) and [Signer Flags](setup.md#signer-flags) configured for his particular set up.
 
 For example, one could set `TX_FLAGS` for a Ledger device like below \(make sure all `LEDGER_*` environment variables are set appropriately\):
 
