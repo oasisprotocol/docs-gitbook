@@ -80,7 +80,7 @@ We can observe that both, the general account and the escrow account \(actively 
 
 ## Generate a Transfer Transaction
 
-Let's generate a transfer transaction of 170 tokens, \(i.e. 170 \* 10^9 base units\), from our account to the chosen destination account:
+Let's generate a transfer transaction of 170 tokens, \(i.e. 170 \* 10^9 base units\), from our account to the chosen destination account and store it to `tx_transfer.json`:
 
 ```bash
 oasis-node stake account gen_transfer \
@@ -158,7 +158,7 @@ Escrow Account:
 
 We can observe that:
 
-* Our general balance decreased for 170.000002 tokens. The 0.000002 tokens corresponds to the fee that we specified we will pay for this transaction.
+* Our general balance decreased for 170.000002 tokens. The 0.000002 token corresponds to the fee that we specified we will pay for this transaction.
 * Our account's nonce increased to 8.
 * Destination account's general balance increased for 170 tokens.
 

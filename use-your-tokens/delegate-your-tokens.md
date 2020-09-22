@@ -20,7 +20,7 @@ cat $GENESIS_FILE | \
   print(json.dumps(json.load(sys.stdin)["staking"]["params"]["min_delegation"], indent=4))'
 ```
 
-Note that this value is in base units, i.e. a value of `"10000000000"` would correspond to 10 tokens.
+Note that this value is in base units. E.g., a value of `"10000000000"` would correspond to 10 tokens.
 {% endhint %}
 
 To achieve this we need to put 208 tokens to our own escrow account.
@@ -93,6 +93,8 @@ You are about to sign the following transaction:
 Other info:
   Genesis document's hash: 976c302f696e417bd861b599e79261244f4391f3887a488212ee122ca7bbf0a8
 ```
+
+and ask you for confirmation.
 
 ## Submit the Transaction
 
