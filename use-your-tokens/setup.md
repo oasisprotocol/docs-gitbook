@@ -68,22 +68,25 @@ Currently, we provide two options for signing transactions:
 
 To make the transaction commands shorter and avoid typing errors, one can set an environment variable, e.g. `TX_FLAGS`, with all the [Base Flags](setup.md#base-flags) and [Signer Flags](setup.md#signer-flags) configured for his particular set up.
 
-For example, one could set `TX_FLAGS` for a Ledger device like below \(replacing Ledger device address and address index appropriately\):
+For example, one could set `TX_FLAGS` for a Ledger device like below \(make sure all `LEDGER_*` environment variables are set appropriately\):
 
 ```bash
-TX_FLAGS="--genesis.file /localhostdir/genesis.json \
-  --signer.backend ledger \
-  --signer.ledger.address oasis19hpt4y2reqwyfqcd53asjchdqf468chr673y6jn07xjp36w32jlscf0me \
-  --signer.ledger.index 1 \
-  --signer.dir /localhostdir/entity/"
+TX_FLAGS=(--genesis.file /localhostdir/genesis.json
+  --signer.dir entity-$LEDGER_INDEX
+  --signer.backend plugin
+  --signer.plugin.name ledger
+  --signer.plugin.path "$LEDGER_SIGNER_PATH"
+  --signer.plugin.config "wallet_id:$LEDGER_WALLET_ID,index:$LEDGER_INDEX"
+)
 ```
 
 Or, one could set `TX_FLAGS` like below to use a file signer:
 
 ```bash
-TX_FLAGS="--genesis.file /localhostdir/genesis.json \
-  --signer.backend file \
-  --signer.dir /localhostdir/entity/"
+TX_FLAGS=(--genesis.file /localhostdir/genesis.json
+  --signer.backend file
+  --signer.dir /localhostdir/entity/
+)
 ```
 
 ### Common Transaction Flags
