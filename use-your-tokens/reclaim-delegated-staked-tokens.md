@@ -10,7 +10,7 @@ For example, to reclaim 357 billion shares from an escrow account, we need to ge
 
 ```bash
 oasis-node stake account gen_reclaim_escrow \
-  $TX_FLAGS \
+  "${TX_FLAGS[@]}" \
   --stake.shares 357000000000 \
   --stake.escrow.account oasis1qr6swa6gsp2ukfjcdmka8wrkrwz294t7ev39nrw6 \
   --transaction.file tx_reclaim.json \
