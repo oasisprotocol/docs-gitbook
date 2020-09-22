@@ -46,12 +46,12 @@ All account balances from Mainnet Beta will carry over to Mainnet when the netwo
 
 ## Success Criteria
 
-We will let the Dry Run network run for 48 hours after the network has started \(once validators representing more than 2/3 of stake in the initial consensus committee are online\).
+We will let the Dry Run network run for up to 48 hours after the network has started \(once validators representing more than 2/3 of stake in the initial consensus committee are online\).
 
 We will determine that the Dry Run testing has been successful and we are ready to launch Mainnet Beta when the following conditions have been met:
 
 * Validators representing more than 2/3 of stake in the initial consensus committee successfully get online.
-* Dry Run network runs successfully for 48 hours, during which node operators test key network processes and components, as outlined in the test section of this document.
+* Dry Run network runs successfully for up to 48 hours, during which node operators test key network processes and components, as outlined in the test section of this document.
 * Top 10 nodes by stake issue a confirmation that everything is working as intended.
 
 The Oasis Protocol Foundation will communicate to node operators that the Dry Run has wrapped up successfully by sharing an email and a message in the [**\#nodeoperators** Oasis Community Slack channel](../community-resources/connect-with-us.md). This communication will include details regarding the launch date and logistics for Mainnet Beta.
