@@ -13,23 +13,25 @@ oasis-node stake info -a $ADDR
 This will output something like:
 
 ```text
-Total supply: 10000000000000000000
-Common pool: 7999217230119682890
-Last block fees: 0
-Staking threshold (entity): 100000000000
-Staking threshold (node-validator): 100000000000
-Staking threshold (node-compute): 100000000000
-Staking threshold (node-storage): 100000000000
-Staking threshold (node-keymanager): 100000000000
-Staking threshold (runtime-compute): 100000000000
-Staking threshold (runtime-keymanager): 100000000000
+Token's ticker symbol: ROSE
+Token's value base-10 exponent: 9
+Total supply: ROSE 10000000000.0
+Common pool: ROSE 7999217230.11968289
+Last block fees: ROSE 0.0
+Staking threshold (entity): ROSE 100.0
+Staking threshold (node-validator): ROSE 100.0
+Staking threshold (node-compute): ROSE 100.0
+Staking threshold (node-storage): ROSE 100.0
+Staking threshold (node-keymanager): ROSE 100.0
+Staking threshold (runtime-compute): ROSE 100.0
+Staking threshold (runtime-keymanager): ROSE 100.0
 ```
 
-The numbers are listed in base units, 1 token corresponds to 10^9 \(i.e. one billion\) base units.
+We can see that the token's name is ROSE and that 1 token corresponds to 10^9 \(i.e. one billion\) base units.
 
-We can observe that the total supply is 10 billion tokens and that almost 8 billion tokens are in the _common pool_.
+Next, we can observe that the **total supply** is 10 billion tokens and that almost 8 billion tokens are in the **common pool**.
 
-Finally, the staking thresholds for the entity, all node kinds \(validator, compute, storage\) and all runtime kinds \(compute, key manager\) are 100 tokens.
+Finally, the **staking thresholds** for the entity, all node kinds \(validator, compute, storage\) and all runtime kinds \(compute, key manager\) are 100 tokens.
 
 This means that if you want to register, e.g. an entity with a validator node, you need to escrow \(i.e. stake\) at least 200 tokens.
 
