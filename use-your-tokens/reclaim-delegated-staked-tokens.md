@@ -1,5 +1,9 @@
 # Reclaim Delegated/Staked Tokens
 
+{% hint style="info" %}
+This example assumes you have read and followed the instructions in the [Prerequisites](prerequisites.md) and [Setup](setup.md) sections.
+{% endhint %}
+
 When we want to reclaim escrowed tokens, we can't do that directly. Instead, we need to specify the number of shares we want to reclaim from an escrow account.
 
 For example, to reclaim 357 billion shares from an escrow account, we need to generate the following reclaim escrow transaction:

@@ -3,7 +3,7 @@
 
 
 {% hint style="info" %}
-This example assumes you have read and followed the [Prerequisites](../prerequisites.md) and [Setup](../setup.md) sections.
+This example assumes you have read and followed the instructions in the [Prerequisites](../prerequisites.md) and [Setup](../setup.md) sections.
 {% endhint %}
 
 To get more information about a particular staking account, e.g. `oasis1qrvsa8ukfw3p6kw2vcs0fk9t59mceqq7fyttwqgx`, run:

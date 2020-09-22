@@ -1,7 +1,7 @@
 # List Accounts
 
 {% hint style="info" %}
-This example assumes you have read and followed the [Prerequisites](../prerequisites.md) and [Setup](../setup.md) sections.
+This example assumes you have read and followed the instructions in the [Prerequisites](../prerequisites.md) and [Setup](../setup.md) sections.
 {% endhint %}
 
 To list all staking accounts with positive balance, run:

@@ -1,5 +1,9 @@
 # Delegate/Stake Tokens
 
+{% hint style="info" %}
+This example assumes you have read and followed the instructions in the [Prerequisites](prerequisites.md) and [Setup](setup.md) sections.
+{% endhint %}
+
 In this example we will put 208 tokens \(i.e. 208 \* 10^9 base units\) to our own escrow account.
 
 First, let's generate an escrow transaction and store it to `tx_escrow.json`:

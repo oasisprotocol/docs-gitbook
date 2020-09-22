@@ -1,7 +1,7 @@
 # Transfer Tokens
 
 {% hint style="info" %}
-This example assumes you have read and followed the [Prerequisites](prerequisites.md) and [Setup](setup.md) sections.
+This example assumes you have read and followed the instructions in the [Prerequisites](prerequisites.md) and [Setup](setup.md) sections.
 {% endhint %}
 
 Let's assume we have a staking account with address `oasis1qr6swa6gsp2ukfjcdmka8wrkrwz294t7ev39nrw6` and we want to transfer tokens to another staking account, e.g. `oasis1qr3jc2yfhszpyy0daha2l9xjlkrxnzas0uaje4t3`.
