@@ -22,7 +22,7 @@ oasis-node stake account info \
 ```
 
 {% hint style="info" %}
-For a detailed explanation on querying account information, see [Account Info]() section.
+For a detailed explanation on querying account information, see [Account Info](accounts/get-info.md) section.
 {% endhint %}
 
 At the beginning, this outputs:
@@ -109,7 +109,7 @@ oasis-node consensus submit_tx \
 
 ## Query Both Accounts' Info
 
-Let's [check both accounts' info]() \(first ours and then the destination's\):
+Let's [check both accounts' info](accounts/get-info.md) \(first ours and then the destination's\):
 
 ```javascript
 {

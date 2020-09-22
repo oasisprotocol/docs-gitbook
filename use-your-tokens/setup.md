@@ -66,7 +66,7 @@ Currently, we provide two options for signing transactions:
 
 ### Storing Base and Signer flags in an Environment Variable
 
-To make the transaction commands shorter and avoid typing errors, one can set an environment variable, e.g. `TX_FLAGS`, with all the [Base Flags]() and [Signer Flags]() configured for his particular set up.
+To make the transaction commands shorter and avoid typing errors, one can set an environment variable, e.g. `TX_FLAGS`, with all the [Base Flags](setup.md#base-flags) and [Signer Flags](setup.md#signer-flags) configured for his particular set up.
 
 For example, one could set `TX_FLAGS` for a Ledger device like below \(replacing Ledger device address and address index appropriately\):
 

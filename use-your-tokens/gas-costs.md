@@ -2,7 +2,7 @@
 
 ### Obtaining Transactions' Gas Costs
 
-As explained in the [Common Transaction Flags]() section, we can obtain gas costs for different staking transactions from the genesis file by running:
+As explained in the [Common Transaction Flags](setup.md#common-transaction-flags) section, we can obtain gas costs for different staking transactions from the genesis file by running:
 
 ```bash
 cat /localhostdir/genesis.json | \

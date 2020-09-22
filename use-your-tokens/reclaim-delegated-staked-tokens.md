@@ -23,7 +23,7 @@ oasis-node consensus submit_tx \
   --transaction.file tx_reclaim.json
 ```
 
-Let's [check our account's info]():
+Let's [check our account's info](accounts/get-info.md):
 
 ```javascript
 {

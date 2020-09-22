@@ -66,7 +66,7 @@ We can observe that:
 * The amount of tokens that are currently debonding \(`escrow.debonding.balance`\) is 0.
 * The total number of shares for the tokens that are currently debonding \(`escrow.debonding.total_shares`\) is 0.
 
-An entity can also charge commission for tokens that are delegated to it. The commission schedule rate steps would be defined in `escrow.commission_schedule.rates` and the commission rate bound steps would be defined in `escrow.commission_schedule.bounds`. For more details, see the [Amending a commission schedule]() example.
+An entity can also charge commission for tokens that are delegated to it. The commission schedule rate steps would be defined in `escrow.commission_schedule.rates` and the commission rate bound steps would be defined in `escrow.commission_schedule.bounds`. For more details, see the [Amending a commission schedule](../../run-a-node/set-up-your-node/amend-commission-schedule.md) example.
 
 Each escrow account also has a corresponding stake accumulator. It stores stake claims for an escrow account and ensures all claims are satisfied at any given point. Adding a new claim is only possible if all of the existing claims plus the new claim can be satisfied.
 
@@ -74,7 +74,7 @@ We can observe that the stake accumulator currently has two claims:
 
 * The `registry.RegisterEntity` claim is for registering an entity. It needs to satisfy the global threshold \(`global`\) for registering an entity \(`entity`\) which is defined by the staking consensus parameters.
 
-  To see the value of the `entity` global staking threshold, run the `oasis-node stake info` command as described in [Common token Info]() section.
+  To see the value of the `entity` global staking threshold, run the `oasis-node stake info` command as described in [Common token Info](../common-staking-info.md) section.
 
 * The `registry.RegisterNode.9Epy5pYPGa91IJlJ8Ivb5iby+2ii8APXdfQoMZDEIDc=` claim is for registering the node with ID `9Epy5pYPGa91IJlJ8Ivb5iby+2ii8APXdfQoMZDEIDc=`.  
 
@@ -82,7 +82,7 @@ We can observe that the stake accumulator currently has two claims:
   It needs to satisfy the global threshold \(`global`\) for registering a validator node \(`node-validator`\) which is defined by the staking consensus parameters.  
 
 
-  To see the value of the `node-validator` global staking threshold, run the `oasis-node stake info` command as described in [Common Token Info]() section.  
+  To see the value of the `node-validator` global staking threshold, run the `oasis-node stake info` command as described in [Common Token Info](../common-staking-info.md) section.  
 
 
   In addition to the global thresholds, each runtime the node is registering for may define their own thresholds. In case the node is registering for multiple runtimes, it needs to satisfy the sum of thresholds of all the runtimes it is registering for.  
