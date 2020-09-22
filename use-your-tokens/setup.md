@@ -47,8 +47,17 @@ Hence, we recommend avoiding its usage until this issue is resolved.
 
 All commands for generating and signing transactions need the following base flags set:
 
-* `--genesis.file`: Path to the genesis file on the `localhost`, e.g. `/localhostdir/genesis.json`.
-* `--signer.dir`: Path to entity's artifacts directory on the `localhost`, e.g.  `entity-$LEDGER_INDEX`
+* `--genesis.file`: Path to the genesis file, e.g. `/localhostdir/genesis.json`. 
+
+
+
+  For convenience, set the `GENESIS_FILE` environment value to its value, e.g.:
+
+  ```bash
+  GENESIS_FILE=/localhostdir/genesis.json
+  ```
+
+* `--signer.dir`: Path to entity's artifacts directory, e.g.  `entity-$LEDGER_INDEX`
 
   or `/localhostdir/entity/`
 
@@ -73,7 +82,7 @@ To make the transaction commands shorter and avoid typing errors, one can create
 For example, one could set `TX_FLAGS` for a Ledger device like below \(make sure all `LEDGER_*` environment variables are set appropriately\):
 
 ```bash
-TX_FLAGS=(--genesis.file /localhostdir/genesis.json
+TX_FLAGS=(--genesis.file $GENESIS_FILE
   --signer.dir entity-$LEDGER_INDEX
   --signer.backend plugin
   --signer.plugin.name ledger
@@ -85,7 +94,7 @@ TX_FLAGS=(--genesis.file /localhostdir/genesis.json
 Or, one could set `TX_FLAGS` like below to use a file signer:
 
 ```bash
-TX_FLAGS=(--genesis.file /localhostdir/genesis.json
+TX_FLAGS=(--genesis.file $GENESIS_FILE
   --signer.backend file
   --signer.dir /localhostdir/entity/
 )
@@ -113,7 +122,7 @@ When generating a transaction, one needs to set the following transaction flags 
   To obtain its value from the genesis file, run:
 
   ```bash
-  cat /localhostdir/genesis.json | \
+  cat $GENESIS_FILE | \
     python3 -c 'import sys, json; \
     print(json.dumps(json.load(sys.stdin)["staking"]["params"]["gas_costs"], indent=4))'
   ```
