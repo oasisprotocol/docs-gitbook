@@ -1,44 +1,69 @@
-# Delegate Your Tokens
+# Delegate/Stake Tokens
 
-### What is a Delegation
+In this example we will put 208 tokens \(i.e. 208 \* 10^9 base units\) to our own escrow account.
 
-You can _delegate_ your tokens by submitting an _escrow_ transaction that deposits a specific number of tokens into someone else’s escrow account \(as opposed to _staking_ tokens, which usually refers to depositing tokens into your own escrow account\).
+First, let's generate an escrow transaction and store it to `tx_escrow.json`:
 
-In other words, delegating your tokens is equivalent to staking your tokens in someone else's node. Delegating your tokens can give you the opportunity to participate in the Oasis Network's proof-of-stake consensus system and earn rewards via someone else's node.
+```bash
+oasis-node stake account gen_escrow \
+  $TX_FLAGS \
+  --stake.amount 208000000000 \
+  --stake.escrow.account oasis1qr6swa6gsp2ukfjcdmka8wrkrwz294t7ev39nrw6 \
+  --transaction.file tx_escrow.json \
+  --transaction.nonce 8 \
+  --transaction.fee.gas 1000 \
+  --transaction.fee.amount 2000
+```
 
-At this time you need to use the `oasis-node` CLI to perform the delegation. It can use either the file-based signer or a Ledger hardware wallet to sign the escrow transaction. Regardless of which signer you use, the commands that you need to run are similar, but the initial setup process is different.
+To submit the generated transaction, we need to copy `tx_escrow.json` to the online Oasis node \(i.e. the `server`\) and submit it from there:
 
-### Delegation via the `oasis-node` CLI
+```bash
+oasis-node consensus submit_tx \
+  -a $ADDR \
+  --transaction.file tx_escrow.json
+```
 
-The `oasis-node` binary offers a command line interface for various staking operations, including the escrow operation needed to delegate tokens.
+Let's [check our account's info]():
 
-#### File-based Signer
+```javascript
+{
+    "general": {
+        "balance": "223492488765",
+        "nonce": 9
+    },
+    "escrow": {
+        "active": {
+            "balance": "11450384816640",
+            "total_shares": "10185014125910"
+        },
+        "debonding": {
+            "balance": "0",
+            "total_shares": "0"
+        },
+        ...
+    }
+}
+```
 
-If you do not have access to or prefer not to use a Ledger device, you can sign your transactions with your entity's private key stored in a file.
+We can observe that:
 
-{% hint style="danger" %}
-When using the file-based signer the use of an [offline/air-gapped machine](https://en.wikipedia.org/wiki/Air_gap_%28networking%29) for this purpose is highly recommended. Gaining access to the entity private key can compromise your tokens.
-{% endhint %}
+* Our general balance decreased for 208 tokens and 2000 base units. The latter
 
-You will need to create your Entity as described in [Running a Node on the Amber Network](../run-a-node/set-up-your-node/running-a-node.md#creating-your-entity) docs and set the following flags:
+  corresponds to the fee that we specified we will pay for this transaction.
 
-* `--signer.backend file`: Specifies use of the file signer.
+* Our account's nonce increased to `9`.
+* Our escrow account's active balance increased for 208 tokens.
+* The total number of shares in our escrow account's active balance
 
-{% hint style="info" %}
-Currently, `file` is the default signer so you could also omit this flag.
-{% endhint %}
+  increased from 10000000000000 to 10185014125910.
 
-* `--signer.dir`: Path to entity's artifacts directory, e.g. `/localhostdir/entity/`.
+When a delegator delegates some amount of tokens to a staking account, the delegator receives the number of shares proportional to the current _share price_ \(in base units\) calculated from the total number of base units delegated to a staking account so far and the number of shares issued so far:
 
-An example of an escrow transaction can be found in our [node operator stake management doc](../run-a-node/set-up-your-node/stake-management.md#escrowing-tokens). To delegate your tokens to someone else's node, simply submit an escrow transaction to the escrow account address corresponding to the _entity_ that owns that node.
+```text
+shares_per_base_unit = account_issued_shares / account_delegated_base_units
+```
 
-#### Ledger Hardware Wallet Signer
+In our case, the current share price \(i.e. `shares_per_base_unit`\) is 10000000000000 / 11242384816640 which is 0.8894909899542729.
 
-For any Oasis Network user with access to a [Ledger hardware wallet device](https://www.ledger.com/), the Ledger device can be used to sign transactions.
-
-You will need to set it up as described in our [Ledger docs](https://docs.oasis.dev/oasis-core-ledger/usage/setup) and then [generate](https://docs.oasis.dev/oasis-core-ledger/usage/transactions) and submit an [escrow transaction](../run-a-node/set-up-your-node/stake-management.md#escrowing-tokens).
-
-### Rewards and Slashing
-
-By delegating your tokens to someone else's node, you can earn a portion of the rewards earned by that node through its participation in the Oasis Network. Your delegated tokens can also be slashed if that node gets slashed for double signing. You can learn more about how rewards and slashing impact delegators in our [incentives document]().
+For 208 tokens, the amount of newly issued shares is thus 208 \* 10^9 \* 0.8894909899542729 which is 185014125910.48877 \(rounded to 185014125910\).
 

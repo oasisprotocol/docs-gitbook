@@ -2,26 +2,26 @@
 
 * [Getting Started](README.md)
 
-## Welcome to Oasis
+## Oasis Network
 
-* [What is the Oasis Network?](welcome-to-oasis/overview.md)
-* [Network Architecture Overview](welcome-to-oasis/network-architecture-overview.md)
+* [What is the Oasis Network?](oasis-network/overview.md)
+* [Network Architecture Overview](oasis-network/network-architecture-overview.md)
+* [Network Parameters](oasis-network/network-parameters.md)
 * [Oasis Network Primer](https://docs.oasis.dev/oasis-network-primer/)
 * [Token Metrics and Distribution](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution)
 * [Papers](https://oasisprotocol.org/papers)
 
 ## Run a Node
 
-* [Set Up Your Machine](run-a-node/set-up-your-machine/README.md)
-  * [Node Operator Overview](run-a-node/set-up-your-machine/node-operator-overview.md)
-  * [Network Parameters](run-a-node/set-up-your-machine/current-parameters.md)
-  * [Node Hardware Recommendations](run-a-node/set-up-your-machine/hardware-recommendations.md)
-  * [Prerequisites](run-a-node/set-up-your-machine/prerequisites-guide.md)
+* [Overview](run-a-node/node-operator-overview.md)
+* [Prerequisites](run-a-node/prerequisites/README.md)
+  * [Hardware](run-a-node/prerequisites/hardware-recommendations.md)
+  * [Oasis Node](run-a-node/prerequisites/prerequisites-guide.md)
 * [Set Up Your Node](run-a-node/set-up-your-node/README.md)
   * [Run a Node on the Network](run-a-node/set-up-your-node/running-a-node.md)
   * [Create an Entity Package](run-a-node/set-up-your-node/creating-an-entity-package.md)
+  * [Amend Commission Schedule](run-a-node/set-up-your-node/amend-commission-schedule.md)
   * [Sentry Node Architecture](run-a-node/set-up-your-node/sentry-node-architecture.md)
-  * [Manage Your Stake](run-a-node/set-up-your-node/stake-management.md)
 * [Node Maintenance](run-a-node/maintenance-guides/README.md)
   * [Wiping Node State](run-a-node/maintenance-guides/wiping-node-state.md)
   * [Handling Network Upgrades](run-a-node/maintenance-guides/handling-network-upgrades.md)
@@ -35,7 +35,18 @@
 
 ## Use Your Tokens
 
-* [Delegate Your Tokens](use-your-tokens/delegate-your-tokens.md)
+* [Terminology](use-your-tokens/terminology.md)
+* [Prerequisites](use-your-tokens/prerequisites.md)
+* [Setup](use-your-tokens/setup.md)
+* [Common Staking Info](use-your-tokens/common-staking-info.md)
+* [Account](use-your-tokens/accounts/README.md)
+  * [Address](use-your-tokens/accounts/address.md)
+  * [List Accounts](use-your-tokens/accounts/listing.md)
+  * [Get Info](use-your-tokens/accounts/get-info.md)
+* [Transfer Tokens](use-your-tokens/transfer-tokens.md)
+* [Delegate/Stake Tokens](use-your-tokens/delegate-your-tokens.md)
+* [Reclaim Delegated/Staked Tokens](use-your-tokens/reclaim-delegated-staked-tokens.md)
+* [Gas Costs](use-your-tokens/gas-costs.md)
 
 ## Contribute to the Network
 

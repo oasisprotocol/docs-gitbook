@@ -23,7 +23,7 @@ Mainnet Dry Run will be used solely for testing purposes, so no real tokens or s
 To differentiate the Mainnet Dry Run from other test networks and Mainnet itself, the Dry Run network’s Chain ID will be `mainnet-dryrun-<GENESIS-DATE-AND-TIME>`.
 
 {% hint style="info" %}
-For the network parameters needed for the Mainnet Dry Run, please see the updated [Network Parameters](../run-a-node/set-up-your-machine/current-parameters.md) document.
+For the network parameters needed for the Mainnet Dry Run, please see the updated [Network Parameters](../oasis-network/network-parameters.md) document.
 {% endhint %}
 
 ## Why do a Mainnet Dry Run?
@@ -77,10 +77,10 @@ Please check the following are working correctly:
 
 * Set up your node on the network by following the instructions in [the Set Up Your Node documentation](../run-a-node/set-up-your-node/running-a-node.md).
 * Use the 100 unstaked, unbonded tokens in your general balance if you have an allocation.
-  * Stake a couple of tokens to your own node with the **escrow** transaction as described [here](../run-a-node/set-up-your-node/stake-management.md#escrowing-tokens).
-  * Delegate a couple of tokens to another node with the **escrow** transaction as described [here](../run-a-node/set-up-your-node/stake-management.md#escrowing-tokens).
-  * Send a couple of tokens to another user with the **transfer** transaction as described [here](../run-a-node/set-up-your-node/stake-management.md#transferring-tokens).
-* Make adjustments to your commission schedule by following the instructions [here](../run-a-node/set-up-your-node/stake-management.md#amending-a-commission-schedule).
+  * Stake a couple of tokens to your own node with the **escrow** transaction as described [here]().
+  * Delegate a couple of tokens to another node with the **escrow** transaction as described [here]().
+  * Send a couple of tokens to another user with the **transfer** transaction as described [here]().
+* Make adjustments to your commission schedule by following the instructions [here]().
 
 ## Dry Run Support
 

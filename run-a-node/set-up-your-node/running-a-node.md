@@ -8,7 +8,7 @@ This guide will cover setting up your node for the Oasis Network. This guide ass
 
 ## Prerequisites
 
-Before following this guide, make sure you've followed the [Prerequisites Guide](../set-up-your-machine/prerequisites-guide.md) and understand how to use the `oasis-node` binary.
+Before following this guide, make sure you've followed the [Prerequisites Guide](../prerequisites/prerequisites-guide.md) and understand how to use the `oasis-node` binary.
 
 ### Systems
 
@@ -49,7 +49,7 @@ mkdir -m700 -p {entity,node}
 
 ### Copying the Genesis File
 
-The latest genesis file can be found in [Network Parameters](../set-up-your-machine/current-parameters.md). You should download the latest `genesis.json` file, copy it to the working directory and set the following environment variable pointing to its path:
+The latest genesis file can be found in [Network Parameters](../../oasis-network/network-parameters.md). You should download the latest `genesis.json` file, copy it to the working directory and set the following environment variable pointing to its path:
 
 ```bash
 GENESIS_FILE_PATH=/localhostdir/genesis.json
@@ -59,7 +59,7 @@ This will be needed later when generating transactions.
 
 ### Initializing an Entity
 
-As described in the [Architecture Overview](../../welcome-to-oasis/network-architecture-overview.md#entities-and-key-management), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. We highly recommend using an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
+As described in the [Architecture Overview](../../oasis-network/network-architecture-overview.md#entities-and-key-management), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. We highly recommend using an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
 
 #### Using a Plugin Signer
 
@@ -252,7 +252,7 @@ We will also need to have the public entity artifacts from the `/localhostdir` p
 
 #### Copying the Genesis File to the server
 
-The latest Genesis file can be found in the [Network Parameters](../set-up-your-machine/current-parameters.md). You should download the latest `genesis.json` file and copy it to `/serverdir/etc/genesis.json` on the `server`.
+The latest Genesis file can be found in the [Network Parameters](../../oasis-network/network-parameters.md). You should download the latest `genesis.json` file and copy it to `/serverdir/etc/genesis.json` on the `server`.
 
 #### Configuring the Oasis Node
 
@@ -268,7 +268,7 @@ If you are using a [Sentry Node](sentry-node-architecture.md), you should use th
 
 * `{{ seed_node_address }}`: The seed node address in the form `ID@IP:port`.
 
-  You can find the current Oasis Seed Node address in the [Current Testnet Parameters](../set-up-your-machine/current-parameters.md).
+  You can find the current Oasis Seed Node address in the [Current Testnet Parameters](../../oasis-network/network-parameters.md).
 
 To use this configuration, save it in the `/serverdir/etc/config.yml` file and pass it to the `oasis-node` command as an argument to the `--config` flag.
 
@@ -418,7 +418,7 @@ This step is not necessary if your entity was fully staked at genesis.
 {% endhint %}
 
 {% hint style="warning" %}
-If you've submitted staking or registry transactions before, your nonce is likely different than the nonce used in the examples. If you're uncertain, please check your account nonce by using [this guide](stake-management.md#querying-account-info).
+If you've submitted staking or registry transactions before, your nonce is likely different than the nonce used in the examples. If you're uncertain, please check your account nonce by using [this guide]().
 {% endhint %}
 
 Once you have been funded, you can complete the process of connecting your node to the network by registering both your entity and your node, as described below.
@@ -468,7 +468,7 @@ Before generating the escrow transaction, you need to set the following environm
 
 * `ACCOUNT_ADDRESS`: Your staking account address.
 
-  To obtain your staking account address from your Entity's ID, see [Obtaining Account Address From Entity's ID](stake-management.md#obtaining-account-address-from-entitys-id).
+  To obtain your staking account address from your Entity's ID, see [Obtaining Account Address From Entity's ID]().
 
 Then execute the following command:
 
@@ -488,12 +488,12 @@ oasis-node stake account gen_escrow \
 {% hint style="info" %}
 The option `--stake.amount` looks like a very large number, but this is actually just an equivalent to 200 tokens on the Amber Network as each unit value used to track the account balance is 1x10^-9 tokens.
 
-The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on the network configuration, see [Stake Management](stake-management.md#obtaining-transactions-gas-costs) for details.
+The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on the network configuration, see [Stake Management]() for details.
 {% endhint %}
 
 ### Generating Entity Registration Transaction
 
-Before you can run your node successfully, you'll need to register your [entity](../../welcome-to-oasis/network-architecture-overview.md#entities-and-key-management) so that your node registers properly. You could do this process _after_ you submit the escrow transaction, however, to save steps we prepare everything before hand.
+Before you can run your node successfully, you'll need to register your [entity](../../oasis-network/network-architecture-overview.md#entities-and-key-management) so that your node registers properly. You could do this process _after_ you submit the escrow transaction, however, to save steps we prepare everything before hand.
 
 Before generating the register transaction, you need to set the following environment variables:
 
@@ -523,7 +523,7 @@ oasis-node registry entity gen_register \
 ```
 
 {% hint style="info" %}
-The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on the network configuration, see [Stake Management](stake-management.md#obtaining-transactions-gas-costs) for details.
+The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on the network configuration, see [Stake Management]() for details.
 {% endhint %}
 
 ### Submitting Your Transactions on the `server`

@@ -1,7 +1,7 @@
 # Network Governance
 
 {% hint style="info" %}
-The proposed governance model is still being finalized. Please check back for updates. If you have a general question on how to use and deploy our software, please read our [Operator Docs](../run-a-node/set-up-your-machine/node-operator-overview.md) or join our [community Slack](https://join.slack.com/t/oasiscommunity/shared_invite/enQtNjQ5MTA3NTgyOTkzLWIxNTg1ZWZmOTIwNmQ2MTg1YmU0MzgyMzk3OWM2ZWQ4NTQ0ZDJkNTBmMTdlM2JhODllYjg5YmJkODc2NzgwNTg). All community members are welcome and encouraged to commit code, documentation and enhancement proposals to the platform. Contribution guidelines can be found [here](contribution-guidelines.md).
+The proposed governance model is still being finalized. Please check back for updates. If you have a general question on how to use and deploy our software, please read our [Operator Docs](../run-a-node/node-operator-overview.md) or join our [community Slack](https://join.slack.com/t/oasiscommunity/shared_invite/enQtNjQ5MTA3NTgyOTkzLWIxNTg1ZWZmOTIwNmQ2MTg1YmU0MzgyMzk3OWM2ZWQ4NTQ0ZDJkNTBmMTdlM2JhODllYjg5YmJkODc2NzgwNTg). All community members are welcome and encouraged to commit code, documentation and enhancement proposals to the platform. Contribution guidelines can be found [here](contribution-guidelines.md).
 {% endhint %}
 
 ### Proposed Governance Model Overview
