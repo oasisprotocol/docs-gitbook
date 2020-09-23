@@ -28,7 +28,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [20.10](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.10)
+  * [20.11](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.11)
 
 {% hint style="info" %}
 The `oasis-node` binary is part of the Oasis Core release.
