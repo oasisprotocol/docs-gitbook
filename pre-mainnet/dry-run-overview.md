@@ -11,7 +11,7 @@ description: >-
 {% endhint %}
 
 {% hint style="info" %}
-**WE ASK THAT ALL NODES IN THE GENESIS FILE PARTICIPATE IN THE DRY RUN**
+**WE ASK THAT ALL NODES IN THE GENESIS FILE PARTICIPATE IN THE DRY RUN.**
 {% endhint %}
 
 ## What is the Mainnet Dry Run?
