@@ -44,7 +44,7 @@ Escrow Account:
 We can observe that:
 
 * General account's balance is ~223 tokens.
-* General account's nonce is 9.
+* Account's nonce is 9.
 * ~11450 tokens are actively bounded to the escrow account.
 * The amount of tokens that are currently debonding is 0.
 
