@@ -141,9 +141,9 @@ When a delegator delegates some amount of tokens to a staking account, the deleg
 shares_per_token = account_issued_shares / account_delegated_tokens
 ```
 
-In our case, the current share price \(i.e. `shares_per_token`\) is 10,000,000,000,000 / 11242.384816640 which is 889490989.9542729 shares per token.
+In our case, the current share price \(i.e. `shares_per_token`\) is 10,000,000,000,000 / 11242.384816640 which is 889,490,989.9542729 shares per token.
 
-For 208 tokens, the amount of newly issued shares is thus 208 \* 889490989.9542729 which is 185,014,125,910.48877 shares \(rounded to 185,014,125,910 shares\).
+For 208 tokens, the amount of newly issued shares is thus 208 \* 889,490,989.9542729 which is 185,014,125,910.48877 shares \(rounded to 185,014,125,910 shares\).
 
 Hence, the escrow account's total number of shares increased for 185,014,125,910 shares.
 
