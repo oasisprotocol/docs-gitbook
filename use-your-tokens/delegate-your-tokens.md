@@ -131,15 +131,19 @@ We can observe that:
 * Our escrow account's active balance increased for 208 tokens.
 * The total number of shares in our escrow account's active part
 
-  increased from 10000000000000 to 10185014125910.
+  increased from 10,000,000,000,000 to 10,185,014,125,910.
 
-When a delegator delegates some amount of tokens to a staking account, the delegator receives the number of shares proportional to the current _share price_ \(in base units\) calculated from the total number of base units delegated to a staking account so far and the number of shares issued so far:
+### Computation of Shares
+
+When a delegator delegates some amount of tokens to a staking account, the delegator receives the number of shares proportional to the current **share price** \(in tokens\) calculated from the total number of tokens delegated to a staking account so far and the number of shares issued so far:
 
 ```text
-shares_per_base_unit = account_issued_shares / account_delegated_base_units
+shares_per_token = account_issued_shares / account_delegated_tokens
 ```
 
-In our case, the current share price \(i.e. `shares_per_base_unit`\) is 10000000000000 / 11242384816640 which is 0.8894909899542729.
+In our case, the current share price \(i.e. `shares_per_token`\) is 10,000,000,000,000 / 11242.384816640 which is 889490989.9542729 shares per token.
 
-For 208 tokens, the amount of newly issued shares is thus 208 \* 10^9 \* 0.8894909899542729 which is 185014125910.48877 \(rounded to 185014125910\).
+For 208 tokens, the amount of newly issued shares is thus 208 \* 889490989.9542729 which is 185,014,125,910.48877 shares \(rounded to 185,014,125,910 shares\).
+
+Hence, the escrow account's total number of shares increased for 185,014,125,910 shares.
 

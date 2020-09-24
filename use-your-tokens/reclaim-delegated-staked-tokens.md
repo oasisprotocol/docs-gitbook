@@ -139,7 +139,7 @@ tokens_per_share = account_delegated_tokens / account_issued_shares
 
 In our case, the current token price \(i.e. `tokens_per_share`\) is 11450.384816640 / 10,185,014,125,910 which is 1.124238481664054 \* 10^-9 token per share.
 
-For 357 billion shares, the amount of tokens that will be reclaimed is thus 357 \* 10^9 \* 1.124238481664054 \* 10^-9 which is 401.35313795406726 \(rounded to 401.353137954 tokens\).
+For 357 billion shares, the amount of tokens that will be reclaimed is thus 357 \* 10^9 \* 1.124238481664054 \* 10^-9 which is 401.35313795406726 tokens \(rounded to 401.353137954 tokens\).
 
 Hence, the escrow account's active balance decreased for 401.353137954 tokens and the debonding balance increased for the same amount.
 
