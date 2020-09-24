@@ -8,23 +8,39 @@ description: >-
 
 The full genesis file is posted in the [Oasis Protocol Foundation's GitHub](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-09-22):
 
-* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json)
+* [Genesis File](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json)
   * SHA1: `84b9b9df7fbb344192c8add9058b9494646da007`
   * SHA256: `72d8af62c93eecc43a6fcbddbae599405ee952af47d2ba7455b2f6307b45c6e9`
 
 We are sharing this information with the Oasis Network community to collect feedback and answer any questions that arise. Please fill out [this form](https://oasisfoundation.typeform.com/to/yG4pp57W) to share feedback and submit your questions regarding the Oasis Network’s genesis file. 
 
 {% hint style="warning" %}
-Please note that the parameters and corresponding values in the genesis file are subject to change prior to the Oasis Network Mainnet launch. The information in this document applies to the upcoming Oasis Network Mainnet Dry Run. After a successful Mainnet Dry Run, we expect most of the parameters and corresponding values we have outlined in this document to carry over directly without any changes when we launch the Oasis Network Mainnet Beta \(transfers disabled\) and then Mainnet \(transfers enabled\). We welcome any and all feedback from the community as we craft a genesis file that provides a strong foundation for the long-term success of our network.
+Please note that the parameters and corresponding values in the genesis file are subject to change prior to the Oasis Network Mainnet launch.
+
+The information in this document applies to the upcoming Oasis Network Mainnet Dry Run. 
+
+After a successful Mainnet Dry Run, we expect most of the parameters and corresponding values we have outlined in this document to carry over directly without any changes when we launch the Oasis Network Mainnet Beta \(transfers disabled\) and then Mainnet \(transfers enabled\).
+
+We welcome any and all feedback from the community as we craft a genesis file that provides a strong foundation for the long-term success of our network.
 {% endhint %}
 
 ## What is a Genesis File?
 
-A genesis file is a JSON document which contains a set of parameters that outline the initial state of a blockchain.
+A genesis file is a JSON document file which contains a set of parameters that outline the initial state of a network.
 
 The state defined in the Oasis Network’s genesis file contains all of the necessary information for launching the Oasis Network Mainnet, including initial token allocations, network parameters, and more.
 
-We will discuss some of the key parameters in the genesis file this document. You can view all of the parameters in the full genesis file in its raw form [here](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json).
+We will discuss some of the key parameters in the genesis file this document. You can view all of the parameters in their raw form in the full genesis file linked at the top of this document.
+
+### Genesis File vs. Genesis Document
+
+When Oasis Node loads a genesis file \(i.e. a JSON document\) it converts it to a genesis document.
+
+The important thing to note is that the genesis document is used to compute the [genesis document's hash](https://docs.oasis.dev/oasis-core/high-level-components/index/genesis#genesis-documents-hash). This hash is used to verify for which network a given transaction is intended for.
+
+{% hint style="info" %}
+For a more in-depth explanation of the genesis document, see the [Genesis Document](https://docs.oasis.dev/oasis-core/high-level-components/index/genesis) part of Oasis Core's developer documentation.
+{% endhint %}
 
 ## Genesis Time and Chain ID
 

@@ -16,10 +16,10 @@ These parameters may change by Mainnet launch.
 For an overview of Mainnet Dry Run which is the next phase towards Mainnet, see the [Mainnet Dry Run Overview](../pre-mainnet/dry-run-overview.md). 
 {% endhint %}
 
-* [Genesis Document](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json)
+* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json):
   * SHA1: `84b9b9df7fbb344192c8add9058b9494646da007`
   * SHA256: `72d8af62c93eecc43a6fcbddbae599405ee952af47d2ba7455b2f6307b45c6e9`
-* Oasis Seed Node Address:
+* Oasis seed node address:
   * `E27F6B7A350B4CC2B48A6CBE94B0A02B0DCB0BF3@35.199.49.168:26656`
 
 {% hint style="success" %}
