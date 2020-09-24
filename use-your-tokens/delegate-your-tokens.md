@@ -121,6 +121,7 @@ Escrow Account:
   Debonding:
     Balance:      ROSE 0.0
     Total Shares: 0
+...
 ```
 
 We can observe that:
@@ -128,7 +129,7 @@ We can observe that:
 * Our general account's balance decreased for 208.000002 tokens. The 0.000002 token corresponds to the fee that we specified we will pay for this transaction.
 * Our account's nonce increased to 9.
 * Our escrow account's active balance increased for 208 tokens.
-* The total number of shares in our escrow account's active balance
+* The total number of shares in our escrow account's active part
 
   increased from 10000000000000 to 10185014125910.
 
