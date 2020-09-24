@@ -38,7 +38,7 @@ Escrow Account:
   Debonding:
     Balance:      ROSE 0.0
     Total Shares: 0
-...
+  ...
 ```
 
 We can observe that:
@@ -94,7 +94,7 @@ oasis-node consensus submit_tx \
 
 ## Query Our Account's Info Again
 
-Let's check [our account's info](delegate-your-tokens.md#query-our-accounts-info) again:
+Let's check [our account's info](reclaim-delegated-staked-tokens.md#query-our-accounts-info) again:
 
 ```javascript
 General Account:
@@ -107,7 +107,7 @@ Escrow Account:
   Debonding:
     Balance:      ROSE 401.353137954
     Total Shares: 401353137954
-...
+  ...
 ```
 
 We can observe that:

@@ -52,13 +52,13 @@ Escrow Account:
   Debonding:
     Balance:      ROSE 0.0
     Total Shares: 0
-...
+  ...
 ```
 
 We can observe that:
 
 * General account's balance is ~431 tokens.
-* General account's nonce is 8.
+* Account's nonce is 8.
 * ~11242 tokens are actively bounded to the escrow account.
 * The amount of tokens that are currently debonding is 0.
 
@@ -121,7 +121,7 @@ Escrow Account:
   Debonding:
     Balance:      ROSE 0.0
     Total Shares: 0
-...
+  ...
 ```
 
 We can observe that:
