@@ -8,7 +8,7 @@ description: >-
 
 The full genesis file is posted in the [Oasis Protocol Foundation's GitHub](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-09-22):
 
-* [Genesis File](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json)
+* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json):
   * SHA1: `84b9b9df7fbb344192c8add9058b9494646da007`
   * SHA256: `72d8af62c93eecc43a6fcbddbae599405ee952af47d2ba7455b2f6307b45c6e9`
 
