@@ -8,8 +8,8 @@ We can configure our account to take a commission on staking rewards given to ou
 
 Let's assume:
 
-* we want to change our commission rate bounds to allow us to set any rate \(0% - 100%\), and
-* change our commission rate to 50%,
+* we want to change our commission rate bounds to allow us to set any rate between 0% - 25%, and
+* change our commission rate to 10%,
 * `oasis1qr6swa6gsp2ukfjcdmka8wrkrwz294t7ev39nrw6`is our staking account address.
 
 We're not allowed to change the commission bounds too close in near future, so we'd have to make changes a number of epochs in the future.
@@ -32,13 +32,13 @@ For our example network this returns:
 ```javascript
 {
     "rate_change_interval": 1,
-    "rate_bound_lead": 14,
-    "max_rate_steps": 21,
-    "max_bound_steps": 21
+    "rate_bound_lead": 336,
+    "max_rate_steps": 10,
+    "max_bound_steps": 10
 }
 ```
 
-This means that we must submit a commission rate bound at least 14 epochs in advance \(`rate_bound_lead`\) and that we can change it on every epoch \(`rate_change_interval`\).
+This means that we must submit a commission rate bound at least 336 epochs in advance \(`rate_bound_lead`\) and that we can change it on every epoch \(`rate_change_interval`\).
 
 The `max_rate_steps` and `max_bound_steps` determine the maximum number of commission rate steps and rate bound steps, respectively.
 
@@ -77,15 +77,15 @@ We can observe that:
 
 ## Generate an Amend Commission Schedule Transaction
 
-In this example, we'll set the bounds to start on epoch 1500. An account's default bounds are 0% maximum, so we have to wait until our new bounds go into effect to raise our rate to 50%. Because of that, we'll specify that our rate also starts on epoch 1500.
+In this example, we'll set the bounds to start on epoch 1500. An account's default bounds are 0% maximum, so we have to wait until our new bounds go into effect to raise our rate to 10%. Because of that, we'll specify that our rate also starts on epoch 1500.
 
 Let's generate an amend commission schedule transaction for this example and store it to `tx_amend_commission_schedule.json`:
 
 ```bash
 oasis-node stake account gen_amend_commission_schedule \
   "${TX_FLAGS[@]}" \
-  --stake.commission_schedule.bounds 1500/0/100000 \
-  --stake.commission_schedule.rates 1500/50000 \
+  --stake.commission_schedule.bounds 1500/0/25000 \
+  --stake.commission_schedule.rates 1500/10000 \
   --transaction.file tx_amend_commission_schedule.json \
   --transaction.nonce 10 \
   --transaction.fee.gas 1000 \
@@ -110,11 +110,11 @@ You are about to sign the following transaction:
     Amendment:
       Rates:
         (1) start: epoch 1500
-            rate:  50.0%
+            rate:  10.0%
       Rate Bounds:
         (1) start:        epoch 1500
             minimum rate: 0.0%
-            maximum rate: 100.0%
+            maximum rate: 25.0%
 Other info:
   Genesis document's hash: 976c302f696e417bd861b599e79261244f4391f3887a488212ee122ca7bbf0a8
 ```
@@ -144,19 +144,19 @@ Escrow Account:
   Commission Schedule:
     Rates:
       (1) start: epoch 1500
-          rate:  50.0%
+          rate:  10.0%
     Rate Bounds:
       (1) start:        epoch 1500
           minimum rate: 0.0%
-          maximum rate: 100.0%
+          maximum rate: 25.0%
   ...
 ```
 
 We can observe that:
 
 * Our account's nonce increased to 11.
-* We set the commission rate of 50.0% to start on epoch 1500.
-* We set the commission rate bounds of 0% - 100% to also start on epoch 1500.
+* We set the commission rate of 10.0% to start on epoch 1500.
+* We set the commission rate bounds of 0% - 25% to also start on epoch 1500.
 
 {% hint style="info" %}
 For more information on how commissions work in general, see the [Commission](../../use-your-tokens/terminology.md#commission) explanation in the _Use Your Tokens_ docs.
@@ -171,13 +171,13 @@ For example, setting multiple commission rate steps and rate bound steps \(for t
 ```
 oasis-node stake account gen_amend_commission_schedule \
   "${TX_FLAGS[@]}" \
-  --stake.commission_schedule.bounds 2000/10000/50000 \
-  --stake.commission_schedule.bounds 3000/10000/30000 \
-  --stake.commission_schedule.rates 2000/50000 \
-  --stake.commission_schedule.rates 2200/40000 \
-  --stake.commission_schedule.rates 2500/30000 \
-  --stake.commission_schedule.rates 2800/25000 \
-  --stake.commission_schedule.rates 3000/20000 \
+  --stake.commission_schedule.bounds 2000/10000/30000 \
+  --stake.commission_schedule.bounds 3000/20000/40000 \
+  --stake.commission_schedule.rates 2000/15000 \
+  --stake.commission_schedule.rates 2200/20000 \
+  --stake.commission_schedule.rates 2500/25000 \
+  --stake.commission_schedule.rates 2800/30000 \
+  --stake.commission_schedule.rates 3000/35000 \
   --transaction.file tx_amend_commission_schedule.json \
   --transaction.nonce 11 \
   --transaction.fee.gas 1000 \
@@ -193,27 +193,27 @@ Escrow Account:
   Commission Schedule:
     Rates:
       (1) start: epoch 1500
-          rate:  50.0%
+          rate:  10.0%
       (2) start: epoch 2000
-          rate:  50.0%
+          rate:  15.0%
       (3) start: epoch 2200
-          rate:  40.0%
-      (4) start: epoch 2500
-          rate:  30.0%
-      (5) start: epoch 2800
-          rate:  25.0%
-      (6) start: epoch 3000
           rate:  20.0%
+      (4) start: epoch 2500
+          rate:  25.0%
+      (5) start: epoch 2800
+          rate:  30.0%
+      (6) start: epoch 3000
+          rate:  35.0%
     Rate Bounds:
       (1) start:        epoch 1500
           minimum rate: 0.0%
-          maximum rate: 100.0%
+          maximum rate: 25.0%
       (2) start:        epoch 2000
           minimum rate: 10.0%
-          maximum rate: 50.0%
-      (3) start:        epoch 3000
-          minimum rate: 10.0%
           maximum rate: 30.0%
+      (3) start:        epoch 3000
+          minimum rate: 20.0%
+          maximum rate: 40.0%
   ...
 ```
 
