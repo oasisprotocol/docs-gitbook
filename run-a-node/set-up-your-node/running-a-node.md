@@ -1,10 +1,14 @@
 ---
-description: This page describes how to run a node on the Oasis Network.
+description: This page describes how to run a validator node on the Oasis Network.
 ---
 
-# Run a Node on the Network
+# Run a Validator Node
 
-This guide will cover setting up your node for the Oasis Network. This guide assumes some basic knowledge on the use of command line tools.
+{% hint style="info" %}
+These instructions are for setting up a _validator_ node. If you want to run a _non-validator_ node instead, see the [instructions on running a non-validator node](run-a-non-validator-node.md).
+{% endhint %}
+
+This guide will cover setting up your validator node for the Oasis Network. This guide assumes some basic knowledge on the use of command line tools.
 
 ## Prerequisites
 
@@ -268,7 +272,7 @@ If you are using a [Sentry Node](sentry-node-architecture.md), you should use th
 
 * `{{ seed_node_address }}`: The seed node address in the form `ID@IP:port`.
 
-  You can find the current Oasis Seed Node address in the [Current Testnet Parameters](../../oasis-network/network-parameters.md).
+  You can find the current Oasis Seed Node address in the [Network Parameters](../../oasis-network/network-parameters.md).
 
 To use this configuration, save it in the `/serverdir/etc/config.yml` file and pass it to the `oasis-node` command as an argument to the `--config` flag.
 
@@ -346,9 +350,6 @@ consensus:
       # NOTE: If you are using the Sentry node setup, this option should be
       # omitted.
       external_address: tcp://{{ external_address }}:26656
-
-    db:
-      backend: badger
 
     # List of seed nodes to connect to.
     # NOTE: You can add additional seed nodes to this list if you want.
