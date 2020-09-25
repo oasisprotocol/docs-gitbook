@@ -56,6 +56,7 @@
 
 ## Pre-Mainnet Initiatives <a id="pre-mainnet"></a>
 
+* [Mainnet Beta Overview](pre-mainnet/mainnet-beta-overview.md)
 * [Mainnet Dry Run Overview](pre-mainnet/dry-run-overview.md)
 * [Genesis File Overview](pre-mainnet/genesis-file.md)
 * [The Testnet](pre-mainnet/testnet.md)
