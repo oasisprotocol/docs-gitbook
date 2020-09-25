@@ -46,8 +46,8 @@ datadir: /node/data
 
 log:
   level:
-    default: debug
-    tendermint: debug
+    default: info
+    tendermint: info
     tendermint/context: error
   format: JSON
 
