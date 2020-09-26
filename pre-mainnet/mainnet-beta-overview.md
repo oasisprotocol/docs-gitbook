@@ -58,12 +58,12 @@ The parts of the genesis file that will change between Mainnet Beta and Mainnet 
 * **disable\_transfers** staking parameter will be set to _false_ \(or omitted\) to enable transfers in the Mainnet genesis file.
 {% endhint %}
 
-You can view and download the Mainnet Beta genesis file here: _TBD_.
+You can view and download the Mainnet Beta [genesis file here](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-10-01/genesis.json).
 
 You can verify the file with the following hashes:
 
-* SHA1: _`TBD`_
-* SHA256: _`TBD`_
+* SHA1: `3a17891f73ae2079e5a2cf7e53c25f7b26f63d3e`
+* SHA256: `a188bcae5b6ba7b1d2bf7fd4b3972381db611989ab11a45059f6faee28ad2a8d`
 
 For additional information about the genesis file and key parameters, please refer to [the Genesis File Overview document](https://docs.oasis.dev/general/pre-mainnet/genesis-file). 
 
