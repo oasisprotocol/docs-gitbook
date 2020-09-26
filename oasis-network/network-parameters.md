@@ -6,17 +6,17 @@ description: >-
 
 # Network Parameters
 
-These are the current parameters for the Mainnet Dry Run Network:
+These are the current parameters for the [Mainnet Beta](../pre-mainnet/mainnet-beta-overview.md):
 
 {% hint style="warning" %}
 These parameters may change by Mainnet launch.
 {% endhint %}
 
 {% hint style="info" %}
-For an overview of Mainnet Dry Run which is the next phase towards Mainnet, see the [Mainnet Dry Run Overview](../pre-mainnet/dry-run-overview.md). 
+For an overview of Mainnet Beta which is the next phase towards Mainnet, see the [Mainnet Beta Overview](../pre-mainnet/mainnet-beta-overview.md). 
 {% endhint %}
 
-* Genesis file:
+* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-10-01/genesis.json):
   * SHA1: `3a17891f73ae2079e5a2cf7e53c25f7b26f63d3e`
   * SHA256: `a188bcae5b6ba7b1d2bf7fd4b3972381db611989ab11a45059f6faee28ad2a8d`
 * Oasis seed node address:
