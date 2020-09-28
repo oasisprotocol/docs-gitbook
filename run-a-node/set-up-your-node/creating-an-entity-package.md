@@ -18,7 +18,7 @@ To create an Entity Package you must create a tarball \(`.tar.gz`\) that contain
 During genesis creation we will only accept a single node.
 {% endhint %}
 
-The following commands should be executed on your local system, where you [initialized your Entity and Node](running-a-node.md#initializing-an-entity):
+The following commands should be executed on your local system, where you [initialized your Entity and Node](run-validator.md#initializing-an-entity):
 
 ```text
 mkdir -p package/entity package/node

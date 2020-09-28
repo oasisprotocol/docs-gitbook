@@ -71,7 +71,7 @@ Currently, we provide two options for signing transactions:
 
 * **File-based signer.**
 
-  You will need to create your Entity as described in [Running a Node on the Network](../run-a-node/set-up-your-node/running-a-node.md#creating-your-entity) docs and set the following flags:
+  You will need to create your Entity as described in [Running a Node on the Network](../run-a-node/set-up-your-node/run-validator.md#creating-your-entity) docs and set the following flags:
 
   * `--signer.backend file`: Specifies use of the file signer.
 

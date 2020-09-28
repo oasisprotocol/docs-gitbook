@@ -10,7 +10,7 @@ This is only an example of a Sentry node deployment, and we take no responsibili
 
 ## Prerequisites
 
-Before following this guide, make sure you've read the [Prerequisites](../prerequisites/oasis-node.md) and [Running a Node on the Network](running-a-node.md) guides and created your Entity.
+Before following this guide, make sure you've read the [Prerequisites](../prerequisites/oasis-node.md) and [Running a Node on the Network](run-validator.md) guides and created your Entity.
 
 ## Configuring the Oasis Sentry Node
 
@@ -148,7 +148,7 @@ In this setup the Oasis validator node should not be exposed directly on the pub
 If your validator node is already registered and running in a non-sentry setup, this step can be skipped as the Oasis validator will update its address in the Registry automatically once we redeploy it with new configuration.
 {% endhint %}
 
-When you are [initializing a validator node](running-a-node.md#initializing-a-node), you should use the sentry node's external address and Consensus ID in the `node.consensus_address` flag. If you are running multiple sentry nodes, you can specify the `node.consensus_address` flag multiple times.
+When you are [initializing a validator node](run-validator.md#initializing-a-node), you should use the sentry node's external address and Consensus ID in the `node.consensus_address` flag. If you are running multiple sentry nodes, you can specify the `node.consensus_address` flag multiple times.
 
 To initialize a validator node with 2 sentry nodes, run the following commands from the `/localhostdir/node` directory:
 

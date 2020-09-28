@@ -10,7 +10,7 @@ Let's assume:
 * `oasis1qr3jc2yfhszpyy0daha2l9xjlkrxnzas0uaje4t3` is the destination's staking account address.
 
 {% hint style="info" %}
-To convert your entity's ID to a staking account address, see the [Obtain Account Address From Entity's ID](accounts/address.md#obtain-account-address-from-entitys-id) section.
+To convert your entity's ID to a staking account address, see the [Obtain Account Address From Entity's ID](account/address.md#obtain-account-address-from-entitys-id) section.
 {% endhint %}
 
 ## Query Our Account's Info
@@ -24,7 +24,7 @@ oasis-node stake account info \
 ```
 
 {% hint style="info" %}
-For a detailed explanation on querying account information, see [t](accounts/get-info.md)he [Get Info](accounts/get-info.md) section.
+For a detailed explanation on querying account information, see [t](account/get-info.md)he [Get Info](account/get-info.md) section.
 {% endhint %}
 
 Before the transaction, this outputs:

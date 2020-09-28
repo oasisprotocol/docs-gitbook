@@ -8,7 +8,7 @@ As an operator of a Node on the Oasis Network, it is suggested that you have an 
 
 ## Decentralized Consensus Layer <a id="decentralized-consensus-layer"></a>
 
-The Oasis Network is based on a Proof-of-Stake \(PoS\) consensus model. Tokens can be self-delegated directly by each node operator or delegated to a node operator by other token holders. While the Oasis Network is designed with a modular architecture that can use any consensus system that satisfies these properties, it currently uses [Tendermint](https://github.com/tendermint/tendermint) as its consensus algorithm. To run a node yourself you can find information on operating a node on the Oasis Network [here](../run-a-node/set-up-your-node/running-a-node.md).
+The Oasis Network is based on a Proof-of-Stake \(PoS\) consensus model. Tokens can be self-delegated directly by each node operator or delegated to a node operator by other token holders. While the Oasis Network is designed with a modular architecture that can use any consensus system that satisfies these properties, it currently uses [Tendermint](https://github.com/tendermint/tendermint) as its consensus algorithm. To run a node yourself you can find information on operating a node on the Oasis Network [here](../run-a-node/set-up-your-node/run-validator.md).
 
 Participating in consensus is one of two critical ways that node operators can help run and be part of the network. Validators will be able to sign blocks, earn transaction fees, stake, and receive delegation. Similar to the PoS design implemented by Cosmos, up to 100 validators with the most stake can participate in the consensus process.
 

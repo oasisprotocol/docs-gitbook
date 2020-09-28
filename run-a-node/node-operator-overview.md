@@ -14,7 +14,7 @@ The Oasis Network's decentralized consensus layer is comprised of nodes operated
 
 {% page-ref page="prerequisites/hardware-recommendations.md" %}
 
-{% page-ref page="set-up-your-node/running-a-node.md" %}
+{% page-ref page="set-up-your-node/run-validator.md" %}
 
 
 

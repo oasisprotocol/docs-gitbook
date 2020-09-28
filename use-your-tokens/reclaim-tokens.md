@@ -22,7 +22,7 @@ oasis-node stake account info \
 ```
 
 {% hint style="info" %}
-For a detailed explanation on querying account information, see [t](accounts/get-info.md)he [Get Info](accounts/get-info.md) section.
+For a detailed explanation on querying account information, see [t](account/get-info.md)he [Get Info](account/get-info.md) section.
 {% endhint %}
 
 Before the transaction, this outputs:
@@ -94,7 +94,7 @@ oasis-node consensus submit_tx \
 
 ## Query Our Account's Info Again
 
-Let's check [our account's info](reclaim-delegated-staked-tokens.md#query-our-accounts-info) again:
+Let's check [our account's info](reclaim-tokens.md#query-our-accounts-info) again:
 
 ```javascript
 General Account:

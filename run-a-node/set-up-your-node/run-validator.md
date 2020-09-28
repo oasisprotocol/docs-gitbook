@@ -5,7 +5,7 @@ description: This page describes how to run a validator node on the Oasis Networ
 # Run a Validator Node
 
 {% hint style="info" %}
-These instructions are for setting up a _validator_ node. If you want to run a _non-validator_ node instead, see the [instructions on running a non-validator node](run-a-non-validator-node.md).
+These instructions are for setting up a _validator_ node. If you want to run a _non-validator_ node instead, see the [instructions on running a non-validator node](run-non-validator.md).
 {% endhint %}
 
 This guide will cover setting up your validator node for the Oasis Network. This guide assumes some basic knowledge on the use of command line tools.
@@ -225,7 +225,7 @@ mkdir -m700 -p /serverdir/{etc,node,node/entity}
 
 #### Copying the Node Artifacts from `/localhostdir`
 
-In order for the node registration to work properly, as defined in `/localhostdir/entity.json`, you must copy the node's artifacts you generated in the [Initializing a Node](running-a-node.md#initializing-a-node) section. To do so, upload the following files from `/localhostdir/node` to `/serverdir/node` over a secure channel \(e.g. SSH\):
+In order for the node registration to work properly, as defined in `/localhostdir/entity.json`, you must copy the node's artifacts you generated in the [Initializing a Node](run-validator.md#initializing-a-node) section. To do so, upload the following files from `/localhostdir/node` to `/serverdir/node` over a secure channel \(e.g. SSH\):
 
 * `consensus.pem`
 * `consensus_pub.pem`
@@ -245,7 +245,7 @@ chmod -R 600 /serverdir/node/*.pem
 ```
 
 {% hint style="warning" %}
-You may have noticed that some of these files were listed as **DO NOT SHARE** in the [Initializing a Node](running-a-node.md#initializing-a-node) section.
+You may have noticed that some of these files were listed as **DO NOT SHARE** in the [Initializing a Node](run-validator.md#initializing-a-node) section.
 
 In the future, these keys should be generated and referenced from an HSM. However, until HSM support is implemented, these keys should be kept as secure as possible on the `server`.
 {% endhint %}
@@ -419,7 +419,7 @@ This step is not necessary if your entity was fully staked at genesis.
 {% endhint %}
 
 {% hint style="warning" %}
-If you've submitted staking or registry transactions before, your nonce is likely different than the nonce used in the examples. If you're uncertain, please check your account nonce by using [this guide](../../use-your-tokens/accounts/get-info.md).
+If you've submitted staking or registry transactions before, your nonce is likely different than the nonce used in the examples. If you're uncertain, please check your account nonce by using [this guide](../../use-your-tokens/account/get-info.md).
 {% endhint %}
 
 Once you have been funded, you can complete the process of connecting your node to the network by registering both your entity and your node, as described below.
@@ -469,7 +469,7 @@ Before generating the escrow transaction, you need to set the following environm
 
 * `ACCOUNT_ADDRESS`: Your staking account address.
 
-  To obtain your staking account address from your Entity's ID, see [Obtaining Account Address From Entity's ID](../../use-your-tokens/accounts/address.md#obtain-account-address-from-entitys-id).
+  To obtain your staking account address from your Entity's ID, see [Obtaining Account Address From Entity's ID](../../use-your-tokens/account/address.md#obtain-account-address-from-entitys-id).
 
 Then execute the following command:
 

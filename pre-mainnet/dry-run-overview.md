@@ -75,7 +75,7 @@ Node operators will play a key role in the success of the Mainnet Dry Run. In ad
 
 Please check the following are working correctly:
 
-* Set up your node on the network by following the instructions in [the Set Up Your Node documentation](../run-a-node/set-up-your-node/running-a-node.md).
+* Set up your node on the network by following the instructions in [the Set Up Your Node documentation](../run-a-node/set-up-your-node/run-validator.md).
 * Use the 100 unstaked, unbonded tokens in your general balance if you have an allocation.
   * Send a couple of tokens to another user with the **transfer** transaction as described [here](../use-your-tokens/transfer-tokens.md).
 * Make adjustments to your commission schedule by following the instructions [here](../run-a-node/set-up-your-node/amend-commission-schedule.md).

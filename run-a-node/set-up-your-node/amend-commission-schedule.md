@@ -53,7 +53,7 @@ oasis-node stake account info \
 ```
 
 {% hint style="info" %}
-For a detailed explanation on querying account information, see the [Get Info](../../use-your-tokens/accounts/get-info.md) section of the _Use Your Tokens_ docs.
+For a detailed explanation on querying account information, see the [Get Info](../../use-your-tokens/account/get-info.md) section of the _Use Your Tokens_ docs.
 {% endhint %}
 
 Before the transaction, this outputs:
