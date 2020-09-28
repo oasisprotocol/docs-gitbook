@@ -6,8 +6,8 @@ description: >-
 
 # Mainnet Dry Run Overview
 
-{% hint style="warning" %}
-**MAINNET DRY RUN WILL KICK-OFF ON SEPTEMBER 22 AT 16:00:00 UTC.**
+{% hint style="success" %}
+**MAINNET DRY RUN IS COMPLETE. THE NETWORK IS NOW PREPARING FOR MAINNET BETA ON 10/01/2020 AT 16:00 UTC.**
 {% endhint %}
 
 {% hint style="info" %}
