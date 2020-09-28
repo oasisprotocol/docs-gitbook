@@ -10,16 +10,8 @@ description: >-
 Up to date information about the current Genesis file can be found on the [Network Parameters](../oasis-network/network-parameters.md) page.
 {% endhint %}
 
-We are sharing this information with the Oasis Network community to collect feedback and answer any questions that arise. Please fill out [this form](https://oasisfoundation.typeform.com/to/yG4pp57W) to share feedback and submit your questions regarding the Oasis Network’s genesis file. 
-
 {% hint style="warning" %}
 Please note that the parameters and corresponding values in the genesis file are subject to change prior to the Oasis Network Mainnet launch.
-
-The information in this document applies to the upcoming Oasis Network Mainnet Dry Run. 
-
-After a successful Mainnet Dry Run, we expect most of the parameters and corresponding values we have outlined in this document to carry over directly without any changes when we launch the Oasis Network Mainnet Beta \(transfers disabled\) and then Mainnet \(transfers enabled\).
-
-We welcome any and all feedback from the community as we craft a genesis file that provides a strong foundation for the long-term success of our network.
 {% endhint %}
 
 ## What is a Genesis File?
@@ -42,14 +34,13 @@ For a more in-depth explanation of the genesis document, see the [Genesis Docume
 
 ## Genesis Time and Chain ID
 
-The **genesis\_time** parameter is a UTC timestamp that specifies when the blockchain is officially going to launch. At the time of genesis, validators are expected to come online and start participating in the consensus process for operating the network. The network will start once validators representing more than 2/3 of stake in the initial consensus committee are online.
+The **genesis\_time** parameter is an ISO8601 UTC timestamp that specifies when the blockchain is officially going to launch. At the time of genesis, validators are expected to come online and start participating in the consensus process for operating the network. The network will start once validators representing more than 2/3 of stake in the initial consensus committee are online.
 
-The **chain\_id** is a unique identifier for a blockchain. It also helps differentiate between different networks using the same version of the software.
+The **chain\_id** is a human-readable version identifier for a blockchain. It is important to note, that this value alone doesn't dictate the version of the genesis file. To determine the correct version of a genesis file, the shasum of that genesis file will need to be generated. This can be done on Linux/macOS like so:
 
-For the Mainnet Dry Run:
-
-* genesis\_time: "2020-09-22T16:00:00.000000000Z"
-* chain\_id: "mainnet-dryrun-2020-09-22-1600790400"
+```text
+shasum -a 256 genesis.json
+```
 
 ## Epoch Time
 
@@ -82,9 +73,9 @@ The following parameters define the gas costs for various types of transactions 
 
 ## Node & Runtime Token Thresholds
 
-There are several **threshold** parameters that specify the minimum number of tokens that need to be staked in order for a particular entity or a particular type of node to participate in the network. The minimum threshold specified for the **entity,** **node-compute, node-keymanager, node-storage,** and **node-validator** parameters is set to 100000000000 nanoROSE for each, indicating that you need to stake at least 100 ROSE tokens in order to have your entity or any of the specified nodes go live on the network. 
+There are several **threshold** parameters that specify the minimum number of tokens that need to be staked in order for a particular entity or a particular type of node to participate in the network. The minimum threshold specified for the **entity,** **node-compute, node-keymanager, node-storage,** and **node-validator** parameters is set to 100000000000 nROSE for each, indicating that you need to stake at least 100 ROSE tokens in order to have your entity or any of the specified nodes go live on the network. 
 
-There are also minimum thresholds for registering new runtimes. The minimum thresholds for registering **runtime-compute** and **runtime-keymanager** are set to 50000000000000 nanoROSE, indicating that you need to stake at least 50000 ROSE tokens in order to register a runtime.
+There are also minimum thresholds for registering new runtimes. The minimum thresholds for registering **runtime-compute** and **runtime-keymanager** are set to 50000000000000 nROSE, indicating that you need to stake at least 50000 ROSE tokens in order to register a runtime.
 
 ## Staking & Rewards
 
@@ -97,7 +88,7 @@ These key parameters are related to staking and rewards on the network:
 * **rate\_bound\_lead** - The minimum lead time \(in epochs\) needed for changes to commission rate bounds. Operators need to wait before any rate bound changes go into effect. The value is set to 336, which is expected to be approximately 14 days. 
 * **max\_rate\_steps** - The maximum allowed number of rate step changes in a commission schedule.The value is set to 10, indicating that the commission schedule can have a maximum of 10 rate steps.
 * **max\_bound\_steps** - The maximum allowed number of commission rate bound step changes in the commission schedule. The value is set to 10, indicating that the commission schedule can have a maximum of 10 bound steps.
-* **min\_delegation** - The minimum amount of tokens required in a delegation. The value is set to 100000000000 nanoROSE, or 100 ROSE tokens.
+* **min\_delegation** - The minimum amount of tokens required in a delegation. The value is set to 100000000000 nROSE, or 100 ROSE tokens.
 * **fee\_split\_weight\_propose** - The block proposer's share of transaction fees, set to a value of 2.
 * **fee\_split\_weight\_next\_propose** - The next proposer's share of transaction fees, set to a value of 1.
 * **fee\_split\_weight\_vote** - A signer’s/voter’s share of transaction fees, set to a value of 1.
@@ -114,7 +105,7 @@ The following parameters specify the total token supply, total token pool reserv
 * **delegations** - The encoding of the initial delegations at the time of genesis.
 
 {% hint style="warning" %}
-If you are an operator who successfully completed the KYC process and submitted your entity package by the deadline in early September, your account should be included in the genesis file, with an account general balance and escrow amount reflecting any grants, rewards, and Amber Network delegations you have received leading up to Mainnet. Please review the ledger section of the genesis file [here](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json) to make sure that your account is included in the genesis file if you were expecting it to be included. Keep in mind that token balances are enumerated in nanoROSE, with 1 billion nanoROSE being equivalent to 1 ROSE token. You can search for account node in the ledger section of the genesis file by searching for your staking address, which is a Bech32-encoded address with the prefix "oasis". If you encounter any issues with finding your account in the ledger, please let us know via the genesis file [feedback form](https://oasisfoundation.typeform.com/to/yG4pp57W).
+If you are an operator who successfully completed the KYC process and submitted your entity package by the deadline in early September, your account should be included in the genesis file, with an account general balance and escrow amount reflecting any grants, rewards, and Amber Network delegations you have received leading up to Mainnet. Please review the ledger section of the genesis file [here](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-09-22/genesis.json) to make sure that your account is included in the genesis file if you were expecting it to be included. Keep in mind that token balances are enumerated in nROSE, with 1 billion nROSE being equivalent to 1 ROSE token. You can search for account node in the ledger section of the genesis file by searching for your staking address, which is a Bech32-encoded address with the prefix "oasis". If you encounter any issues with finding your account in the ledger, please let us know via the genesis file [feedback form](https://oasisfoundation.typeform.com/to/yG4pp57W).
 {% endhint %}
 
 {% hint style="info" %}
@@ -125,7 +116,7 @@ If you are an operator who successfully completed the KYC process and submitted 
 
 These parameters specify key values for the network's slashing mechanism:
 
-* **amount** - The amount of tokens to slash for double signing. The value is set to 100000000000 nanoROSE, or 100 ROSE tokens.
+* **amount** - The amount of tokens to slash for double signing. The value is set to 100000000000 nROSE, or 100 ROSE tokens.
 * **freeze\_interval** - The duration, in epochs, for which a node that has been slashed for double signing is “frozen,” or barred from participating in the network's consensus committee. A value of 18446744073709551615 \(the maximum value for a 64-bit unsigned integer\) means that any node slashed for double signing is, in effect, permanently banned from the network.
 
 ## Consensus 
