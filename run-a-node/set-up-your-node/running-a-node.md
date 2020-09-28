@@ -12,7 +12,7 @@ This guide will cover setting up your validator node for the Oasis Network. This
 
 ## Prerequisites
 
-Before following this guide, make sure you've followed the [Prerequisites Guide](../prerequisites/prerequisites-guide.md) and understand how to use the `oasis-node` binary.
+Before following this guide, make sure you've followed the [Prerequisites Guide](../prerequisites/oasis-node.md) and understand how to use the `oasis-node` binary.
 
 ### Systems
 

@@ -10,7 +10,7 @@ This is only an example of a Sentry node deployment, and we take no responsibili
 
 ## Prerequisites
 
-Before following this guide, make sure you've read the [Prerequisites](../prerequisites/prerequisites-guide.md) and [Running a Node on the Network](running-a-node.md) guides and created your Entity.
+Before following this guide, make sure you've read the [Prerequisites](../prerequisites/oasis-node.md) and [Running a Node on the Network](running-a-node.md) guides and created your Entity.
 
 ## Configuring the Oasis Sentry Node
 

@@ -16,7 +16,7 @@
 * [Overview](run-a-node/node-operator-overview.md)
 * [Prerequisites](run-a-node/prerequisites/README.md)
   * [Hardware](run-a-node/prerequisites/hardware-recommendations.md)
-  * [Oasis Node](run-a-node/prerequisites/prerequisites-guide.md)
+  * [Oasis Node](run-a-node/prerequisites/oasis-node.md)
 * [Set Up Your Node](run-a-node/set-up-your-node/README.md)
   * [Run a Validator Node](run-a-node/set-up-your-node/running-a-node.md)
   * [Run a Non-validator Node](run-a-node/set-up-your-node/run-a-non-validator-node.md)
