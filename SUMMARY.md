@@ -28,6 +28,7 @@
   * [Handling Network Upgrades](run-a-node/maintenance-guides/handling-network-upgrades.md)
   * [Adding or Removing Nodes](run-a-node/maintenance-guides/adding-or-removing-nodes.md)
 * [Node Troubleshooting](run-a-node/troubleshooting.md)
+* [Upgrade Log](run-a-node/upgrade-log.md)
 
 ## Wallet Support
 
