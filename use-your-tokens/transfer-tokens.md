@@ -1,5 +1,9 @@
 # Transfer Tokens
 
+{% hint style="warning" %}
+Transfers are disabled on the Mainnet Beta Network.
+{% endhint %}
+
 {% hint style="info" %}
 This example assumes you have read and followed the instructions in the [Prerequisites](prerequisites.md) and [Setup](setup.md) sections.
 {% endhint %}
