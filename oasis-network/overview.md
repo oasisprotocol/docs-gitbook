@@ -13,7 +13,7 @@ The Oasis Network separates consensus from computation, making the platform high
 * _The Consensus Layer_: The Consensus Layer is a decentralized set of validator nodes that maintains a proof-of-stake blockchain.
 * _The ParaTime Layer_: The ParaTime Layer can host multiple parallel runtimes, each representing a replicated compute environment with shared state.
 
-You can learn more about the Oasis Network in our primer [here](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution).
+You can learn more about the Oasis Network in our [Oasis Network Primer](https://docs.oasis.dev/oasis-network-primer/).
 
 ## Key Features <a id="key-features"></a>
 
