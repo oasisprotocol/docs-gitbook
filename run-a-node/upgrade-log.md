@@ -6,12 +6,12 @@ description: >-
 
 # Upgrade Log
 
-## 2020-10-02 - Mainnet Beta
+## 2020-10-01 - Mainnet Beta
 
 ### Instructions
 
 * Stop your node.
-* [Wipe State](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
+* [Wipe state](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
 * Replace the old genesis file with the [Mainnet Beta genesis file](../pre-mainnet/mainnet-beta-overview.md#mainnet-beta-genesis-file).
 * Start your node.
 
