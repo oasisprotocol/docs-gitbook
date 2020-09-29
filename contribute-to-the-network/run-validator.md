@@ -1,3 +1,9 @@
+---
+description: >-
+  Overview of the technical setup and stake requirements to become a validator
+  on the Oasis Network.
+---
+
 # Run a Validator Node
 
 [Oasis Network](../oasis-network/overview.md)'s Consensus Layer is a decentralised set of validator nodes that maintain a proof-of-stake blockchain.
