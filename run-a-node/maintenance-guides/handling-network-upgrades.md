@@ -6,10 +6,10 @@ Following this guide when there is no network upgrade will result in you losing 
 
 The following guide should be used when the network has agreed to do a software upgrade.
 
-## Dumping Blockchain State
+## Dump Network State
 
 {% hint style="info" %}
-Do not stop your `oasis-node` process just yet.
+Do not stop your [Oasis Node](../prerequisites/oasis-node.md) process just yet.
 {% endhint %}
 
 Before an upgrade we will update the [Network Parameters](../../oasis-network/network-parameters.md) to specify the block height at which to dump.
@@ -30,41 +30,17 @@ replacing `<HEIGHT-TO-DUMP>` with the block height we specified.
 You must only run the following command _after_ the `<HEIGHT-TO-DUMP>` block height has been reached on the network.
 {% endhint %}
 
-## Patching Dumped State
+## Patch Dumped State
 
 {% hint style="info" %}
 At the moment, we don't provide state patches.
-
-Once [Oasis Core \#2757](https://github.com/oasisprotocol/oasis-core/issues/2757) is implemented, it will become easier to create/apply a state patch with the standard Unix tools.
 {% endhint %}
 
-## Downloading and Verifying the Provided Genesis Document
+## Download and Verify the Provided Genesis File
 
-Download the genesis document linked in the [Deployment Change Log](../../oasis-network/network-parameters.md) and save it as `/serverdir/etc/genesis.json`.
+Download the new genesis file linked in the [Network Parameters](../../oasis-network/network-parameters.md) and save it as `/serverdir/etc/genesis.json`.
 
-Pretty-print the dumped state \(set indent to 2\) so you will be able to easily compare it to the provided genesis document.
-
-{% hint style="info" %}
-We plan to update the `oasis-node genesis dump` command to output the state dump in a _canonical_ form that is `diff`/`patch` friendly.
-
-For more details, see [Oasis Core \#2757](https://github.com/oasisprotocol/oasis-core/issues/2757).
-{% endhint %}
-
-One way to do that is to use [Python's `json` module](https://docs.python.org/3/library/json.html#module-json):
-
-```bash
-cat genesis_dump.$HEIGHT_TO_DUMP.json | \
-  python3 -c 'import sys, json; print(json.dumps(json.load(sys.stdin), indent=2))' \
-  > genesis_dump.$HEIGHT_TO_DUMP.pretty.json
-```
-
-{% hint style="warning" %}
-Be aware that [jq](http://stedolan.github.io/jq/), the popular JSON CLI tool, [converts all numbers to IEEE 754 64-bit values](https://github.com/stedolan/jq/wiki/FAQ#caveats) which can result in silent loss of precision and/or other changes.
-
-Hence, we recommend avoiding its usage until this issue is resolved.
-{% endhint %}
-
-Then compare the pretty-printed dumped state with the provided genesis document:
+Then compare the dumped state with the downloaded genesis file:
 
 ```bash
 diff genesis_dump.$HEIGHT_TO_DUMP.pretty.json genesis.json
@@ -118,16 +94,16 @@ For the 2020-03-05 network upgrade, the `diff` command above returns:
 7649c7652
 ```
 
-We can see that the provided genesis document updated some network parameters but didn't touch any other entity, account or delegation data.
+We can see that the provided genesis file updated some network parameters but didn't touch any other entity, account or delegation data.
 
-If you obtain the same result, then you have successfully verified the provided genesis document.
+If you obtain the same result, then you have successfully verified the provided genesis file.
 
 Let's break down the diff and explain what has changed.
 
-The following genesis document fields will always change on a network upgrade:
+The following genesis file fields will always change on a network upgrade:
 
 * `chain_id`: A unique ID of the network.
-* `genesis_time`: Time from which the genesis document is valid.
+* `genesis_time`: Time from which the genesis file is valid.
 * `halt_epoch`: The epoch when the node will stop functioning. We set this to intentionally force an upgrade.
 
 The following fields were a particular change in this upgrade:
@@ -142,11 +118,11 @@ The following fields were a particular change in this upgrade:
 
   These two fields were added to control how a block's fee for a validator is split split between the validator that signs the block \(`fee_split_vote`\) and the validator that proposes the block \(`fee_split_propose`\).
 
-## Stopping Your Node
+## Stop Your Node
 
-This will depend on your process manager. You should stop your `oasis-node` process however this is done for your setup.
+This will depend on your process manager. You should stop your [Oasis Node](../prerequisites/oasis-node.md) process however this is done for your setup.
 
-## Wiping State
+## Wipe State
 
 {% hint style="warning" %}
 We do not suggest that you wipe _all_ state. You might lose node identities and keys if you do it this way.
@@ -154,23 +130,23 @@ We do not suggest that you wipe _all_ state. You might lose node identities and 
 
 Before restarting your node you should wipe consensus state. The process for this is described in the [Wiping Node State](wiping-node-state.md#state-wipe-and-keep-node-identity) document.
 
-## Updating Configuration
+## Update Configuration
 
-If the [Deployment Change Log](../../oasis-network/network-parameters.md#deployment-change-log) provides instructions for updating your node's configuration, update the `/serverdir/etc/config.yml` file accordingly.
+If the [Upgrade Log](../upgrade-log.md) provides instructions for updating your node's configuration, update the `/serverdir/etc/config.yml` file accordingly.
 
-## Upgrading Oasis Core
+## Upgrade Oasis Node
 
-Before starting your node again, make sure you upgrade your `oasis-node` binary to the current version specified in the [Network Parameters](../../oasis-network/network-parameters.md).
+Before starting your node again, make sure you upgrade your [Oasis Node](../prerequisites/oasis-node.md) binary to the current version specified in the [Network Parameters](../../oasis-network/network-parameters.md).
 
-## Starting the Node
+## Start Your Node
 
-This will depend on your process manager. If you don't have a process manager, you should use one. However, to start the node without a process manager you can start the `oasis-node` like so:
+This will depend on your process manager. If you don't have a process manager, you should use one. However, to start the node without a process manager you can start the [Oasis Node](../prerequisites/oasis-node.md) like so:
 
 ```bash
 oasis-node --config /serverdir/etc/config.yml
 ```
 
-## Cleaning Up
+## Clean Up
 
-After you're comfortable with your node deployment, you can clean up the `genesis_dump.$HEIGHT_TO_DUMP.json` and `genesis_dump.$HEIGHT_TO_DUMP.pretty.json` files.
+After you're comfortable with your node deployment, you can clean up the `genesis_dump.$HEIGHT_TO_DUMP.json` file.
 

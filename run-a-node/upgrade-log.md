@@ -6,19 +6,26 @@ description: >-
 
 # Upgrade Log
 
-## 2020-10-02 - Mainnet-Beta
+## 2020-10-02 - Mainnet Beta
 
 ### Instructions
 
-* Wipe State
-* Upload new [genesis](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-10-01/genesis.json)
-* Restart Oasis-node \(v20.10\)
+* Stop your node.
+* [Wipe State](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
+* Replace the old genesis file with the [Mainnet Beta genesis file](../pre-mainnet/mainnet-beta-overview.md#mainnet-beta-genesis-file).
+* Start your node.
 
-## 2020-09-22 - Mainnet-Beta Dry Run
+{% hint style="info" %}
+You should keep using Oasis Core version 20.10.
+{% endhint %}
+
+{% hint style="info" %}
+For more detailed instructions, see the [Handling Network Upgrades](maintenance-guides/handling-network-upgrades.md) guide.
+{% endhint %}
+
+## 2020-09-22 - Mainnet Dry Run
 
 ### Instructions
 
-* This is the initial deployment
-
-
+* This is the initial deployment.
 
