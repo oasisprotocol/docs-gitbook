@@ -52,6 +52,7 @@
 
 ## Contribute to the Network
 
+* [Run a Validator Node](contribute-to-the-network/run-validator.md)
 * [Network Governance](contribute-to-the-network/network-governance.md)
 * [Contribution Guidelines](contribute-to-the-network/contribution-guidelines.md)
 * [Visit Our GitHub](https://github.com/oasisprotocol)
