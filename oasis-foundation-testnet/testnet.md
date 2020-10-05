@@ -20,6 +20,8 @@ This page is meant to be kept up to date with the information from the currently
 * [Genesis file](https://github.com/oasisprotocol/public-testnet-artifacts/releases/download/2020-09-15/genesis.json):
   * SHA1: `dc0a483341658c29b06d58b09d66e14677659482`
   * SHA256: `ddf7a2c2d4f577f26451626e99f98c09591d90d7b0fd225634eb4b2eead36b69`
+* [Genesis document hash](../pre-mainnet/genesis-file.md#genesis-file-vs-genesis-document):
+  * `c93ff310b77d68d236d35f9df5d9a37073a88d388a29bd88d8d2f717f1dafcc7`
 * Oasis seed node address:
   * `05EAC99BB37F6DAAD4B13386FF5E087ACBDDC450@34.86.165.6:26656`
 
