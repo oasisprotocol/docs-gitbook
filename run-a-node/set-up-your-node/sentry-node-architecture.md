@@ -22,8 +22,6 @@ Sentry node identity keys can be initialized with:
 oasis-node identity init --datadir /serverdir/node
 ```
 
-The generated `tls_identity_cert.pem` \(which is the node's TLS cert for securing gRPC connections\) needs to be available on any node that will be protected by the sentry node.
-
 ### Configuring Sentry Node
 
 An Oasis node can be configured to run as a sentry node by setting the `worker.sentry.enabled` flag. The `tendermint.sentry.upstream_address` flag can be used to configure a list of nodes that will be protected by the sentry node.
