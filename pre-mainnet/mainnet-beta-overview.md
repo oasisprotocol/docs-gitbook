@@ -14,7 +14,7 @@ description: >-
 **ALL NODES in the genesis file are ENCOURAGED TO PARTICIPATE in the Mainnet Beta.**
 {% endhint %}
 
-After a successful [Mainnet Dry Run](dry-run-overview.md), in which the Dry Run test network went live in under 1 minute, we are ready to launch Mainnet Beta!
+After a successful [Mainnet Dry Run](), in which the Dry Run test network went live in under 1 minute, we are ready to launch Mainnet Beta!
 
 ## What is Mainnet Beta?
 
@@ -71,5 +71,5 @@ For additional information about the genesis file and key parameters, please ref
 
 The Oasis team will be offering live video support during the launch of Mainnet Beta. Video call link and calendar details will be shared with node operators via email and Slack.
 
-For any additional support, please reach out via the [**\#nodeoperators** Oasis Community Slack channel](../community-resources/connect-with-us.md) with your questions, comments, and feedback related to Mainnet Beta.
+For any additional support, please reach out via the [**\#nodeoperators** Oasis Community Slack channel](../oasis-network/connect-with-us.md) with your questions, comments, and feedback related to Mainnet Beta.
 

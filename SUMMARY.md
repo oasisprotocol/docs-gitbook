@@ -4,12 +4,12 @@
 
 ## Oasis Network
 
-* [What is the Oasis Network?](oasis-network/overview.md)
-* [Network Architecture Overview](oasis-network/network-architecture-overview.md)
+* [Overview of the Oasis Network](oasis-network/overview.md)
 * [Network Parameters](oasis-network/network-parameters.md)
-* [Oasis Network Primer](https://docs.oasis.dev/oasis-network-primer/)
-* [Token Metrics and Distribution](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution)
+* [Why Oasis?](https://docs.oasis.dev/oasis-network-primer/)
+* [ROSE Token Metrics](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution)
 * [Papers](https://oasisprotocol.org/papers)
+* [Community Channels](oasis-network/connect-with-us.md)
 
 ## Run a Node
 
@@ -60,7 +60,6 @@
 ## Pre-Mainnet Initiatives <a id="pre-mainnet"></a>
 
 * [Mainnet Beta Overview](pre-mainnet/mainnet-beta-overview.md)
-* [Mainnet Dry Run Overview](pre-mainnet/dry-run-overview.md)
 * [Genesis File Overview](pre-mainnet/genesis-file.md)
 
 ## Oasis Foundation Testnet
@@ -74,7 +73,6 @@
 
 ## Community Resources
 
-* [Connect With Us](community-resources/connect-with-us.md)
 * [Community-Made Tools](community-resources/community-made-resources.md)
 
 ## Frequently Asked Questions <a id="faq"></a>

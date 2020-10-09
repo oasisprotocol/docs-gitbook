@@ -1,5 +1,9 @@
 # Delegate/Stake Tokens
 
+{% hint style="warning" %}
+This documentation provides technical instruction to stake and delegate on the Oasis Network. For non-developers interested in staking and delegating please see [Holding ROSE Tokens](https://app.gitbook.com/@oasisprotocol/s/general/~/drafts/-MJDUWMpmth3MJrJI9el/wallet-support/holding-rose-tokens) for a list of validators to delegate to and instructions on how to get in touch.
+{% endhint %}
+
 {% hint style="info" %}
 This example assumes you have read and followed the instructions in the [Prerequisites](prerequisites.md) and [Setup](setup.md) sections.
 {% endhint %}

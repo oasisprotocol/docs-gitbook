@@ -63,7 +63,7 @@ This will be needed later when generating transactions.
 
 ### Initializing an Entity
 
-As described in the [Architecture Overview](../../oasis-network/network-architecture-overview.md#entities-and-key-management), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. We highly recommend using an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
+As described in the [Architecture Overview](), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. We highly recommend using an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
 
 #### Using a Plugin Signer
 
@@ -494,7 +494,7 @@ The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on th
 
 ### Generating Entity Registration Transaction
 
-Before you can run your node successfully, you'll need to register your [entity](../../oasis-network/network-architecture-overview.md#entities-and-key-management) so that your node registers properly. You could do this process _after_ you submit the escrow transaction, however, to save steps we prepare everything before hand.
+Before you can run your node successfully, you'll need to register your [entity]() so that your node registers properly. You could do this process _after_ you submit the escrow transaction, however, to save steps we prepare everything before hand.
 
 Before generating the register transaction, you need to set the following environment variables:
 
