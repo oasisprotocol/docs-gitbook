@@ -32,8 +32,8 @@
 
 ## Wallet Support
 
-* [Wallet App: Oasis Core Ledger](https://docs.oasis.dev/oasis-core-ledger)
-* [Wallet Tester Program for Node Operators](wallet-support/wallet-tester-program.md)
+* [Oasis Core Ledger](https://docs.oasis.dev/oasis-core-ledger)
+* [Holding ROSE Tokens](wallet-support/holding-rose-tokens.md)
 
 ## Use Your Tokens
 
