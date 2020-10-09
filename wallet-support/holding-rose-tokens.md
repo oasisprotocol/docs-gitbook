@@ -81,7 +81,7 @@ The validator registry is in alphabetical order and includes information provide
 
 #### Run your own Node
 
-Instead, if you're interested in running your own node you can get started here. Be sure to also join the \#nodeoperator channel on [slack](www.oasisprotocol.org/slack) and sign up for the node operator mailing list!
+Instead, if you're interested in running your own node you can get started [here](https://app.gitbook.com/@oasisprotocol/s/general/~/drafts/-MJAJJpeKl1B7oBUfKCn/run-a-node/node-operator-overview). Be sure to also join the \#nodeoperator channel on [slack](www.oasisprotocol.org/slack) and sign up for the node operator mailing list!
 
 
 
