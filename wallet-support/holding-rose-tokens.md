@@ -60,9 +60,9 @@ We understand that the Ledger Wallet could use a better UI. A few solutions in p
 * GUI Wallet Support for Ledger
 * Available in late October
 
-## _Coming Soon:_ Web Wallet Support
+## _Coming Soon:_ Wallet Support
 
-In addition to the GUI listed above there are also a number of other web wallets in development including an integration for [BitPie](www.bitpie.com) in late October and Trustwallet. 
+In addition to the GUIs listed above there are also a number of other wallets in development including an integration for [BitPie](www.bitpie.com) in late October and Trust Wallet. 
 
 ## Staking and Delegating on the Oasis Network
 
