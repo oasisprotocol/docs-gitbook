@@ -30,16 +30,16 @@ Your Key to Digital Asset Banking - Finoa is a regulated custodian for Digital A
 * **Delegation options:** Finoa offers delegation to a number of select validators including Bison Trails, Blockdaemon, Chorus One, Figment Networks, and more.
 * **Min holding:** No threshold for assets under custody. Please check out details at [finoa.io/oasis](www.finoa.io/oasis).
 * **Sharing your wallet address for distribution**: Finoa will share a list of relevant wallets with Oasis for distribution.
-* **Sign up:** Email oasis@finoa.io to set up an account.
+* **Sign up:** Email [oasis@finoa.io](mailto:oasis@finoa.io) to set up an account.
 
 ## Self Custody
 
 ### [Ledger Hardware Wallet](https://www.ledger.com/ledger-live) \(Available on Ledger Live\)
 
-We recommend this option for teams with Ledger Wallet experience, and more specifically Ledger experimental / developer mode
+We recommend this option for teams with Ledger Wallet experience, and more specifically Ledger experimental / developer mode.
 
-* **Setup:** Read more about Ledger setup on the Oasis Network [here](https://docs.oasis.dev/oasis-core-ledger/)
-* **Sharing your wallet address for distribution:** Once you complete the setup on Ledger, please submit your wallet address [here](https://oasisfoundation.typeform.com/to/Cyk8NAzc)
+* **Setup:** Read more about Ledger setup on the Oasis Network [here](https://docs.oasis.dev/oasis-core-ledger/).
+* **Sharing your wallet address for distribution:** Once you complete the setup on Ledger, please submit your wallet address [here](https://oasisfoundation.typeform.com/to/Cyk8NAzc).
 
 {% hint style="warning" %}
 _Ledger is currently only available via Linux and CLI. We do have a few easy to use GUIs in development._ 
@@ -52,13 +52,13 @@ We understand that the Ledger Wallet could use a better UI. A few solutions in p
 #### [Anthem](https://anthem.chorus.one/)
 
 * A tool built by Chorus One that makes address signing, staking, delegation, and transfers easy to do. Integrated with Ledger hardware.
-* Oasis address creation is currently supported by Anthem
-* Available in late October
+* Oasis account address creation is currently supported by Anthem.
+* Available in late October.
 
 #### RockX GUI
 
-* GUI Wallet Support for Ledger
-* Available in late October
+* GUI Wallet Support for Ledger.
+* Available in late October.
 
 ## _Coming Soon:_ Other Wallet Support
 
@@ -86,7 +86,7 @@ The validator registry is in alphabetical order and includes information provide
 
 #### Run your own Node
 
-Instead, if you're interested in running your own node you can get started [here](https://app.gitbook.com/@oasisprotocol/s/general/~/drafts/-MJAJJpeKl1B7oBUfKCn/run-a-node/node-operator-overview). Be sure to also join the \#nodeoperator channel on [slack](www.oasisprotocol.org/slack) and sign up for the node operator mailing list!
+Instead, if you're interested in running your own node you can get started [here](../run-a-node/node-operator-overview.md). Be sure to also join the \#nodeoperator channel on [slack](www.oasisprotocol.org/slack) and sign up for the node operator mailing list!
 
 
 
