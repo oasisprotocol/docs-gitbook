@@ -55,9 +55,14 @@ We understand that the Ledger Wallet could use a better UI. A few solutions in p
 * Oasis address creation is currently supported by Anthem
 * Available in late October
 
+#### RockX GUI
+
+* GUI Wallet Support for Ledger
+* Available in late October
+
 ## _Coming Soon:_ Web Wallet Support
 
-In addition to the GUI listed above there are also a number of other web wallets in development including an integration for BitPie and Trustwallet. More to come here soon.
+In addition to the GUI listed above there are also a number of other web wallets in development including an integration for [BitPie](www.bitpie.com) in late October and Trustwallet. 
 
 ## Staking and Delegating on the Oasis Network
 
