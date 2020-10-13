@@ -20,6 +20,7 @@
 * [Set Up Your Node](run-a-node/set-up-your-node/README.md)
   * [Run a Validator Node](run-a-node/set-up-your-node/run-validator.md)
   * [Run a Non-validator Node](run-a-node/set-up-your-node/run-non-validator.md)
+  * [Run a Seed Node](run-a-node/set-up-your-node/run-seed-node.md)
   * [Create an Entity Package](run-a-node/set-up-your-node/creating-an-entity-package.md)
   * [Amend Commission Schedule](run-a-node/set-up-your-node/amend-commission-schedule.md)
   * [Sentry Node Architecture](run-a-node/set-up-your-node/sentry-node-architecture.md)
