@@ -76,6 +76,8 @@ Mining rewards vary over the course of the Network. In the first four years rewa
 
 The Oasis Network is supported by an amazing community of validators and infrastructure providers. Many provide services to help you set up your own validator node and/or make delegation easy.
 
+In addition, Ledger GUI support for delegating is coming soon!
+
 #### Oasis Validators and Infrastructure Providers
 
 A summary of validators interested in delegations or providing infrastructure support to token holders is [here](https://airtable.com/shrPKNSKjc8rkAhEn) \(including contact info and a bit more detail about the team and project\). Please feel free to reach out to the teams directly for more information on staking and delegation logistics, fees and more.
