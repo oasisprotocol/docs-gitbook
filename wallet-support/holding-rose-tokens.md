@@ -45,20 +45,20 @@ We recommend this option for teams with Ledger Wallet experience, and more speci
 _Ledger is currently only available via Linux and CLI. We do have a few easy to use GUIs in development._ 
 {% endhint %}
 
-### _Coming Soon_: Ledger GUIs in Development
+### Ledger GUIs
 
-We understand that the Ledger Wallet could use a better UI. A few solutions in process.
+#### [RockX Wallet](https://oasis-wallet.rockx.com/)
 
-#### [Anthem](https://anthem.chorus.one/)
+* Currently supports address signing and transfers for the Oasis Network
+* Note that transfers on Mainnet Beta are disabled; to test wallet transfers please select "Testnet".
+* Staking and delegation in development
 
-* A tool built by Chorus One that makes address signing, staking, delegation, and transfers easy to do. Integrated with Ledger hardware.
-* Oasis account address creation is currently supported by Anthem.
-* Available in late October.
+#### [Anthem by Chorus One](https://anthem.chorus.one/)
 
-#### RockX GUI
+* Currently supports address signing for the Oasis Network
+* Staking, Delegation and Transfers in development
 
-* GUI Wallet Support for Ledger.
-* Available in late October.
+#### 
 
 ## _Coming Soon:_ Other Wallet Support
 
