@@ -32,20 +32,25 @@ Your Key to Digital Asset Banking - Finoa is a regulated custodian for Digital A
 * **Sharing your wallet address for distribution**: Finoa will share a list of relevant wallets with Oasis for distribution.
 * **Sign up:** Email [oasis@finoa.io](mailto:oasis@finoa.io) to set up an account.
 
-## Self Custody
+## Self Custody with Ledger
 
-### [Ledger Hardware Wallet](https://www.ledger.com/ledger-live) \(Available on Ledger Live\)
+Oasis currently has a Ledger Hardware Wallet available on [Ledger Live](https://www.ledger.com/ledger-live). 
 
-We recommend this option for teams with Ledger Wallet experience, and more specifically Ledger experimental / developer mode.
+### Set up
 
-* **Setup:** Read more about Ledger setup on the Oasis Network [here](https://docs.oasis.dev/oasis-core-ledger/).
-* **Sharing your wallet address for distribution:** Once you complete the setup on Ledger, please submit your wallet address [here](https://oasisfoundation.typeform.com/to/Cyk8NAzc).
+To set up your Ledger Device take the following steps:
 
-{% hint style="warning" %}
-_Ledger is currently only available via Linux and CLI. We do have a few easy to use GUIs in development._ 
-{% endhint %}
+* Go to [Ledger Live](https://www.ledger.com/ledger-live) and enable experimental mode.
+* Download the Oasis Wallet app on Ledger Live.
+* Once you download the app you can set up your address, delegate, and make transactions in two ways -- via the Oasis CLI or one of the many Oasis Ledger GUIs.
 
-### Ledger GUIs
+### Using the Oasis CLI
+
+The Oasis CLI supports both Linux and MacOs. To use the Ledger app using the Oasis CLI go [here](https://docs.oasis.dev/oasis-core-ledger/usage/setup).
+
+### Using a Ledger GUI
+
+To easily see your wallet address, make transfers, and delegate you can use an Oasis Ledger GUI. Two initial options below.
 
 #### [RockX Wallet](https://oasis-wallet.rockx.com/)
 
@@ -56,13 +61,24 @@ _Ledger is currently only available via Linux and CLI. We do have a few easy to 
 #### [Anthem by Chorus One](https://anthem.chorus.one/)
 
 * Currently supports address signing for the Oasis Network
-* Staking, Delegation and Transfers in development
+* _Staking, Delegation and Transfers in development_
 
-#### 
+### Verifying your wallet address
 
-## _Coming Soon:_ Other Wallet Support
+If you'd like to verify your wallet address, we can send you a transaction on the Oasis Testnet. Please take the following steps:
 
+1. Share your wallet address with us on [slack](www.oasisprotocol.org/slack) in the \#testnet channel. When you ask for tokens please indicate that this is to test your Ledger Wallet.
+2. Oasis will send you 3.14 TEST tokens.
+3. Send 1.00 TEST tokens back.
+
+### Share your wallet address for distribution
+
+Once you complete the setup on Ledger, please submit your wallet address [here](https://oasisfoundation.typeform.com/to/Cyk8NAzc).
+
+{% hint style="info" %}
+_**COMING SOON**_  
 In addition to the GUIs listed above there are also a number of other wallets in development including an integration for [BitPie](www.bitpie.com) in late October and [Trust Wallet](https://trustwallet.com/). 
+{% endhint %}
 
 ## Staking and Delegating on the Oasis Network
 
