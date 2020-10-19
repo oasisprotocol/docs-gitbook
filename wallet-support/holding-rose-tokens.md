@@ -63,23 +63,19 @@ To easily see your wallet address, make transfers, and delegate you can use an O
 * Currently supports address signing for the Oasis Network
 * _Staking, Delegation and Transfers in development_
 
-### Verifying your wallet address
+### Verify your wallet address for Mainnet
 
-If you'd like to verify your wallet address before the Oasis Mainnet launches, we can send you a transaction on the Oasis Testnet. 
+If you are a token holder who should receive tokens at Mainnet launch, you will receive an email with specific instructions about how to securely share your wallet address shortly. Please be on the lookout.
 
 {% hint style="info" %}
 Note that the wallet address for the Oasis Testnet and Mainnet will be the same. 
 {% endhint %}
 
-Please take the following steps:
+Once your address has been securely shared, we will do one additional step of verification on the Testnet. To do this correctly we will:
 
-1. Share your wallet address with us on [slack](www.oasisprotocol.org/slack) in the \#testnet channel. When you ask for tokens please indicate that this is to test your Ledger Wallet.
-2. Oasis will send you 3.14 TEST tokens.
-3. Send 1.00 TEST tokens back.
-
-### Share your wallet address for distribution
-
-Once you complete the setup on Ledger, please submit your wallet address [here](https://oasisfoundation.typeform.com/to/Cyk8NAzc).
+1. Send you a secure email notifying that we have sent you 3.15 TEST tokens
+2. Please then send 1.00 TEST tokens back
+3. Once this is verified respond to the secure email you've received to do a final confirmation.
 
 {% hint style="info" %}
 _**COMING SOON**_  
