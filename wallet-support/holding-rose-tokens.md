@@ -34,15 +34,18 @@ Your Key to Digital Asset Banking - Finoa is a regulated custodian for Digital A
 
 ## Self Custody with Ledger
 
-Oasis currently has a Ledger Hardware Wallet available on [Ledger Live](https://www.ledger.com/ledger-live). 
+You can use your Ledger hardware wallet to hold your ROSE tokens.
 
-### Set up
+### Setup
 
-To set up your Ledger Device take the following steps:
+To set up your Ledger wallet take the following steps:
 
-* Go to [Ledger Live](https://www.ledger.com/ledger-live) and enable experimental mode.
-* Download the Oasis Wallet app on Ledger Live.
-* Once you download the app you can set up your address, delegate, and make transactions in two ways -- via the Oasis CLI or one of the many Oasis Ledger GUIs.
+* Install [Ledger Live](https://www.ledger.com/ledger-live) and enable experimental mode.
+* Install the _Oasis_ app to your Ledger wallet via Ledger Live's Manager.
+
+For more detailed instructions, see the [Ledger Wallet](../use-your-tokens/holding-tokens/ledger-wallet.md) doc.
+
+Once this is done, you can set up your address, delegate, and make transactions. You can do that in two ways -- via the Oasis CLI or one of the many Oasis Ledger GUIs.
 
 ### Using the Oasis CLI
 
