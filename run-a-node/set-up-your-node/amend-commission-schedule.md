@@ -1,7 +1,7 @@
 # Amend Commission Schedule
 
 {% hint style="info" %}
-This example assumes you have read and followed the instructions in the [Prerequisites](../../use-your-tokens/prerequisites.md) and [Setup](../../use-your-tokens/setup.md) sections of the _Use Your Tokens_ docs.
+This example assumes you have read and followed the instructions in the [Prerequisites](../../use-your-tokens/oasis-cli-tools/prerequisites.md) and [Setup](../../use-your-tokens/oasis-cli-tools/setup.md) sections of the _Use Your Tokens_ docs.
 {% endhint %}
 
 We can configure our account to take a commission on staking rewards given to our node\(s\). The **commission rate** must be within **commission rate bounds**, which we can also configure.
@@ -53,7 +53,7 @@ oasis-node stake account info \
 ```
 
 {% hint style="info" %}
-For a detailed explanation on querying account information, see the [Get Info](../../use-your-tokens/account/get-info.md) section of the _Use Your Tokens_ docs.
+For a detailed explanation on querying account information, see the [Get Info](../../use-your-tokens/oasis-cli-tools/get-account-info.md) section of the _Use Your Tokens_ docs.
 {% endhint %}
 
 Before the transaction, this outputs:

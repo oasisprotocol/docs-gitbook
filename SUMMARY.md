@@ -33,23 +33,29 @@
 
 ## Wallet Support
 
-* [Oasis Core Ledger](https://docs.oasis.dev/oasis-core-ledger)
 * [Holding ROSE Tokens](wallet-support/holding-rose-tokens.md)
 
 ## Use Your Tokens
 
+* [Overview](use-your-tokens/overview.md)
 * [Terminology](use-your-tokens/terminology.md)
-* [Prerequisites](use-your-tokens/prerequisites.md)
-* [Setup](use-your-tokens/setup.md)
-* [Common Staking Info](use-your-tokens/common-staking-info.md)
-* [Account](use-your-tokens/account/README.md)
-  * [Address](use-your-tokens/account/address.md)
-  * [List Accounts](use-your-tokens/account/list-accounts.md)
-  * [Get Info](use-your-tokens/account/get-info.md)
-* [Transfer Tokens](use-your-tokens/transfer-tokens.md)
-* [Delegate/Stake Tokens](use-your-tokens/delegate-tokens.md)
-* [Reclaim Delegated/Staked Tokens](use-your-tokens/reclaim-tokens.md)
-* [Gas Costs](use-your-tokens/gas-costs.md)
+* [Holding Tokens](use-your-tokens/holding-tokens/README.md)
+  * [Ledger Wallet](use-your-tokens/holding-tokens/ledger-wallet.md)
+  * [Custody Providers](use-your-tokens/holding-tokens/custody-providers.md)
+  * [File-based signer](use-your-tokens/holding-tokens/file-based-signer.md)
+* [Web Wallets](use-your-tokens/web-wallets.md)
+* [Mobile Wallets](use-your-tokens/mobile-wallets.md)
+* [Oasis CLI Tools](use-your-tokens/oasis-cli-tools/README.md)
+  * [Prerequisites](use-your-tokens/oasis-cli-tools/prerequisites.md)
+  * [Setup](use-your-tokens/oasis-cli-tools/setup.md)
+  * [Common Staking Info](use-your-tokens/oasis-cli-tools/common-staking-info.md)
+  * [List Accounts](use-your-tokens/oasis-cli-tools/list-accounts.md)
+  * [Get Account Info](use-your-tokens/oasis-cli-tools/get-account-info.md)
+  * [Obtain Account Address From Entity's ID](use-your-tokens/oasis-cli-tools/address.md)
+  * [Transfer Tokens](use-your-tokens/oasis-cli-tools/transfer-tokens.md)
+  * [Delegate/Stake Tokens](use-your-tokens/oasis-cli-tools/delegate-tokens.md)
+  * [Reclaim Delegated/Staked Tokens](use-your-tokens/oasis-cli-tools/reclaim-tokens.md)
+  * [Gas Costs](use-your-tokens/oasis-cli-tools/gas-costs.md)
 
 ## Contribute to the Network
 

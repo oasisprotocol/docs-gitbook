@@ -25,7 +25,7 @@ Then proceed by following the [Run a Validator Node](../run-a-node/set-up-your-n
 To become a validator on the Oasis Network, you need to have enough tokens staked in your escrow account.
 
 {% hint style="info" %}
-For more information about obtaining information on your entity's account, see the [Account Get Info](../use-your-tokens/account/get-info.md) doc.
+For more information about obtaining information on your entity's account, see the [Account Get Info](../use-your-tokens/oasis-cli-tools/get-account-info.md) doc.
 {% endhint %}
 
 Currently, you should have:
