@@ -82,19 +82,18 @@ To make the transaction commands shorter and avoid typing errors, one can create
 For example, one could set `TX_FLAGS` for a Ledger device like below \(make sure all `LEDGER_*` environment variables are set appropriately\):
 
 ```bash
-TX_FLAGS=(--genesis.file $GENESIS_FILE
-  --signer.dir entity-$LEDGER_INDEX
+TX_FLAGS=(--genesis.file "$GENESIS_FILE"
+  --signer.dir /localhostdir/entity
   --signer.backend plugin
   --signer.plugin.name ledger
   --signer.plugin.path "$LEDGER_SIGNER_PATH"
-  --signer.plugin.config "wallet_id:$LEDGER_WALLET_ID,index:$LEDGER_INDEX"
 )
 ```
 
 Or, one could set `TX_FLAGS` like below to use a file signer:
 
 ```bash
-TX_FLAGS=(--genesis.file $GENESIS_FILE
+TX_FLAGS=(--genesis.file "$GENESIS_FILE"
   --signer.backend file
   --signer.dir /localhostdir/entity/
 )

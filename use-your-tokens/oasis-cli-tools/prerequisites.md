@@ -18,7 +18,7 @@ To setup Oasis Node CLI, follow the Oasis Node documentation:
 ## Ledger-based signer
 
 {% hint style="info" %}
-This is only needed if you will use the [Ledger hardware wallet](https://www.ledger.com/) based signer.
+This is only needed if you will use the [Ledger wallet](../holding-tokens/ledger-wallet.md) to hold your tokens.
 {% endhint %}
 
 To use the Ledger-based signer in combination with Oasis Node CLI, follow the [Setup](https://docs.oasis.dev/oasis-core-ledger/usage/setup) guide in our [Oasis Core Ledger](https://docs.oasis.dev/oasis-core-ledger/) docs.
