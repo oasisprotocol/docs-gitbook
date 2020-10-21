@@ -45,15 +45,17 @@ To set up your Ledger wallet take the following steps:
 
 For more detailed instructions, see the [Ledger Wallet](../use-your-tokens/holding-tokens/ledger-wallet.md) doc.
 
-Once this is done, you can set up your address, delegate, and make transactions. You can do that in two ways -- via the Oasis CLI or one of the many Oasis Ledger GUIs.
+Once this is done, you can set up your address, delegate, and make transactions. You can do that in two ways -- via the Oasis CLI tools or one of the Web Wallets.
 
-### Using the Oasis CLI
+### Using the Oasis CLI Tools
 
-The Oasis CLI supports both Linux and MacOs. To use the Ledger app using the Oasis CLI go [here](https://docs.oasis.dev/oasis-core-ledger/usage/setup).
+The Oasis CLI supports both Linux and macOS.
 
-### Using a Ledger GUI
+For more detailed instructions, see [Oasis CLI Tools](../use-your-tokens/oasis-cli-tools/) doc.
 
-To easily see your wallet address, make transfers, and delegate you can use an Oasis Ledger GUI. Two initial options below.
+### Using a Web Wallet
+
+To easily see your wallet address, make transfers, and delegate you can use a Web Wallet. Two initial options below.
 
 #### [RockX Wallet](https://oasis-wallet.rockx.com/)
 
