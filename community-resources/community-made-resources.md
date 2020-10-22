@@ -30,4 +30,5 @@ Below are a number of community-built tools you can use to monitor the Oasis Tes
 ## Monitoring and Alerts <a id="monitoring-and-alerts"></a>
 
 * [Panic Monitoring Tool \(by Simply VC\)](https://github.com/SimplyVC/panic_oasis)
+* [Oasis Monitor \(by Tessellated Geometry\)](https://github.com/TessellatedGeometry/oasis-monitor)
 
