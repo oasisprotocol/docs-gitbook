@@ -53,9 +53,9 @@ The Oasis CLI supports both Linux and macOS.
 
 For more detailed instructions, see [Oasis CLI Tools](../use-your-tokens/oasis-cli-tools/) doc.
 
-### Using a Web Wallet
+### Using a Web Wallet \(Ledger GUI\)
 
-To easily see your wallet address, make transfers, and delegate you can use a Web Wallet. Two initial options below.
+To easily see your wallet address, make transfers, and delegate you can use a Web Wallet.
 
 #### [RockX Wallet](https://oasis-wallet.rockx.com/)
 
@@ -68,24 +68,18 @@ To easily see your wallet address, make transfers, and delegate you can use a We
 * Currently supports address signing for the Oasis Network
 * _Staking, Delegation and Transfers in development_
 
+## Other Wallet Applications
+
+In addition to Ledger you can also you a stand alone mobile wallet application. Please check with the app developer directly for custody information.
+
+#### [Bitpie](https://bitpie.com/)
+
+* Available for [Android](https://play.google.com/store/apps/details?id=com.bitpie) and [iOS](https://apps.apple.com/us/app/bitpie-wallet/id1481314229).
+* Currently supports address generation and transfers.
+
 ### Verify your wallet address for Mainnet
 
-If you are a token holder who should receive tokens at Mainnet launch, you will receive an email with specific instructions about how to securely share your wallet address shortly. Please be on the lookout.
-
-{% hint style="info" %}
-Note that the wallet address for the Oasis Testnet and Mainnet will be the same. 
-{% endhint %}
-
-Once your address has been securely shared, we will do one additional step of verification on the Testnet. To do this correctly we will:
-
-1. Send you a secure email notifying that we have sent you 3.15 TEST tokens
-2. Please then send 1.00 TEST tokens back
-3. Once this is verified respond to the secure email you've received to do a final confirmation.
-
-{% hint style="info" %}
-_**COMING SOON**_  
-In addition to the GUIs listed above there are also a number of other wallets in development including an integration for [BitPie](www.bitpie.com) in late October and [Trust Wallet](https://trustwallet.com/). 
-{% endhint %}
+If you are a token holder expecting to receive tokens at Mainnet Launch you will receive an email with instructions on secure wallet verification and next steps soon.
 
 ## Staking and Delegating on the Oasis Network
 
