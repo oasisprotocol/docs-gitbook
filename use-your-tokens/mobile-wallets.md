@@ -10,7 +10,16 @@ If you need features that are not yet supported, consider using the [Oasis CLI T
 
 ### [Bitpie](https://bitpie.com/)
 
-* _In development._
+* Available for [Android](https://play.google.com/store/apps/details?id=com.bitpie) and [iOS](https://apps.apple.com/us/app/bitpie-wallet/id1481314229).
+* Currently supports address generation and transfers.
+
+{% hint style="info" %}
+Transfers on [Mainnet Beta](../pre-mainnet/mainnet-beta-overview.md) are disabled.
+{% endhint %}
+
+* _Staking and delegation are in development._
+
+
 
 ### [Trust Wallet](https://trustwallet.com/)
 
