@@ -31,10 +31,6 @@
 * [Node Troubleshooting](run-a-node/troubleshooting.md)
 * [Upgrade Log](run-a-node/upgrade-log.md)
 
-## Wallet Support
-
-* [Holding ROSE Tokens](wallet-support/holding-rose-tokens.md)
-
 ## Use Your Tokens
 
 * [Overview](use-your-tokens/overview.md)
@@ -56,6 +52,11 @@
   * [Delegate/Stake Tokens](use-your-tokens/oasis-cli-tools/delegate-tokens.md)
   * [Reclaim Delegated/Staked Tokens](use-your-tokens/oasis-cli-tools/reclaim-tokens.md)
   * [Gas Costs](use-your-tokens/oasis-cli-tools/gas-costs.md)
+
+## Wallet & Custody Support <a id="wallet-support"></a>
+
+* [Holding ROSE Tokens](wallet-support/holding-rose-tokens.md)
+* [Staking and Delegating](wallet-support/staking-and-delegating.md)
 
 ## Contribute to the Network
 
