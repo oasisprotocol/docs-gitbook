@@ -6,7 +6,7 @@ The hardware requirements listed on this page are the suggested minimum requirem
 
 ## Minimum Requirements <a id="suggested-minimum-configurations"></a>
 
-As noted in the [Architecture Overview](), the Oasis Network is composed of multiple classes of Nodes that participate in different committees. The majority of committees have common system configurations for the participant Nodes.
+The Oasis Network is composed of multiple classes of nodes that participate in different committees. The majority of committees have common system configurations for the participant nodes.
 
 We suggest your system meets the following minimum system requirements to run an Oasis node:
 
