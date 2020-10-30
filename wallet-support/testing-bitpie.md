@@ -6,6 +6,10 @@ description: >-
 
 # Testing your Bitpie Wallet
 
+{% hint style="danger" %}
+These instructions has been provided by Bitpie. For troubleshooting and feedback please reach out to the Bitpie team directly.
+{% endhint %}
+
 ### Steps for using Bitpie on the Oasis Testnet:
 
 **Step 1:** Update the Bitpie wallet to the latest version 4.9.013 build 49014, if the Bitpie wallet has been installed, overwrite the installation and upgrade.
