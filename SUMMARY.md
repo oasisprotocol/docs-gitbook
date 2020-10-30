@@ -56,6 +56,7 @@
 ## Wallet & Custody Support <a id="wallet-support"></a>
 
 * [Holding ROSE Tokens](wallet-support/holding-rose-tokens.md)
+* [Testing Bitpie on the Oasis Testnet](wallet-support/testing-bitpie-on-the-oasis-testnet.md)
 * [Staking and Delegating](wallet-support/staking-and-delegating.md)
 
 ## Contribute to the Network
