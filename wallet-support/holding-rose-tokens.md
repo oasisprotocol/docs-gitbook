@@ -76,6 +76,7 @@ In addition to Ledger you can also you a stand alone mobile wallet application. 
 
 * Available for [Android](https://play.google.com/store/apps/details?id=com.bitpie) and [iOS](https://apps.apple.com/us/app/bitpie-wallet/id1481314229).
 * Currently supports address generation and transfers.
+* To test BitPie on the Testnet please click [here](https://docs.oasis.dev/general/wallet-support/testing-bitpie).
 
 ### Verify your wallet address for Mainnet
 
