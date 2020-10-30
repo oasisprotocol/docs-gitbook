@@ -22,3 +22,5 @@ description: >-
 
 ![](https://lh4.googleusercontent.com/wZuz_iw3_uceyuKXf7gU78k8DoPPmnkVWb3ajHtZPpDSWJUqEVorQY-nYyYsaxk_c1pKApR2aO8rFahs9LTiFKoLd-uCEljzL-4rBc8Y8tQKqN5p2MbKjgxFSqJ3qi_b7mkjjbVV)
 
+For instructions in Chinese please see [here](https://www.yuque.com/docs/share/c3d327df-0eae-4eb8-af82-fdda49a97b36?#).
+
