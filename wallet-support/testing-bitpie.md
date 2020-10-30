@@ -4,7 +4,7 @@ description: >-
   to first test their wallet address on the Oasis Testnet
 ---
 
-# Testing Bitpie on the Oasis Testnet
+# Testing your Bitpie Wallet
 
 ### Steps for using Bitpie on the Oasis Testnet:
 
