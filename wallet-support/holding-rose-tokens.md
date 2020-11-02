@@ -4,7 +4,7 @@ description: 'Wallets, Delegation, and Staking'
 
 # Holding ROSE Tokens
 
-_Last updated as of October 9, 2020_
+_Last updated as of November 2, 2020_
 
 {% hint style="info" %}
 The purpose of this documentation is to provide instructions and support for ROSE token holders who will receive tokens at the time of Mainnet launch. Below are a number of ways to hold tokens -- both via custody providers and self custody -- and an easy to use guide to delegating your tokens to top validators on the network.
