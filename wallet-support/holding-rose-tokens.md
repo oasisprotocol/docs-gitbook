@@ -63,11 +63,6 @@ To easily see your wallet address, make transfers, and delegate you can use a We
 * Note that transfers on Mainnet Beta are disabled; to test wallet transfers please select "Testnet".
 * Staking and delegation in development
 
-#### [Anthem by Chorus One](https://anthem.chorus.one/)
-
-* Currently supports address signing for the Oasis Network
-* _Staking, Delegation and Transfers in development_
-
 ## Other Wallet Applications
 
 In addition to Ledger you can also you a stand alone mobile wallet application. Please check with the app developer directly for custody information.
