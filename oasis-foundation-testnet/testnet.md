@@ -16,12 +16,12 @@ On the Testnet, TEST tokens are in use -- if you need some to test your clients,
 
 This page is meant to be kept up to date with the information from the currently released Testnet. Use the information here to deploy or upgrade your node on the Testnet.
 
-* Latest Testnet version: **2020-09-15**
-* [Genesis file](https://github.com/oasisprotocol/public-testnet-artifacts/releases/download/2020-09-15/genesis.json):
-  * SHA1: `dc0a483341658c29b06d58b09d66e14677659482`
-  * SHA256: `ddf7a2c2d4f577f26451626e99f98c09591d90d7b0fd225634eb4b2eead36b69`
+* Latest Testnet version: **2020-11-04**
+* [Genesis file](https://github.com/oasisprotocol/public-testnet-artifacts/releases/download/2020-11-04/genesis.json):
+  * SHA1: `31883216b4737b8b46c24e8d86796ba78310fe8b`
+  * SHA256: `ce7cc41db609e39646eb29fd719f88397a698227611acd1c09142c9f2d4e6a50`
 * [Genesis document hash](../pre-mainnet/genesis-file.md#genesis-file-vs-genesis-document):
-  * `c93ff310b77d68d236d35f9df5d9a37073a88d388a29bd88d8d2f717f1dafcc7`
+  * `086a764a7a748eb6a2a3b046f152caf7e1cc9713478ce0565df253e1c5872963`
 * Oasis seed node address:
   * `05EAC99BB37F6DAAD4B13386FF5E087ACBDDC450@34.86.165.6:26656`
 
@@ -30,7 +30,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [20.11.2](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.11.2)
+  * [20.12.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.1)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
