@@ -63,48 +63,23 @@ This will be needed later when generating transactions.
 
 ### Initializing an Entity
 
-As described in the [Architecture Overview](), an entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. We highly recommend using an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
+An entity is critical to operating nodes on the network as it controls the stake attached to a given individual or organization on the network. We highly recommend using an HSM or [Ledger](https://docs.oasis.dev/oasis-core-ledger) device to protect your entity private key.
 
-#### Using a Plugin Signer
+#### Using a Ledger-based Signer
 
-{% hint style="info" %}
-At least version **20.9.1** of Oasis Core is required for the below process to work.
-{% endhint %}
+The Ledger-based signer stores your private keys on your Ledger wallet. It is implemented as an Oasis Core signer plugin.
 
-It is possible to use a signer plugin to generate/sign your entity descriptors. The [Oasis Core Ledger plugin](https://docs.oasis.dev/oasis-core-ledger) is an example of such a plugin which can be used to store keys on a Ledger device. The used example will therefore assume that you are using the Ledger signer plugin, but a similar process can be used with any other signer plugin \(the major difference being the plugin configuration\).
+You will need to set it up as described in the [Setup](https://docs.oasis.dev/oasis-core-ledger/usage/setup) section of our [Oasis Core Ledger docs](https://docs.oasis.dev/oasis-core-ledger).
 
-{% hint style="info" %}
-Make sure you set the following environment variables:
+As the entity's private key is stored on your Ledger wallet, you only need to export the entity's public key as described in [Exporting Public Key to Entity](https://docs.oasis.dev/oasis-core-ledger/usage/entity) section of our [Oasis Core Ledger docs](https://docs.oasis.dev/oasis-core-ledger).
 
-* `LEDGER_SIGNER_PATH`: Location of the `ledger-signer` binary.
-
-  See [Setup](https://docs.oasis.dev/oasis-core-ledger/usage/setup) for more details.
-
-* `LEDGER_WALLET_ID`: ID of the Ledger wallet to use.
-
-  See [Identifying Ledger Devices](https://docs.oasis.dev/oasis-core-ledger/usage/devices) for more details.
-
-* `LEDGER_INDEX`: Index \(0-based\) of the account on the Ledger device to use.
-{% endhint %}
-
-To initialize an entity simply run the following from `/localhostdir/entity`:
-
-```bash
-oasis-node registry entity init \
-    --signer.backend plugin \
-    --signer.plugin.name ledger \
-    --signer.plugin.path "$LEDGER_SIGNER_PATH" \
-    --signer.plugin.config "wallet_id:$LEDGER_WALLET_ID,index:$LEDGER_INDEX"
-```
-
-You will need to confirm the signing operation on the Ledger device.
-
-This will then generate two files in `/localhostdir/entity`:
+This will create 1 file in `/localhostdir/entity`:
 
 * `entity.json`: The entity descriptor. This is the JSON of the unsigned information to be sent to the registry application on the network.
-* `entity_genesis.json`: This JSON object contains the entity descriptor that has been signed with entity's private key. This is meant to be shared for inclusion in the Genesis block.
 
-Note the absence of `entity.pem` as the private key is stored on the Ledger device.
+{% hint style="info" %}
+There will be no signed entity descriptor, i.e. `entity_genesis.json`, created yet. It will get created when you'll update the entity descriptor with your signed node descriptor as described in the [Adding the Node to the Entity Descriptor](run-validator.md#adding-the-node-to-the-entity-descriptor) section.
+{% endhint %}
 
 #### Using a File-based Signer
 
@@ -175,7 +150,7 @@ The command will generate the following files:
 * `sentry_client_tls_identity.pem`: The node's TLS private key for communicating with sentry nodes. **DO NOT SHARE**
 * `sentry_client_tls_identity_cert.pem`: The node's TLS certificate for communicating with sentry nodes.
 
-#### Adding the Node to the Entity Descriptor
+### Adding the Node to the Entity Descriptor
 
 Once the node has been initialized, we need to add it to the entity descriptor so that it can properly register itself when the node starts up. The instructions differ based on what kind of signer was used to generate the entity.
 
@@ -488,7 +463,7 @@ The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on th
 
 ### Generating Entity Registration Transaction
 
-Before you can run your node successfully, you'll need to register your [entity]() so that your node registers properly. You could do this process _after_ you submit the escrow transaction, however, to save steps we prepare everything before hand.
+Before you can run your node successfully, you'll need to register your entity so that your node registers properly. You could do this process _after_ you submit the escrow transaction, however, to save steps we prepare everything before hand.
 
 Before generating the register transaction, you need to set the following environment variables:
 
