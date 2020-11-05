@@ -18,6 +18,7 @@ Then proceed by following the [Run a Validator Node](../run-a-node/set-up-your-n
 
 * Create your entity.
 * Initialize and configure your node.
+* Put enough stake in your escrow account.
 * Register your entity on the network.
 
 ## Stake requirements
