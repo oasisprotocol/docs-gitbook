@@ -53,7 +53,7 @@ The Oasis CLI supports both Linux and macOS.
 
 For more detailed instructions, see [Oasis CLI Tools](../use-your-tokens/oasis-cli-tools/) doc.
 
-### Using a Web Wallet \(Ledger GUI\)
+### Using a Ledger GUI
 
 To easily see your wallet address, make transfers, and delegate you can use a Web Wallet.
 
@@ -62,6 +62,14 @@ To easily see your wallet address, make transfers, and delegate you can use a We
 * Currently supports address signing and transfers for the Oasis Network
 * Note that transfers on Mainnet Beta are disabled; to test wallet transfers please select "Testnet".
 * Staking and delegation in development
+
+#### [Chorus One Anthem](https://anthem.chorus.one/)
+
+* Currently supports address signing and transfers for the Oasis Network
+* Currently supports the Oasis Testnet and can be used to test wallet transfers before Mainnet launch. Will be updated to include Mainnet after launch.
+* Staking and delegation in development
+
+
 
 ## Other Wallet Applications
 
@@ -72,6 +80,7 @@ In addition to Ledger you can also you a stand alone mobile wallet application. 
 * Available for [Android](https://play.google.com/store/apps/details?id=com.bitpie) and [iOS](https://apps.apple.com/us/app/bitpie-wallet/id1481314229).
 * Currently supports address generation and transfers.
 * To test BitPie on the Testnet please click [here](https://docs.oasis.dev/general/wallet-support/testing-bitpie).
+* Staking and delegation available at Mainnet launch
 
 ### Verify your wallet address for Mainnet
 
