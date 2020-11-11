@@ -6,20 +6,20 @@ description: >-
 
 # Network Parameters
 
-These are the current parameters for the [Mainnet Beta](../pre-mainnet/mainnet-beta-overview.md):
+These are the current parameters for the [Mainnet Beta](../mainnet/mainnet-beta-overview.md):
 
 {% hint style="warning" %}
 These parameters may change by Mainnet launch.
 {% endhint %}
 
 {% hint style="info" %}
-For an overview of Mainnet Beta which is the next phase towards Mainnet, see the [Mainnet Beta Overview](../pre-mainnet/mainnet-beta-overview.md). 
+For an overview of Mainnet Beta which is the next phase towards Mainnet, see the [Mainnet Beta Overview](../mainnet/mainnet-beta-overview.md). 
 {% endhint %}
 
 * [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-10-01/genesis.json):
   * SHA1: `3a17891f73ae2079e5a2cf7e53c25f7b26f63d3e`
   * SHA256: `a188bcae5b6ba7b1d2bf7fd4b3972381db611989ab11a45059f6faee28ad2a8d`
-* Genesis document's hash \([explanation](../pre-mainnet/genesis-file.md#genesis-file-vs-genesis-document)\):
+* Genesis document's hash \([explanation](../mainnet/genesis-file.md#genesis-file-vs-genesis-document)\):
   * `a245619497e580dd3bc1aa3256c07f68b8dcc13f92da115eadc3b231b083d3c4`
 * Oasis seed node address:
   * `E27F6B7A350B4CC2B48A6CBE94B0A02B0DCB0BF3@35.199.49.168:26656`

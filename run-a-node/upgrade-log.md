@@ -12,7 +12,7 @@ description: >-
 
 * Stop your node.
 * [Wipe state](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
-* Replace the old genesis file with the [Mainnet Beta genesis file](../pre-mainnet/mainnet-beta-overview.md#mainnet-beta-genesis-file).
+* Replace the old genesis file with the [Mainnet Beta genesis file](../mainnet/mainnet-beta-overview.md#mainnet-beta-genesis-file).
 * Start your node.
 
 {% hint style="info" %}

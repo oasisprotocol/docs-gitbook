@@ -17,7 +17,7 @@ The following web wallets combine the simplicity of a web-based UI and security 
 * Currently supports address generation and transfers.
 
 {% hint style="info" %}
-Transfers on [Mainnet Beta](../pre-mainnet/mainnet-beta-overview.md) are disabled. To test transfers, please use the [Testnet](../oasis-foundation-testnet/testnet.md).
+Transfers on [Mainnet Beta](../mainnet/mainnet-beta-overview.md) are disabled. To test transfers, please use the [Testnet](../oasis-foundation-testnet/testnet.md).
 {% endhint %}
 
 * _Staking and delegation are in development._

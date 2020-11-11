@@ -66,10 +66,11 @@
 * [Contribution Guidelines](contribute-to-the-network/contribution-guidelines.md)
 * [Visit Our GitHub](https://github.com/oasisprotocol)
 
-## Pre-Mainnet Initiatives <a id="pre-mainnet"></a>
+## Mainnet Initiatives <a id="mainnet"></a>
 
-* [Mainnet Beta Overview](pre-mainnet/mainnet-beta-overview.md)
-* [Genesis File Overview](pre-mainnet/genesis-file.md)
+* [Mainnet Overview](mainnet/mainnet.md)
+* [Mainnet Beta Overview](mainnet/mainnet-beta-overview.md)
+* [Genesis File Overview](mainnet/genesis-file.md)
 
 ## Oasis Foundation Testnet
 

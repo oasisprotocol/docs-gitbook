@@ -14,7 +14,7 @@ If you need features that are not yet supported, consider using the [Oasis CLI T
 * Currently supports address generation and transfers.
 
 {% hint style="info" %}
-Transfers on [Mainnet Beta](../pre-mainnet/mainnet-beta-overview.md) are disabled.
+Transfers on [Mainnet Beta](../mainnet/mainnet-beta-overview.md) are disabled.
 {% endhint %}
 
 * _Staking and delegation are in development._
