@@ -8,12 +8,12 @@ description: >-
 
 These are the current parameters for the [Mainnet Beta](../mainnet/mainnet-beta-overview.md):
 
-{% hint style="warning" %}
-These parameters may change by Mainnet launch.
+{% hint style="danger" %}
+These parameters will change for the upcoming upgrade from Mainnet Beta to Mainnet.
 {% endhint %}
 
 {% hint style="info" %}
-For an overview of Mainnet Beta which is the next phase towards Mainnet, see the [Mainnet Beta Overview](../mainnet/mainnet-beta-overview.md). 
+For more information on the proposed criteria and changes to upgrade from Mainnet Beta to Mainnet, see the [Mainnet Overview](../mainnet/mainnet.md) doc. 
 {% endhint %}
 
 * [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-10-01/genesis.json):
