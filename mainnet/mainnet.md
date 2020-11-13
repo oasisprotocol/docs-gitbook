@@ -47,7 +47,7 @@ The following parts of the Genesis File will be updated:
 
 See the updated [Network Parameters](../oasis-network/network-parameters.md) for the published Mainnet genesis file.
 
-Mainnet will use [**Oasis Core 20.12.1**](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.1).
+Mainnet will use [**Oasis Core 20.12.2**](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.2).
 
 ## Mainnet Launch Support
 
