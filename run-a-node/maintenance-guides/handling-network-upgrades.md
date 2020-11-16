@@ -50,60 +50,95 @@ Download the new genesis file linked in the [Network Parameters](../../oasis-net
 Then compare the dumped state with the downloaded genesis file:
 
 ```bash
-diff genesis_dump.json genesis.json
+diff --unified=3 genesis_dump.json genesis.json
 ```
 
-### Example diff for the 2020-03-05 network upgrade
+### Example diff for Mainnet Beta to Mainnet network upgrade
 
-For the 2020-03-05 network upgrade, the `diff` command above returns:
+Let's assume that the above `diff` command returns:
 
 ```diff
-3,4c3,4
-<   "genesis_time": "2020-03-05T14:16:02.002875089+01:00",
-<   "chain_id": "quest-2020-02-11-1581440400",
----
->   "genesis_time": "2020-03-05T17:00:00.000000000Z",
->   "chain_id": "questnet-2020-03-05-1583427600",
-1942c1942,1945
-<         "3": "100000000000"
----
->         "3": "100000000000",
->         "4": "100000000000",
->         "5": "100000000000",
->         "6": "100000000000"
-1953c1956,1961
-<       "commission_schedule_rules": {},
----
->       "commission_schedule_rules": {
->         "rate_change_interval": 1,
->         "rate_bound_lead": 14,
->         "max_rate_steps": 21,
->         "max_bound_steps": 21
->       },
-1967,1973d1974
-<       "disable_transfers": true,
-<       "disable_delegation": true,
-<       "undisable_transfers_from": {
-<         "OSo8hvkfyqypYniWWlVhikiVYQJC7EBsUdczBdpAjIs=": true,
-<         "ZWVxEX66b1wnY62wx5lp7bR9rF8+2tCxgmcwFs7Kg1s=": true
-<       },
-<       "fee_weight_vote": 1,
-1975c1976,1978
-<       "reward_factor_block_proposed": "0"
----
->       "reward_factor_block_proposed": "0",
->       "fee_split_vote": "1",
->       "fee_split_propose": "1"
-7647c7650
-<   "halt_epoch": 4839,
----
->   "halt_epoch": 6525,
-7649c7652
+--- genesis_dump.json	2020-11-16 17:49:46.864554271 +0100
++++ genesis.json	2020-11-16 17:49:40.353496022 +0100
+@@ -1,7 +1,7 @@
+ {
+   "height": 702000,
+-  "genesis_time": "2020-11-18T13:38:00Z",
+-  "chain_id": "mainnet-beta-2020-10-01-1601568000",
++  "genesis_time": "2020-11-18T16:00:00Z",
++  "chain_id": "oasis-1",
+   "epochtime": {
+     "params": {
+       "interval": 600
+@@ -2506,1563 +2506,1779 @@
+       "debonding_interval": 336,
+       "reward_schedule": [
+         {
+-          "until": 3696,
+-          "scale": "1595"
++          "until": 4842,
++          "scale": "2081"
+         },
+         {
+-          "until": 3720,
+-          "scale": "1594"
++          "until": 4866,
++          "scale": "2080"
+         },
+
+        ... trimmed ...
+
+         {
+-          "until": 35712,
++          "until": 36882,
+           "scale": "2"
+         },
+         {
+-          "until": 35760,
++          "until": 36930,
+           "scale": "1"
+         }
+       ],
+@@ -4087,7 +4303,6 @@
+         "transfer": 1000
+       },
+       "min_delegation": "100000000000",
+-      "disable_transfers": true,
+       "fee_split_weight_propose": "2",
+       "fee_split_weight_vote": "1",
+       "fee_split_weight_next_propose": "1",
+@@ -4097,7 +4312,7 @@
+     "token_symbol": "ROSE",
+     "token_value_exponent": 9,
+     "total_supply": "10000000000000000000",
+-    "common_pool": "1841608893017061854",
++    "common_pool": "2291608893017061854",
+     "last_block_fees": "0",
+     "ledger": {
+       "oasis1qp0l8r2s3076n4xrq8av0uuqegj7z9kq55gu5exy": {
+@@ -6419,7 +6634,7 @@
+       },
+       "oasis1qrad7s7nqm4gvyzr8yt2rdk0ref489rn3vn400d6": {
+         "general": {
+-          "balance": "1633038701000000000"
++          "balance": "1183038701000000000"
+         },
+         "escrow": {
+           "active": {
+@@ -9862,6 +10077,8 @@
+       }
+     }
+   },
+-  "halt_epoch": 1440,
+-  "extra_data": null
++  "halt_epoch": 9940,
++  "extra_data": {
++    "quote": "UXVpcyBjdXN0b2RpZXQgaXBzb3MgY3VzdG9kZXM/IFtzdWJtaXR0ZWQgYnkgT2FzaXMgQ29tbXVuaXR5IE1lbWJlciBEYW5peWFyIEJvcmFuZ2F6aXlldl0="
++  }
+ }
 ```
 
-We can see that the provided genesis file updated some network parameters but didn't touch any other entity, account or delegation data.
-
-If you obtain the same result, then you have successfully verified the provided genesis file.
+We can observe that the provided genesis file mostly updates some particular network parameters. In addition, some ROSE tokens were transferred from an account to the Common Pool. All other things remained unchanged.
 
 Let's break down the diff and explain what has changed.
 
@@ -115,15 +150,17 @@ The following genesis file fields will always change on a network upgrade:
 
 The following fields were a particular change in this upgrade:
 
-* `staking.params.thresholds`: Three new staking threshold values were added for three new staking threshold kinds \(`4`: key manager node, `5`: compute runtime, `6`: key manager runtime\).
-* `staking.params.commission_schedule_rules`: Commission schedule rules were added since this upgrade enables token transfers and delegation.
-* `staking.params.disable_transfers`, `staking.params.disable_delegation`,
+* `staking.params.reward_schedule`: This field describes the staking reward model. It was changed to start at 20% \(annualized\) and range from 20% to 2% over the first 4 years of the network. For more details, see the updated [Token Metrics and Distribution](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution) doc.
+* `staking.params.disable_transfers`: This field was removed to enable token transfers.
+* `staking.common_pool`: This field represents the Common Pool. Its balance was increased by 450M ROSE to fund increased staking rewards.
+* `staking.ledger.oasis1qrad7s7nqm4gvyzr8yt2rdk0ref489rn3vn400d6`: This field corresponds to the Community and Ecosystem Wallet. Its `general.balance` was reduced by 450M ROSE and transferred to the Common Pool to fund increased staking rewards.
+* `extra_data`: This field can hold network's extra data, but is currently ignored everywhere. For this upgrade, we changed it back to the value in the Mainnet Beta genesis file to include the Oasis network's genesis quote: _”_[_Quis custodiet ipsos custodes?_](https://en.wikipedia.org/wiki/Quis_custodiet_ipsos_custodes%3F)_” \[submitted by Oasis Community Member Daniyar Borangaziyev\]._
 
-  `staking.params.undisable_transfers_from`: These fields were removed since this upgrade enables token transfers and delegation.
+{% hint style="info" %}
+The balances in the genesis file are enumerated in nROSE, with 1 billion nROSE being equivalent to 1 ROSE token. For more details, see the [Genesis File Overview](../../mainnet/genesis-file.md).
+{% endhint %}
 
-* `staking.params.fee_split_vote`, `staking.params.fee_split_propose`:
-
-  These two fields were added to control how a block's fee for a validator is split split between the validator that signs the block \(`fee_split_vote`\) and the validator that proposes the block \(`fee_split_propose`\).
+If you obtain the same result, then you have successfully verified the provided genesis file.
 
 ## Stop Your Node
 
