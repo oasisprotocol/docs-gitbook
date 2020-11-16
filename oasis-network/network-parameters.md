@@ -13,7 +13,11 @@ These parameters will not work for [Mainnet Beta](../mainnet/mainnet-beta-overvi
 {% endhint %}
 
 {% hint style="info" %}
-For more information on the proposed criteria and changes to upgrade from Mainnet Beta to Mainnet, see the [Mainnet Overview](../mainnet/mainnet.md) doc. 
+For more information on the proposed criteria and changes to upgrade from Mainnet Beta to Mainnet, see the [Mainnet Overview](../mainnet/mainnet.md) doc.
+{% endhint %}
+
+{% hint style="info" %}
+For detailed instructions on upgrading your node from Mainnet Beta to Mainnet, see the [Upgrade Log](../run-a-node/upgrade-log.md#2020-11-18-16-00-utc-mainnet-upcoming) doc.
 {% endhint %}
 
 * Genesis file:
