@@ -9,7 +9,7 @@ description: >-
 These are the current parameters for the upcoming Mainnet:
 
 {% hint style="danger" %}
-These parameters will not work for Mainnet Beta. At this time it is not suggested to join the Mainnet Beta Network
+These parameters will not work for [Mainnet Beta](../mainnet/mainnet-beta-overview.md). At this time it is not suggested to join the Mainnet Beta network.
 {% endhint %}
 
 {% hint style="info" %}
