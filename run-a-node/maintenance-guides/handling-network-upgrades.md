@@ -12,22 +12,29 @@ The following guide should be used when the network has agreed to do a software 
 Do not stop your [Oasis Node](../prerequisites/oasis-node.md) process just yet.
 {% endhint %}
 
-Before an upgrade we will update the [Network Parameters](../../oasis-network/network-parameters.md) to specify the block height at which to dump.
+Before an upgrade we will update the [Upgrade Log](../upgrade-log.md) to specify the block height at which to dump.
 
 To dump the state of the network to a genesis file, run:
 
 ```bash
-HEIGHT_TO_DUMP=<HEIGHT-TO-DUMP>
 oasis-node genesis dump \
   -a unix:/serverdir/node/internal.sock \
-  --genesis.file /serverdir/etc/genesis_dump.$HEIGHT_TO_DUMP.json \
-  --height $HEIGHT_TO_DUMP
+  --genesis.file /serverdir/etc/genesis_dump.json \
+  --height <HEIGHT-TO-DUMP>
 ```
 
 replacing `<HEIGHT-TO-DUMP>` with the block height we specified.
 
 {% hint style="warning" %}
-You must only run the following command _after_ the `<HEIGHT-TO-DUMP>` block height has been reached on the network.
+You can only run the following command _after_ the `<HEIGHT-TO-DUMP>` block height has been reached on the network.
+
+To see the network's current height, run:
+
+```bash
+oasis-node control status -a unix:/serverdir/node/internal.sock
+```
+
+and observe the value of the `consensus.latest_height` key.
 {% endhint %}
 
 ## Patch Dumped State
@@ -43,7 +50,7 @@ Download the new genesis file linked in the [Network Parameters](../../oasis-net
 Then compare the dumped state with the downloaded genesis file:
 
 ```bash
-diff genesis_dump.$HEIGHT_TO_DUMP.pretty.json genesis.json
+diff genesis_dump.json genesis.json
 ```
 
 ### Example diff for the 2020-03-05 network upgrade
@@ -148,5 +155,5 @@ oasis-node --config /serverdir/etc/config.yml
 
 ## Clean Up
 
-After you're comfortable with your node deployment, you can clean up the `genesis_dump.$HEIGHT_TO_DUMP.json` file.
+After you're comfortable with your node deployment, you can clean up the `genesis_dump.json` file.
 
