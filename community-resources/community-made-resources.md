@@ -24,8 +24,8 @@ Below are a number of community-built tools you can use to monitor the Oasis Tes
 * [Rosetta Gateway \(by Oasis Protocol Foundation\)](https://github.com/oasisprotocol/oasis-core-rosetta-gateway)
 * [Oasis Metadata Registry \(by Oasis Protocol Foundation\)](https://github.com/oasisprotocol/metadata-registry)
 * [Oasis API Server \(by Simply VC\)](https://github.com/SimplyVC/oasis_api_server)
-* [Oasis RPC Proxy \(by Figment Networks\)](https://github.com/figment-networks/oasis-rpc-proxy)
-* [Oasis Indexer \(by Figment Networks\)](https://github.com/figment-networks/oasishub-indexer)
+* [Oasis RPC Proxy \(by Figment\)](https://github.com/figment-networks/oasis-rpc-proxy)
+* [Oasis Indexer \(by Figment\)](https://github.com/figment-networks/oasishub-indexer)
 
 ## Monitoring and Alerts <a id="monitoring-and-alerts"></a>
 
