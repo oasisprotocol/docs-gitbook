@@ -6,6 +6,16 @@ description: >-
 
 # Upgrade Log
 
+## 2020-11-18 - Mainnet \(Upcoming\)
+
+### Instructions
+
+* Stop your node.
+* Upgrade the oasis-node binary to [20.12.2](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.2)
+* [Wipe state](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
+* Replace the old genesis file with the to-be-published Mainnet Genesis
+* Start your node.
+
 ## 2020-10-01 - Mainnet Beta
 
 ### Instructions

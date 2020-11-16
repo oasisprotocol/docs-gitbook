@@ -6,21 +6,21 @@ description: >-
 
 # Network Parameters
 
-These are the current parameters for the [Mainnet Beta](../mainnet/mainnet-beta-overview.md):
+These are the current parameters for the upcoming Mainnet:
 
 {% hint style="danger" %}
-These parameters will change for the upcoming upgrade from Mainnet Beta to Mainnet.
+These parameters will not work for Mainnet Beta. At this time it is not suggested to join the Mainnet Beta Network
 {% endhint %}
 
 {% hint style="info" %}
 For more information on the proposed criteria and changes to upgrade from Mainnet Beta to Mainnet, see the [Mainnet Overview](../mainnet/mainnet.md) doc. 
 {% endhint %}
 
-* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-10-01/genesis.json):
-  * SHA1: `3a17891f73ae2079e5a2cf7e53c25f7b26f63d3e`
-  * SHA256: `a188bcae5b6ba7b1d2bf7fd4b3972381db611989ab11a45059f6faee28ad2a8d`
+* Genesis file:
+  * SHA1: `TBD`
+  * SHA256: `TBD`
 * Genesis document's hash \([explanation](../mainnet/genesis-file.md#genesis-file-vs-genesis-document)\):
-  * `a245619497e580dd3bc1aa3256c07f68b8dcc13f92da115eadc3b231b083d3c4`
+  * `TBD`
 * Oasis seed node address:
   * `E27F6B7A350B4CC2B48A6CBE94B0A02B0DCB0BF3@35.199.49.168:26656`
 
@@ -29,7 +29,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [20.10](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.10)
+  * [20.12.2](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.2)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
