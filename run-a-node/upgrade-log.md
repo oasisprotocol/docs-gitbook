@@ -6,7 +6,7 @@ description: >-
 
 # Upgrade Log
 
-## 2020-11-18 - Mainnet \(Upcoming\)
+## 2020-11-18 \(16:00 UTC\) - Mainnet \(Upcoming\)
 
 ### Instructions
 
