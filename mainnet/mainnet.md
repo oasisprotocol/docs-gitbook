@@ -34,7 +34,7 @@ The Mainnet genesis file is intended to be as close as possible to the state of 
 In addition, after receiving additional feedback from the community, the Oasis Protocol Foundation has proposed to increase the staking rewards model. In the new proposed model staking rewards will start at 20% \(annualized\) and range from 20% to 2% over the first 4 years of the network \(see more in updated [Token Metrics and Distribution](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution) doc\).
 
 {% hint style="info" %}
-The following parts of the Genesis File will be updated:
+The following parts of the genesis file will be updated:
 
 * **`height`** will be updated to be the block height at the time of the snapshot on Mainnet Beta.
 * **`genesis_time`** will be updated with the time of the Mainnet launch.
@@ -42,7 +42,9 @@ The following parts of the Genesis File will be updated:
 * **`halt_epoch`** will be set to `9940` \(approximately 1 year from Mainnet launch\).
 * **`staking.params.disable_transfers`** will be set to **`false`** \(or omitted\) to enable transfers.
 * **`staking.params.reward_schedule`** will be updated to reflect the updated reward schedule as mentioned above.
-* Transfer from the Community and Ecosystem Wallet of 450M ROSE to the Common Pool to fund increased staking rewards.
+* Transfer from the Community and Ecosystem Wallet \(  `oasis1qrad7s7nqm4gvyzr8yt2rdk0ref489rn3vn400d6.general.balance` under 
+
+  `staking.ledger)`of 450M ROSE to the Common Pool \(`staking.common_pool`\) to fund increased staking rewards.
 {% endhint %}
 
 See the updated [Network Parameters](../oasis-network/network-parameters.md) for the published Mainnet genesis file.
