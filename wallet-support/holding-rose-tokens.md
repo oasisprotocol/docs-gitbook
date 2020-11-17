@@ -18,7 +18,7 @@ At the time of Mainnet Launch using a custody provider will be the easiest way t
 
 Anchorage is the most advanced digital asset platform, with a solution designed to meet the evolving needs of institutional investors. Today Anchorage offers world class custody, trading, and financing services, as well as on-chain participation like staking and governance. Modular and adaptable to any blockchain use case, Anchorage supports all assets that meet our standards of quality and security.
 
-* **Delegation options:** Anchorage will enable delegation on the Oasis Network of any validator running a node on the network.
+* **Delegation options:** Available via Anchorage
 * **Min holding:** Minimum custody requirements. Suitable for larger token holders. 
 * **Sharing your wallet address for distribution**: Anchorage will share a list of relevant wallets with Oasis for distribution.
 * **Sign up:** Please sign up [here](https://web.anchorage.com/anchorage-oasis)
@@ -27,7 +27,7 @@ Anchorage is the most advanced digital asset platform, with a solution designed 
 
 Your Key to Digital Asset Banking - Finoa is a regulated custodian for Digital Assets, servicing professional investors with Custody and Staking. The platform enables its users to securely store and manage their crypto-assets, while providing a directly accessible, highly intuitive and unique user-experience, enabling seamless access to the ecosystem of Decentralized Finance \(DeFi\).
 
-* **Delegation options:** Finoa offers delegation to a number of select validators including Bison Trails, Blockdaemon, Chorus One, Figment Networks, and more.
+* **Delegation options:** Finoa offers delegation to a number of select validators including Bison Trails, Blockdaemon, Chorus One, Figment, and more.
 * **Min holding:** No threshold for assets under custody. Please check out details at [finoa.io/oasis](www.finoa.io/oasis).
 * **Sharing your wallet address for distribution**: Finoa will share a list of relevant wallets with Oasis for distribution.
 * **Sign up:** Email [oasis@finoa.io](mailto:oasis@finoa.io) to set up an account.
