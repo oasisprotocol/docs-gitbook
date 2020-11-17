@@ -11,7 +11,7 @@ description: >-
 * **Block height** when Mainnet Beta network stops: **702000.**
 
 {% hint style="info" %}
-We expect the Mainnet Beta network to reach this block height at around 2020-11-18 14:00 UTC.
+We expect the Mainnet Beta network to reach this block height at around 2020-11-18 13:30 UTC.
 {% endhint %}
 
 * **Upgrade window:**
