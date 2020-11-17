@@ -36,18 +36,30 @@ In addition, after receiving additional feedback from the community, the Oasis P
 {% hint style="info" %}
 The following parts of the genesis file will be updated:
 
-* **`height`** will be updated to be the block height at the time of the snapshot on Mainnet Beta.
-* **`genesis_time`** will be updated with the time of the Mainnet launch.
+* **`height`** will remain the same as at the time of the snapshot of Mainnet Beta, i.e. `702000`.
+* **`genesis_time`** will be set to `2020-11-18T16:00:00Z`.
 * **`chain_id`** will be set to `oasis-1`.
 * **`halt_epoch`** will be set to `9940` \(approximately 1 year from Mainnet launch\).
-* **`staking.params.disable_transfers`** will be set to **`false`** \(or omitted\) to enable transfers.
+* **`staking.params.disable_transfers`** will be omitted \(or set to`false)`to enable transfers.
 * **`staking.params.reward_schedule`** will be updated to reflect the updated reward schedule as mentioned above.
-* Transfer from the Community and Ecosystem Wallet \(  `oasis1qrad7s7nqm4gvyzr8yt2rdk0ref489rn3vn400d6.general.balance` under 
+* **`staking.common_pool`** will be increased by 450M ROSE to fund increased staking rewards.
+* **`staking.ledger.oasis1qrad7s7nqm4gvyzr8yt2rdk0ref489rn3vn400d6`**, which corresponds to the Community and Ecosystem Wallet, will have its `general.balance` reduced by 450M ROSE to `1183038701000000000` and transferred to the Common Pool to fund increased staking rewards.
+* **`extra_data`** will be set back to the value in the [Mainnet Beta genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-10-01/genesis.json) 
 
-  `staking.ledger)`of 450M ROSE to the Common Pool \(`staking.common_pool`\) to fund increased staking rewards.
+  to include the Oasis network's genesis quote: _”_[_Quis custodiet ipsos custodes?_](https://en.wikipedia.org/wiki/Quis_custodiet_ipsos_custodes%3F)_” \[submitted by Oasis Community Member Daniyar Borangaziyev\]:_
+
+  ```diff
+    "extra_data": {
+      "quote": "UXVpcyBjdXN0b2RpZXQgaXBzb3MgY3VzdG9kZXM/IFtzdWJtaXR0ZWQgYnkgT2FzaXMgQ29tbXVuaXR5IE1lbWJlciBEYW5peWFyIEJvcmFuZ2F6aXlldl0="
+    }
+  ```
 {% endhint %}
 
 See the updated [Network Parameters](../oasis-network/network-parameters.md) for the published Mainnet genesis file.
+
+{% hint style="info" %}
+For more detailed instructions how to verify the provided Mainnet genesis file by comparing it to network state dump, see the [Handling Network Upgrades](../run-a-node/maintenance-guides/handling-network-upgrades.md#example-diff-for-mainnet-beta-to-mainnet-network-upgrade) guide.
+{% endhint %}
 
 Mainnet will use [**Oasis Core 20.12.2**](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.2).
 
