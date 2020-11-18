@@ -8,23 +8,15 @@ description: >-
 
 These are the current parameters for the upcoming Mainnet:
 
-{% hint style="danger" %}
-These parameters will not work for [Mainnet Beta](../mainnet/mainnet-beta-overview.md). At this time it is not suggested to join the Mainnet Beta network.
-{% endhint %}
-
 {% hint style="info" %}
-For more information on the proposed criteria and changes to upgrade from Mainnet Beta to Mainnet, see the [Mainnet Overview](../mainnet/mainnet.md) doc.
+For more information on the proposed criteria and changes to upgrade from Mainnet Beta to Mainnet, see the [Mainnet Overview](../mainnet/mainnet.md) doc. For detailed instructions on upgrading your node from Mainnet Beta to Mainnet, see the [Upgrade Log](../run-a-node/upgrade-log.md#2020-11-18-16-00-utc-mainnet-upcoming) doc.
 {% endhint %}
 
-{% hint style="info" %}
-For detailed instructions on upgrading your node from Mainnet Beta to Mainnet, see the [Upgrade Log](../run-a-node/upgrade-log.md#2020-11-18-16-00-utc-mainnet-upcoming) doc.
-{% endhint %}
-
-* Genesis file:
-  * SHA1: `TBD`
-  * SHA256: `TBD`
+* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-11-18/genesis.json):
+  * SHA1: `60d82cbb175348aab5d71e69073c9f3562ec3286`
+  * SHA256: `f53ddbc20e09a65906089e81f871d36b658b0d7f5205e17bf047bd822489b3ef`
 * Genesis document's hash \([explanation](../mainnet/genesis-file.md#genesis-file-vs-genesis-document)\):
-  * `TBD`
+  * `a4dc2c4537992d6d2908c9779927ccfee105830250d903fd1abdfaf42cb45631`
 * Oasis seed node address:
   * `E27F6B7A350B4CC2B48A6CBE94B0A02B0DCB0BF3@35.199.49.168:26656`
 
