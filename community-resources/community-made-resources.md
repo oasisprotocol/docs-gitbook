@@ -10,9 +10,11 @@ Below are a number of community-built tools you can use to monitor the Oasis Tes
 * [Oasis.Fish \(by Stakefish\)](https://oasis.fish/leaderboard/)
 * [Oasis Smartstake \(by Smartstake\)](https://oasis.smartstake.io/)
 
-## Staking Dashboard <a id="staking-dashboard"></a>
+## Wallets, GUIs, and Staking Dashboards <a id="staking-dashboard"></a>
 
 * [Anthem \(by Chorus One\)](https://anthem.chorus.one/login)
+* [Bitpie](https://bitpie.com/)
+* [RockX Wallet](https://oasis-wallet.rockx.com/)
 
 ## One-touch Node Deployments <a id="one-touch-node-deployments"></a>
 
@@ -31,4 +33,5 @@ Below are a number of community-built tools you can use to monitor the Oasis Tes
 
 * [Panic Monitoring Tool \(by Simply VC\)](https://github.com/SimplyVC/panic_oasis)
 * [Oasis Monitor \(by Tessellated Geometry\)](https://github.com/TessellatedGeometry/oasis-monitor)
+* [Mission Control \(by Chainflow\)](https://github.com/Chainflow/oasis-mission-control)
 
