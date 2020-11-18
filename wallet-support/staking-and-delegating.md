@@ -12,10 +12,10 @@ The Oasis Network is supported by an amazing community of validators and infrast
 
 #### Tools to use for Staking and Delegation
 
-A number of wallets, Ledger GUIs and Custodians support staking and delegation on the Oasis Network. Those include:
+In addition to using the [Oasis CLI](https://app.gitbook.com/@oasisprotocol/s/general/~/drafts/-MMQWgyLljbUORgRYwzo/use-your-tokens/oasis-cli-tools), there are number of wallets, Ledger GUIs and Custodians support staking and delegation on the Oasis Network. Those include:
 
 * [Chorus One Anthem](https://anthem.chorus.one/) \(Ledger GUI\)
-* [Bitpie](https://bitpie.com/) \(mobile wallet\)
+* [Bitpie](https://bitpie.com/) \(mobile wallet; Available on Android app; iOS coming soon\)
 * [Anchorage](https://anchorage.com/) \(custodian\)
 * [Finoa](https://finoa.io/) \(custodian\)
 
