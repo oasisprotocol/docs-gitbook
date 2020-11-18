@@ -111,8 +111,8 @@ Let's assume that the above `diff` command returns:
      "token_symbol": "ROSE",
      "token_value_exponent": 9,
      "total_supply": "10000000000000000000",
--    "common_pool": "1841608893017061854",
-+    "common_pool": "2291608893017061854",
+-    "common_pool": "1835039672187348312",
++    "common_pool": "2285039672187348312",
      "last_block_fees": "0",
      "ledger": {
        "oasis1qp0l8r2s3076n4xrq8av0uuqegj7z9kq55gu5exy": {
