@@ -57,19 +57,17 @@ For more detailed instructions, see [Oasis CLI Tools](../use-your-tokens/oasis-c
 
 To easily see your wallet address, make transfers, and delegate you can use a Web Wallet.
 
-#### [RockX Wallet](https://oasis-wallet.rockx.com/)
-
-* Currently supports address signing and transfers for the Oasis Network
-* Note that transfers on Mainnet Beta are disabled; to test wallet transfers please select "Testnet".
-* Staking and delegation in development
-
 #### [Chorus One Anthem](https://anthem.chorus.one/)
 
 * Currently supports address signing and transfers for the Oasis Network
 * Currently supports the Oasis Testnet and can be used to test wallet transfers before Mainnet launch. Will be updated to include Mainnet after launch.
 * Staking and delegation in development
 
+#### [RockX Wallet](https://oasis-wallet.rockx.com/) \[currently under maintenance\]
 
+* Currently supports address signing and transfers for the Oasis Network
+* Note that transfers on Mainnet Beta are disabled; to test wallet transfers please select "Testnet".
+* Staking and delegation in development
 
 ## Other Wallet Applications
 
