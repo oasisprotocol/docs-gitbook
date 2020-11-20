@@ -4,11 +4,16 @@ description: 'Wallets, Delegation, and Staking'
 
 # Holding ROSE Tokens
 
-_Last updated as of November 2, 2020_
+## Summary
 
-{% hint style="info" %}
-The purpose of this documentation is to provide instructions and support for ROSE token holders who will receive tokens at the time of Mainnet launch. Below are a number of ways to hold tokens -- both via custody providers and self custody -- and an easy to use guide to delegating your tokens to top validators on the network.
-{% endhint %}
+* ROSE is supported on Ledger Hardware \(NOT Ledger Live\)
+
+  and Bitpie 
+
+* For Ledger, you can use the Oasis CLI \(recommended for experienced developers only\) or you can use a web-based GUI that provides a UI.
+* The two GUIs that are currently available are Anthem and RockX.
+* Anthem supports delegation today; RockX should soon.
+* Bitpie is a mobile app that supports transfers and delegation. 
 
 ## Custody Providers
 
