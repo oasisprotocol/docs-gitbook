@@ -6,10 +6,7 @@ description: 'Wallets, Delegation, and Staking'
 
 ## Summary
 
-* ROSE is supported on Ledger Hardware \(NOT Ledger Live\)
-
-  and Bitpie 
-
+* ROSE is supported on Ledger Hardware \(NOT Ledger Live\), Bitpie and via two custodians -- Anchorage and Finoa.
 * For Ledger, you can use the Oasis CLI \(recommended for experienced developers only\) or you can use a web-based GUI that provides a UI.
 * The two GUIs that are currently available are Anthem and RockX.
 * Anthem supports delegation today; RockX should soon.
