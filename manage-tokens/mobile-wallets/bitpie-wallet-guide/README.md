@@ -27,11 +27,11 @@ To install the Bitpie Wallet, you need an iOS or Android device.
   
 If you have an iOS device, visit [the App Store](https://apps.apple.com/us/app/bitpie-universal-crypto-wallet/id1481314229), and click "Get" to download the Bitpie app. You may see multiple Bitpie apps listed -- make sure you select the app named **Bitpie-Universal Crypto Wallet**. 
 
-![](../../../.gitbook/assets/screen-shot-2020-11-18-at-5.22.54-pm.png)
+![](../../../.gitbook/assets/gqkch2l.png)
 
 If you have an Android device, [visit the Google Play Store](https://play.google.com/store/apps/details?id=com.bitpie), and clicke "Install" to download the Bitpie app.
 
-![](../../../.gitbook/assets/screen-shot-2020-11-18-at-5.04.42-pm.png)
+![](../../../.gitbook/assets/screenshot_20201119-135919.png)
 
 If you are not able to find the Bitpie app in your respective app marketplace or encounter installation issues, your device may have an operating system version that is not supported by the Bitpie app. Check the app download page to see what operating system versions the Bitpie app is compatible with. 
 
