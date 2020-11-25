@@ -31,33 +31,30 @@
 * [Node Troubleshooting](run-a-node/troubleshooting.md)
 * [Upgrade Log](run-a-node/upgrade-log.md)
 
-## Use Your Tokens
+## Manage Your ROSE Tokens <a id="manage-tokens"></a>
 
-* [Overview](use-your-tokens/overview.md)
-* [Terminology](use-your-tokens/terminology.md)
-* [Holding Tokens](use-your-tokens/holding-tokens/README.md)
-  * [Ledger Wallet](use-your-tokens/holding-tokens/ledger-wallet.md)
-  * [Custody Providers](use-your-tokens/holding-tokens/custody-providers.md)
-  * [File-based signer](use-your-tokens/holding-tokens/file-based-signer.md)
-* [Web Wallets](use-your-tokens/web-wallets.md)
-* [Mobile Wallets](use-your-tokens/mobile-wallets.md)
-* [Oasis CLI Tools](use-your-tokens/oasis-cli-tools/README.md)
-  * [Prerequisites](use-your-tokens/oasis-cli-tools/prerequisites.md)
-  * [Setup](use-your-tokens/oasis-cli-tools/setup.md)
-  * [Common Staking Info](use-your-tokens/oasis-cli-tools/common-staking-info.md)
-  * [List Accounts](use-your-tokens/oasis-cli-tools/list-accounts.md)
-  * [Get Account Info](use-your-tokens/oasis-cli-tools/get-account-info.md)
-  * [Obtain Account Address From Entity's ID](use-your-tokens/oasis-cli-tools/address.md)
-  * [Transfer Tokens](use-your-tokens/oasis-cli-tools/transfer-tokens.md)
-  * [Delegate/Stake Tokens](use-your-tokens/oasis-cli-tools/delegate-tokens.md)
-  * [Reclaim Delegated/Staked Tokens](use-your-tokens/oasis-cli-tools/reclaim-tokens.md)
-  * [Gas Costs](use-your-tokens/oasis-cli-tools/gas-costs.md)
-
-## Wallet & Custody Support <a id="wallet-support"></a>
-
-* [Holding ROSE Tokens](wallet-support/holding-rose-tokens.md)
-* [Testing your Bitpie Wallet](wallet-support/testing-bitpie.md)
-* [Staking and Delegating](wallet-support/staking-and-delegating.md)
+* [Overview](manage-tokens/overview.md)
+* [Terminology](manage-tokens/terminology.md)
+* [Staking and Delegating](manage-tokens/staking-and-delegating.md)
+* [Custody & Wallets](manage-tokens/holding-rose-tokens/README.md)
+  * [Custody Providers](manage-tokens/holding-rose-tokens/custody-providers.md)
+  * [Self-Custody With Ledger](manage-tokens/holding-rose-tokens/ledger-wallet.md)
+  * [File-Based Signer](manage-tokens/holding-rose-tokens/file-based-signer.md)
+* [Web Wallets](manage-tokens/web-wallets.md)
+* [Mobile Wallets](manage-tokens/mobile-wallets/README.md)
+  * [Bitpie Wallet Guide](manage-tokens/mobile-wallets/bitpie-wallet-guide/README.md)
+    * [Testing Bitpie Wallet](manage-tokens/mobile-wallets/bitpie-wallet-guide/testing-bitpie.md)
+* [Oasis CLI Tools](manage-tokens/oasis-cli-tools/README.md)
+  * [Prerequisites](manage-tokens/oasis-cli-tools/prerequisites.md)
+  * [Setup](manage-tokens/oasis-cli-tools/setup.md)
+  * [Common Staking Info](manage-tokens/oasis-cli-tools/common-staking-info.md)
+  * [List Accounts](manage-tokens/oasis-cli-tools/list-accounts.md)
+  * [Get Account Info](manage-tokens/oasis-cli-tools/get-account-info.md)
+  * [Obtain Account Address From Entity's ID](manage-tokens/oasis-cli-tools/address.md)
+  * [Transfer Tokens](manage-tokens/oasis-cli-tools/transfer-tokens.md)
+  * [Delegate/Stake Tokens](manage-tokens/oasis-cli-tools/delegate-tokens.md)
+  * [Reclaim Delegated/Staked Tokens](manage-tokens/oasis-cli-tools/reclaim-tokens.md)
+  * [Gas Costs](manage-tokens/oasis-cli-tools/gas-costs.md)
 
 ## Contribute to the Network
 

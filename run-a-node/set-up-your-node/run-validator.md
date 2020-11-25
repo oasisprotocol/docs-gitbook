@@ -388,7 +388,7 @@ This step is not necessary if your entity was fully staked at genesis.
 {% endhint %}
 
 {% hint style="warning" %}
-If you've submitted staking or registry transactions before, your nonce is likely different than the nonce used in the examples. If you're uncertain, please check your account nonce by using [this guide](../../use-your-tokens/oasis-cli-tools/get-account-info.md).
+If you've submitted staking or registry transactions before, your nonce is likely different than the nonce used in the examples. If you're uncertain, please check your account nonce by using [this guide](../../manage-tokens/oasis-cli-tools/get-account-info.md).
 {% endhint %}
 
 Once you have been funded, you can complete the process of connecting your node to the network by registering both your entity and your node, as described below.
@@ -438,7 +438,7 @@ Before generating the escrow transaction, you need to set the following environm
 
 * `ACCOUNT_ADDRESS`: Your staking account address.
 
-  To obtain your staking account address from your Entity's ID, see [Obtaining Account Address From Entity's ID](../../use-your-tokens/oasis-cli-tools/address.md#obtain-account-address-from-entitys-id).
+  To obtain your staking account address from your Entity's ID, see [Obtaining Account Address From Entity's ID](../../manage-tokens/oasis-cli-tools/address.md#obtain-account-address-from-entitys-id).
 
 Then execute the following command:
 
@@ -458,7 +458,7 @@ oasis-node stake account gen_escrow \
 {% hint style="info" %}
 The option `--stake.amount` looks like a very large number, but this is actually just an equivalent to 200 tokens on the Amber Network as each unit value used to track the account balance is 1x10^-9 tokens.
 
-The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on the network configuration, see [Common Transaction Flags](../../use-your-tokens/oasis-cli-tools/setup.md#common-transaction-flags) for details.
+The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on the network configuration, see [Common Transaction Flags](../../manage-tokens/oasis-cli-tools/setup.md#common-transaction-flags) for details.
 {% endhint %}
 
 ### Generating Entity Registration Transaction
@@ -493,7 +493,7 @@ oasis-node registry entity gen_register \
 ```
 
 {% hint style="info" %}
-The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on the network configuration, see [Common Transaction Flags](../../use-your-tokens/oasis-cli-tools/setup.md#common-transaction-flags) for details.
+The `--transactions.fee.gas` and `--transaction.fee.amount` options depend on the network configuration, see [Common Transaction Flags](../../manage-tokens/oasis-cli-tools/setup.md#common-transaction-flags) for details.
 {% endhint %}
 
 ### Submitting Your Transactions on the `server`
