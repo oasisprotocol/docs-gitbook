@@ -12,7 +12,7 @@ This guide will cover setting up your non-validator node for the Oasis Network. 
 
 ## Prerequisites
 
-Before following this guide, make sure you've followed the [Prerequisites Guide](../prerequisites/oasis-node.md) and understand how to use the `oasis-node` binary.
+Before following this guide, make sure you've followed the [Prerequisites](../prerequisites/) section and have the Oasis Node binary installed on your systems.
 
 ### Creating a Working Directory
 

@@ -12,7 +12,11 @@ This guide will cover setting up your validator node for the Oasis Network. This
 
 ## Prerequisites
 
-Before following this guide, make sure you've followed the [Prerequisites Guide](../prerequisites/oasis-node.md) and understand how to use the `oasis-node` binary.
+Before following this guide, make sure you've followed the [Prerequisites](../prerequisites/) section and have the Oasis Node binary installed on your systems.
+
+### Stake requirements
+
+To become a validator on the Oasis Network, you need to have enough tokens staked in your escrow account. For more details, see the [Stake requirements](../../contribute-to-the-network/run-validator.md#stake-requirements) section of [Run a Validator Node](../../contribute-to-the-network/run-validator.md) doc.
 
 ### Systems
 
