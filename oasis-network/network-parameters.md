@@ -6,11 +6,7 @@ description: >-
 
 # Network Parameters
 
-These are the current parameters for the upcoming Mainnet:
-
-{% hint style="info" %}
-For more information on the proposed criteria and changes to upgrade from Mainnet Beta to Mainnet, see the [Mainnet Overview](../mainnet/mainnet.md) doc. For detailed instructions on upgrading your node from Mainnet Beta to Mainnet, see the [Upgrade Log](../run-a-node/upgrade-log.md#2020-11-18-16-00-utc-mainnet-upcoming) doc.
-{% endhint %}
+These are the current parameters for the Mainnet:
 
 * [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-11-18/genesis.json):
   * SHA1: `60d82cbb175348aab5d71e69073c9f3562ec3286`
@@ -25,7 +21,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [20.12.2](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.2)
+  * [20.12.3](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.3)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
