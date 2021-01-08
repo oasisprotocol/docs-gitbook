@@ -18,8 +18,8 @@ We are proud of our diverse and talented community from all around the world. We
 
 ### Get Involved
 
-* [Join the DevAccelerator Program](https://oasisprotocol.org/devaccelerator)
-* [Apply for a Grant](https://oasisprotocol.org/en/grants)
-* [Become an Oasis Ambassador](https://oasisprotocol.org/ambassadors)
+* [Join the DevAccelerator Program](https://oasisprotocol.org/dev-accelerator)
+* [Apply for a Grant](https://oasisprotocol.org/ecosystem-grants)
+* [Become an Oasis Ambassador](https://medium.com/oasis-protocol-project/become-an-oasis-ambassador-and-build-a-responsible-data-economy-bbd38d0f9c12)
 * [Contribute to the Codebase](https://github.com/oasisprotocol)
 
