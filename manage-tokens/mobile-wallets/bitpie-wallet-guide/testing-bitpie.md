@@ -17,7 +17,7 @@ These instructions has been provided by Bitpie. For additional troubleshooting a
 
 **Step 1:** Update the Bitpie wallet to the latest version 4.9.013 build 49014, if the Bitpie wallet has been installed, overwrite the installation and upgrade. If using the iOS version please download the Bitpie "Pro" app. 
 
-![](../../../.gitbook/assets/screen-shot-2020-11-16-at-8.27.48-pm%20%281%29.png)
+![](../../../.gitbook/assets/screen-shot-2020-11-16-at-8.27.48-pm.png)
 
 **Step 2:** On the Bitpie Wallet-Homepage switch from \[ROSE system\] to \[Testnet Transfer\]
 
