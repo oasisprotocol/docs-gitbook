@@ -69,9 +69,9 @@
 * [Mainnet Beta Overview](mainnet/mainnet-beta-overview.md)
 * [Genesis File Overview](mainnet/genesis-file.md)
 
-## Oasis Foundation Testnet
+## Oasis Protocol Foundation <a id="foundation"></a>
 
-* [The Testnet](oasis-foundation-testnet/testnet.md)
+* [The Testnet](foundation/testnet.md)
 
 ## Developer Resources
 
