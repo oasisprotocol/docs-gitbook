@@ -39,3 +39,7 @@ Currently, you should have:
 The size of the consensus committee \(i.e. the validator set\) is configured by the [**max\_validators** consensus parameter](../mainnet/genesis-file.md#consensus).
 {% endhint %}
 
+{% hint style="info" %}
+To determine if you are eligible to receive a delegation from the Oasis Protocol Foundation, see the [Delegation Policy](../foundation/delegation-policy.md) document.
+{% endhint %}
+
