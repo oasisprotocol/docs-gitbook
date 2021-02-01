@@ -12,7 +12,7 @@ The Oasis Network is supported by an amazing community of validators and infrast
 
 ### Tools to use for Staking and Delegation
 
-In addition to using the [Oasis CLI](https://docs.oasis.dev/general/manage-tokens/oasis-cli-tools), there are number of wallets, Ledger GUIs and Custodians support staking and delegation on the Oasis Network. Those include:
+In addition to using the [Oasis CLI](oasis-cli-tools/), there are number of wallets, Ledger GUIs and Custodians support staking and delegation on the Oasis Network. Those include:
 
 * [Chorus One Anthem](https://anthem.chorus.one/) \(Ledger GUI\)
 * [Bitpie](https://bitpie.com/) \(mobile wallet\)
@@ -31,5 +31,5 @@ The validator registry is in alphabetical order and includes information provide
 
 ### Run your own Node
 
-Instead, if you're interested in running your own node you can get started [here](../run-a-node/node-operator-overview.md). Be sure to also join the \#nodeoperator channel on [slack](https://github.com/oasisprotocol/docs/tree/8f97350dab7994478e9e3d1e4543c0b2b1a8ca12/manage-tokens/www.oasisprotocol.org/slack/README.md) and sign up for the node operator mailing list!
+Instead, if you're interested in running your own node you can get started [here](../run-a-node/node-operator-overview.md). Be sure to also [join the **\#nodeoperator** channel on Slack and sign up for the node operator mailing list](../oasis-network/connect-with-us.md#social-media-channels)!
 
