@@ -1,6 +1,6 @@
 ---
 description: >-
-  This page serves as a hub for Oasis community members, including info about
+  This page serves as a hub for Oasis community members, featuring info about
   upcoming events and initiatives, ways to get involved with the community and
   earn ROSE tokens, and many other resources.
 ---
@@ -29,7 +29,7 @@ We're very excited to welcome individuals who come from many different backgroun
 
 ### Apply for a ROSE Bloom Grant
 
-## 📩 ROSE Token Distribution Process
+## 🏦 ROSE Token Distribution Process
 
 Please note that any tokens you earn or win through community programs, such as the Community Cup program  or the Ambassador Rewards program, are not sent to you immediately. You need to complete the KYC process and submit your ROSE wallet address before the Oasis Foundation can send you any ROSE tokens.   
   
