@@ -81,7 +81,9 @@
 
 ## Community Resources
 
+* [Community Hub](community-resources/community-hub.md)
 * [Community-Made Tools](community-resources/community-made-resources.md)
+* [Token Delivery & KYC Guide](community-resources/token-delivery-and-kyc.md)
 
 ## Frequently Asked Questions <a id="faq"></a>
 
