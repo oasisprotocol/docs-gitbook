@@ -96,5 +96,8 @@ You can learn more about each validator by clicking on their name and going to t
 
 ## 🌎 Join our Social Media Channels
 
-To stay up-to-date on the latest Oasis Network news, events, and programs, be sure to join our social media channels, including Telegram and Slack. See our full list of community channels you can join [here](../oasis-network/connect-with-us.md#social-media-channels).
+To stay up-to-date on the latest Oasis Network news, events, and programs, be sure to join our social media channels:
+
+* [Public Slack channel](https://join.slack.com/t/oasiscommunity/shared_invite/enQtNjQ5MTA3NTgyOTkzLWIxNTg1ZWZmOTIwNmQ2MTg1YmU0MzgyMzk3OWM2ZWQ4NTQ0ZDJkNTBmMTdlM2JhODllYjg5YmJkODc2NzgwNTg)
+* [Public Telegram channel](https://t.me/oasisprotocolcommunity)
 

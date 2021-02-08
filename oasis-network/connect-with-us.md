@@ -2,6 +2,10 @@
 
 We are proud of our diverse and talented community from all around the world. We regularly share events, thoughts on technology, and updates on the network through a number of social channels. We also love exchanging ideas and receiving feedback from our community members. Connect with us to get the latest news and share your thoughts with us any time.
 
+## Community Hub
+
+[Visit our Community Hub](connect-with-us.md#community-hub) to learn about upcoming events and initiatives, new ways to get involved with the Oasis Network community, earn ROSE tokens, and much more.
+
 ## General Resources
 
 * [Oasis Protocol Foundation Website](https://oasisprotocol.org/)
