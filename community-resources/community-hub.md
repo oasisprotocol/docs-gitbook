@@ -15,9 +15,9 @@ Whether you're a blockchain enthusiast, a software developer, or someone who is 
 
 Check out these resources to learn the basics of the Oasis Network:
 
-* Oasis Network Primer
-* Token Distribution Schedule
-* Oasis Network Blog
+* [Oasis Network Primer](https://docs.oasis.dev/oasis-network-primer/)
+* [Token Distribution Schedule](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution)
+* [Oasis Network Blog](https://medium.com/oasis-protocol-project%20)
 
 ## 🌹 Get Involved & Earn ROSE Tokens
 
@@ -25,9 +25,37 @@ We're very excited to welcome individuals who come from many different backgroun
 
 ### Participate in the Community Cup
 
+The Communitiy Cup is a weekly series of challenges that tap into the diverse set of skills and creativity of the Oasis community. Oasis community members have the opportunity to participate in a wide variety of microtasksvia social media sites like Twitter and Gleam for a chance to win ROSE token prizes.  
+  
+Past challenges have tasked Oasis community members with brainstorming on ideas for [upcoming network initiatives](https://medium.com/oasis-protocol-project/the-oasis-community-cup-oasis2021vision-406592b13e90) and [naming themes for network upgrades](https://medium.com/oasis-protocol-project/oasis-community-cup-naming-challenge-9fe23c189bdf).   
+  
+Follow [our Oasis Network account on Twitter](https://twitter.com/OasisProtocol) and [our official blog](https://medium.com/oasis-protocol-project) to stay up-to-date on the latest Community Cup challenges and other opportunities to earn ROSE token prizes.
+
 ### Join the Oasis Ambassador Program
 
+We believe the Oasis Network, with its ability to tokenize not just financial tools and currency, but data itself, has the potential to create a better internet. But this is not a mission we can accomplish alone — it will take a legion of evangelists, influencers, technologists and dreamers — to accomplish our goals. We are looking for talented individuals who are passionate about growing the Oasis Network to build a new responsible data economy that benefits people from all backgrounds and all around the world.   
+  
+By joining our Oasis Ambassador Program, you will have the opportunity to: 
+
+* **Evangelize a responsible data economy**: The Oasis Protocol Foundation is focused on building a better internet — one where users are in control and innovation is not bound by locked data silos. Work with us to evangelize and support this privacy-first vision.
+* **Earn Rewards:** Receive grants for doing your part and for completing specific tasks.
+* **Be Part of the Extended Team:** Be part of a larger community of privacy enthusiasts and will be a key contributor to the Oasis Foundation.
+* **Connect with other Oasis community members**: Discuss network updates with others contributing code on the network and give first-hand feedback to developers working on the network based on what you’re hearing in the field.
+* **Gain real-world experience and build a name for yourself:** Build real-world experience in the blockchain field and gain new marketable skills to help you in your career. As an ambassador, we’ll post your picture and bio on our website too!
+
+{% hint style="success" %}
+Oasis Ambassadors have already earned **over 500,000 ROSE tokens** to-date through the Oasis Ambassador Program.
+{% endhint %}
+
+Apply to become an Oasis Ambassador [here](https://oasisfoundation.typeform.com/to/C1cDkJxW), and start earning ROSE rewards!
+
 ### Apply for a ROSE Bloom Grant
+
+The ROSE Bloom Grants program is the best way to receive funding for your project on the Oasis Network. Designed to help foster the growth of the Oasis ecosystem, the ROSE Bloom Grants program will help kickstart the development of projects in a range of key focus areas.   
+  
+Proposals will be eligible to receive anywhere from $5k — $50k USD in ROSE tokens, and will be evaluated on the relevance to the success of the network, the technical design of the project, the overall quality of the team, and more. If you’ve got a great idea for improving the Oasis Network or are inspired to build a new DeFi protocol, DApp, or privacy-first product, we’d love to hear about it!   
+  
+Submit a proposal [here](https://oasisfoundation.typeform.com/to/HtYql2aN) and we’ll review.
 
 ## 🏦 ROSE Token Distribution Process
 
@@ -68,5 +96,5 @@ You can learn more about each validator by clicking on their name and going to t
 
 ## 🌎 Join our Social Media Channels
 
-To stay up-to-date on all of the latest Oasis Network news, events, and updates, be sure to join our social media channels, including Telegram and Slack. See how to join [here](../oasis-network/connect-with-us.md#social-media-channels).
+To stay up-to-date on the latest Oasis Network news, events, and programs, be sure to join our social media channels, including Telegram and Slack. See our full list of community channels you can join [here](../oasis-network/connect-with-us.md#social-media-channels).
 
