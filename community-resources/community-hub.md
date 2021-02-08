@@ -47,7 +47,7 @@ By joining our Oasis Ambassador Program, you will have the opportunity to:
 Oasis Ambassadors have already earned **over 500,000 ROSE tokens** to-date through the Oasis Ambassador Program.
 {% endhint %}
 
-Apply to become an Oasis Ambassador [here](https://oasisfoundation.typeform.com/to/C1cDkJxW), and start earning ROSE rewards!
+Apply to become an Oasis Ambassador [here](https://oasisfoundation.typeform.com/to/C1cDkJxW), and start earning ROSE token rewards!
 
 ### Apply for a ROSE Bloom Grant
 
