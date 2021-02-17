@@ -1,4 +1,4 @@
-# Hardware
+# Hardware Requirements
 
 {% hint style="info" %}
 The hardware requirements listed on this page are the suggested minimum requirements. It might be possible to configure a system with less resources, but you run the risk of being underprovisioned and thereby prone to loss of stake.

@@ -1,4 +1,4 @@
-# Oasis Node
+# Oasis Node Binary
 
 The Oasis Node is a binary that is created from the [Oasis Core](https://github.com/oasisprotocol/oasis-core) repository's `go/` path.
 
