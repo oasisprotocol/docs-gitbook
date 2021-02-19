@@ -70,7 +70,7 @@ A bridge from the Oasis Network to Ethereum that allows you to swap ROSE for ETH
 * **Status:** Planning incentivized testnet 
 * **Tesnet Launch Date:** Early Q2
 * **Mainnet Launch Date:** TBA
-* **Sign up:** here
+* **Sign up:** [here](https://oasisfoundation.typeform.com/to/aPDUHoTJ)
 * **Slack Channel:** [**\#**ethbridgeparatime](https://join.slack.com/t/oasiscommunity/shared_invite/enQtNjQ5MTA3NTgyOTkzLWIxNTg1ZWZmOTIwNmQ2MTg1YmU0MzgyMzk3OWM2ZWQ4NTQ0ZDJkNTBmMTdlM2JhODllYjg5YmJkODc2NzgwNTg)
 * **Requires SGX**: Yes
 
