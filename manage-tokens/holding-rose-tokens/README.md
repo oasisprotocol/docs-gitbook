@@ -65,13 +65,13 @@ To easily see your wallet address, make transfers, and delegate you can use a We
 
 * Currently supports address signing and transfers for the Oasis Network
 * Currently supports the Oasis Testnet and can be used to test wallet transfers before Mainnet launch. Will be updated to include Mainnet after launch.
-* Staking and delegation in development
+* Staking and delegation available.
 
-#### [RockX Wallet](https://oasis-wallet.rockx.com/) \[currently under maintenance\]
+#### [RockX Wallet](https://oasis-wallet.rockx.com/)
 
 * Currently supports address signing and transfers for the Oasis Network
 * Note that transfers on Mainnet Beta are disabled; to test wallet transfers please select "Testnet".
-* Staking and delegation in development
+* Staking and delegation available.
 
 ## Other Wallet Applications
 
