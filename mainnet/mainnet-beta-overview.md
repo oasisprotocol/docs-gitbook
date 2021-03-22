@@ -18,7 +18,7 @@ After a successful [Mainnet Dry Run](), in which the Dry Run test network went l
 
 ## What is Mainnet Beta?
 
-Mainnet Beta is the first phase of launching the Mainnet Network. It includes the finalized Mainnet [genesis file](genesis-file.md) and initial token allocations. A few key highlights:
+Mainnet Beta is the first phase of launching the Mainnet Network. It includes the finalized Mainnet [genesis file](../oasis-network/genesis-file.md) and initial token allocations. A few key highlights:
 
 * **Transfers are disabled during Mainnet Beta.**  
 * **Validators** participating in Mainnet Beta will be able to **start earning staking rewards**. 
@@ -46,7 +46,7 @@ The Oasis Protocol Foundation will communicate to node operators that Mainnet Be
 
 ## **Mainnet Beta Genesis File**
 
-The Mainnet Beta [genesis file](genesis-file.md) is intended to be as close as possible to the Mainnet genesis file. We do not expect any major changes in genesis file parameters between now and Mainnet launch.
+The Mainnet Beta [genesis file](../oasis-network/genesis-file.md) is intended to be as close as possible to the Mainnet genesis file. We do not expect any major changes in genesis file parameters between now and Mainnet launch.
 
 {% hint style="info" %}
 The parts of the genesis file that will change between Mainnet Beta and Mainnet include:

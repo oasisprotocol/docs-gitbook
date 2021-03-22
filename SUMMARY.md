@@ -6,6 +6,7 @@
 
 * [Overview of the Oasis Network](oasis-network/overview.md)
 * [Network Parameters](oasis-network/network-parameters.md)
+* [Genesis Document](oasis-network/genesis-file.md)
 * [Why Oasis?](https://docs.oasis.dev/oasis-network-primer/)
 * [ROSE Token Metrics](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution)
 * [Papers](https://oasisprotocol.org/papers)
@@ -68,7 +69,6 @@
 
 * [Mainnet Overview](mainnet/mainnet.md)
 * [Mainnet Beta Overview](mainnet/mainnet-beta-overview.md)
-* [Genesis File Overview](mainnet/genesis-file.md)
 
 ## Oasis Protocol Foundation <a id="foundation"></a>
 
