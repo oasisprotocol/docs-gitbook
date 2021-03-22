@@ -65,9 +65,9 @@
 * [Contribution Guidelines](contribute-to-the-network/contribution-guidelines.md)
 * [Visit Our GitHub](https://github.com/oasisprotocol)
 
-## Mainnet Initiatives <a id="mainnet"></a>
+## Mainnet
 
-* [Mainnet Beta to Mainnet Upgrade](mainnet/mainnet-upgrade.md)
+* [Upgrade to Mainnet](mainnet/mainnet-upgrade.md)
 
 ## Oasis Protocol Foundation <a id="foundation"></a>
 
