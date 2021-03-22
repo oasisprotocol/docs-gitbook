@@ -6,7 +6,7 @@ description: >-
 
 # Upgrade Log
 
-## 2020-11-18 \(16:00 UTC\) - Mainnet \(Upcoming\)
+## 2020-11-18 \(16:00 UTC\) - Mainnet
 
 * **Block height** when Mainnet Beta network stops: **702000.**
 
@@ -95,7 +95,7 @@ consensus:
 
 * Stop your node.
 * [Wipe state](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
-* Replace the old genesis file with the [Mainnet Beta genesis file]().
+* Replace the old genesis file with the Mainnet Beta genesis file published in the [2020-10-01 release](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-10-01).
 * Start your node.
 
 {% hint style="info" %}

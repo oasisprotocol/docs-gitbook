@@ -3,8 +3,6 @@
 This section provides documentation on how to manage your ROSE tokens via different web wallets.
 
 {% hint style="warning" %}
-These web wallets are still in development, so they don't support the full set of token-related operations.
-
 If you need features that are not yet supported, consider using the [Oasis CLI Tools](oasis-cli-tools/).
 {% endhint %}
 
@@ -14,16 +12,9 @@ The following web wallets combine the simplicity of a web-based UI and security 
 
 ### [RockX Wallet](https://oasis-wallet.rockx.com/)
 
-* Currently supports address generation and transfers.
-
-{% hint style="info" %}
-Transfers on [Mainnet Beta]() are disabled. To test transfers, please use the [Testnet](../foundation/testnet.md).
-{% endhint %}
-
-* _Staking and delegation are in development._
+* Supports address generation, transfers and staking/delegation.
 
 ### [Anthem by Chorus One](https://anthem.chorus.one/)
 
-* Currently supports address generation.
-* _Transfers, staking and delegation are in development._
+* Supports address generation, transfers and staking/delegation.
 
