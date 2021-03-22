@@ -67,7 +67,7 @@
 
 ## Mainnet Initiatives <a id="mainnet"></a>
 
-* [Mainnet Overview](mainnet/mainnet.md)
+* [Mainnet Beta to Mainnet Upgrade](mainnet/mainnet-upgrade.md)
 
 ## Oasis Protocol Foundation <a id="foundation"></a>
 
