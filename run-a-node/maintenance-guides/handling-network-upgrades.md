@@ -157,7 +157,7 @@ The following fields were a particular change in this upgrade:
 * `extra_data`: This field can hold network's extra data, but is currently ignored everywhere. For this upgrade, we changed it back to the value in the Mainnet Beta genesis file to include the Oasis network's genesis quote: _”_[_Quis custodiet ipsos custodes?_](https://en.wikipedia.org/wiki/Quis_custodiet_ipsos_custodes%3F)_” \[submitted by Oasis Community Member Daniyar Borangaziyev\]._
 
 {% hint style="info" %}
-The balances in the genesis file are enumerated in base units with 1 ROSE token equaling 10^9 \(i.e. billion\) base units. For more details, see the [Genesis Document](../../oasis-network/genesis-file.md#parameters) docs.
+The balances in the genesis file are enumerated in base units with 1 ROSE token equaling 10^9 \(i.e. billion\) base units. For more details, see the [Genesis Document](../../oasis-network/genesis-doc.md#parameters) docs.
 {% endhint %}
 
 If you obtain the same result, then you have successfully verified the provided genesis file.
