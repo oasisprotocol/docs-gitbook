@@ -27,12 +27,6 @@ Designed for the next generation of blockchain, the Oasis Network is the first p
 
 Yes! We are still taking grant applications. You can apply any time [here](https://medium.com/oasis-protocol-project/oasis-foundation-grant-wishlist-3ad73b723d7%20). 
 
-### **When is Mainnet Launch?**
-
-The Oasis Network is currently running a release candidate for Mainnet -- the [Amber Network](https://medium.com/oasis-protocol-project/introducing-the-amber-network-a-release-candidate-for-mainnet-7fe9c8d6a5c5?source=false---------0). The next version of Mainnet is coming soon!  
-
-![](../.gitbook/assets/image%20%283%29.png)
-
 ## **Architecture**
 
 ### **What kind of blockchain is the Oasis Network? Does it use sidechains?**
