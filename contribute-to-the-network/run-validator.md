@@ -31,8 +31,8 @@ For more information about obtaining information on your entity's account, see t
 
 Currently, you should have:
 
-* 100 ROSE staked for your entity's registration since that is the [current entity's staking threshold](../oasis-network/genesis-doc.md#node-and-runtime-token-thresholds).
-* 100 ROSE staked for your validator node's registration since that is the [current validator node's staking threshold](../oasis-network/genesis-doc.md#node-and-runtime-token-thresholds).
+* 100 ROSE staked for your entity's registration since that is the [current entity's staking threshold](../oasis-network/genesis-doc.md#node-and-paratime-token-thresholds).
+* 100 ROSE staked for your validator node's registration since that is the [current validator node's staking threshold](../oasis-network/genesis-doc.md#node-and-paratime-token-thresholds).
 * Enough ROSE staked to be in the top 80 entities \(by stake\) so your validator will be elected into the consensus committee.
 
 {% hint style="info" %}
