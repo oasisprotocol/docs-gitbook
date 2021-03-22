@@ -15,7 +15,7 @@ If you need features that are not yet supported, consider using the [Oasis CLI T
 * To use Bitpie Wallet to manage your ROSE tokens, [check out our Bitpie Wallet Guide](bitpie-wallet-guide/).
 
 {% hint style="info" %}
-Transfers on [Mainnet Beta](../../mainnet/mainnet-beta-overview.md) are disabled.
+Transfers on [Mainnet Beta]() are disabled.
 {% endhint %}
 
 * Staking and delegation functionality are in development.
