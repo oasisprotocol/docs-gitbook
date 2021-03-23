@@ -21,7 +21,7 @@ Designed for the next generation of blockchain, the Oasis Network is the first p
 
 **Rapidly Growing Community:** The Oasis Network has a thriving community of close to a thousand node operators, developers, enterprise partners, ambassadors, and nearly ten thousand community members engaged in global social channels.
 
-**Top-Tier Team:** The Oasis Team is made up of top talent from around the world with backgrounds from Apple, Google, Amazon, Goldman Sachs, UC Berkeley, Carnegie Mellon, Stanford, Harvard and more — all committed to growing and expanding the impact of the Oasis Network.
+**Top-Tier Team:** The Oasis Team is made up of top talent from around the world with backgrounds from Apple, Google, Amazon, Goldman Sachs, UC Berkeley, Carnegie Mellon, Stanford, Harvard and more — all committed to growing and expanding the impact of the Oasis Network. _\*\*_
 
 ### **Is the Oasis Protocol Foundation still taking grant applications for projects that are building new dApps?**
 
