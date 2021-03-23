@@ -13,13 +13,18 @@ Before an upgrade we will update the [Upgrade Log](../upgrade-log.md) to specify
 To submit the provided upgrade descriptor use the following command:
 
 ```bash
-oasis-node control upgrade-binary <path-to-upgrade-descriptor.json> \ 
- -a unix:/serverdir/node/internal.sock
+oasis-node control upgrade-binary \
+ -a unix:/serverdir/node/internal.sock \
+ <PATH-TO-UPGRADE-DESCRIPTOR.json>
 ```
 
-if for any reason you would need to cancel a scheduled pending upgrade use the `cancel-upgrade` command.
+To verify that the upgrade descriptor has been received, grep your node's logs for "received upgrade descriptor" message, e.g.:
 
-Node reaching the upgrade epoch will automatically export network state to a genesis file.
+> {"caller":"upgrade.go:60","epoch":5102,"level":"info","module":"upgrade","msg":"received upgrade descriptor, scheduling shutdown","name":"testnet-upgrade-2021-03-24","ts":"2021-03-24T09:56:52.944552808Z"}
+
+If for any reason you would need to cancel a scheduled pending upgrade, use the `cancel-upgrade` command.
+
+Node reaching the upgrade epoch will automatically export network state to a genesis file under the following path:`exports/genesis-<CHAIN-ID>-<DATE-TIME>-<DUMP-BLOCK-HEIGHT>.json`.
 
 ## Manually exporting network state
 
