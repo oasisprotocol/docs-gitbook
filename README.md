@@ -8,9 +8,9 @@ Welcome to the Oasis Network documentation!
 
 {% page-ref page="community-resources/community-made-resources.md" %}
 
-
-
 ## Developer Resources
 
 This section contains links to various developer resources related to the implementation of the Oasis Network.
+
+
 

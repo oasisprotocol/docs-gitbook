@@ -97,7 +97,7 @@ The **`consensus.params.gas_costs.tx_byte`** parameter specifies the additional 
 For example, a staking transfer transaction of size 230 bytes would have a total gas cost of 1000 + 230.
 {% endhint %}
 
-###  Node & ParaTime Token Thresholds
+### Node & ParaTime Token Thresholds
 
 There are several **`staking.params.thresholds`** parameters that specify the minimum number of tokens that need to be staked in order for a particular entity or a particular type of node to participate in the network.
 
@@ -140,7 +140,7 @@ The following parameters specify the total token supply, total token pool reserv
 {% hint style="info" %}
 **Interpreting your account balance in the `staking.ledger`**
 
-Your account's **`general.balance`** includes all of your tokens that have not been staked or delegated. ****Within your account's **`escrow`** field, the **`active.balance`** holds the total amount of tokens are \(actively\) delegated to you.
+Your account's **`general.balance`** includes all of your tokens that have not been staked or delegated. **\*\*Within your account's** `escrow` **field, the** `active.balance`\*\* holds the total amount of tokens are \(actively\) delegated to you.
 {% endhint %}
 
 ### Slashing
