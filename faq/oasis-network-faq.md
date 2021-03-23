@@ -40,7 +40,7 @@ The Oasis Network is a Layer 1, proof-of-stake, decentralized network. It has tw
 1. The **Consensus Layer** is a scalable, high-throughput, secure, proof-of-stake consensus run by a decentralized set of validator nodes.
 2. The **ParaTime Layer** hosts many parallel runtimes \(ParaTimes\), each representing a replicated compute environment with shared state.
 
-![](../.gitbook/assets/image%20%281%29%20%281%29.png)
+![](../.gitbook/assets/image%20%281%29%20%281%29%20%281%29%20%281%29%20%283%29.png)
 
 ### **How is a ParaTime different from a Parachain?**
 

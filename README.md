@@ -6,15 +6,9 @@ Welcome to the Oasis Network documentation!
 
 {% page-ref page="oasis-network/overview.md" %}
 
-{% page-ref page="run-a-node/node-operator-overview.md" %}
-
-{% page-ref page="manage-tokens/overview.md" %}
-
 {% page-ref page="community-resources/community-made-resources.md" %}
 
 ## Developer Resources
 
 This section contains links to various developer resources related to the implementation of the Oasis Network.
-
-
 
