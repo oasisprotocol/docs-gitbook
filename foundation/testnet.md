@@ -36,3 +36,63 @@ Feel free to use other seed nodes besides the one provided here.
 The Oasis Node is part of the Oasis Core release.
 {% endhint %}
 
+## 2021-03-24 Upgrade
+
+* **Upgrade height** upgrade is scheduled to happen at epoch: **5128.**
+
+{% hint style="info" %}
+We expect the Testnet network to reach this epoch at around 2021-03-24 11:30 UTC.
+{% endhint %}
+
+#### Instructions
+
+* \(optional\) To ensure your node will stop at epoch **5218** [submit the following upgrade descriptor](../run-a-node/maintenance-guides/handling-network-upgrades.md#stop-the-node-at-specific-epoch) at any time before the upgrade: 
+
+  ```text
+  {"name":"testnet-upgrade-2021-03-24","method":"internal","identifier":"testnet-upgrade-2021-03-24","epoch":5128}
+  ```
+
+* Download [Oasis Node](prerequisites/oasis-node.md) version [21.0.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.0.1), while continuing to run version 20.12.x.
+* Download the Testnet genesis file published in the [Testnet 2021-03-24 release](https://github.com/oasisprotocol/testnet-artifacts/releases/tag/2021-03-24).
+
+{% hint style="info" %}
+Testnet state at epoch **5218** will be exported and migrated to a [21.0.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.0.1) compatible genesis. Upgrade genesis will be published on the above link soon after reaching the upgrade epoch. 
+{% endhint %}
+
+* \(optional\) Verify the provided Testnet genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
+* Replace the old genesis file with the new Testnet genesis file.
+* Remove the old 20.12.x version of Oasis Node.
+* [Wipe state](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
+* Update your node's configuration or perform any additional needed steps as per [Additional Steps](upgrade-log.md#additional-steps) below.
+* Start your node.
+
+{% hint style="info" %}
+For more detailed instructions, see the [Handling Network Upgrades](maintenance-guides/handling-network-upgrades.md) guide.
+{% endhint %}
+
+#### Additional steps
+
+Examine the release [Changelog](https://github.com/oasisprotocol/oasis-core/blob/v21.0.1/CHANGELOG.md#210-2021-03-18).
+
+**Runtime operators**
+
+In addition to some [configuration changes](https://github.com/oasisprotocol/oasis-core/blob/v21.0.1/CHANGELOG.md#210-2021-03-18), this upgrade contains breaking runtime API changes. Make sure any runtime code is updated and compatible with the 21.0.1 runtime API version.
+
+For this upgrade the runtime node operators need to perform an additional migration of the storage nodes. Before starting the upgraded node the storage database on all storage nodes needs to be migrated with the following command \(using the 21.0.1 binary\):
+
+```text
+oasis-node storage migrate \
+  --datadir <node_datadir> \
+  --runtime.supported <runtime_id>
+```
+
+{% hint style="info" %}
+Depending on the runtime storage state size the migration can take long time.
+{% endhint %}
+
+{% hint style="warning" %}
+**Storage access policy changes**
+
+Due to the changes in the default access policy on storage nodes, at least one of the storage nodes should be configured with `worker.storage.public_rpc.enabled` flag set to `true`. Otherwise external runtime clients wont be able to connect to any storage nodes.
+{% endhint %}
+

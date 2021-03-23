@@ -6,13 +6,22 @@ Following this guide when there is no network upgrade will result in you losing 
 
 The following guide should be used when the network has agreed to do a software upgrade.
 
-## Dump Network State
+## Stop the node at specific epoch
 
-{% hint style="info" %}
-Do not stop your [Oasis Node](../prerequisites/oasis-node.md) process just yet.
-{% endhint %}
+Before an upgrade we will update the [Upgrade Log](../upgrade-log.md) to specify the epoch height at which the upgrade will take place. Additionally, an upgrade descriptor will be provided which can be used to instruct the node to shutdown and export state at the start of the upgrade epoch.
 
-Before an upgrade we will update the [Upgrade Log](../upgrade-log.md) to specify the block height at which to dump.
+To submit the provided upgrade descriptor use the following command:
+
+```bash
+oasis-node control upgrade-binary <path-to-upgrade-descriptor.json> \ 
+ -a unix:/serverdir/node/internal.sock
+```
+
+if for any reason you would need to cancel a scheduled pending upgrade use the `cancel-upgrade` command.
+
+Node reaching the upgrade epoch will automatically export network state to a genesis file.
+
+## Manually exporting network state
 
 To dump the state of the network to a genesis file, run:
 
