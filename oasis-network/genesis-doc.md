@@ -140,7 +140,7 @@ The following parameters specify the total token supply, total token pool reserv
 {% hint style="info" %}
 **Interpreting your account balance in the `staking.ledger`**
 
-Your account's **`general.balance`** includes all of your tokens that have not been staked or delegated. **\*\*Within your account's** `escrow` **field, the** `active.balance`\*\* holds the total amount of tokens are \(actively\) delegated to you.
+Your account's **`general.balance`** includes all of your tokens that have not been staked or delegated. Within your account's **`escrow`**field, the **`active.balance`** holds the total amount of tokens are \(actively\) delegated to you.
 {% endhint %}
 
 ### Slashing
