@@ -63,7 +63,7 @@ Testnet state at epoch **5128** will be exported and migrated to a [21.0.1](http
 * Replace the old genesis file with the new Testnet genesis file.
 * Remove the old 20.12.x version of Oasis Node.
 * [Wipe state](../run-a-node/maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
-* Update your node's configuration or perform any additional needed steps as per [Additional Steps](upgrade-log.md#additional-steps) below.
+* Update your node's configuration or perform any additional needed steps as per [Additional Steps](testnet.md#additional-steps) below.
 * Start your node.
 
 {% hint style="info" %}
