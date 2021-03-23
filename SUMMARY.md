@@ -76,6 +76,7 @@
 
 ## Developer Resources
 
+* [Overview](developer-resources/overview.md)
 * [Oasis Core Documentation](https://docs.oasis.dev/oasis-core)
 * [GitHub](https://github.com/oasisprotocol)
 
