@@ -21,7 +21,7 @@ Designed for the next generation of blockchain, the Oasis Network is the first p
 
 **Rapidly Growing Community:** The Oasis Network has a thriving community of close to a thousand node operators, developers, enterprise partners, ambassadors, and nearly ten thousand community members engaged in global social channels.
 
-**Top-Tier Team:** The Oasis Team is made up of top talent from around the world with backgrounds from Apple, Google, Amazon, Goldman Sachs, UC Berkeley, Carnegie Mellon, Stanford, Harvard and more — all committed to growing and expanding the impact of the Oasis Network.
+**Top-Tier Team:** The Oasis Team is made up of top talent from around the world with backgrounds from Apple, Google, Amazon, Goldman Sachs, UC Berkeley, Carnegie Mellon, Stanford, Harvard and more — all committed to growing and expanding the impact of the Oasis Network. _\*\*_
 
 ### **Is the Oasis Protocol Foundation still taking grant applications for projects that are building new dApps?**
 
@@ -40,7 +40,7 @@ The Oasis Network is a Layer 1, proof-of-stake, decentralized network. It has tw
 1. The **Consensus Layer** is a scalable, high-throughput, secure, proof-of-stake consensus run by a decentralized set of validator nodes.
 2. The **ParaTime Layer** hosts many parallel runtimes \(ParaTimes\), each representing a replicated compute environment with shared state.
 
-![](../.gitbook/assets/image%20%281%29%20%281%29%20%281%29%20%281%29%20%283%29.png)
+![](../.gitbook/assets/image%20%281%29%20%281%29%20%281%29%20%281%29.png)
 
 ### **How is a ParaTime different from a Parachain?**
 

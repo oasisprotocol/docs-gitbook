@@ -11,9 +11,11 @@ The Oasis Network has two main components, the Consensus Layer and the ParaTime 
 1. The **Consensus Layer** is a scalable, high-throughput, secure, proof-of-stake consensus run by a decentralized set of validator nodes.
 2. The **ParaTime Layer** hosts many parallel runtimes \(ParaTimes\), each representing a replicated compute environment with shared state.
 
-![](../.gitbook/assets/image%20%281%29%20%282%29.png)
+![](../.gitbook/assets/image%20%281%29%20%282%29%20%281%29.png)
 
-Operating a ParaTime requires the participation of Node Operators, who contribute nodes to the committee in exchange for rewards. ParaTimes can be operated by anyone, and have their own reward system, participation requirements, and structure.
+  
+Operating a ParaTime requires the participation of Node Operators, who contribute nodes to the committee in exchange for rewards. ParaTimes can be operated by anyone, and have their own reward system, participation requirements, and structure.  
+
 
 As a Node Operator you can participate in any number of ParaTimes. While there are a number of ParaTimes under development, below are a few key ParaTimes that you can get involved in today.
 
@@ -23,7 +25,7 @@ As a Node Operator you can participate in any number of ParaTimes. While there a
 
 A self-contained EVM compatible ParaTime developed by Second State that allows developers to quickly build DApps on the Oasis Network. The Oasis-Eth ParaTime has support for the entire solidity toolchain, but currently is not connected to the Ethereum Network
 
-### Overview
+### Overview 
 
 * **Leading Developer:** [Second State](http://oasiseth.org/)
 * **Status:** Open for Enrollment
@@ -60,9 +62,9 @@ A self-contained EVM compatible ParaTime developed by Second State that allows d
 {% tab title="Ethereum Bridge ParaTime" %}
 ## Ethereum Bridge ParaTime
 
-A bridge from the Oasis Network to Ethereum that allows you to swap ROSE for ETH.
+A bridge from the Oasis Network to Ethereum that allows you to swap ROSE for ETH. 
 
-### Overview
+### Overview 
 
 * **Leading Developer:** [Oasis Protocol Foundation](http://oasisprotocol.org/)
 * **Status:** Planning incentivized testnet 
