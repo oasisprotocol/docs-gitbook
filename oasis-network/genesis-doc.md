@@ -40,7 +40,9 @@ The token balances in a genesis document \(or a genesis file\) are enumerated in
 The **`staking.token_value_exponent`** parameter defines the token value's base-10 exponent. For the Mainnet it is set to 9 which means 1 ROSE equals 10^9 \(i.e. billion\) base units.
 {% endhint %}
 
-### Genesis Time and Chain ID
+### Height, Genesis Time and Chain ID
+
+The **`height`** parameter specifies the network's initial block height. For the [Mainnet genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-11-18/genesis.json), it is set to 702000 indicating that Mainnet should start counting blocks from number 702000.
 
 The **`genesis_time`** parameter is an ISO8601 UTC timestamp that specifies when the network is officially going to launch. At the time of genesis, validators are expected to come online and start participating in the consensus process for operating the network. The network starts once validators representing more than 2/3 of stake in the initial consensus committee are online.
 
@@ -162,11 +164,7 @@ The following parameters are used to define key values for the network's consens
 * **`consensus.params.max_block_gas`** Maximum block gas. The value is set to 0, which specifies an unlimited amount of gas.
 * **`consensus.params.public_key_blacklist`** A list of the public keys that cannot be used on the network. Currently, there are no blacklisted public keys.
 
+### Halt Epoch
 
-
-
-
-
-
-## 
+The **`halt_epoch`** parameter specifies the epoch when the network is scheduled to halt. This parameter is set to intentionally force an upgrade before this epoch is reached. For the [Mainnet genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-11-18/genesis.json), it is set to 9940 indicating that Mainnet should be upgraded before epoch 9940.
 

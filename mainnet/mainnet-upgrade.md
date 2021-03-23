@@ -1,4 +1,4 @@
-# Mainnet Overview
+# Upgrade to Mainnet
 
 This document provides an overview of the proposed criteria and changes to upgrade from Mainnet Beta to Mainnet. This has been [reviewed and approved by community members and validators of the Oasis Network](https://github.com/oasisprotocol/community-forum/issues/1) and is being reproduced and summarized here for easy access.
 
