@@ -49,10 +49,14 @@ We expect the Testnet network to reach this epoch at around 2021-03-24 11:30 UTC
 * \(optional\) To ensure your node will stop at epoch **5128** [submit the following upgrade descriptor](../run-a-node/maintenance-guides/handling-network-upgrades.md#stop-the-node-at-specific-epoch) at any time before the upgrade: 
 
   ```text
-  {"name":"testnet-upgrade-2021-03-24","method":"internal","identifier":"testnet-upgrade-2021-03-24","epoch":5128}
+  {
+    "name": "testnet-upgrade-2021-03-24",
+    "method": "internal",
+    "identifier": "testnet-upgrade-2021-03-24",
+    "epoch": 5128
+  }
   ```
 
-* Download [Oasis Node](../run-a-node/prerequisites/) version [21.0.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.0.1), while continuing to run version 20.12.x.
 * Download the Testnet genesis file published in the [Testnet 2021-03-24 release](https://github.com/oasisprotocol/testnet-artifacts/releases/tag/2021-03-24).
 
 {% hint style="info" %}
@@ -62,8 +66,8 @@ Testnet state at epoch **5128** will be exported and migrated to a 21.0.x compat
 * \(optional\) Verify the provided Testnet genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](../run-a-node/maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
 * Replace the old genesis file with the new Testnet genesis file.
 * Stop your node \(if you haven't stopped it already by submitting the upgrade descriptor\).
-* Remove the old 20.12.x version of Oasis Node.
 * [Wipe state](../run-a-node/maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
+* Replace the old version of Oasis Node with version [21.0.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.0.1).
 * Update your node's configuration or perform any additional needed steps as per [Additional Steps](testnet.md#additional-steps) below.
 * Start your node.
 
