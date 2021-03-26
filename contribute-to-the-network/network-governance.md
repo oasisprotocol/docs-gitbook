@@ -1,14 +1,14 @@
 # Network Governance
 
-{% hint style="info" %}
-The proposed governance model is still being finalized. Please check back for updates.
 
+
+{% hint style="info" %}
 If you have a general question on how to use and deploy our software, please read our [Run a Node](../run-a-node/node-operator-overview.md) section or join our [community Slack](https://join.slack.com/t/oasiscommunity/shared_invite/enQtNjQ5MTA3NTgyOTkzLWIxNTg1ZWZmOTIwNmQ2MTg1YmU0MzgyMzk3OWM2ZWQ4NTQ0ZDJkNTBmMTdlM2JhODllYjg5YmJkODc2NzgwNTg).
 
 All community members are welcome and encouraged to commit code, documentation and enhancement proposals to the platform. Contribution guidelines can be found [here](contribution-guidelines.md).
 {% endhint %}
 
-### Proposed Governance Model Overview
+### Governance Model Overview
 
 The Oasis Protocol Foundation proposes a representative democracy governance model based on a combination of off-chain and on-chain processes for the continued development of the Oasis Network. The Oasis Protocol Foundation will be tasked with guiding the long-term development of the platform and coordinating the community of development and network operations, with input collected from community members and changes to the network being voted on by node operators, with voting power based proportionally on staked and delegated tokens. We propose this model because we think it will provide a balanced voice to all engaged community members -- from developers of all sizes, to node owners, to token holders -- while at the same time still facilitating the swift deployment of network updates, new features, critical bug fixes.
 
