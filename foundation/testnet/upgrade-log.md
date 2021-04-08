@@ -73,10 +73,6 @@ oasis-node storage migrate \
   --runtime.supported <RUNTIME-ID>
 ```
 
-{% hint style="info" %}
-Depending on the runtime storage state size, the migration can take a long time.
-{% endhint %}
-
 {% hint style="warning" %}
 **Storage access policy changes**
 
