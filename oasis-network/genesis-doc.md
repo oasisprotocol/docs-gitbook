@@ -8,7 +8,7 @@ description: This document provides an overview of the Oasis Network's genesis d
 
 A genesis document contains a set of parameters that outline the initial state of an Oasis network.
 
-The state defined in the network's genesis document contains all the necessary information for launching that particular network \(i.e. Mainnet, [Testnet](../foundation/testnet.md)\), including initial token allocations, network parameters, and more.
+The state defined in the network's genesis document contains all the necessary information for launching that particular network \(i.e. Mainnet, [Testnet](../foundation/testnet/)\), including initial token allocations, network parameters, and more.
 
 {% hint style="info" %}
 For a more in-depth explanation of the genesis document, see the [Genesis Document](https://docs.oasis.dev/oasis-core/high-level-components/index/genesis) part of Oasis Core's developer documentation.
@@ -31,7 +31,7 @@ Up to date information about the current genesis file and the current genesis do
 This sections explains some of the key parameters of the genesis document.
 
 {% hint style="warning" %}
-The concrete parameter values in the following sections pertain to the Mainnet. Other Oasis networks \(e.g. [Testnet](../foundation/testnet.md)\) might use different values.
+The concrete parameter values in the following sections pertain to the Mainnet. Other Oasis networks \(e.g. [Testnet](../foundation/testnet/)\) might use different values.
 {% endhint %}
 
 {% hint style="danger" %}

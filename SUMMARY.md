@@ -71,7 +71,8 @@
 
 ## Oasis Protocol Foundation <a id="foundation"></a>
 
-* [The Testnet](foundation/testnet.md)
+* [The Testnet](foundation/testnet/README.md)
+  * [Upgrade Log](foundation/testnet/upgrade-log.md)
 * [Delegation Policy](foundation/delegation-policy.md)
 
 ## Developer Resources
