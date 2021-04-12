@@ -24,6 +24,7 @@
   * [Run a Seed Node](run-a-node/set-up-your-node/run-seed-node.md)
   * [Create an Entity Package](run-a-node/set-up-your-node/creating-an-entity-package.md)
   * [Amend Commission Schedule](run-a-node/set-up-your-node/amend-commission-schedule.md)
+  * [Governance](run-a-node/set-up-your-node/governance.md)
   * [Sentry Node Architecture](run-a-node/set-up-your-node/sentry-node-architecture.md)
 * [Node Maintenance](run-a-node/maintenance-guides/README.md)
   * [Wiping Node State](run-a-node/maintenance-guides/wiping-node-state.md)
