@@ -41,7 +41,44 @@ In case there are currently any active proposals this should return a list of th
 }]
 ```
 
-##  Voting for a Proposal
+## View Votes for a Proposal
+
+ To view votes for a given proposal, you can use the following command:
+
+```bash
+oasis-node governance proposal_votes -a $ADDR --proposal.id <PROPOSAL-ID>
+```
+
+replacing `<PROPOSAL-ID>` with the id of the proposal you want see.
+
+It should return a list of cast votes for the chosen proposal similar to the following:
+
+```bash
+[
+  {
+    "voter": "oasis1qq2vzcvxn0js5unsch5me2xz4kr43vcasv0d5eq4",
+    "vote": "yes"
+  },
+  {
+    "voter": "oasis1qqv25adrld8jjquzxzg769689lgf9jxvwgjs8tha",
+    "vote": "yes"
+  },
+  {
+    "voter": "oasis1qz2tg4hsatlxfaf8yut9gxgv8990ujaz4sldgmzx",
+    "vote": "yes"
+  },
+  {
+    "voter": "oasis1qz424yg28jqmgfq3xvly6ky64jqnmlylfc27d7cp",
+    "vote": "no"
+  },
+  {
+    "voter": "oasis1qr37y56g92chzvsew54kj7gu47cxyly7jytt5rm0",
+    "vote": "yes"
+  }
+]
+```
+
+## Voting for a Proposal
 
 {% hint style="info" %}
 At this time only entities which have active validator nodes scheduled in the validator set are eligible to vote for governance proposals.
