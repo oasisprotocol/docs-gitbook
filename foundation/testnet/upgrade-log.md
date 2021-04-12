@@ -32,7 +32,7 @@ Testnet state at epoch **5662** will be exported and migrated to a 21.1.x compat
 {% endhint %}
 
 * Replace the old genesis file with the new Testnet genesis file.
-* Replace the old version of Oasis Node with version 21.1.
+* Replace the old version of Oasis Node with version [21.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1).
 * [Wipe state](../../run-a-node/maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
 * Start your node.
 
@@ -50,11 +50,11 @@ To prevent irrecoverable runtime storage data corruption/loss in case of a faile
 For example, to backup the `/serverdir/node` directory using the rsync tool, run:
 
 ```text
-rsync /serverdir/node/ /serverdir/node-BACKUP/
+rsync -a /serverdir/node/ /serverdir/node-BACKUP/
 ```
 {% endhint %}
 
-The storage database on all storage nodes needs to be migrated with the following command \(using the 21.1.0 binary\):
+The storage database on all storage nodes needs to be migrated with the following command \(using the [21.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1) binary\):
 
 ```text
 oasis-node storage migrate \
@@ -73,7 +73,7 @@ After the migration to v5 completes, you will see an output similar to:
 - migrated root io-root:477391131f60ac2c22bce9167c7e3783a13d4fb81fddd2d388b4ead6a586fe52 -> io-root:f29f86d491303c5fd7b3572e97cbd65b7487b6b4ac519623afd161cc2e4678b7
 ```
 
-Take note of the displayed `state-roots` and report them to the Foundation, as these need to be included in the upgrade genesis. Keep the runtime nodes stopped until the upgrade epoch is reached. At upgrade epoch upgrade the nodes by following the remaining steps above.
+Take note of the displayed `state-root` and report it to the Foundation, as it needs to be included in the upgrade's new genesis file. Keep the runtime nodes stopped until the upgrade epoch is reached. At upgrade epoch, upgrade the nodes by following the remaining steps above.
 
 ## 2021-03-24 Upgrade
 
@@ -130,7 +130,7 @@ To prevent irrecoverable runtime storage data corruption/loss in case of a faile
 For example, to backup the `/serverdir/node` directory using the rsync tool, run:
 
 ```text
-rsync /serverdir/node/ /serverdir/node-BACKUP/
+rsync -a /serverdir/node/ /serverdir/node-BACKUP/
 ```
 {% endhint %}
 
