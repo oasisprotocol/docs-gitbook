@@ -17,7 +17,7 @@ On the Testnet, TEST tokens are in use -- if you need some to test your clients,
 This page is meant to be kept up to date with the information from the currently released Testnet. Use the information here to deploy or upgrade your node on the Testnet.
 
 * Latest Testnet version: **2021-04-13**
-* [Genesis file](https://github.com/oasisprotocol/testnet-artifacts/releases/download/2021-03-24/genesis.json):
+* [Genesis file](https://github.com/oasisprotocol/testnet-artifacts/releases/download/2021-04-13/genesis.json):
   * SHA1: `189fd6b295d2f4c1896d5515d133714f531ca11e`
   * SHA256: `ccac45fdf81f572c63e915a2dcb90b4281443020229a0df38d76018b55674489`
 * Genesis document's hash \([explanation](../../oasis-network/genesis-doc.md#genesis-file-vs-genesis-document)\):
