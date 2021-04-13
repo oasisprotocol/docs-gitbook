@@ -24,7 +24,7 @@ To verify that the upgrade descriptor has been received, grep your node's logs f
 
 If for any reason you would need to cancel a scheduled pending upgrade, use the `cancel-upgrade` command.
 
-Node reaching the upgrade epoch will automatically export network state to a genesis file under the following path:`exports/genesis-<CHAIN-ID>-<DATE-TIME>-<DUMP-BLOCK-HEIGHT>.json`.
+Node reaching the upgrade epoch will automatically export network state to a genesis file under the following path:`exports/genesis-<CHAIN-ID>-at-<DUMP-BLOCK-HEIGHT>.json`.
 
 ## Manually exporting network state
 
