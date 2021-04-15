@@ -69,6 +69,8 @@
 ## Mainnet
 
 * [Cobalt Upgrade](mainnet/cobalt-upgrade.md)
+* [Previous Upgrades](mainnet/previous-upgrades/README.md)
+  * [Upgrade to Mainnet](mainnet/previous-upgrades/mainnet-upgrade.md)
 
 ## Oasis Protocol Foundation <a id="foundation"></a>
 
