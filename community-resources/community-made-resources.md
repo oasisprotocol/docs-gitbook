@@ -28,6 +28,7 @@ Below are a number of community-built tools you can use to monitor the Oasis Tes
 * [Oasis API Server \(by Simply VC\)](https://github.com/SimplyVC/oasis_api_server)
 * [Oasis RPC Proxy \(by Figment\)](https://github.com/figment-networks/oasis-rpc-proxy)
 * [Oasis Indexer \(by Figment\)](https://github.com/figment-networks/oasishub-indexer)
+* [Oasis Explorer \(by Everstake\)](https://github.com/everstake/oasis-explorer)
 
 ## Monitoring and Alerts <a id="monitoring-and-alerts"></a>
 
