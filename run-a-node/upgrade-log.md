@@ -98,7 +98,7 @@ For more detailed instructions, see the [Handling Network Upgrades](maintenance-
 
 ### Additional notes
 
-Examine the [Changelog](https://github.com/oasisprotocol/oasis-core/blob/v21.0.1/CHANGELOG.md#210-2021-03-18) of the 21.1.1 \(and 21.0\) releases.
+Examine the [Change Log](https://github.com/oasisprotocol/oasis-core/blob/v21.1.1/CHANGELOG.md) of the 21.1.1 \(and 21.0\) releases.
 
 **Runtime operators**
 
