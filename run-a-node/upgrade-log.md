@@ -88,7 +88,7 @@ Mainnet state at epoch **5046** will be exported and migrated to a 21.1.x compat
 * Verify the provided Cobalt upgrade genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
 * Replace the old genesis file with the new Cobalt upgrade genesis file.
 * Stop your node \(if you haven't stopped it already by submitting the upgrade descriptor\).
-* Replace the old version of Oasis Node with version [21.1.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.0.1).
+* Replace the old version of Oasis Node with version [21.1.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1.1).
 * [Wipe state](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
 * Start your node.
 
