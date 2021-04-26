@@ -40,7 +40,7 @@ The upgrade descriptor contains a non-existing upgrade handler and will be used 
 
 #### **Runtime operators**
 
-Following section is relevant only for runtime operators. 
+Following section is relevant only for **runtime operators** that are running **storage** nodes for active runtimes on the Mainnet.
 
 This upgrade requires a runtime storage node migration to be performed **before the upgrade genesis is published**. This can be done before the upgrade epoch is reached by stopping all runtime nodes and running the migration.
 
