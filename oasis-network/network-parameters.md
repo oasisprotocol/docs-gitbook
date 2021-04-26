@@ -21,7 +21,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [20.12.5](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.5)
+  * [20.12.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.7)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
