@@ -27,11 +27,84 @@ This section will be updated with more details as we get closer to the upgrade.
 
 Upgrading the Mainnet will require a coordinated upgrade of the Network. All nodes will need to configure a new genesis file that they can generate or verify independently and reset/archive any state from Mainnet. Once enough \(representing 2/3+ of stake\) nodes have taken this step, the upgraded network will start.
 
+For the actual steps that node operators need to make on their nodes, see the [Upgrade Log](../run-a-node/upgrade-log.md#2021-04-28-16-00-utc-cobalt-upgrade).
+
 ## Proposed State Changes
 
-{% hint style="info" %}
-This section will be updated with more details about the proposed state changes that will be performed at the time of the upgrade.
-{% endhint %}
+The following parts of the genesis file will be updated:
+
+* **`height`** will be set to the height of the Mainnet state dump + 1, i.e.`3027601`.
+* **`genesis_time`** will be set to`2021-04-28T16:00:00Z`.
+* **`chain_id`** will be set to `oasis-2`.
+* **`halt_epoch`** will be set to`13807`\(approximately 1 year from Cobalt upgrade\).
+* **`epochtime`**section will be removed \(it will be replaced by the **`beacon`** section\).
+
+#### **Registry backend parameters**	
+
+* **`registry.params.enable_runtime_governance_models`**will be set to:
+
+  ```text
+  {
+    "entity": true,
+    "runtime": true
+  }
+  ```
+
+* Runtimes will be automatically migrated.
+* Some inactive entities/nodes might be removed due to not passing stake claims.
+
+#### **Roothash backend parameters**
+
+* **`roothash.params.max_runtime_messages`**will be set to 256.
+* **`roothash.params.max_evidence_age`**will be set to 100.
+
+#### **Staking backend parameters**
+
+* **`staking.params.governance_deposits`**will be set to `0`.
+* **`staking.params.allow_escrow_messages`**will be set to`true`.
+* **`staking.params.slashing.consensus-light-client-attack.amount`** will be set to `100000000000`.
+* **`staking.params.slashing.consensus-light-client-attack.freeze_interval`** will be set to `18446744073709551615`.
+
+#### **Beacon backend parameters**
+
+* **`beacon.base`**will be set to`5047`.
+* **`beacon.params.backend`**will be set to`"pvss"`.
+* **`beacon.params.pvss_parameters.participants`**will be set to`20`.
+* **`beacon.params.pvss_parameters.threshold`**will be set to`10`.
+* **`beacon.params.pvss_parameters.commit_interval`**will be set to`399`.
+* **`beacon.params.pvss_parameters.reveal_interval`**will be set to`200`.
+* **`beacon.params.pvss_parameters.transition_delay`** __will be set to`1`.
+
+#### **Scheduler backend parameters**
+
+* **`scheduler.params.max_validators`**will be set to`100`.
+
+#### **Governance backend parameters**
+
+* **`governance.params.voting_period`**will be set to`168`.
+* **`governance.params.upgrade_min_epoch_diff`**will be set to`336`.
+* **`governance.params.upgrade_cancel_min_epoch_diff`**will be set to`192`.
+* **`governance.params.quorum`**will be set to`75`.
+* **`governance.params.threshold`**will be set to `90`.
+* **`governance.params.min_proposal_deposit`**will be set to `10000000000000`.
+
+#### **Consensus backend parameters**
+
+* **`consensus.params.max_evidence_num`** will be removed.
+* **`consensus.params.max_evidence_size`**will be set to`51200`.
+* **`consensus.params.state_checkpoint_interval`**will be set to`10000`.
+* **`consensus.params.state_checkpoint_num_kept`**will be set to`2`.
+* **`consensus.params.state_checkpoint_chunk_size`**will be set to`8388608`.
+
+#### Other
+
+* **`extra_data`** will be set back to the value in the [Mainnet genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-11-18) ****to include the Oasis network's genesis quote: _”_[_Quis custodiet ipsos custodes?_](https://en.wikipedia.org/wiki/Quis_custodiet_ipsos_custodes%3F)_” \[submitted by Oasis Community Member Daniyar Borangaziyev\]:_ 
+
+  ```text
+  "extra_data": {
+    "quote": "UXVpcyBjdXN0b2RpZXQgaXBzb3MgY3VzdG9kZXM/IFtzdWJtaXR0ZWQgYnkgT2FzaXMgQ29tbXVuaXR5IE1lbWJlciBEYW5peWFyIEJvcmFuZ2F6aXlldl0="
+  }
+  ```
 
 ## Launch Support
 
