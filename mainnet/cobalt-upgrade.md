@@ -69,6 +69,8 @@ Removing entities from **`registry.entities`** will effectively deregister them 
 Deregistered entities can always re-register by submitting the [entity registration transaction](../run-a-node/set-up-your-node/run-validator.md#generating-entity-registration-transaction) after the upgrade.
 {% endhint %}
 
+* **`registry.node_statuses`** object contains the registered nodes' statuses. In the Cobalt upgrade, each node's status will get a new parameter: **`election_eligible_after`**. This parameter specifies at which epoch a node is eligible to be [scheduled into various committees](https://docs.oasis.dev/oasis-core/high-level-components/index/services/scheduler). All nodes will have the parameter set to `0` which means they are immediately eligible. The migration will be done automatically with the `oasis-node debug fix-genesis` command.
+
 ### **Root Hash**
 
 * **`roothash.params.max_runtime_messages`** is a new parameter that specifies the global limit on the number of [messages](https://docs.oasis.dev/oasis-core/high-level-components/index-1/messages) that can be emitted in each round by the runtime. It will be set to `256`.
