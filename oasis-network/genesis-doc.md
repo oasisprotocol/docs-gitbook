@@ -42,7 +42,7 @@ The **`staking.token_value_exponent`** parameter defines the token value's base-
 
 ### Height, Genesis Time and Chain ID
 
-The **`height`** parameter specifies the network's initial block height. For the [Mainnet genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-11-18/genesis.json), it is set to 702000 indicating that Mainnet should start counting blocks from number 702000.
+The **`height`** parameter specifies the network's initial block height. When a network is upgraded, its height is retained. For example, for the [Cobalt upgrade](../mainnet/cobalt-upgrade.md) the height of the Mainnet state dump was bumped by 1 from 3,027,600 to 3,027,601.
 
 The **`genesis_time`** parameter is an ISO8601 UTC timestamp that specifies when the network is officially going to launch. At the time of genesis, validators are expected to come online and start participating in the consensus process for operating the network. The network starts once validators representing more than 2/3 of stake in the initial consensus committee are online.
 
@@ -235,5 +235,5 @@ The following parameters are used to define key values for the network's consens
 
 ### Halt Epoch
 
-The **`halt_epoch`** parameter specifies the epoch when the network is scheduled to halt. This parameter is set to intentionally force an upgrade before this epoch is reached. For the [Mainnet genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-11-18/genesis.json), it is set to 9940 indicating that Mainnet should be upgraded before epoch 9940.
+The **`halt_epoch`** parameter specifies the epoch when the network is scheduled to halt. This parameter is set to intentionally force an upgrade before this epoch is reached. For example, if it is set to 9940, it indicates that the network should be upgraded before epoch 9940, otherwise it will halt.
 
