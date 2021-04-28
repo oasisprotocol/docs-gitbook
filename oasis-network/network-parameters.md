@@ -8,16 +8,15 @@ description: >-
 
 These are the current parameters for the Mainnet:
 
-* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-11-18/genesis.json):
-  * SHA1: `60d82cbb175348aab5d71e69073c9f3562ec3286`
-  * SHA256: `f53ddbc20e09a65906089e81f871d36b658b0d7f5205e17bf047bd822489b3ef`
+* [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2021-04-28/genesis.json):
+  * SHA256: `8ae33cffe67e3df1be392dddde332a73f207cede5992c93600b0ae65c22af2a2`
 
 {% hint style="info" %}
 Genesis file is signed by [network's current maintainers](https://github.com/oasisprotocol/mainnet-artifacts/blob/master/README.md#pgp-keys-of-current-maintainers). To verify its authenticity, follow the [PGP verification instructions](https://github.com/oasisprotocol/mainnet-artifacts/blob/master/README.md#verifying-genesis-file-signatures).
 {% endhint %}
 
 * Genesis document's hash \([explanation](genesis-doc.md#genesis-file-vs-genesis-document)\):
-  * `a4dc2c4537992d6d2908c9779927ccfee105830250d903fd1abdfaf42cb45631`
+  * `53852332637bacb61b91b6411ab4095168ba02a50be4c3f82448438826f23898`
 * Oasis seed node address:
   * `E27F6B7A350B4CC2B48A6CBE94B0A02B0DCB0BF3@35.199.49.168:26656`
 
@@ -26,7 +25,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [20.12.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.7)
+  * [21.1.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1.1)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
