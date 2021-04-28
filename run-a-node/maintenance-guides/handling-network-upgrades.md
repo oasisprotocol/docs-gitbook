@@ -53,9 +53,11 @@ and observe the value of the `consensus.latest_height` key.
 
 ## Patch Dumped State
 
-{% hint style="info" %}
 At the moment, we don't provide state patches.
-{% endhint %}
+
+However, for certain upgrades we use the **`oasis-node debug fix-genesis`** CLI command to automatically migrate/update some parts of the genesis file.
+
+Other parts are updated manually, as described in each upgrade's Proposed State Changes section \(e.g. [Cobalt upgrade's Proposed State Changes](../../mainnet/cobalt-upgrade.md#proposed-state-changes)\).
 
 ## Download and Verify the Provided Genesis File
 
