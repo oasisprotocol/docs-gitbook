@@ -61,7 +61,13 @@ The **`epochtime`**object will be removed since it became obsolete with the new 
 
 * **`registry.runtimes`** list contains the registered runtimes' descriptors. In the Cobalt upgrade, it will be migrated from a list of _signed_ runtime descriptors to a list of runtime descriptors. The migration will be done automatically with the `oasis-node debug fix-genesis` command.
 * **`registry.suspended_runtimes`** list contains the suspended registered runtimes' descriptors. In the Cobalt upgrade, it will be migrated from a list of _signed_ suspended runtime descriptors to a list of suspended runtime descriptors. The migration will be done automatically with the `oasis-node debug fix-genesis` command.
-* Inactive registered entities/nodes in **`registry.entities`** / **`registry.nodes`**that don't pass the [minimum staking thresholds](../oasis-network/genesis-doc.md#node-and-paratime-token-thresholds) will be removed.
+* Inactive registered entities in **`registry.entities`** \(and their corresponding nodes in **`registry.nodes`**\) that don't pass the [minimum staking thresholds](../oasis-network/genesis-doc.md#node-and-paratime-token-thresholds) will be removed. The removal will be done automatically with the `oasis-node debug fix-genesis` command.
+
+{% hint style="info" %}
+Removing entities from **`registry.entities`** will effectively deregister them but the entities' accounts in **`staking.ledger`** will remain intact.
+
+Deregistered entities can always re-register by submitting the [entity registration transaction](../run-a-node/set-up-your-node/run-validator.md#generating-entity-registration-transaction) after the upgrade.
+{% endhint %}
 
 ### **Root Hash**
 
