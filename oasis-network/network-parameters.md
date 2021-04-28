@@ -9,8 +9,16 @@ description: >-
 These are the current parameters for the Mainnet:
 
 * [Genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/download/2020-11-18/genesis.json):
+
   * SHA1: `60d82cbb175348aab5d71e69073c9f3562ec3286`
   * SHA256: `f53ddbc20e09a65906089e81f871d36b658b0d7f5205e17bf047bd822489b3ef`
+
+  \`\`
+
+{% hint style="info" %}
+Genesis file is signed by [network's current maintainers](https://github.com/oasisprotocol/mainnet-artifacts/blob/master/README.md#pgp-keys-of-current-maintainers). To verify its authenticity, follow the [PGP verification instructions](https://github.com/oasisprotocol/mainnet-artifacts/blob/master/README.md#verifying-genesis-file-signatures).
+{% endhint %}
+
 * Genesis document's hash \([explanation](genesis-doc.md#genesis-file-vs-genesis-document)\):
   * `a4dc2c4537992d6d2908c9779927ccfee105830250d903fd1abdfaf42cb45631`
 * Oasis seed node address:
