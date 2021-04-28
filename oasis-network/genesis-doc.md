@@ -189,7 +189,7 @@ The **`scheduler`** object contains parameters controlling how various committee
 
 The **`beacon`** object contains parameters controlling the network's random beacon.
 
-* **`beacon.base`** Network's starting epoch.
+* **`beacon.base`** Network's starting epoch. When a network is upgraded, its epoch is retained. For example, for the [Cobalt upgrade](../mainnet/cobalt-upgrade.md) the epoch of the Mainnet state dump was bumped by 1 from 5,046 to 5,047.
 * **`beacon.params.backend`** The random beacon backend to use. The value is set to "pvss" indicating that the beacon implementing a [PVSS \(publicly verifiable secret sharing\) scheme](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0007-improved-random-beacon.md) should be used.
 
 #### PVSS Beacon
