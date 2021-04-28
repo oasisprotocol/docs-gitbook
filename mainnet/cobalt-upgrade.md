@@ -154,7 +154,7 @@ After completing the runtime storage migration, Second State will communicate th
 
 The Oasis team will be offering live video support during the Cobalt upgrade. Video call link and calendar details will be shared with node operators via email and Slack.
 
-For any additional support, please reach out via the [**\#nodeoperators** Oasis Community Slack channel](../oasis-network/connect-with-us.md) with your questions, comments, and feedback related to Mainnet Beta.
+For any additional support, please reach out via the [**\#nodeoperators** Oasis Community Slack channel](../oasis-network/connect-with-us.md) with your questions, comments, and feedback related to Cobalt upgrade.
 
 To follow the network, please use one of the many [community block explorers](../community-resources/community-made-resources.md#block-explorers-validator-leaderboards).
 
