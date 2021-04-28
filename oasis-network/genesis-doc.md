@@ -198,9 +198,9 @@ These parameters control the behavior of the new [improved random beacon](https:
 
 * **`beacon.params.pvss_parameters.participants`** The number of participants to be selected for each beacon generation protocol round. The value is set to 20.
 * **`beacon.params.pvss_parameters.threshold`** The minimum number of participants which must successfully contribute entropy for the final output to be considered valid. The value is set to 10.
-* **`beacon.params.pvss_parameters.commit_interval`** The duration of the Commit phase \(in blocks\). The value is set to 399.
-* **`beacon.params.pvss_parameters.reveal_interval`** The duration of the Reveal phase \(in blocks\). The value is set to 200.
-* **`beacon.params.pvss_parameters.transition_delay`** __The duration of the post Reveal phase \(in blocks\). The value is set to 1.
+* **`beacon.params.pvss_parameters.commit_interval`** The duration of the Commit phase \(in blocks\). The value is set to 400.
+* **`beacon.params.pvss_parameters.reveal_interval`** The duration of the Reveal phase \(in blocks\). The value is set to 196.
+* **`beacon.params.pvss_parameters.transition_delay`** __The duration of the post Reveal phase \(in blocks\). The value is set to 4.
 
 ### **Governance**
 
