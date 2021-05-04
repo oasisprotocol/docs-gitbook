@@ -98,7 +98,7 @@ You can learn more about each validator by clicking on their name and going to t
 
 To stay up-to-date on the latest Oasis Network news, events, and programs, be sure to join our social media channels:
 
-* [Public Slack channel](https://join.slack.com/t/oasiscommunity/shared_invite/enQtNjQ5MTA3NTgyOTkzLWIxNTg1ZWZmOTIwNmQ2MTg1YmU0MzgyMzk3OWM2ZWQ4NTQ0ZDJkNTBmMTdlM2JhODllYjg5YmJkODc2NzgwNTg)
+* [Public Slack channel](https://join.slack.com/t/oasiscommunity/shared_invite/zt-px9vgilg-ybt04p2ovxUuC7A~YV0g~w)
 * [Public Telegram channel](https://t.me/oasisprotocolcommunity)\*\*\*\*
 * [Twitter](https://twitter.com/OasisProtocol) 
 * [Discord](https://discord.gg/RwNTK8t) 
