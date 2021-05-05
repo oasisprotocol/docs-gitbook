@@ -10,10 +10,6 @@ This guide will cover setting up a seed node for the Oasis Network. This guide a
 
 Before following this guide, make sure you've followed the [Prerequisites Guide](../prerequisites/oasis-node.md) and understand how to use the `oasis-node` binary.
 
-{% hint style="danger" %}
-**Due to recent improvements to the seed node, it is recommended to use `oasis-node` with version** [**20.11.2**](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.11.2) **\(or later\).**
-{% endhint %}
-
 ### Creating a Working Directory
 
 We will be creating the following directory structure inside a chosen top-level `/node` \(feel free to name your directories however you wish\) directory:
