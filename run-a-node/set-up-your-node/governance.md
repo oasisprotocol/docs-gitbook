@@ -1,10 +1,6 @@
 # Governance
 
 {% hint style="info" %}
-This section describes functionality which is currently only available on the Testnet and will only be enabled on Mainnet as part of the Cobalt upgrade.
-{% endhint %}
-
-{% hint style="info" %}
 This example assumes you have read and followed the instructions in the [Prerequisites](../../manage-tokens/oasis-cli-tools/prerequisites.md) and [Setup](../../manage-tokens/oasis-cli-tools/setup.md) sections of the _Use Your Tokens_ docs.
 {% endhint %}
 
