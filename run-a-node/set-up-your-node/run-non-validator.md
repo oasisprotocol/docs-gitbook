@@ -5,7 +5,7 @@ description: This page describes how to run a non-validator node on the Oasis Ne
 # Run a Non-validator Node
 
 {% hint style="info" %}
-These instructions are for setting up a _non-validator_ node. If you want to run a _validator_ node instead, see the [instructions for running a validator node](run-validator.md).
+These instructions are for setting up a _non-validator_ node. If you want to run a _validator_ node instead, see the [instructions for running a validator node](run-validator.md). Similarly, if you want to run a _ParaTime_ node instead, see the [instructions for running a ParaTime node](run-a-paratime-node.md).
 {% endhint %}
 
 This guide will cover setting up your non-validator node for the Oasis Network. This guide assumes some basic knowledge on the use of command line tools.

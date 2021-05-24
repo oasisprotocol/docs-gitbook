@@ -40,3 +40,20 @@ It is also possible to configure the Node to _not_ keep all the state from the g
 To do that, set the **`consensus.tendermint.abci.prune.strategy`** and **`consensus.tendermint.abci.prune.num_kept`** parameters appropriately in your [Node's configuration](../set-up-your-node/run-validator.md#configuring-the-oasis-node).
 {% endhint %}
 
+## ParaTime Nodes
+
+To run a ParaTime node, your system should meet the following minimum system requirements:
+
+* 2.0 GHz x86-64 CPU
+
+{% hint style="warning" %}
+The CPU must have [AES-NI](https://en.wikipedia.org/wiki/AES_instruction_set) support.
+{% endhint %}
+
+{% hint style="warning" %}
+If you want to be able to run ParaTimes which require the use of a Trusted Execution Environment \(TEE\), the CPU needs to support Intel SGX.
+{% endhint %}
+
+* 8 GB ECC RAM
+* 100+ GB High Speed Storage
+
