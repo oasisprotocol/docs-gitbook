@@ -46,7 +46,7 @@ On Ubuntu 20.04+, you can install all the above with:
 sudo apt install bubblewrap
 ```
 
-On Fedora 29+, you can install all the above with:
+On Fedora, you can install all the above with:
 
 ```text
 sudo dnf install bubblewrap
