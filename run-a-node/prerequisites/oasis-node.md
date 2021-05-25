@@ -34,3 +34,21 @@ To install the `oasis-node` binary for the current user, copy/symlink it to `~/.
 
 To install the `oasis-node` binary for all users of the system, copy it to `/usr/local/bin`.
 
+## Running ParaTimes
+
+If you intend to [run a ParaTime node](../set-up-your-node/run-a-paratime-node.md) you will need to additionally install the following software packages:
+
+* [Bubblewrap](https://github.com/projectatomic/bubblewrap) \(at least version 0.4.1\), needed to create process sandboxes.
+
+On Ubuntu 20.04+, you can install all the above with:
+
+```text
+sudo apt install bubblewrap
+```
+
+On Fedora 29+, you can install all the above with:
+
+```text
+sudo dnf install bubblewrap
+```
+
