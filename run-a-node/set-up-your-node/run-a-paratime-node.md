@@ -149,7 +149,7 @@ Before using this configuration you should collect the following information to 
   You can find the current Oasis Seed Node address in the [Network Parameters](../../oasis-network/network-parameters.md).
 
 * `{{ runtime_id }}`: The Runtime identifier.
-* `{{ ias_proxy_address }}`: The IAS proxy address in the form `ID@HOST:port`. You can find the current Oasis IAS proxy address in the [Network Parameters](../../oasis-network/network-parameters.md).
+* `{{ ias_proxy_address }}`: The IAS proxy address in the form `ID@HOST:port`. You can find the current Oasis IAS proxy address in the [Network Parameters](../../oasis-network/network-parameters.md). If you want you can also [run your own IAS proxy](run-an-ias-proxy.md).
 
 ## Starting the Oasis Node
 

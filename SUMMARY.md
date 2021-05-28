@@ -23,6 +23,7 @@
   * [Run a Non-validator Node](run-a-node/set-up-your-node/run-non-validator.md)
   * [Run a Seed Node](run-a-node/set-up-your-node/run-seed-node.md)
   * [Run a ParaTime Node](run-a-node/set-up-your-node/run-a-paratime-node.md)
+  * [Run an IAS Proxy](run-a-node/set-up-your-node/run-an-ias-proxy.md)
   * [Create an Entity Package](run-a-node/set-up-your-node/creating-an-entity-package.md)
   * [Amend Commission Schedule](run-a-node/set-up-your-node/amend-commission-schedule.md)
   * [Governance](run-a-node/set-up-your-node/governance.md)
