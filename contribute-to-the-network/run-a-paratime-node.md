@@ -1,7 +1,7 @@
 ---
 description: >-
-  Overview of the requirements to become a validator on a ParaTime connected to
-  the Oasis Network.
+  Overview of the requirements to become a compute node on a ParaTime connected
+  to the Oasis Network.
 ---
 
 # Run a ParaTime Node
@@ -14,12 +14,60 @@ The Oasis Network has two main components, the Consensus Layer and the ParaTime 
 ![](../.gitbook/assets/image%20%281%29%20%282%29%20%281%29.png)
 
   
-Operating a ParaTime requires the participation of Node Operators, who contribute nodes to the committee in exchange for rewards. ParaTimes can be operated by anyone, and have their own reward system, participation requirements, and structure.  
+Operating a ParaTime requires the participation of node operators, who contribute nodes to the committee in exchange for rewards. ParaTimes can be operated by anyone, and have their own reward system, participation requirements, and structure.
 
-
-As a Node Operator you can participate in any number of ParaTimes. While there are a number of ParaTimes under development, below are a few key ParaTimes that you can get involved in today.
+As a node operator you can participate in any number of ParaTimes. While there are a number of ParaTimes under development, below are a few key ParaTimes that you can get involved in today. For operational documentation on running a ParaTime, please see the section on [running a ParaTime node for node operators](../run-a-node/set-up-your-node/run-a-paratime-node.md).
 
 {% tabs %}
+{% tab title="Cipher ParaTime" %}
+## Cipher ParaTime
+
+An Oasis Foundation developed ParaTime that will enable a bridge to Ethereum and Confidential Smart Contract support.
+
+### Overview 
+
+* **Leading Developer:** [Oasis Protocol Foundation](http://oasisprotocol.org/)
+* **Status:** Planning incentivized testnet 
+* **Tesnet Launch Date:** June 2021
+* **Mainnet Launch Date:** TBA
+* **Sign Up:** [here](https://oasisfoundation.typeform.com/to/I3wQ1CFJ)
+* **Slack Channel:** [**\#**cipher-paratime](www.oasisprotocol.org/slack)
+* **Requires SGX**: Yes
+
+### Features
+
+* Secure and stable 2-way token bridge between the Oasis Network and Ethereum with full support for the transfer of ROSE tokens from the Oasis Network to Ethereum 
+* User-friendly web UI for swapping tokens
+* Confidential Smart Contract support
+* Fully decentralized with node operators distributed across the world
+* Oasis **ROSE** tokens will be the native token used in the ParaTime for gas fees
+* Support for WebAssembly smart contracts
+* Support for confidential compute
+
+### Rewards
+
+* The ParaTime will release tokens on-chain to reward nodes for participation.
+* The reward program is 2 years long, and tokens will be released per epoch.
+* The reward will be 10~20 ROSE tokens per entity per epoch, where the Oasis Protocol Foundation will make the final decision on the reward size upon the testnet launch.
+* Incentivized testnet with ROSE tokens delegated by the Oasis Protocol Foundation to testnet participants based on performance \(rewards can be found [here](https://oasis-foundation.medium.com/oasis-cipher-paratime-c9f40ae64946)\)
+
+### Parameters
+
+* **Runtime Identifier:** TBD
+* **Runtime Binary:** TBD
+
+### Hardware Requirements
+
+* 2.0 GHz x86-64 CPU
+* CPU must have AES-NI support
+* 2 GB ECC RAM
+* 500 GB High Speed Storage
+* CPU support for Intel SGX
+* Intel SGX support enabled in BIOS
+* Intel SGX Linux driver installed
+* AESMD daemon installed and running
+{% endtab %}
+
 {% tab title="Oasis-Eth ParaTime" %}
 ## Oasis-Eth ParaTime
 
@@ -57,55 +105,6 @@ A self-contained EVM compatible ParaTime developed by Second State that allows d
 * CPU must have AES-NI support
 * 2 GB ECC RAM \(4GB recommended\)
 * 500 GB High Speed Storage \(SSD recommended\)
-{% endtab %}
-
-{% tab title="Cipher ParaTime" %}
-## Cipher ParaTime
-
-An Oasis Foundation developed ParaTime that will enable a bridge to Ethereum and Confidential Smart Contract support.
-
-### Overview 
-
-* **Leading Developer:** [Oasis Protocol Foundation](http://oasisprotocol.org/)
-* **Status:** Planning incentivized testnet 
-* **Tesnet Launch Date:** June 2021
-* **Mainnet Launch Date:** TBA
-* **Sign up:** [here](https://oasisfoundation.typeform.com/to/I3wQ1CFJ)
-* **Slack Channel:** [**\#**cipherparatime](www.oasisprotocol.org/slack)
-* **Requires SGX**: Yes
-
-### Features
-
-* Secure and stable 2-way token bridge between the Oasis Network and Ethereum with full support for the transfer of ROSE tokens from the Oasis Network to Ethereum 
-* User-friendly web UI for swapping tokens
-* Confidential Smart Contract support
-* Fully decentralized with node operators distributed across the world
-* Oasis **ROSE** tokens will be the native token used in the ParaTime for gas fees
-* Support for WebAssembly smart contracts
-* Support for confidential compute
-
-### Rewards
-
-* The ParaTime will release tokens on-chain to reward nodes for participation.
-* The reward program is 2 years long, and tokens will be released per epoch.
-* The reward will be 10~20 ROSE tokens per entity per epoch, where the Oasis Protocol Foundation will make the final decision on the reward size upon the testnet launch.
-* Incentivized testnet with ROSE tokens delegated by the Oasis Protocol Foundation to testnet participants based on performance \(rewards can be found [here](https://oasis-foundation.medium.com/oasis-cipher-paratime-c9f40ae64946)\)
-
-### Hardware Requirements
-
-* 2.0 GHz x86-64 CPU
-* CPU must have AES-NI support
-* 2 GB ECC RAM
-* 500 GB High Speed Storage
-* CPU support for Intel SGX
-* Intel SGX support enabled in BIOS
-* Intel SGX Linux driver installed
-* AESMD daemon installed and running
-
-We currently do not have SGX installation instructions tailored to node operators, but some of these developer-oriented resources may be useful:
-
-* [https://docs.oasis.dev/oasis-core/development-setup/build-environment-setup-and-building/building\#sgx-environment](https://docs.oasis.dev/oasis-core/development-setup/build-environment-setup-and-building/building#sgx-environment)
-* [https://edp.fortanix.com/docs/installation/guide/](https://edp.fortanix.com/docs/installation/guide/)
 {% endtab %}
 {% endtabs %}
 
