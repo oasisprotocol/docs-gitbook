@@ -59,33 +59,37 @@ A self-contained EVM compatible ParaTime developed by Second State that allows d
 * 500 GB High Speed Storage \(SSD recommended\)
 {% endtab %}
 
-{% tab title="Ethereum Bridge ParaTime" %}
-## Ethereum Bridge ParaTime
+{% tab title="Cipher ParaTime" %}
+## Cipher ParaTime
 
-A bridge from the Oasis Network to Ethereum that allows you to swap ROSE for ETH. 
+An Oasis Foundation developed ParaTime that will enable a bridge to Ethereum and Confidential Smart Contract support.
 
 ### Overview 
 
 * **Leading Developer:** [Oasis Protocol Foundation](http://oasisprotocol.org/)
 * **Status:** Planning incentivized testnet 
-* **Tesnet Launch Date:** Early Q2
+* **Tesnet Launch Date:** June 2021
 * **Mainnet Launch Date:** TBA
-* **Sign up:** [here](https://oasisfoundation.typeform.com/to/aPDUHoTJ)
-* **Slack Channel:** [**\#**ethbridgeparatime](https://join.slack.com/t/oasiscommunity/shared_invite/enQtNjQ5MTA3NTgyOTkzLWIxNTg1ZWZmOTIwNmQ2MTg1YmU0MzgyMzk3OWM2ZWQ4NTQ0ZDJkNTBmMTdlM2JhODllYjg5YmJkODc2NzgwNTg)
+* **Sign up:** [here](https://oasisfoundation.typeform.com/to/I3wQ1CFJ)
+* **Slack Channel:** [**\#**cipherparatime](www.oasisprotocol.org/slack)
 * **Requires SGX**: Yes
 
 ### Features
 
-* Secure and stable 2-way token bridge between the Oasis Network and Ethereum
-* Full support for the transfer of ROSE tokens from the Oasis Network to Ethereum \(unlocking the ability to add wrapped ROSE as liquidity on Uniswap and other DeFi protocols on Ethereum\)
-* Full support for the transfer of ETH and ERC20 tokens from Ethereum to the Oasis Network \(unlocking the ability to swap wrapped ETH and ERC20 tokens on Uniswap and other DeFi protocols on the Oasis Network while paying much lower fees than on Ethereum\)
+* Secure and stable 2-way token bridge between the Oasis Network and Ethereum with full support for the transfer of ROSE tokens from the Oasis Network to Ethereum 
 * User-friendly web UI for swapping tokens
-* Additional features TBA
+* Confidential Smart Contract support
+* Fully decentralized with node operators distributed across the world
+* Oasis **ROSE** tokens will be the native token used in the ParaTime for gas fees
+* Support for WebAssembly smart contracts
+* Support for confidential compute
 
 ### Rewards
 
-* Incentivized testnet with ROSE tokens delegated by the Oasis Protocol Foundation to testnet participants based on performance
-* Additional rewards TBA
+* The ParaTime will release tokens on-chain to reward nodes for participation.
+* The reward program is 2 years long, and tokens will be released per epoch.
+* The reward will be 10~20 ROSE tokens per entity per epoch, where the Oasis Protocol Foundation will make the final decision on the reward size upon the testnet launch.
+* Incentivized testnet with ROSE tokens delegated by the Oasis Protocol Foundation to testnet participants based on performance \(rewards can be found [here](https://oasis-foundation.medium.com/oasis-cipher-paratime-c9f40ae64946)\)
 
 ### Hardware Requirements
 
