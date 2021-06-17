@@ -83,6 +83,7 @@
 ## Developer Resources
 
 * [Oasis Core Documentation](https://docs.oasis.dev/oasis-core)
+* [Oasis SDK Documentation](https://docs.oasis.dev/oasis-sdk)
 * [GitHub](https://github.com/oasisprotocol)
 
 ## Community Resources
