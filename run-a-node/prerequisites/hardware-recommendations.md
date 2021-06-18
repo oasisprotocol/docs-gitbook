@@ -19,8 +19,14 @@ The CPU must have [AES-NI](https://en.wikipedia.org/wiki/AES_instruction_set) su
 * 4 GB ECC RAM
 
 {% hint style="info" %}
-Initial state sync is more resource intensive than ordinary node operation once the node is caught up with the network. Once the node is synced, it can operate with 2 GB of RAM.
+Ordinary node operation can work with 2 GB of RAM.
+
+However, at certain time points, it absolutely requires at least 4 GB of RAM. Examples of such more resource intensive time points are the initial state sync, BadgerDB migration when upgrading a node to Oasis Core 21.2.x, ...
+
+If you can dynamically change the amount of RAM a node is provisioned, then feel free to downscale/upscale it as you see fit.
 {% endhint %}
+
+
 
 * 100+ GB High Speed Storage
 
