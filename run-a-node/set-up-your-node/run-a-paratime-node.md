@@ -67,11 +67,13 @@ docker run \
 
 #### Check SGX Setup
 
-In order to make sure that your SGX setup is working, you can [install the Fortanix SGX utilities](https://edp.fortanix.com/docs/installation/guide/#install-fortanix-edp-utilities) by doing the following \(assuming you have Rust installed\):
+In order to make sure that your SGX setup is working, you can [install the Fortanix SGX utilities](https://edp.fortanix.com/docs/installation/guide/#install-fortanix-edp-utilities) by doing the following \(assuming you have Rust nightly installed\):
 
 ```bash
-cargo install sgxs-tools
+cargo +nightly install sgxs-tools
 ```
+
+_NOTE: These utilities must be compiled with a nightly version of the Rust toolchain since they use the `#![feature]` macro._
 
 After the installation completes run `sgx-detect` to make sure that everything is set up correctly. In case you encounter errors, see the [list of common SGX installation issues](https://edp.fortanix.com/docs/installation/help/) for help.
 
