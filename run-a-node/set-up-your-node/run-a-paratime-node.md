@@ -61,6 +61,7 @@ The easiest way to install and run the AESM service is by using a Docker contain
 
 ```bash
 docker run \
+  --pull always \
   --detach \
   --restart always \
   --device /dev/isgx \
