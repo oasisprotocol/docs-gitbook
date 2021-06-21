@@ -144,12 +144,19 @@ consensus:
 
 runtime:
   supported:
+    # List of ParaTimes that the node should support.
     - "{{ runtime_id }}"
+
   paths:
+    # Paths to ParaTime binaries for all of the supported ParaTimes.
     "{{ runtime_id }}": /node/bin/paratime.sgxs
+  
+  # The following section is required for ParaTimes which are running inside the
+  # Intel SGX Trusted Execution Environment.
   sgx:
     loader: /node/bin/oasis-core-runtime-loader
     signatures:
+      # Paths to ParaTime signatures.
       "{{ runtime_id }}": /node/bin/paratime.sig
 
 worker:
@@ -165,18 +172,22 @@ worker:
     enabled: true
   
   client:
+    # External gRPC configuration.
     port: 30001
     addresses:
       # The external IP that is used when registering this node to the network.
       - "{{ external_address }}:30001"
   
   p2p:
+    # External P2P configuration.
     enabled: true
     port: 30002
     addresses:
       # The external IP that is used when registering this node to the network.
       - "{{ external_address }}:30002"
 
+# The following section is required for ParaTimes which are running inside the
+# Intel SGX Trusted Execution Environment.
 ias:
   proxy:
     address:
