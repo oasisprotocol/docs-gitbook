@@ -51,6 +51,10 @@ On [Intel's website](https://01.org/intel-software-guard-extensions/downloads), 
 
 After installing the driver and restarting your system, make sure that the `/dev/isgx` device exists.
 
+{% hint style="warning" %}
+Make sure that `/dev` is _not_ mounted with the `noexec` option as otherwise the enclave loader will be unable to map executable pages. You can use `sudo mount -o remount,exec /dev` to temporarily change the mount flag.
+{% endhint %}
+
 #### Install AESM Service
 
 The easiest way to install and run the AESM service is by using a Docker container provided by Fortanix as follows \(this will keep the container running and it will be automatically started on boot\):
@@ -75,7 +79,35 @@ cargo +nightly install sgxs-tools
 
 _NOTE: These utilities must be compiled with a nightly version of the Rust toolchain since they use the `#![feature]` macro._
 
-After the installation completes run `sgx-detect` to make sure that everything is set up correctly. In case you encounter errors, see the [list of common SGX installation issues](https://edp.fortanix.com/docs/installation/help/) for help.
+After the installation completes run `sgx-detect` to make sure that everything is set up correctly. When everything works, you should get output similar to the following \(some things depend on hardware features so your output may differ\):
+
+```text
+Detecting SGX, this may take a minute...
+✔  SGX instruction set
+  ✔  CPU support
+  ✔  CPU configuration
+  ✔  Enclave attributes
+  ✔  Enclave Page Cache
+  SGX features
+    ✔  SGX2  ✔  EXINFO  ✔  ENCLV  ✔  OVERSUB  ✔  KSS  
+    Total EPC size: 92.8MiB
+✘  Flexible launch control
+  ✔  CPU support
+  ？ CPU configuration
+  ✘  Able to launch production mode enclave
+✔  SGX system software
+  ✔  SGX kernel device (/dev/isgx)
+  ✘  libsgx_enclave_common
+  ✔  AESM service
+  ✔  Able to launch enclaves
+    ✔  Debug mode
+    ✘  Production mode
+    ✔  Production mode (Intel whitelisted)
+```
+
+The important part is the checkbox under _Able to launch enclaves_ in both _Debug mode_ and _Production mode \(Intel whitelisted\)_.
+
+In case you encounter errors, see the [list of common SGX installation issues](https://edp.fortanix.com/docs/installation/help/) for help.
 
 ## Configuration
 
