@@ -167,12 +167,14 @@ worker:
   client:
     port: 30001
     addresses:
+      # The external IP that is used when registering this node to the network.
       - "{{ external_address }}:30001"
   
   p2p:
     enabled: true
     port: 30002
     addresses:
+      # The external IP that is used when registering this node to the network.
       - "{{ external_address }}:30002"
 
 ias:
