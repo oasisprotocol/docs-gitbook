@@ -72,7 +72,11 @@ docker run \
 
 #### Check SGX Setup
 
-In order to make sure that your SGX setup is working, you can [install the Fortanix SGX utilities](https://edp.fortanix.com/docs/installation/guide/#install-fortanix-edp-utilities) by doing the following \(assuming you have Rust nightly installed\):
+In order to make sure that your SGX setup is working, you can use the `sgx-detect` tool from the [sgxs-tools](https://lib.rs/crates/sgxs-tools) Rust package.
+
+Make sure you have Rust nightly, pkg-config and OpenSSL development package installed. For more details, see [Oasis Core's Build Environment Setup and Building, Prerequisites doc](https://docs.oasis.dev/oasis-core/development-setup/build-environment-setup-and-building/prerequisites).
+
+Then build and install sgxs-tools by running:
 
 ```bash
 cargo +nightly install sgxs-tools
