@@ -45,9 +45,57 @@ When the ParaTime is running in a TEE, a different binary to what is registered 
 
 If the ParaTime is configured to run in a TEE \(currently only [Intel SGX](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html)\), you must make sure that your system supports running SGX enclaves. This requires that your hardware has SGX support, that SGX support is enabled and that the additional driver and software components are properly installed and running.
 
-#### Install SGX Driver
+#### Install SGX Linux Driver
 
-On [Intel's website](https://01.org/intel-software-guard-extensions/downloads), find the latest "Intel SGX Linux Release" \(_not_ "Intel SGX DCAP Linux Release"\) and download the "Intel \(R\) SGX Installers" for your platform. The package will have `driver` in the name.
+Oasis Core currently only supports the legacy \(out-of-tree\) [Intel SGX Linux driver](https://github.com/intel/linux-sgx-driver).
+
+{% hint style="info" %}
+Support for the new Intel SGX support in mainline Linux kernels since version 5.11 is being tracked in [oasis-core\#3651](https://github.com/oasisprotocol/oasis-core/issues/3651).
+{% endhint %}
+
+**Ubuntu 18.04/16.04**
+
+A convenient way to install the SGX Linux driver on Ubuntu 18.04/16.04 systems is to use the [Fortanix](https://edp.fortanix.com/docs/installation/guide/)'s APT repository and its [DKMS](https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support) package.
+
+First add Fortanix's APT repository to your system:
+
+```bash
+echo "deb https://download.fortanix.com/linux/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/fortanix.list >/dev/null
+curl -sSL "https://download.fortanix.com/linux/apt/fortanix.gpg" | sudo -E apt-key add -
+```
+
+And then install the `intel-sgx-dkms` package:
+
+```bash
+sudo apt-get update
+sudo apt-get install intel-sgx-dkms
+```
+
+{% hint style="warning" %}
+Some [Azure Confidential Computing instances](https://docs.microsoft.com/en-us/azure/confidential-computing/quick-create-portal) have the [Intel SGX DCAP driver](https://github.com/intel/SGXDataCenterAttestationPrimitives/tree/master/driver/linux) pre-installed.
+
+To determine that, run `dmesg | grep -i sgx` and observe if a line like the following is shown:
+
+```text
+[    4.991649] sgx: intel_sgx: Intel SGX DCAP Driver v1.33
+```
+
+If that is the case, you need to blacklist the Intel SGX DCAP driver's module by running:
+
+```text
+echo "blacklist intel_sgx" | sudo tee -a /etc/modprobe.d/blacklist-intel_sgx.conf >/dev/null
+```
+{% endhint %}
+
+**Fedora 34/33**
+
+A convenient way to install the SGX Linux driver on Fedora 34/33 systems is to use the Oasis-provided [Fedora Package for the Legacy Intel SGX Linux Driver](https://github.com/oasisprotocol/sgx-driver-kmod).
+
+**Other Distributions**
+
+Go to [Intel SGX Downloads](https://01.org/intel-software-guard-extensions/downloads) page and find the latest "Intel SGX Linux Release" \(_not_ "Intel SGX DCAP Release"\) and download the "Intel \(R\) SGX Installers" for your distribution. The package will have `driver` in the name.
+
+**Verification**
 
 After installing the driver and restarting your system, make sure that the `/dev/isgx` device exists.
 
