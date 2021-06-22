@@ -74,7 +74,51 @@ docker run \
 
 In order to make sure that your SGX setup is working, you can use the `sgx-detect` tool from the [sgxs-tools](https://lib.rs/crates/sgxs-tools) Rust package.
 
-Make sure you have Rust nightly, pkg-config and OpenSSL development package installed. For more details, see [Oasis Core's Build Environment Setup and Building, Prerequisites doc](https://docs.oasis.dev/oasis-core/development-setup/build-environment-setup-and-building/prerequisites).
+There are no pre-built packages for it, so you will need to compile it yourself. Make sure you have the following installed on your system:
+
+* System packages:
+
+  * [GCC](http://gcc.gnu.org/) \(including C++ subpackage\).
+  * [Protobuf](https://github.com/protocolbuffers/protobuf) compiler.
+  * [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config).
+  * [OpenSSL](https://www.openssl.org/) development package.
+
+  
+  On Fedora, you can install all the above with:
+
+  ```text
+  sudo dnf install gcc gcc-c++ protobuf-compiler pkg-config openssl-devel
+  ```
+
+  On Ubuntu, you can install all the above with:
+
+  ```text
+  sudo apt install gcc g++ protobuf-compiler pkg-config libssl-dev
+  ```
+
+* [Rust](https://www.rust-lang.org/) nightly.
+
+  
+  We follow [Rust upstream's recommendation](https://www.rust-lang.org/tools/install) on using [rustup](https://rustup.rs/) to install and manage Rust versions.
+
+  
+  _NOTE: rustup cannot be installed alongside a distribution packaged Rust version. You will need to remove it \(if it's present\) before you can start using rustup._
+
+  
+  Install it by running:
+
+  ```text
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  ```
+
+  _NOTE: If you want to avoid directly executing a shell script fetched the internet, you can also_ [_download `rustup-init` executable for your platform_](https://rust-lang.github.io/rustup/installation/other.html) _and run it manually. This will run `rustup-init` which will download and install the latest stable version of Rust on your system._  
+
+
+  Install Rust nightly with:
+
+  ```text
+  rustup install nightly
+  ```
 
 Then build and install sgxs-tools by running:
 
@@ -84,7 +128,9 @@ cargo +nightly install sgxs-tools
 
 _NOTE: These utilities must be compiled with a nightly version of the Rust toolchain since they use the `#![feature]` macro._
 
-After the installation completes run `sgx-detect` to make sure that everything is set up correctly. When everything works, you should get output similar to the following \(some things depend on hardware features so your output may differ\):
+After the installation completes, run `sgx-detect` to make sure that everything is set up correctly.
+
+When everything works, you should get output similar to the following \(some things depend on hardware features so your output may differ\):
 
 ```text
 Detecting SGX, this may take a minute...
