@@ -6,9 +6,107 @@ description: >-
 
 # Upgrade Log
 
+## 2021-06-23 Upgrade
+
+* **Upgrade height:** upgrade is scheduled to happen at epoch **7553.**
+
+{% hint style="info" %}
+We expect the Testnet network to reach this epoch at around 2021-06-23 14:30 UTC.
+{% endhint %}
+
+### Instructions
+
+* See [Before upgrade](upgrade-log.md#before-upgrade) section for required steps to be done before upgrade.
+* \(optional\) Vote for the upgrade. On 2021-06-21 an upgrade proposal will be proposed which \(if accepted\) will schedule the upgrade on epoch **7553.** See the [Governance documentation](../../run-a-node/set-up-your-node/governance.md) for details on voting for proposals.
+
+{% hint style="info" %}
+The upgrade proposal contains the `"consensus-max-allowances-16"` upgrade handler whose only purpose is to set the**`staking.params.min_delegation`** consensus parameter to 16 \(default value is 0\) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
+{% endhint %}
+
+* Stop your node, replace the old version of Oasis Node with version [21.2.4](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.4) and restart your node.
+
+{% hint style="info" %}
+Since Oasis Core 21.2.4 is otherwise compatible with the current consensus layer protocol, you may upgrade your Testnet node to this version at any time.
+{% endhint %}
+
+{% hint style="warning" %}
+For this upgrade, do NOT wipe state.
+{% endhint %}
+
+* Once reaching the designated upgrade epoch, your node will stop and needs to be upgraded to Oasis Core [21.2.4](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.4).
+  * If you upgraded your node to Oasis Core 21.2.4 before the upgrade epoch was reached, you only need to restart your node for the upgrade to proceed.
+  * Otherwise, you need to upgrade your node to Oasis Core 21.2.4 first and then restart it.
+
+{% hint style="info" %}
+The Testnet's genesis file and the genesis document's hash will remain the same.
+{% endhint %}
+
+### Before upgrade
+
+This upgrade will upgrade Oasis Core to version **21.2.x** which includes the new [**BadgerDB**](https://github.com/dgraph-io/badger) **v3**.
+
+Since BadgerDB's on-disk format changed in v3, it requires on-disk state migration. The migration process is done automatically and makes the following steps:
+
+* Upon startup, Oasis Node will start migrating all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and start writing Badger v3 DB to files with the `.migrate` suffix.
+* If the migration fails in the middle, Oasis Node will delete all `<DATA-DIR>/**/*.badger.db.migrate` files the next time it starts and start the migration \(of the remaining `<DATA-DIR>/**/*.badger.db`
+
+  files\) again.
+
+* If the migration succeeds, Oasis Node will append the `.backup` suffix to all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and remove the `.migrate` suffix from all `<DATA-DIR>/**/*.badger.db.migrate` files \(Badger v3 files\).
+
+#### Extra storage requirements
+
+Your node will thus need to have extra storage space to store both the old and the new BadgerDB files.
+
+To see estimate how much extra space the migration will need, use the `du` tool:
+
+```text
+shopt -s globstar
+du -h <DATA-DIR>/**/*.badger.db | sort -h -r
+```
+
+This is an example output from a Testnet node that uses `/srv/oasis/node` as the `<DATA-DIR>`:
+
+```text
+6.3G	/srv/oasis/node/tendermint/data/blockstore.badger.db
+2.7G	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db
+1.4G	/srv/oasis/node/tendermint/data/state.badger.db
+158M	/srv/oasis/node/persistent-store.badger.db
+164K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints
+80K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4424334
+80K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4423334
+76K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4424334/fc815694d8219acb97fc0207a2159601df76df4d96802c147252ad0f2fd8a3f3
+76K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4423334/613e734e4ee4999bf71c3a190df13ea9d9b7d65af6a7fd8b2c9a477f2d052313
+68K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4424334/fc815694d8219acb97fc0207a2159601df76df4d96802c147252ad0f2fd8a3f3/chunks
+68K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4423334/613e734e4ee4999bf71c3a190df13ea9d9b7d65af6a7fd8b2c9a477f2d052313/chunks
+20K	/srv/oasis/node/tendermint/data/evidence.badger.db
+```
+
+{% hint style="info" %}
+After you've confirmed your node is up and running, you can safely delete all the  `<DATA-DIR>/**/*.badger.db.backup` files.
+{% endhint %}
+
+#### Extra memory requirements
+
+BadgerDB v2 to v3 migration can use a number of Go routines to migrate different database files in parallel.
+
+However, this comes with a memory cost. For larger database files, it might need up to 4 GB of RAM per database, so we recommend lowering the number of Go routines BadgerDB uses during migration \(`badger.migrate.num_go_routines`\) if your node has less than 8 GB of RAM.
+
+If your node has less than 8 GB of RAM, set the number of Go routines BadgerDB uses during migration to 2 \(default is 8\) by adding the following to your node's `config.yml`:
+
+```text
+# BadgerDB configuration.
+badger:
+  migrate:
+    # Set the number of Go routines BadgerDB uses during migration to 2 to lower
+    # the memory pressure during migration (at the expense of a longer migration
+    # time).
+    num_go_routines: 2
+```
+
 ## 2021-04-13 Upgrade
 
-* **Upgrade height** upgrade is scheduled to happen at epoch **5662.**
+* **Upgrade height:** upgrade is scheduled to happen at epoch **5662.**
 
 {% hint style="info" %}
 We expect the Testnet network to reach this epoch at around 2021-04-13 12:00 UTC.
@@ -77,7 +175,7 @@ Take note of the displayed `state-root` and report it to the Foundation, as it n
 
 ## 2021-03-24 Upgrade
 
-* **Upgrade height** upgrade is scheduled to happen at epoch **5128.**
+* **Upgrade height:** upgrade is scheduled to happen at epoch **5128.**
 
 {% hint style="info" %}
 We expect the Testnet network to reach this epoch at around 2021-03-24 11:30 UTC.

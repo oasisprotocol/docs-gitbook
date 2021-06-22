@@ -8,7 +8,7 @@ description: >-
 
 ## 2021-04-28 \(16:00 UTC\) - Cobalt Upgrade
 
-* **Upgrade height** upgrade is scheduled to happen at epoch **5046.**
+* **Upgrade height:** upgrade is scheduled to happen at epoch **5046.**
 
 {% hint style="info" %}
 We expect the Mainnet network to reach this epoch at around 2021-04-28 12:00 UTC.
