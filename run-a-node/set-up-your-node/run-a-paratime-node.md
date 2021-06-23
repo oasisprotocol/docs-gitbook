@@ -126,7 +126,7 @@ There are no pre-built packages for it, so you will need to compile it yourself.
 
 * System packages:
 
-  * [GCC](http://gcc.gnu.org/) \(including C++ subpackage\).
+  * [GCC](http://gcc.gnu.org/).
   * [Protobuf](https://github.com/protocolbuffers/protobuf) compiler.
   * [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config).
   * [OpenSSL](https://www.openssl.org/) development package.
@@ -135,13 +135,13 @@ There are no pre-built packages for it, so you will need to compile it yourself.
   On Fedora, you can install all the above with:
 
   ```text
-  sudo dnf install gcc gcc-c++ protobuf-compiler pkg-config openssl-devel
+  sudo dnf install gcc protobuf-compiler pkg-config openssl-devel
   ```
 
   On Ubuntu, you can install all the above with:
 
   ```text
-  sudo apt install gcc g++ protobuf-compiler pkg-config libssl-dev
+  sudo apt install gcc protobuf-compiler pkg-config libssl-dev
   ```
 
 * [Rust](https://www.rust-lang.org/) nightly.
