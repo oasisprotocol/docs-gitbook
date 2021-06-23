@@ -37,6 +37,10 @@ For this upgrade, do NOT wipe state.
   * If you upgraded your node to Oasis Core 21.2.4 before the upgrade epoch was reached, you only need to restart your node for the upgrade to proceed.
   * Otherwise, you need to upgrade your node to Oasis Core 21.2.4 first and then restart it.
 
+{% hint style="success" %}
+If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org/), you can configure it to restart the Oasis Node automatically.
+{% endhint %}
+
 {% hint style="info" %}
 The Testnet's genesis file and the genesis document's hash will remain the same.
 {% endhint %}
