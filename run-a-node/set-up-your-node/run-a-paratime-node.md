@@ -41,11 +41,11 @@ In case you decide to build the ParaTime binary from source yourself, make sure 
 When the ParaTime is running in a TEE, a different binary to what is registered in the consensus layer will not work and will be rejected by the network.
 {% endhint %}
 
-### Trusted Execution Environment \(TEE\)
+## Setting up Trusted Execution Environment \(TEE\)
 
 If the ParaTime is configured to run in a TEE \(currently only [Intel SGX](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html)\), you must make sure that your system supports running SGX enclaves. This requires that your hardware has SGX support, that SGX support is enabled and that the additional driver and software components are properly installed and running.
 
-#### Install SGX Linux Driver
+### Install SGX Linux Driver
 
 Oasis Core currently only supports the legacy \(out-of-tree\) [Intel SGX Linux driver](https://github.com/intel/linux-sgx-driver).
 
@@ -53,7 +53,7 @@ Oasis Core currently only supports the legacy \(out-of-tree\) [Intel SGX Linux d
 Support for the new Intel SGX support in mainline Linux kernels since version 5.11 is being tracked in [oasis-core\#3651](https://github.com/oasisprotocol/oasis-core/issues/3651).
 {% endhint %}
 
-**Ubuntu 18.04/16.04**
+#### Ubuntu 18.04/16.04
 
 A convenient way to install the SGX Linux driver on Ubuntu 18.04/16.04 systems is to use the [Fortanix](https://edp.fortanix.com/docs/installation/guide/)'s APT repository and its [DKMS](https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support) package.
 
@@ -87,15 +87,15 @@ echo "blacklist intel_sgx" | sudo tee -a /etc/modprobe.d/blacklist-intel_sgx.con
 ```
 {% endhint %}
 
-**Fedora 34/33**
+#### Fedora 34/33
 
 A convenient way to install the SGX Linux driver on Fedora 34/33 systems is to use the Oasis-provided [Fedora Package for the Legacy Intel SGX Linux Driver](https://github.com/oasisprotocol/sgx-driver-kmod).
 
-**Other Distributions**
+#### Other Distributions
 
 Go to [Intel SGX Downloads](https://01.org/intel-software-guard-extensions/downloads) page and find the latest "Intel SGX Linux Release" \(_not_ "Intel SGX DCAP Release"\) and download the "Intel \(R\) SGX Installers" for your distribution. The package will have `driver` in the name.
 
-**Verification**
+#### Verification
 
 After installing the driver and restarting your system, make sure that the `/dev/isgx` device exists.
 
@@ -103,7 +103,7 @@ After installing the driver and restarting your system, make sure that the `/dev
 Make sure that `/dev` is _not_ mounted with the `noexec` option as otherwise the enclave loader will be unable to map executable pages. You can use `sudo mount -o remount,exec /dev` to temporarily change the mount flag.
 {% endhint %}
 
-#### Install AESM Service
+### Install AESM Service
 
 The easiest way to install and run the AESM service is by using a Docker container provided by Fortanix as follows \(this will keep the container running and it will be automatically started on boot\):
 
@@ -118,63 +118,68 @@ docker run \
   fortanix/aesmd
 ```
 
-#### Check SGX Setup
+### Check SGX Setup
 
 In order to make sure that your SGX setup is working, you can use the `sgx-detect` tool from the [sgxs-tools](https://lib.rs/crates/sgxs-tools) Rust package.
 
-There are no pre-built packages for it, so you will need to compile it yourself. Make sure you have the following installed on your system:
+There are no pre-built packages for it, so you will need to compile it yourself.
 
-* System packages:
+{% hint style="info" %}
+sgxs-tools must be compiled with a nightly version of the Rust toolchain since they use the `#![feature]` macro.
+{% endhint %}
 
-  * [GCC](http://gcc.gnu.org/).
-  * [Protobuf](https://github.com/protocolbuffers/protobuf) compiler.
-  * [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config).
-  * [OpenSSL](https://www.openssl.org/) development package.
+#### Install Dependencies
 
-  
-  On Fedora, you can install all the above with:
+Make sure you have the following installed on your system:
 
-  ```text
-  sudo dnf install gcc protobuf-compiler pkg-config openssl-devel
-  ```
+* [GCC](http://gcc.gnu.org/).
+* [Protobuf](https://github.com/protocolbuffers/protobuf) compiler.
+* [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config).
+* [OpenSSL](https://www.openssl.org/) development package.
 
-  On Ubuntu, you can install all the above with:
+On Fedora, you can install all the above with:
 
-  ```text
-  sudo apt install gcc protobuf-compiler pkg-config libssl-dev
-  ```
+```text
+sudo dnf install gcc protobuf-compiler pkg-config openssl-devel
+```
 
-* [Rust](https://www.rust-lang.org/) nightly.
+On Ubuntu, you can install all the above with:
 
-  
-  We follow [Rust upstream's recommendation](https://www.rust-lang.org/tools/install) on using [rustup](https://rustup.rs/) to install and manage Rust versions.
+```text
+sudo apt install gcc protobuf-compiler pkg-config libssl-dev
+```
 
-  
-  _NOTE: rustup cannot be installed alongside a distribution packaged Rust version. You will need to remove it \(if it's present\) before you can start using rustup._
+#### Install [Rust](https://www.rust-lang.org/) Nightly
 
-  
-  Install it by running:
+We follow [Rust upstream's recommendation](https://www.rust-lang.org/tools/install) on using [rustup](https://rustup.rs/) to install and manage Rust versions.
 
-  ```text
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  ```
+{% hint style="warning" %}
+rustup cannot be installed alongside a distribution packaged Rust version. You will need to remove it \(if it's present\) before you can start using rustup.
+{% endhint %}
 
-  _NOTE: If you want to avoid directly executing a shell script fetched the internet, you can also_ [_download `rustup-init` executable for your platform_](https://rust-lang.github.io/rustup/installation/other.html) _and run it manually. This will run `rustup-init` which will download and install the latest stable version of Rust on your system._  
+Install rustup by running:
 
+```text
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
-  Install Rust nightly with:
+{% hint style="success" %}
+If you want to avoid directly executing a shell script fetched the internet, you can also [download `rustup-init` executable for your platform](https://rust-lang.github.io/rustup/installation/other.html) and run it manually. This will run `rustup-init` which will download and install the latest stable version of Rust on your system.
+{% endhint %}
 
-  ```text
-  rustup install nightly
-  ```
+Install Rust nightly with:
 
-Then build and install sgxs-tools by running:
+```text
+rustup install nightly
+```
+
+#### Build and Install sgxs-tools
 
 ```bash
 cargo +nightly install sgxs-tools
 ```
 
-_NOTE: These utilities must be compiled with a nightly version of the Rust toolchain since they use the `#![feature]` macro._
+#### Run `sgx-detect` Tool
 
 After the installation completes, run `sgx-detect` to make sure that everything is set up correctly.
 
