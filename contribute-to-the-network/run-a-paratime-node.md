@@ -49,23 +49,14 @@ An Oasis Foundation developed ParaTime that will enable a bridge to Ethereum and
 * The ParaTime will release tokens on-chain to reward nodes for participation.
 * The reward program is 2 years long, and tokens will be released per epoch.
 * The reward will be 10~20 ROSE tokens per entity per epoch, where the Oasis Protocol Foundation will make the final decision on the reward size upon the testnet launch.
-* Incentivized testnet with ROSE tokens delegated by the Oasis Protocol Foundation to testnet participants based on performance \(rewards can be found [here](https://oasis-foundation.medium.com/oasis-cipher-paratime-c9f40ae64946)\)
+* Incentivized testnet with ROSE tokens delegated by the Oasis Protocol Foundation to testnet participants based on performance \(rewards can be found [here](https://oasis-foundation.medium.com/oasis-cipher-paratime-c9f40ae64946)\).
 
 ### Parameters
 
-* **Runtime Identifier:** TBD
-* **Runtime Binary:** TBD
-
-### Hardware Requirements
-
-* 2.0 GHz x86-64 CPU
-* CPU must have AES-NI support
-* 2 GB ECC RAM
-* 500 GB High Speed Storage
-* CPU support for Intel SGX
-* Intel SGX support enabled in BIOS
-* Intel SGX Linux driver installed
-* AESMD daemon installed and running
+* **Oasis Core Version:** [21.2.4](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.4)
+* **Runtime Identifier:**
+  * `0000000000000000000000000000000000000000000000000000000000000000`
+* **Runtime Binary:** [v0.1.0-alpha1](https://github.com/oasisprotocol/cipher-paratime/releases/tag/v0.1.0-alpha1)
 {% endtab %}
 
 {% tab title="Oasis-Eth ParaTime" %}
