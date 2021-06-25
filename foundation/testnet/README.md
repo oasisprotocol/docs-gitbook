@@ -36,3 +36,16 @@ Feel free to use other seed nodes besides the one provided here.
 The Oasis Node is part of the Oasis Core release.
 {% endhint %}
 
+## ParaTimes
+
+This section contains parameters for various ParaTimes known to be deployed on the Testnet. Similar to the Testnet, these may be subject to frequent version upgrades and/or state resets.
+
+### Cipher ParaTime
+
+* Oasis Core Version:
+  *  ****[21.2.4](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.4)
+* Runtime Identifier:
+  * `0000000000000000000000000000000000000000000000000000000000000000`
+* Runtime Binary: 
+  * [v0.1.0-alpha1](https://github.com/oasisprotocol/cipher-paratime/releases/tag/v0.1.0-alpha1)
+

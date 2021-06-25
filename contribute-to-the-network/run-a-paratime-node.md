@@ -33,6 +33,8 @@ An Oasis Foundation developed ParaTime that will enable a bridge to Ethereum and
 * **Sign Up:** [here](https://oasisfoundation.typeform.com/to/I3wQ1CFJ)
 * **Slack Channel:** [**\#**cipher-paratime](www.oasisprotocol.org/slack)
 * **Requires SGX**: Yes
+* **Parameters:**
+  * [Testnet](../foundation/testnet/#cipher-paratime)
 
 ### Features
 
@@ -50,13 +52,6 @@ An Oasis Foundation developed ParaTime that will enable a bridge to Ethereum and
 * The reward program is 2 years long, and tokens will be released per epoch.
 * The reward will be 10~20 ROSE tokens per entity per epoch, where the Oasis Protocol Foundation will make the final decision on the reward size upon the testnet launch.
 * Incentivized testnet with ROSE tokens delegated by the Oasis Protocol Foundation to testnet participants based on performance \(rewards can be found [here](https://oasis-foundation.medium.com/oasis-cipher-paratime-c9f40ae64946)\).
-
-### Parameters
-
-* **Oasis Core Version:** [21.2.4](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.4)
-* **Runtime Identifier:**
-  * `0000000000000000000000000000000000000000000000000000000000000000`
-* **Runtime Binary:** [v0.1.0-alpha1](https://github.com/oasisprotocol/cipher-paratime/releases/tag/v0.1.0-alpha1)
 {% endtab %}
 
 {% tab title="Oasis-Eth ParaTime" %}
