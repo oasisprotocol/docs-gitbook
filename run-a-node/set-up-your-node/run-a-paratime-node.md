@@ -105,7 +105,39 @@ Make sure that `/dev` is _not_ mounted with the `noexec` option as otherwise the
 
 ### Install AESM Service
 
-The easiest way to install and run the AESM service is by using a Docker container provided by Fortanix as follows \(this will keep the container running and it will be automatically started on boot\):
+To allow execution of SGX enclaves, several **Architectural Enclaves \(AE\)** are involved \(i.e. Launch Enclave, Provisioning Enclave, Provisioning Certificate Enclave, Quoting Enclave, Platform Services Enclaves\).
+
+Communication between application-spawned SGX enclaves and Intel-provided Architectural Enclaves is through **Application Enclave Service Manager \(AESM\)**. AESM runs as a daemon and provides a socket through which applications can facilitate various SGX services such as launch approval, remote attestation quote signing, etc.
+
+#### Ubuntu 20.04/18.04/16.04
+
+A convenient way to install the AESM service on Ubuntu 20.04/18.04/16.04 systems is to use the Intel's [official Intel SGX APT repository](https://download.01.org/intel-sgx/sgx_repo/).
+
+First add Intel SGX APT repository to your system:
+
+```bash
+echo "deb https://download.01.org/intel-sgx/sgx_repo/ubuntu $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/intel-sgx.list >/dev/null
+curl -sSL "https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key" | sudo -E apt-key add -
+```
+
+And then install the `sgx-aesm-service` and  `libsgx-aesm-launch-plugin` packages:
+
+```bash
+sudo apt-get update
+sudo apt-get install sgx-aesm-service libsgx-aesm-launch-plugin
+```
+
+The AESM service should be up and running. To confirm that, use:
+
+```bash
+sudo systemctl status aesmd.service
+```
+
+#### Docker-enabled System
+
+An easy way to install and run the AESM service on a [Docker](https://docs.docker.com/engine/)-enabled system is to use [Fortanix's AESM container image](https://hub.docker.com/r/fortanix/aesmd/).
+
+Executing the following command should \(always\) pull the latest version of Fortanix's AESM Docker container, map the `/dev/isgx` device and `/var/run/aesmd` directory and ensure AESM is running in the background \(also automatically started on boot\):
 
 ```bash
 docker run \
@@ -116,6 +148,41 @@ docker run \
   --volume /var/run/aesmd:/var/run/aesmd \
   --name aesmd \
   fortanix/aesmd
+```
+
+#### Podman-enabled System
+
+Similarly to Docker-enabled systems, an easy way to install and run the AESM service on a [Podman](https://podman.io/)-enabled system is to use [Fortanix's AESM container image](https://hub.docker.com/r/fortanix/aesmd/).
+
+First, create the container with:
+
+```bash
+sudo podman create \
+  --pull always \
+  --device /dev/isgx \
+  --volume /var/run/aesmd:/var/run/aesmd:Z \
+  --name aesmd \
+  docker.io/fortanix/aesmd
+```
+
+Then generate the `container-aesmd.service` systemd unit file for it with:
+
+```bash
+sudo podman generate systemd --restart-policy=always --time 10 --name aesmd | \
+  sudo tee -a /etc/systemd/system/container-aesmd.service
+```
+
+Finally, enable and start the `container-aesmd.service` with:
+
+```bash
+sudo systemctl enable container-aesmd.service
+sudo systemctl start container-aesmd.service
+```
+
+The AESM service should be up and running. To confirm that, use:
+
+```bash
+sudo systemctl status container-aesmd.service
 ```
 
 ### Check SGX Setup
