@@ -18,6 +18,28 @@ This guide will cover setting up your ParaTime compute node for the Oasis Networ
 
 Before following this guide, make sure you've followed the [Prerequisites](../prerequisites/) and [Run a Non-validator Node](run-non-validator.md) sections and have the Oasis Node binary installed and configured on your systems. In addition to the basic non-validator configuration you will also need to [create and register your own entity](run-validator.md#creating-your-entity). Reading the rest of the [validator node setup instructions](run-validator.md) may also be useful.
 
+### Install Bubblewrap Sandbox
+
+ParaTime compute nodes execute ParaTime binaries inside a sandboxed environment provided by [Bubblewrap](https://github.com/containers/bubblewrap).
+
+{% tabs %}
+{% tab title="Ubuntu" %}
+```bash
+sudo apt install bubblewrap
+```
+{% endtab %}
+
+{% tab title="Fedora" %}
+```bash
+sudo dnf install bubblewrap
+```
+{% endtab %}
+
+{% tab title="Other systems" %}
+On other systems you can download [the binary release provided by the Bubblewrap project](https://github.com/containers/bubblewrap/releases). Note that the Oasis Node expects it to be installed under `/usr/bin/bwrap` by default.
+{% endtab %}
+{% endtabs %}
+
 ### Stake Requirements
 
 To be able to register as a ParaTime node on the Oasis Network, you need to have enough tokens staked in your escrow account. For more details, see the [Stake requirements](../../contribute-to-the-network/run-validator.md#stake-requirements) section of [Run a Validator Node](../../contribute-to-the-network/run-validator.md) doc. Note that stake requirements may differ from ParaTime to ParaTime.
