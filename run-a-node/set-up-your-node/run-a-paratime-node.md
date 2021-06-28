@@ -377,6 +377,10 @@ Before using this configuration you should collect the following information to 
 * `{{ runtime_id }}`: The Runtime identifier.
 * `{{ ias_proxy_address }}`: The IAS proxy address in the form `ID@HOST:port`. You can find the current Oasis IAS proxy address in the [Network Parameters](../../oasis-network/network-parameters.md). If you want you can also [run your own IAS proxy](run-an-ias-proxy.md).
 
+{% hint style="warning" %}
+`worker.client.port` \(default `30001`\) and `worker.p2p.port` \(default `30002`\) need to be exposed and publicly accessible on the internet \(for`TCP`traffic\).
+{% endhint %}
+
 ## Starting the Oasis Node
 
 You can start the node by running the following command:
