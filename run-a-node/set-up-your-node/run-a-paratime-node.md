@@ -27,7 +27,7 @@ To be able to register as a ParaTime node on the Oasis Network, you need to have
 In order to run a ParaTime node you need to obtain the following pieces of information first, both of these need to come from a trusted source:
 
 * \*\*\*\*[**The ParaTime Identifier**](https://docs.oasis.dev/oasis-core/high-level-components/index-1/identifiers) is a 256-bit unique identifier of a ParaTime on the Oasis Network. It provides a unique identity to the ParaTime and together with the [genesis document's hash](https://docs.oasis.dev/oasis-core/high-level-components/index/genesis#genesis-documents-hash) serves as a domain separation context for ParaTime transaction and cryptographic commitments.  It is usually represented in hexadecimal form, for example: `8000000000000000000000000000000000000000000000000000000000000000` 
-* **The ParaTime Binary** contains the executable code that implements the ParaTime itself. It is executed in a sandboxed environment by Oasis Node and its format depends on whether the ParaTime is running in a Trusted Execution Environment \(TEE\) or not.  In the non-TEE case this will be a regular Linux executable \(an [ELF binary](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format), usually without an extension\) and in the TEE case this will be an [SGXS binary](https://github.com/fortanix/rust-sgx/blob/master/doc/SGXS.md) \(usually with a `.sgxs` extension\) that describes a secure enclave together with a detached signature of the binary \(usually with a `.sig`extension\).  The rest of this guide assumes that the binary is available at `/node/bin/paratime.sgxs` and that the signature is available at `/node/bin/paratime.sig`.
+* **The ParaTime Binary** contains the executable code that implements the ParaTime itself. It is executed in a sandboxed environment by Oasis Node and its format depends on whether the ParaTime is running in a Trusted Execution Environment \(TEE\) or not.  In the non-TEE case this will be a regular Linux executable \(an [ELF binary](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format), usually without an extension\) and in the TEE case this will be an [SGXS binary](https://github.com/fortanix/rust-sgx/blob/master/doc/SGXS.md) \(usually with a `.sgxs` extension\) that describes a secure enclave together with a detached signature of the binary \(usually with a `.sig`extension\).
 
 {% hint style="danger" %}
 Like the genesis document, make sure you obtain these from a trusted source.
@@ -320,7 +320,7 @@ runtime:
 
   paths:
     # Paths to ParaTime binaries for all of the supported ParaTimes.
-    "{{ runtime_id }}": /node/bin/paratime.sgxs
+    "{{ runtime_id }}": {{ runtime_bin_path }}
   
   # The following section is required for ParaTimes which are running inside the
   # Intel SGX Trusted Execution Environment.
@@ -328,7 +328,7 @@ runtime:
     loader: /node/bin/oasis-core-runtime-loader
     signatures:
       # Paths to ParaTime signatures.
-      "{{ runtime_id }}": /node/bin/paratime.sig
+      "{{ runtime_id }}": {{ runtime_sig_path }}
 
 worker:
   registration:
@@ -375,6 +375,8 @@ Before using this configuration you should collect the following information to 
   You can find the current Oasis Seed Node address in the [Network Parameters](../../oasis-network/network-parameters.md).
 
 * `{{ runtime_id }}`: The Runtime identifier.
+* `{{ runtime_bin_path }}`: Path to the [runtime binary](run-a-paratime-node.md#the-paratime-identifier-and-binary).
+* `{{ runtime_sig_path }}`: Path to the [runtime signature](run-a-paratime-node.md#the-paratime-identifier-and-binary) \(for runtimes that require Intel SGX\).
 * `{{ ias_proxy_address }}`: The IAS proxy address in the form `ID@HOST:port`. You can find the current Oasis IAS proxy address in the [Network Parameters](../../oasis-network/network-parameters.md). If you want you can also [run your own IAS proxy](run-an-ias-proxy.md).
 
 {% hint style="warning" %}
