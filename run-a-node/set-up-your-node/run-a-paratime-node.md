@@ -20,7 +20,7 @@ Before following this guide, make sure you've followed the [Prerequisites](../pr
 
 ### Install Bubblewrap Sandbox
 
-ParaTime compute nodes execute ParaTime binaries inside a sandboxed environment provided by [Bubblewrap](https://github.com/containers/bubblewrap).
+ParaTime compute nodes execute ParaTime binaries inside a sandboxed environment provided by [Bubblewrap](https://github.com/containers/bubblewrap). In order to install it, please follow these instructions, depending on your distribution:
 
 {% tabs %}
 {% tab title="Ubuntu" %}
@@ -35,7 +35,7 @@ sudo dnf install bubblewrap
 ```
 {% endtab %}
 
-{% tab title="Other systems" %}
+{% tab title="Other Distributions" %}
 On other systems you can download [the binary release provided by the Bubblewrap project](https://github.com/containers/bubblewrap/releases). Note that the Oasis Node expects it to be installed under `/usr/bin/bwrap` by default.
 {% endtab %}
 {% endtabs %}
@@ -115,7 +115,7 @@ A convenient way to install the SGX Linux driver on Fedora 34/33 systems is to u
 
 #### Other Distributions
 
-Go to [Intel SGX Downloads](https://01.org/intel-software-guard-extensions/downloads) page and find the latest "Intel SGX Linux Release" \(_not_ "Intel SGX DCAP Release"\) and download the "Intel \(R\) SGX Installers" for your distribution. The package will have `driver` in the name.
+Go to [Intel SGX Downloads](https://01.org/intel-software-guard-extensions/downloads) page and find the latest "Intel SGX Linux Release" \(_not_ "Intel SGX DCAP Release"\) and download the "Intel \(R\) SGX Installers" for your distribution. The package will have `driver` in the name \(e.g., `sgx_linux_x64_driver_2.11.0_2d2b795.bin`\).
 
 #### Verification
 
