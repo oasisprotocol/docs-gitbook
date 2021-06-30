@@ -28,7 +28,7 @@ Before following this guide, make sure you've followed the [Prerequisites](../pr
   * `runtimes`: This will store the ParaTime binaries and their corresponding signatures \(if they are running in a Trusted Execution Environment\).
 
 {% hint style="success" %}
-Feel free to name your working directory as you wish, e.g. `/srv/oasis/node`.
+Feel free to name your working directory as you wish, e.g. `/srv/oasis/`.
 
 Just make sure to use the correct working directory path in the instructions below.
 {% endhint %}
