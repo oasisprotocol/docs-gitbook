@@ -66,7 +66,34 @@ To register a node that is both a validator and a ParaTime node, the entity for 
 
 All together, there would need to be at least 400 tokens staked in your entity's escrow account.
 
-To stake the tokens, use [one of our wallets](../../manage-tokens/holding-rose-tokens/) or the [Oasis CLI tools](../../manage-tokens/oasis-cli-tools/delegate-tokens.md).
+To stake the tokens, use [o](../../manage-tokens/holding-rose-tokens/)ur [Oasis CLI tools](../../manage-tokens/oasis-cli-tools/delegate-tokens.md).
+
+If everything was set up correctly, you should see something like below when running [Oasis Node Stake Account Info](../../manage-tokens/oasis-cli-tools/get-account-info.md) command for your entity's account \(this an example for the Testnet\):
+
+```bash
+Balance:
+  Total: 0.0 TEST
+  Available: 0.0 TEST
+
+Active Delegations to this Account:
+  Total: 20000.0 TEST (20000000000000 shares)
+  Delegations:
+    - From:   oasis1qrwdwxutpyr9d2m84zh55rzcf99aw0hkts7myvv9
+      Amount: 20000.0 TEST (20000000000000 shares)
+
+Stake Accumulator:
+  Claims:
+    - Name: registry.RegisterEntity
+      Staking Thresholds:
+        - Global: entity
+    - Name: registry.RegisterNode.HG5TB3dbY8gtYBBw/R/cHfPaOpe0vT7W1wu/2rtpk/A=
+      Staking Thresholds:
+        - Global: node-compute
+      Staking Thresholds:
+        - Global: node-storage
+
+Nonce: 1
+```
 
 {% hint style="info" %}
 The stake requirements may differ from ParaTime to ParaTime and are subject to change in the future.
