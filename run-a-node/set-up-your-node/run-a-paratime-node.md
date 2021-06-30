@@ -12,6 +12,10 @@ These instructions are for setting up a _ParaTime_ node. If you want to run a _v
 If you are looking for some concrete ParaTimes that you can run, see [the list of ParaTimes and their parameters](../../contribute-to-the-network/run-a-paratime-node.md).
 {% endhint %}
 
+{% hint style="success" %}
+Oasis Core refers to ParaTimes as runtimes internally, so all configuration options will have runtime in their name.
+{% endhint %}
+
 This guide will cover setting up your ParaTime compute node for the Oasis Network. This guide assumes some basic knowledge on the use of command line tools.
 
 ## Prerequisites
