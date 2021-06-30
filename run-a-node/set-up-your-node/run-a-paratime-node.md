@@ -233,11 +233,10 @@ Note that Oasis Node expects Bubblewrap to be installed under `/usr/bin/bwrap` b
 {% endtab %}
 {% endtabs %}
 
-Ensure you have a new enough version:
+Ensure you have a new enough version by running:
 
 ```text
 bwrap --version
-bubblewrap 0.4.1
 ```
 
 {% hint style="warning" %}
