@@ -39,7 +39,38 @@ In addition to the basic non-validator configuration you will also need to [crea
 
 ### Stake Requirements
 
-To be able to register as a ParaTime node on the Oasis Network, you need to have enough tokens staked in your escrow account. For more details, see the [Stake requirements](../../contribute-to-the-network/run-validator.md#stake-requirements) section of [Run a Validator Node](../../contribute-to-the-network/run-validator.md) doc. Note that stake requirements may differ from ParaTime to ParaTime.
+To be able to register as a ParaTime node on the Oasis Network, you need to have enough tokens staked in your entity's escrow account.
+
+To see the staking requirements for different node roles, use the Oasis CLI tools as described in [Common Staking Info](../../manage-tokens/oasis-cli-tools/common-staking-info.md).
+
+{% hint style="success" %}
+Currently, both the Mainnet and the Testnet require 100 ROSE/TEST for each role type:
+
+```text
+Staking threshold (entity): ROSE 100.0
+Staking threshold (node-validator): ROSE 100.0
+Staking threshold (node-compute): ROSE 100.0
+Staking threshold (node-storage): ROSE 100.0
+Staking threshold (node-keymanager): ROSE 100.0
+Staking threshold (runtime-compute): ROSE 100.0
+Staking threshold (runtime-keymanager): ROSE 100.0
+```
+{% endhint %}
+
+To register a node that is both a validator and a ParaTime node, the entity for which the node is registered would need to satisfy the following:
+
+* Entity registration staking threshold \(currently 100 tokens\),
+* Validator node staking threshold \(currently 100 tokens\),
+* Compute node staking threshold \(currently 100 tokens\),
+* Storage node staking threshold \(currently 100 tokens\).
+
+All together, there would need to be at least 400 tokens staked in your entity's escrow account.
+
+To stake the tokens, use [one of our wallets](../../manage-tokens/holding-rose-tokens/) or the [Oasis CLI tools](../../manage-tokens/oasis-cli-tools/delegate-tokens.md).
+
+{% hint style="info" %}
+The stake requirements may differ from ParaTime to ParaTime and are subject to change in the future.
+{% endhint %}
 
 ### The ParaTime Identifier and Binary
 
