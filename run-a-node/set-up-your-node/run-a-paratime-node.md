@@ -99,6 +99,59 @@ Nonce: 1
 The stake requirements may differ from ParaTime to ParaTime and are subject to change in the future.
 {% endhint %}
 
+### Register a New Entity or Update Your Entity Registration
+
+If you don't have an entity yet, create a new one by following the [Creating Your Entity](run-validator.md#creating-your-entity) instructions.
+
+{% hint style="danger" %}
+Everything in this section should be done on the `localhost` as there are sensitive items that will be created.
+{% endhint %}
+
+If you will be running the ParaTime on a new Oasis Node, initialize a new node by following the [Initializing a Node](run-validator.md#initializing-a-node) instructions.
+
+Then update your entity descriptor by enumerating paths to all your node's descriptors \(existing and new ones\) in the `--entity.node.descriptor` flag. For example:
+
+```bash
+oasis-node registry entity update \
+    ... various signer flags ... \
+    --entity.node.descriptor /localhost/node1/node_genesis.json,/localhost/node2/node_genesis.json
+```
+
+{% hint style="info" %}
+To confirm all nodes are added to your entity descriptor, run:
+
+```bash
+cat <PATH-TO-entity.json> | jq
+```
+
+and ensure you see all your nodes' IDs under the `"nodes"` list.
+
+For example:
+
+```bash
+{
+  "v": 2,
+  "id": "QTg+ZjubD/36egwByAIGC6lMVBKgqo7xnZPgHVoIKzc=",
+  "nodes": [
+    "yT1h8/eN0VInQxn3YKcHxvSgGcsjsTSYmdTLZZMBTWI=",
+    "HG5TB3dbY8gtYBBw/R/cHfPaOpe0vT7W1wu/2rtpk/A="
+  ]
+}
+```
+{% endhint %}
+
+Then generate and submit the new/updated entity descriptor via the entity registration transaction by following the [Generating Entity Registration Transaction](run-validator.md#generating-entity-registration-transaction) instructions.
+
+{% hint style="warning" %}
+Make sure your entity descriptor \(i.e. `entity.json`\) is copied to your online server and saved as `/node/entity/entity.json` to ensure the [node's configuration](run-a-paratime-node.md#configuration) will find it.
+{% endhint %}
+
+{% hint style="success" %}
+You will [configure the node](run-a-paratime-node.md#configuration) to automatically register for the roles it has enabled \(i.e. storage and compute roles\) via the `worker.registration.entity` configuration flag.
+
+No manual node registration is necessary.
+{% endhint %}
+
 ### The ParaTime Identifier and Binary
 
 In order to run a ParaTime node you need to obtain the following pieces of information first, both of these need to come from a trusted source:
