@@ -183,7 +183,7 @@ And then install the `sgx-aesm-service` and  `libsgx-aesm-launch-plugin` package
 
 ```bash
 sudo apt-get update
-sudo apt-get install sgx-aesm-service libsgx-aesm-launch-plugin
+sudo apt-get install sgx-aesm-service libsgx-aesm-launch-plugin libsgx-aesm-epid-plugin
 ```
 
 The AESM service should be up and running. To confirm that, use:
