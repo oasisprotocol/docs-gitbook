@@ -16,29 +16,22 @@ This guide will cover setting up your ParaTime compute node for the Oasis Networ
 
 ## Prerequisites
 
-Before following this guide, make sure you've followed the [Prerequisites](../prerequisites/) and [Run a Non-validator Node](run-non-validator.md) sections and have the Oasis Node binary installed and configured on your systems. In addition to the basic non-validator configuration you will also need to [create and register your own entity](run-validator.md#creating-your-entity). Reading the rest of the [validator node setup instructions](run-validator.md) may also be useful.
+Before following this guide, make sure you've followed the [Prerequisites](../prerequisites/) and [Run a Non-validator Node](run-non-validator.md) sections and have:
 
-### Install Bubblewrap Sandbox
+* Oasis Node binary installed and configured on your system.
+* The chosen top-level `/node/` working directory prepared. In addition to `etc` and `data` directories, also prepare the following directories:
+  * `bin`: This will store binaries needed by Oasis Node for running the ParaTimes.
+  * `runtimes`: This will store the ParaTime binaries and their corresponding signatures \(if they are running in a Trusted Execution Environment\).
 
-ParaTime compute nodes execute ParaTime binaries inside a sandboxed environment provided by [Bubblewrap](https://github.com/containers/bubblewrap). In order to install it, please follow these instructions, depending on your distribution:
+{% hint style="success" %}
+Feel free to name your working directory as you wish, e.g. `/srv/oasis/node`.
 
-{% tabs %}
-{% tab title="Ubuntu" %}
-```bash
-sudo apt install bubblewrap
-```
-{% endtab %}
+Just make sure to use the correct working directory path in the instructions below.
+{% endhint %}
 
-{% tab title="Fedora" %}
-```bash
-sudo dnf install bubblewrap
-```
-{% endtab %}
+* Genesis file copied to `/node/etc/genesis.json`.
 
-{% tab title="Other Distributions" %}
-On other systems you can download [the binary release provided by the Bubblewrap project](https://github.com/containers/bubblewrap/releases). Note that the Oasis Node expects it to be installed under `/usr/bin/bwrap` by default.
-{% endtab %}
-{% endtabs %}
+In addition to the basic non-validator configuration you will also need to [create and register your own entity](run-validator.md#creating-your-entity). Reading the rest of the [validator node setup instructions](run-validator.md) may also be useful.
 
 ### Stake Requirements
 
@@ -62,6 +55,46 @@ In case you decide to build the ParaTime binary from source yourself, make sure 
 
 When the ParaTime is running in a TEE, a different binary to what is registered in the consensus layer will not work and will be rejected by the network.
 {% endhint %}
+
+### Install Oasis Core Runtime Loader
+
+For ParaTimes running inside [Intel SGX Trusted Execution Environment](run-a-paratime-node.md#setting-up-trusted-execution-environment-tee), you will need to install the Oasis Core Runtime Loader.
+
+The Oasis Core Runtime Loader binary \(`oasis-core-runtime-loader`\) is part of Oasis Core binary releases, so make sure you download the appropriate version specified the [Network Parameters](../../oasis-network/network-parameters.md) page.
+
+Install it to `bin` subdirectory of your node's working directory, e.g. `/node/bin/oasis-core-runtime-loader`.
+
+### Install ParaTime Binary
+
+For each ParaTime, you need to obtain its binary and install it to `runtimes` subdirectory of your node's working directory.
+
+For ParaTimes running inside a Trusted Execution Environment, you also need to obtain and install the binary's detached signature to this directory.
+
+{% hint style="info" %}
+For example, for the [Cipher ParaTime](../../foundation/testnet/#cipher-paratime), you would have to obtain the `cipher-paratime.sgxs` binary and the `cipher-paratime.sig` detached signature and install them to `/node/runtimes/cipher-paratime.sgxs`and `/node/runtimes/cipher-paratime.sig`.
+{% endhint %}
+
+### Install Bubblewrap Sandbox
+
+ParaTime compute nodes execute ParaTime binaries inside a sandboxed environment provided by [Bubblewrap](https://github.com/containers/bubblewrap). In order to install it, please follow these instructions, depending on your distribution:
+
+{% tabs %}
+{% tab title="Ubuntu" %}
+```bash
+sudo apt install bubblewrap
+```
+{% endtab %}
+
+{% tab title="Fedora" %}
+```bash
+sudo dnf install bubblewrap
+```
+{% endtab %}
+
+{% tab title="Other Distributions" %}
+On other systems you can download [the binary release provided by the Bubblewrap project](https://github.com/containers/bubblewrap/releases). Note that the Oasis Node expects it to be installed under `/usr/bin/bwrap` by default.
+{% endtab %}
+{% endtabs %}
 
 ## Setting up Trusted Execution Environment \(TEE\)
 
@@ -393,13 +426,14 @@ Before using this configuration you should collect the following information to 
 
 * `{{ external_address }}`: The external IP you used when registering this node.
 * `{{ seed_node_address }}`: The seed node address in the form `ID@IP:port`.
-
-  You can find the current Oasis Seed Node address in the [Network Parameters](../../oasis-network/network-parameters.md).
-
-* `{{ runtime_id }}`: The Runtime identifier.
-* `{{ runtime_bin_path }}`: Path to the [runtime binary](run-a-paratime-node.md#the-paratime-identifier-and-binary).
-* `{{ runtime_sig_path }}`: Path to the [runtime signature](run-a-paratime-node.md#the-paratime-identifier-and-binary) \(for runtimes that require Intel SGX\).
-* `{{ ias_proxy_address }}`: The IAS proxy address in the form `ID@HOST:port`. You can find the current Oasis IAS proxy address in the [Network Parameters](../../oasis-network/network-parameters.md). If you want you can also [run your own IAS proxy](run-an-ias-proxy.md).
+  * You can find the current Oasis Seed Node address in the [Network Parameters](../../oasis-network/network-parameters.md).
+* `{{ runtime_id }}`: The [ParaTime identifier](run-a-paratime-node.md#the-paratime-identifier-and-binary).
+  * You can find the current Oasis-supported ParaTime identifiers in the [Network Paramers](../../foundation/testnet/#paratimes).
+* `{{ runtime_bin_path }}`: Path to the [ParaTime binary](run-a-paratime-node.md#the-paratime-identifier-and-binary) of the form `/node/runtimes/foo-paratime.sgxs`.
+* `{{ runtime_sig_path }}`: Path to the [ParaTime detached signature](run-a-paratime-node.md#the-paratime-identifier-and-binary) \(for ParaTimes that require Intel SGX\) of the form `/node/runtimes/foo-paratime.sig`.
+* `{{ ias_proxy_address }}`: The IAS proxy address in the form `ID@HOST:port`.
+  * You can find the current Oasis IAS proxy address in the [Network Parameters](../../oasis-network/network-parameters.md).
+  * If you want, you can also [run your own IAS proxy](run-an-ias-proxy.md).
 
 {% hint style="warning" %}
 Make sure the`worker.client.port` \(default: `30001`\) and `worker.p2p.port` \(default: `30002`\) ports are exposed and publicly accessible on the internet \(for`TCP`traffic\).
