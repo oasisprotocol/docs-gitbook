@@ -114,7 +114,7 @@ For example, for the [Cipher ParaTime](../../foundation/testnet/#cipher-paratime
 ParaTime compute nodes execute ParaTime binaries inside a sandboxed environment provided by [Bubblewrap](https://github.com/containers/bubblewrap). In order to install it, please follow these instructions, depending on your distribution:
 
 {% tabs %}
-{% tab title="Ubuntu" %}
+{% tab title="Ubuntu 18.10+" %}
 ```bash
 sudo apt install bubblewrap
 ```
@@ -127,7 +127,27 @@ sudo dnf install bubblewrap
 {% endtab %}
 
 {% tab title="Other Distributions" %}
-On other systems you can download [the binary release provided by the Bubblewrap project](https://github.com/containers/bubblewrap/releases). Note that the Oasis Node expects it to be installed under `/usr/bin/bwrap` by default.
+On other systems, you can download the latest [source release provided by the Bubblewrap project](https://github.com/containers/bubblewrap/releases) and build it yourself.
+
+Make sure you have the necessary development tools installed on your system and the `libcap` development headers. On Ubuntu, you can install them with:
+
+```bash
+sudo apt install build-essential libcap-dev
+```
+
+After obtaining the Bubblewrap source tarball, e.g. [bubblewrap-0.4.1.tar.xz](https://github.com/containers/bubblewrap/releases/download/v0.4.1/bubblewrap-0.4.1.tar.xz), run:
+
+```bash
+tar -xf bubblewrap-0.4.1.tar.xz
+cd bubblewrap-0.4.1
+./configure --prefix=/usr
+make
+sudo make install
+```
+
+{% hint style="warning" %}
+Note that Oasis Node expects Bubblewrap to be installed under `/usr/bin/bwrap` by default.
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
