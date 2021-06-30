@@ -35,7 +35,9 @@ Just make sure to use the correct working directory path in the instructions bel
 
 * Genesis file copied to `/node/etc/genesis.json`.
 
-In addition to the basic non-validator configuration you will also need to [create and register your own entity](run-validator.md#creating-your-entity). Reading the rest of the [validator node setup instructions](run-validator.md) may also be useful.
+{% hint style="success" %}
+Reading the rest of the [validator node setup instructions](run-validator.md) may also be useful.
+{% endhint %}
 
 ### Stake Requirements
 
