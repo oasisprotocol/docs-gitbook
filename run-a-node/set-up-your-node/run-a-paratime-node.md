@@ -126,8 +126,8 @@ curl -sSL "https://download.fortanix.com/linux/apt/fortanix.gpg" | sudo -E apt-k
 And then install the `intel-sgx-dkms` package:
 
 ```bash
-sudo apt-get update
-sudo apt-get install intel-sgx-dkms
+sudo apt update
+sudo apt install intel-sgx-dkms
 ```
 
 {% hint style="warning" %}
@@ -182,8 +182,8 @@ curl -sSL "https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key" 
 And then install the `sgx-aesm-service` and  `libsgx-aesm-launch-plugin` packages:
 
 ```bash
-sudo apt-get update
-sudo apt-get install sgx-aesm-service libsgx-aesm-launch-plugin libsgx-aesm-epid-plugin
+sudo apt update
+sudo apt install sgx-aesm-service libsgx-aesm-launch-plugin libsgx-aesm-epid-plugin
 ```
 
 The AESM service should be up and running. To confirm that, use:
