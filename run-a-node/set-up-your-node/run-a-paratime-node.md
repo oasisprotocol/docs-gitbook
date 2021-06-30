@@ -78,7 +78,7 @@ For ParaTimes running inside a Trusted Execution Environment, you also need to o
 For example, for the [Cipher ParaTime](../../foundation/testnet/#cipher-paratime), you would have to obtain the `cipher-paratime.sgxs` binary and the `cipher-paratime.sig` detached signature and install them to `/node/runtimes/cipher-paratime.sgxs`and `/node/runtimes/cipher-paratime.sig`.
 {% endhint %}
 
-### Install Bubblewrap Sandbox
+### Install Bubblewrap Sandbox \(at least version 0.3.3\)
 
 ParaTime compute nodes execute ParaTime binaries inside a sandboxed environment provided by [Bubblewrap](https://github.com/containers/bubblewrap). In order to install it, please follow these instructions, depending on your distribution:
 
@@ -99,6 +99,17 @@ sudo dnf install bubblewrap
 On other systems you can download [the binary release provided by the Bubblewrap project](https://github.com/containers/bubblewrap/releases). Note that the Oasis Node expects it to be installed under `/usr/bin/bwrap` by default.
 {% endtab %}
 {% endtabs %}
+
+Ensure you have a new enough version:
+
+```text
+bwrap --version
+bubblewrap 0.4.1
+```
+
+{% hint style="warning" %}
+Ubuntu 18.04 LTS \(and earlier\) provide overly-old `bubblewrap`. Follow _Other Distributions_ section on those systems. 
+{% endhint %}
 
 ## Setting up Trusted Execution Environment \(TEE\)
 
