@@ -622,7 +622,7 @@ Ensure you have all required SGX driver libraries installed as listed in [Instal
 
 ### Stake Requirement
 
-Double check your node entity satisfies the staking requirements for a runtime node. For details see the [Stake Requirements](run-a-paratime-node.md#stake-requirements) section.
+Double check your node entity satisfies the staking requirements for a ParaTime node. For details see the [Stake Requirements](run-a-paratime-node.md#stake-requirements) section.
 
 ### Runtime Worker Ports
 
