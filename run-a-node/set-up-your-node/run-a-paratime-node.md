@@ -301,7 +301,7 @@ Go to [Intel SGX Downloads](https://01.org/intel-software-guard-extensions/downl
 
 After installing the driver and restarting your system, make sure that the `/dev/isgx` device exists.
 
-#### Ensure `/dev` is NOT Mounted with the `noexec` Option
+### Ensure `/dev` is NOT Mounted with the `noexec` Option
 
 Newer Linux distributions usually mount `/dev` with the `noexec` mount option. If that is the case, it will prevent the enclave loader from mapping executable pages.
 
