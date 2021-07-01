@@ -262,7 +262,7 @@ A convenient way to install the SGX Linux driver on Ubuntu 18.04/16.04 systems i
 First add Fortanix's APT repository to your system:
 
 ```bash
-echo "deb https://download.fortanix.com/linux/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/fortanix.list >/dev/null
+echo "deb https://download.fortanix.com/linux/apt xenial main" | sudo tee /etc/apt/sources.list.d/fortanix.list >/dev/null
 curl -sSL "https://download.fortanix.com/linux/apt/fortanix.gpg" | sudo -E apt-key add -
 ```
 
@@ -318,7 +318,7 @@ A convenient way to install the AESM service on Ubuntu 20.04/18.04/16.04 systems
 First add Intel SGX APT repository to your system:
 
 ```bash
-echo "deb https://download.01.org/intel-sgx/sgx_repo/ubuntu $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/intel-sgx.list >/dev/null
+echo "deb https://download.01.org/intel-sgx/sgx_repo/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/intel-sgx.list >/dev/null
 curl -sSL "https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key" | sudo -E apt-key add -
 ```
 
@@ -371,7 +371,8 @@ Then generate the `container-aesmd.service` systemd unit file for it with:
 
 ```bash
 sudo podman generate systemd --restart-policy=always --time 10 --name aesmd | \
-  sudo tee -a /etc/systemd/system/container-aesmd.service
+  sed "/\[Service\]/a RuntimeDirectory=aesmd" | \
+  sudo tee /etc/systemd/system/container-aesmd.service
 ```
 
 Finally, enable and start the `container-aesmd.service` with:
@@ -385,6 +386,12 @@ The AESM service should be up and running. To confirm that, use:
 
 ```bash
 sudo systemctl status container-aesmd.service
+```
+
+To see the logs of the AESM service, use:
+
+```text
+sudo podman logs -t -f aesmd
 ```
 
 ### Check SGX Setup
