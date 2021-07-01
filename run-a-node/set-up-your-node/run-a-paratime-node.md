@@ -322,7 +322,7 @@ echo "deb https://download.01.org/intel-sgx/sgx_repo/ubuntu $(lsb_release -cs) m
 curl -sSL "https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key" | sudo -E apt-key add -
 ```
 
-And then install the `sgx-aesm-service` and  `libsgx-aesm-launch-plugin` packages:
+And then install the `sgx-aesm-service`,  `libsgx-aesm-launch-plugin` and `libsgx-aesm-epid-plugin` packages:
 
 ```bash
 sudo apt update
