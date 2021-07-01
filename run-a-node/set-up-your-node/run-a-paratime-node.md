@@ -68,7 +68,7 @@ To register a node that is both a validator and a ParaTime node, the entity for 
 
 All together, there would need to be at least 400 tokens staked in your entity's escrow account.
 
-To stake the tokens, use [o](../../manage-tokens/holding-rose-tokens/)ur [Oasis CLI tools](../../manage-tokens/oasis-cli-tools/delegate-tokens.md).
+To stake the tokens, use our [Oasis CLI tools](../../manage-tokens/oasis-cli-tools/delegate-tokens.md).
 
 If everything was set up correctly, you should see something like below when running [Oasis Node Stake Account Info](../../manage-tokens/oasis-cli-tools/get-account-info.md) command for your entity's account \(this an example for the Testnet\):
 
@@ -601,4 +601,30 @@ To ensure that your node is properly connected with the network, you can run the
 ```bash
 oasis-node control status -a unix:/node/data/internal.sock
 ```
+
+## Troubleshooting
+
+See  [the general troubleshooting section](../troubleshooting.md), before proceeding with ParaTime node-specific troubleshooting.
+
+### Too Old Bubblewrap Version
+
+Double check your installed `bubblewrap` version, and ensure is at least of version **0.3.3**. Previous versions of this guide did not explicitly mention the required version. For details see the [Install Bubblewrap Sandbox](run-a-paratime-node.md#install-bubblewrap-sandbox-at-least-version-0-3-3) section.
+
+### Missing `libsgx-aesm-epid-plugin`
+
+If you are encountering the following error message in your node's logs:
+
+```text
+failed to initialize TEE: error while getting quote info from AESMD: aesm: error 30
+```
+
+Ensure you have all required SGX driver libraries installed as listed in [Install SGX Linux Driver section](run-a-paratime-node.md#install-sgx-linux-driver). Previous versions of this guide were missing the `libsgx-aesm-epid-plugin`.
+
+### Stake Requirement
+
+Double check your node entity satisfies the staking requirements for a runtime node. For details see the [Stake Requirements](run-a-paratime-node.md#stake-requirements) section.
+
+### Runtime Worker Ports
+
+Make sure the `worker.client.port` \(default: `30001`\) and `worker.p2p.port` \(default: `30002`\) ports are exposed and publicly accessible on the internet \(for `TCP` traffic\). Previous versions of this guide did not explicitly mention this requirement.
 
