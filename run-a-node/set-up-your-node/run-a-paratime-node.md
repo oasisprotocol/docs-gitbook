@@ -301,8 +301,30 @@ Go to [Intel SGX Downloads](https://01.org/intel-software-guard-extensions/downl
 
 After installing the driver and restarting your system, make sure that the `/dev/isgx` device exists.
 
-{% hint style="warning" %}
-Make sure that `/dev` is _not_ mounted with the `noexec` option as otherwise the enclave loader will be unable to map executable pages. You can use `sudo mount -o remount,exec /dev` to temporarily change the mount flag.
+#### Ensure `/dev` is NOT Mounted with the `noexec` Option
+
+Newer Linux distributions usually mount `/dev` with the `noexec` mount option. If that is the case, it will prevent the enclave loader from mapping executable pages.
+
+Ensure your `/dev` \(i.e. `devtmpfs`\) is not mounted with the `noexec` option. To check that, use:
+
+```text
+cat /proc/mounts | grep devtmpfs
+```
+
+To temporarily remove the `noexec` mount option for `/dev`, run:
+
+```text
+sudo mount -o remount,exec /dev
+```
+
+To permanently remove the `noexec` mount option for `/dev`, add the following to the system's `/etc/fstab` file:
+
+```text
+devtmpfs        /dev        devtmpfs    defaults,exec 0 0
+```
+
+{% hint style="info" %}
+This is the recommended way to modify mount options for virtual \(i.e. API\) file system as described in [systemd's API File Systems](https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems/) documentation.
 {% endhint %}
 
 ### Install AESM Service
@@ -634,4 +656,20 @@ Double check your node entity satisfies the staking requirements for a ParaTime 
 ### Runtime Worker Ports
 
 Make sure the `worker.client.port` \(default: `30001`\) and `worker.p2p.port` \(default: `30002`\) ports are exposed and publicly accessible on the internet \(for `TCP` traffic\). Previous versions of this guide did not explicitly mention this requirement.
+
+### Unable to Launch Enclaves
+
+If running `sgx-detect --verbose` reports:
+
+```text
+🕮  SGX system software > Able to launch enclaves > Debug mode
+The enclave could not be launched.
+
+debug: failed to load report enclave
+debug: cause: failed to load report enclave
+debug: cause: Failed to map enclave into memory.
+debug: cause: Operation not permitted (os error 1)
+```
+
+Ensure your system's [`/dev` is NOT mounted with the `noexec` mount option](run-a-paratime-node.md#ensure-dev-is-not-mounted-with-the-noexec-option).
 
