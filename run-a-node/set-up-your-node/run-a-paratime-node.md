@@ -70,7 +70,7 @@ All together, there would need to be at least 400 tokens staked in your entity's
 
 To stake the tokens, use our [Oasis CLI tools](../../manage-tokens/oasis-cli-tools/delegate-tokens.md).
 
-If everything was set up correctly, you should see something like below when running [Oasis Node Stake Account Info](../../manage-tokens/oasis-cli-tools/get-account-info.md) command for your entity's account \(this an example for the Testnet\):
+If everything was set up correctly, you should see something like below when running [Oasis Node Stake Account Info](../../manage-tokens/oasis-cli-tools/get-account-info.md) command for your entity's account \(this is an example for the Testnet\):
 
 ```bash
 Balance:
