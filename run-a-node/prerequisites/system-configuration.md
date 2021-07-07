@@ -35,6 +35,10 @@ As `root`, create a file in `/etc/security/limits.d/99-oasis-node.conf` with con
 
 You can replace `*` with the name of the user that is running the Oasis Node in case you only want to change the limits for that particular user.
 
+{% hint style="warning" %}
+In order for the changes to take effect a system restart may be required.
+{% endhint %}
+
 ### Systemd Service Configuration
 
 In case you are running your Oasis Node process via [systemd](https://systemd.io/), you can add the following directive under the `[Service]` section:
