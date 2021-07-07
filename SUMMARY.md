@@ -18,6 +18,7 @@
 * [Prerequisites](run-a-node/prerequisites/README.md)
   * [Hardware Requirements](run-a-node/prerequisites/hardware-recommendations.md)
   * [Install Oasis Node Binary](run-a-node/prerequisites/oasis-node.md)
+  * [System Configuration](run-a-node/prerequisites/system-configuration.md)
 * [Set Up Your Node](run-a-node/set-up-your-node/README.md)
   * [Run a Validator Node](run-a-node/set-up-your-node/run-validator.md)
   * [Run a Non-validator Node](run-a-node/set-up-your-node/run-non-validator.md)
