@@ -39,9 +39,9 @@ You can replace `*` with the name of the user that is running the Oasis Node in 
 In order for the changes to take effect a system restart may be required.
 {% endhint %}
 
-### Systemd Service Configuration
+### Systemd Service Configuration (Graphical Login)
 
-In case you are running your Oasis Node process via [systemd](https://systemd.io/), you can add the following directive under the `[Service]` section:
+In case you are running your Oasis Node process via [systemd](https://systemd.io/), you can add the following directive under the `[Service]` section under /etc/systemd/user.conf:
 
 ```text
 LimitNOFILE=102400
