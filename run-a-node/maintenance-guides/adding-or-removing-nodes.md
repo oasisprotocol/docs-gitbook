@@ -89,7 +89,7 @@ GENESIS_FILE_PATH="path/to/the/current/genesis"
 OUTPUT_REGISTER_TX_FILE_PATH="/localhostdir/update_entity_registration.tx"
 oasis-node registry entity gen_register \
   --genesis.file $GENESIS_FILE_PATH \
-  --signer file \
+  --signer.backend file \
   --signer.dir $ENTITY_DIR_PATH \
   --transaction.file $OUTPUT_REGISTER_TX_FILE_PATH \
   --transaction.fee.gas 1000 \
