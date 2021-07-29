@@ -6,7 +6,7 @@ You only need to install the Oasis Remote Signer binary if you intend to configu
 An example of such a setup is described in [Using Ledger-backed Consensus Key with a Remote Signer](using-ledger-backed-consensus-key-with-a-remote-signer.md).
 {% endhint %}
 
-The Oasis Remote Signer is a binary that is created from the [Oasis Core](https://github.com/oasisprotocol/oasis-core) repository's `go/oasis-remote-signer` path.
+The Oasis Remote Signer is a binary that is created from the [Oasis Core](https://github.com/oasisprotocol/oasis-core) repository's [`go/oasis-remote-signer` path](https://github.com/oasisprotocol/oasis-core/tree/master/go/oasis-remote-signer).
 
 It contains the logic for implementing various Oasis Core signers \(i.e. Ledger-based signer, file-based signer or a combination of both via composite signer\) and a gRPC service through which an Oasis node can connect to it and request signatures from it.
 
