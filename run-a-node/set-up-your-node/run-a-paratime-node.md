@@ -168,7 +168,7 @@ Like the genesis document, make sure you obtain these from a trusted source.
 {% hint style="warning" %}
 #### **Compiling the ParaTime Binary from Source Code**
 
-In case you decide to build the ParaTime binary from source yourself, make sure that you follow our guidelines for deterministic compilation to ensure that you receive the exact same binary.
+In case you decide to build the ParaTime binary from source yourself, make sure that you follow our [guidelines for deterministic compilation](https://docs.oasis.dev/oasis-sdk/guide/reproducing) to ensure that you receive the exact same binary.
 
 When the ParaTime is running in a TEE, a different binary to what is registered in the consensus layer will not work and will be rejected by the network.
 {% endhint %}
