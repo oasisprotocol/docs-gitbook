@@ -30,7 +30,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [21.2.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.7)
+  * [21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
@@ -43,7 +43,7 @@ This section contains parameters for various ParaTimes known to be deployed on t
 ### Cipher ParaTime
 
 * Oasis Core version:
-  *  ****[21.2.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.7)
+  *  ****[21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8)
 * Runtime identifier:
   * `0000000000000000000000000000000000000000000000000000000000000000`
 * Runtime binary: 
