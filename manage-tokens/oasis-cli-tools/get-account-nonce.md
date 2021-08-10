@@ -18,7 +18,7 @@ oasis-node stake account nonce \
 This example assumes you have the [jq](http://stedolan.github.io/jq/) tool installed on your system.
 {% endhint %}
 
-If you want to get your Entity's nonce, you can use the following combination of commands:
+If you want to get your entity's nonce, you can use the following combination of commands:
 
 ```bash
 ENTITY_DIR=<PATH-TO-YOUR-ENTITY>
