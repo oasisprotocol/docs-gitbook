@@ -256,16 +256,20 @@ First review the public key and ensure it matches the `Generated random root pub
 Then double press the _Allow unsafe manager_ option.
 
 {% hint style="info" %}
-If there is an existing version of the _Oasis App_ installed on your Nano S, you will be prompted with the _Uninstall Oasis_ screen, followed by reviewing the _Identifier_ and finally confirming deletion on the _Confirm action_ screen.
+If there is an existing version of the _Oasis App_ installed on your Nano S, you will be prompted with the _Uninstall Oasis_ screen, followed by reviewing the _Identifier_ \(it will depend on the version of the Oasis App you have currently installed\) and finally confirming deletion on the _Confirm action_ screen.
 {% endhint %}
 
 After the new version of the Oasis App has finished loading, you will be prompted with the _Install app Oasis_ screen, followed by reviewing the _Version_, _Identifier_ and _Code Identifier_ screens_._ Ensure the values are as follows:
 
 * Version: 2.3.1
-* Identifier: `E0CB424D3B1C2A0F694BCB6E99C3B37C7685399D59DD12D7CF80AF4A487882B1`
+* Identifier \(_Application full hash_ on the terminal\): `E0CB424D3B1C2A0F694BCB6E99C3B37C7685399D59DD12D7CF80AF4A487882B1`
 * Code Identifier: `C17EBE7CD356D01411A02A81C64CDA3E81F193BDA09BEBBD0AEAF75AD7EC35E3`
 
 Finally, confirm installation of the new app by double pressing on the _Perform installation_ screen. Your Ledger device will ask for your PIN again.
+
+{% hint style="danger" %}
+Installing Oasis App 2.3.1 on a Nano S with the firmware version &lt; 2.0.0 \(e.g. 1.6.1\) will NOT fail. It will show a different _Identifier_ when installing the app which will NOT match the _Application full hash_ shown on the terminal. However, opening the app will not work and it will "freeze" your Nano S device.
+{% endhint %}
 
 #### Verify Installation
 
