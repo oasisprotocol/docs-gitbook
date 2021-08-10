@@ -69,7 +69,7 @@ oasis-node governance list_proposals -a $ADDR | jq
 
 where `$ADDR` represents the path to the internal Oasis Node UNIX socket prefixed with `unix:` \(e.g.`unix:/serverdir/node/internal.sock`\).
 
-Obtain your entity's nonce and store it in the `NONCE` variable. You can do that by running:
+Obtain [your entity's nonce](../manage-tokens/oasis-cli-tools/get-account-nonce.md#get-your-entitys-nonce) and store it in the `NONCE` variable. You can do that by running:
 
 ```yaml
 ENTITY_DIR=<PATH-TO-YOUR-ENTITY>
