@@ -1,4 +1,4 @@
-# Get Account's Nonce
+# Get Account Nonce
 
 {% hint style="info" %}
 This example assumes you have read and followed the instructions in the [Prerequisites](prerequisites.md) and [Setup](setup.md) sections.

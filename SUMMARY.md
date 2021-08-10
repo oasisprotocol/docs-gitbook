@@ -58,7 +58,7 @@
   * [Common Staking Info](manage-tokens/oasis-cli-tools/common-staking-info.md)
   * [List Accounts](manage-tokens/oasis-cli-tools/list-accounts.md)
   * [Get Account Info](manage-tokens/oasis-cli-tools/get-account-info.md)
-  * [Get Account's Nonce](manage-tokens/oasis-cli-tools/get-accounts-nonce.md)
+  * [Get Account Nonce](manage-tokens/oasis-cli-tools/get-account-nonce.md)
   * [Obtain Account Address From Entity's ID](manage-tokens/oasis-cli-tools/address.md)
   * [Transfer Tokens](manage-tokens/oasis-cli-tools/transfer-tokens.md)
   * [Delegate/Stake Tokens](manage-tokens/oasis-cli-tools/delegate-tokens.md)
