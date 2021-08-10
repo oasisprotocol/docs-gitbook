@@ -18,7 +18,7 @@ We expect the Testnet network to reach this epoch at around 2021-08-11 08:50 UTC
 
 The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) release contains the [`consensus-params-update-2021-08` upgrade handler](https://github.com/oasisprotocol/oasis-core/blob/v21.2.8/go/upgrade/migrations/consensus_parameters.go) which will update the following parameters in the consensus layer:
 
-* **`staking.params.max_allowances`** specifies the maximum number of allowances on account can store. It will be set to `16` \(default value is `0`\) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
+* **`staking.params.max_allowances`** specifies the maximum number of allowances on account can store. It will be set to `16` \(default value is `0`\) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime. _Note that this has already been the case on Testnet since the 2021-06-23 upgrade._
 * **`staking.params.gas_costs`** , **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
 * **`scheduler.params.max_validators`** is the maximum size of the consensus committee \(i.e. the validator set\). It will be increased to`110` \(it was set to `100` previously\).
 
