@@ -6,7 +6,7 @@ description: >-
 
 # Upgrade Log
 
-## 2021-08-xx - Parameter Update
+## 2021-08-31 - Parameter Update
 
 * **Upgrade height:** upgrade is scheduled to happen at epoch _**TBD**_**.**
 
