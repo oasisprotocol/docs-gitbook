@@ -6,6 +6,281 @@ description: >-
 
 # Upgrade Log
 
+## 2021-08-xx - Parameter Update
+
+* **Upgrade height:** upgrade is scheduled to happen at epoch _**TBD**_**.**
+
+{% hint style="info" %}
+We expect the Mainnet network to reach this epoch at around _TBD_.
+{% endhint %}
+
+### Proposed Parameter Changes
+
+The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) release contains the [`consensus-params-update-2021-08` upgrade handler](https://github.com/oasisprotocol/oasis-core/blob/v21.2.8/go/upgrade/migrations/consensus_parameters.go) which will update the following parameters in the consensus layer:
+
+* **`staking.params.max_allowances`** specifies the maximum number of allowances on account can store. It will be set to `16` \(default value is `0`\) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
+* **`staking.params.gas_costs`** , **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
+* **`scheduler.params.max_validators`** is the maximum size of the consensus committee \(i.e. the validator set\). It will be increased to`110` \(it was set to `100` previously\).
+
+### Instructions - Voting
+
+{% hint style="warning" %}
+**Voting for the upgrade proposal will end on** _**TBD.**_
+{% endhint %}
+
+{% hint style="info" %}
+At this time only entities which have active validator nodes scheduled in the validator set are eligible to vote for governance proposals.
+{% endhint %}
+
+{% hint style="danger" %}
+At least **75%** of the **voting power** needs to cast vote on the upgrade proposal for the result to be valid.
+
+At least **90%** of the votes need to be **yes** votes for a proposal to be accepted.
+{% endhint %}
+
+This upgrade will be the first upgrade that will use the new on-chain governance service introduced in the [Cobalt Upgrade](../mainnet/cobalt-upgrade.md).
+
+The Oasis Protocol Foundation will submit an [upgrade governance proposal](https://docs.oasis.dev/oasis-core/high-level-components/index/services/governance#submit-proposal) with the following contents:
+
+```yaml
+{
+   "v": 1,
+    "handler": "consensus-params-update-2021-08",
+    "target": {
+        "consensus_protocol": {
+            "major": 4
+        },
+        "runtime_host_protocol": {
+            "major": 3
+        },
+        "runtime_committee_protocol": {
+            "major": 2
+        }
+    },
+    "epoch": <TBD>
+}
+```
+
+ To view the proposal yourself, you can run the following command on your online Oasis Node:
+
+```bash
+oasis-node governance list_proposals -a $ADDR | jq
+```
+
+where `$ADDR` represents the path to the internal Oasis Node UNIX socket prefixed with `unix:` \(e.g.`unix:/serverdir/node/internal.sock`\).
+
+Obtain your entity's nonce and store it in the `NONCE` variable. You can do that by running:
+
+```yaml
+ENTITY_DIR=<PATH-TO-YOUR-ENTITY>
+ADDRESS=$(oasis-node stake pubkey2address --public_key \
+  $(cat $ENTITY_DIR/entity.json | jq .id -r))
+NONCE=$(oasis-node stake account nonce --stake.account.address $ADDRESS -a $ADDR)
+```
+
+where `<PATH-TO-YOUR-ENTITY>` is the path to your entity's descriptor, e.g. `/serverdir/node/entity/`.
+
+To vote for the proposal, use the following command to generate a suitable transaction:
+
+```bash
+oasis-node governance gen_cast_vote \
+  "${TX_FLAGS[@]}" \
+  --vote.proposal.id <TBD> \
+  --vote yes \
+  --transaction.file tx_cast_vote.json \
+  --transaction.nonce $NONCE \
+  --transaction.fee.gas 2000 \
+  --transaction.fee.amount 2000
+```
+
+where `TX_FLAGS` refer to previously set base and signer flags as described in the [Oasis CLI Tools Setup](../manage-tokens/oasis-cli-tools/setup.md#storing-base-and-signer-flags-in-an-environment-variable) doc.
+
+{% hint style="warning" %}
+If you use a Ledger-signer backed entity, you will need to install version 2.3.1 of the Oasis App as described in [Installing Oasis App 2.3.1 to Your Ledger](upgrade-log.md#installing-oasis-app-2-3-1-to-your-ledger). This is needed because the current version of the Oasis App available through Ledger Live, version 1.8.2, doesn't support signing the `governance.CastVote` transaction type.
+{% endhint %}
+
+To submit the generated transaction, copy `tx_cast_vote.json` to the online Oasis node and submit it from there:
+
+```bash
+oasis-node consensus submit_tx \
+  -a $ADDR \
+  --transaction.file tx_cast_vote.json
+```
+
+### Instructions - Before Upgrade System Preparation
+
+* This upgrade will upgrade **Oasis Core** to version **21.2.8** which:
+  * Upgrades the BadgerDB database backend from v2 to v3. See [**BadgerDB v2 to v3 Migration**](upgrade-log.md#badgerdb-v2-to-v3-migration) section for required steps to be done before upgrade.
+  * Has a check that makes sure the **file descriptor limit** is set to an appropriately high value \(at least 50000\). While previous versions only warned in case the limit was set too low, this version will refuse to start. Follow the [File Descriptor Limit](prerequisites/system-configuration.md#file-descriptor-limit) documentation page for details on how to increase the limit on your system.
+* Stop your node, replace the old version of Oasis Node with version [21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) and restart your node.
+
+{% hint style="success" %}
+Since Oasis Core 21.2.8 is otherwise compatible with the current consensus layer protocol, you may upgrade your Mainnet node to this version at any time.
+{% endhint %}
+
+{% hint style="warning" %}
+For this upgrade, do NOT wipe state.
+{% endhint %}
+
+* Once reaching the designated upgrade epoch, your node will stop and needs to be upgraded to Oasis Core [21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8).
+  * If you upgraded your node to Oasis Core 21.2.8 before the upgrade epoch was reached, you only need to restart your node for the upgrade to proceed.
+  * Otherwise, you need to upgrade your node to Oasis Core 21.2.8 first and then restart it.
+
+{% hint style="success" %}
+If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org/), you can configure it to restart the Oasis Node automatically.
+{% endhint %}
+
+{% hint style="info" %}
+The Mainnet's genesis file and the genesis document's hash will remain the same.
+{% endhint %}
+
+### BadgerDB v2 to v3 Migration
+
+This upgrade will upgrade Oasis Core to version **21.2.x** which includes the new [**BadgerDB**](https://github.com/dgraph-io/badger) **v3**.
+
+Since BadgerDB's on-disk format changed in v3, it requires on-disk state migration. The migration process is done automatically and makes the following steps:
+
+* Upon startup, Oasis Node will start migrating all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and start writing Badger v3 DB to files with the `.migrate` suffix.
+* If the migration fails in the middle, Oasis Node will delete all `<DATA-DIR>/**/*.badger.db.migrate` files the next time it starts and start the migration \(of the remaining `<DATA-DIR>/**/*.badger.db`
+
+  files\) again.
+
+* If the migration succeeds, Oasis Node will append the `.backup` suffix to all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and remove the `.migrate` suffix from all `<DATA-DIR>/**/*.badger.db.migrate` files \(Badger v3 files\).
+
+#### Extra storage requirements
+
+Your node will thus need to have extra storage space to store both the old and the new BadgerDB files.
+
+To see estimate how much extra space the migration will need, use the `du` tool:
+
+```text
+shopt -s globstar
+du -h <DATA-DIR>/**/*.badger.db | sort -h -r
+```
+
+This is an example output from a Mainnet node that uses `/srv/oasis/node` as the `<DATA-DIR>`:
+
+```text
+43G	/srv/oasis/node/tendermint/data/blockstore.badger.db
+28G	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db
+311M	/srv/oasis/node/tendermint/data/state.badger.db
+2.0M	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints
+996K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4517601
+996K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4507601
+992K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4517601/ba6218d7be2df31ba6e7201a8585c6435154728e55bbb7df1ffebe683bf60217
+992K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4507601/1e0bf592bb0d99832b13ad91bc32aed018dfc2639e07b93a254a05f6791a19ac
+984K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4517601/ba6218d7be2df31ba6e7201a8585c6435154728e55bbb7df1ffebe683bf60217/chunks
+984K	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db/checkpoints/4507601/1e0bf592bb0d99832b13ad91bc32aed018dfc2639e07b93a254a05f6791a19ac/chunks
+148K	/srv/oasis/node/persistent-store.badger.db
+36K	/srv/oasis/node/tendermint/data/evidence.badger.db
+```
+
+{% hint style="info" %}
+After you've confirmed your node is up and running, you can safely delete all the  `<DATA-DIR>/**/*.badger.db.backup` files.
+{% endhint %}
+
+#### Extra memory requirements
+
+BadgerDB v2 to v3 migration can use a number of Go routines to migrate different database files in parallel.
+
+However, this comes with a memory cost. For larger database files, it might need up to 4 GB of RAM per database, so we recommend lowering the number of Go routines BadgerDB uses during migration \(`badger.migrate.num_go_routines`\) if your node has less than 8 GB of RAM.
+
+If your node has less than 8 GB of RAM, set the number of Go routines BadgerDB uses during migration to 2 \(default is 8\) by adding the following to your node's `config.yml`:
+
+```text
+# BadgerDB configuration.
+badger:
+  migrate:
+    # Set the number of Go routines BadgerDB uses during migration to 2 to lower
+    # the memory pressure during migration (at the expense of a longer migration
+    # time).
+    num_go_routines: 2
+```
+
+### Installing Oasis App 2.3.1 to Your Ledger
+
+{% hint style="info" %}
+This manual installation procedure is needed until the latest version of the Oasis App, version 2.3.1, becomes available through [Ledger Live](https://www.ledger.com/ledger-live/)'s Manager.
+{% endhint %}
+
+{% hint style="warning" %}
+Unlike Nano S devices, **Nano X** devices are locked meaning one cannot manual install the latest version of the Oasis App on them. If you use a Nano X device, you will need to temporarily switch to a Nano S device or wait for the new version of the Oasis App to be available through Ledger Live's Manager.
+{% endhint %}
+
+#### Update Firmware to Version 2.0.0
+
+First, make sure the firmware on your Nano S is up-to-date. At least [version 2.0.0](https://support.ledger.com/hc/en-us/articles/360010446000-Ledger-Nano-S-firmware-release-notes) released on May 4, 2021, is required. Follow [Ledger's instructions for updating the firmware on your Nano S](https://support.ledger.com/hc/en-us/articles/360002731113-Update-Ledger-Nano-S-firmware).
+
+#### Install Prerequisites for Manual Installation
+
+The manual installation process relies on some tooling that needs to be available on the system:
+
+* [Python](https://www.python.org/) 3.
+* [Python tools for Ledger Blue, Nano S and Nano X](https://github.com/LedgerHQ/blue-loader-python).
+
+Most systems should already have [Python](https://www.python.org/) pre-installed.
+
+To install [Python tools for Ledger Blue, Nano S and Nano X](https://github.com/LedgerHQ/blue-loader-python), use [pip](https://pip.pypa.io/en/stable/):
+
+```text
+pip3 install --upgrade ledgerblue
+```
+
+You might want to install the packages to a [Python virtual environment](https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments) or via so-called [User install](https://pip.pypa.io/en/stable/user_guide/#user-installs) \(i.e. isolated to the current user\).
+
+#### Download Oasis App 2.3.1
+
+Download the [Oasis App 2.3.1 installer for Nano S](https://github.com/Zondax/ledger-oasis/releases/download/v2.3.1/installer_s.sh) from [Zondax's Oasis App GitHub repo](https://github.com/Zondax/ledger-oasis).
+
+#### Install Oasis App 2.3.1
+
+Make the downloaded installer executable by running:
+
+```yaml
+chmod +x installer_s.sh
+```
+
+Connect you Nano S and unlock it. Then execute the installer:
+
+```yaml
+./installer_s.sh load
+```
+
+Your Nano S will give you the option to either:
+
+* _Deny unsafe manager_, or
+* review the _Public Key_ and _Allow unsafe manager_.
+
+First review the public key and ensure it matches the `Generated random root public key` displayed in the terminal.
+
+Then double press the _Allow unsafe manager_ option.
+
+{% hint style="info" %}
+If there is an existing version of the _Oasis App_ installed on your Nano S, you will be prompted with the _Uninstall Oasis_ screen, followed by reviewing the _Identifier_ and finally confirming deletion on the _Confirm action_ screen.
+{% endhint %}
+
+After the new version of the Oasis App has finished loading, you will be prompted with the _Install app Oasis_ screen, followed by reviewing the _Version_, _Identifier_ and _Code Identifier_ screens_._ Ensure the values are as follows:
+
+* Version: 2.3.1
+* Identifier: `E0CB424D3B1C2A0F694BCB6E99C3B37C7685399D59DD12D7CF80AF4A487882B1`
+* Code Identifier: `C17EBE7CD356D01411A02A81C64CDA3E81F193BDA09BEBBD0AEAF75AD7EC35E3`
+
+Finally, confirm installation of the new app by double pressing on the _Perform installation_ screen. Your Ledger device will ask for your PIN again.
+
+#### Verify Installation
+
+Open the Oasis App on your Nano S and ensure the _Version_ screen shows version 2.3.1.
+
+{% hint style="info" %}
+Starting the manually installed version of the Oasis App will always show the _This app is not genuine_ screen, followed by _Identifier_ \(which should match the Identifier value above\) screen. Finally, open the application by double pressing on the _Open application_ screen.
+{% endhint %}
+
+{% hint style="success" %}
+After you've signed your `governance.CastVote` transaction, you can safely downgrade Oasis App to the latest official version available via [Ledger Live](https://www.ledger.com/ledger-live/), version 1.8.2.
+
+To do that, just open Ledger Live's Manager and it will prompt you to install version 1.8.2.
+{% endhint %}
+
 ## 2021-04-28 \(16:00 UTC\) - Cobalt Upgrade
 
 * **Upgrade height:** upgrade is scheduled to happen at epoch **5046.**
