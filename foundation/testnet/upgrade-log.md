@@ -6,6 +6,48 @@ description: >-
 
 # Upgrade Log
 
+## 2021-08-11 Upgrade
+
+* **Upgrade height:** upgrade is scheduled to happen at epoch **8844.**
+
+{% hint style="info" %}
+We expect the Testnet network to reach this epoch at around 2021-08-11 08:50 UTC.
+{% endhint %}
+
+### Proposed Parameter Changes
+
+The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) release contains the [`consensus-params-update-2021-08` upgrade handler](https://github.com/oasisprotocol/oasis-core/blob/v21.2.8/go/upgrade/migrations/consensus_parameters.go) which will update the following parameters in the consensus layer:
+
+* **`staking.params.max_allowances`** specifies the maximum number of allowances on account can store. It will be set to `16` \(default value is `0`\) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
+* **`staking.params.gas_costs`** , **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
+* **`scheduler.params.max_validators`** is the maximum size of the consensus committee \(i.e. the validator set\). It will be increased to`110` \(it was set to `100` previously\).
+
+### Instructions - Before Upgrade System Preparation
+
+* This upgrade will upgrade **Oasis Core** to version **21.2.8** which:
+  * Has a check that makes sure the **file descriptor limit** is set to an appropriately high value \(at least 50000\). While previous versions only warned in case the limit was set too low, this version will refuse to start. Follow the [File Descriptor Limit](../../run-a-node/prerequisites/system-configuration.md#file-descriptor-limit) documentation page for details on how to increase the limit on your system.
+* Stop your node, replace the old version of Oasis Node with version [21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) and restart your node.
+
+{% hint style="info" %}
+Since Oasis Core 21.2.8 is otherwise compatible with the current consensus layer protocol, you may upgrade your Testnet node to this version at any time.
+{% endhint %}
+
+{% hint style="warning" %}
+For this upgrade, do NOT wipe state.
+{% endhint %}
+
+* Once reaching the designated upgrade epoch, your node will stop and needs to be upgraded to Oasis Core [21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8).
+  * If you upgraded your node to Oasis Core 21.2.8 before the upgrade epoch was reached, you only need to restart your node for the upgrade to proceed.
+  * Otherwise, you need to upgrade your node to Oasis Core 21.2.8 first and then restart it.
+
+{% hint style="success" %}
+If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org/), you can configure it to restart the Oasis Node automatically.
+{% endhint %}
+
+{% hint style="info" %}
+The Testnet's genesis file and the genesis document's hash will remain the same.
+{% endhint %}
+
 ## 2021-06-23 Upgrade
 
 * **Upgrade height:** upgrade is scheduled to happen at epoch **7553.**
