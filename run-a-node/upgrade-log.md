@@ -6,12 +6,12 @@ description: >-
 
 # Upgrade Log
 
-## 2021-08-31 - Parameter Update
+## 2021-08-31 \(16:00 UTC\) - Parameter Update
 
-* **Upgrade height:** upgrade is scheduled to happen at epoch _**TBD**_**.**
+* **Upgrade height:** upgrade is scheduled to happen at epoch **8049.**
 
 {% hint style="info" %}
-We expect the Mainnet network to reach this epoch at around _TBD_.
+We expect the Mainnet network to reach this epoch at around 2021-08-31 16:00 UTC.
 {% endhint %}
 
 ### Proposed Parameter Changes
@@ -25,7 +25,7 @@ The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag
 ### Instructions - Voting
 
 {% hint style="warning" %}
-**Voting for the upgrade proposal will end on** _**TBD.**_
+**Voting for the upgrade proposal will end at epoch 7876. We expect the Mainnet network to reach this epoch at around 2021-08-24 14:00 UTC**_**.**_
 {% endhint %}
 
 {% hint style="info" %}
@@ -40,7 +40,7 @@ At least **90%** of the votes need to be **yes** votes for a proposal to be acce
 
 This upgrade will be the first upgrade that will use the new on-chain governance service introduced in the [Cobalt Upgrade](../mainnet/cobalt-upgrade.md).
 
-The Oasis Protocol Foundation will submit an [upgrade governance proposal](https://docs.oasis.dev/oasis-core/high-level-components/index/services/governance#submit-proposal) with the following contents:
+The Oasis Protocol Foundation has submitted an [upgrade governance proposal](https://docs.oasis.dev/oasis-core/high-level-components/index/services/governance#submit-proposal) with the following contents:
 
 ```yaml
 {
@@ -57,7 +57,7 @@ The Oasis Protocol Foundation will submit an [upgrade governance proposal](https
             "major": 2
         }
     },
-    "epoch": <TBD>
+    "epoch": 8049
 }
 ```
 
@@ -68,6 +68,39 @@ oasis-node governance list_proposals -a $ADDR | jq
 ```
 
 where `$ADDR` represents the path to the internal Oasis Node UNIX socket prefixed with `unix:` \(e.g.`unix:/serverdir/node/internal.sock`\).
+
+The output should look like:
+
+```yaml
+[
+  {
+    "id": 1,
+    "submitter": "oasis1qpydpeyjrneq20kh2jz2809lew6d9p64yymutlee",
+    "state": "active",
+    "deposit": "10000000000000",
+    "content": {
+      "upgrade": {
+        "v": 1,
+        "handler": "consensus-params-update-2021-08",
+        "target": {
+          "consensus_protocol": {
+            "major": 4
+          },
+          "runtime_host_protocol": {
+            "major": 3
+          },
+          "runtime_committee_protocol": {
+            "major": 2
+          }
+        },
+        "epoch": 8049
+      }
+    },
+    "created_at": 7708,
+    "closes_at": 7876
+  }
+]
+```
 
 Obtain [your entity's nonce](../manage-tokens/oasis-cli-tools/get-account-nonce.md#get-your-entitys-nonce) and store it in the `NONCE` variable. You can do that by running:
 
@@ -85,7 +118,7 @@ To vote for the proposal, use the following command to generate a suitable trans
 ```bash
 oasis-node governance gen_cast_vote \
   "${TX_FLAGS[@]}" \
-  --vote.proposal.id <TBD> \
+  --vote.proposal.id 1 \
   --vote yes \
   --transaction.file tx_cast_vote.json \
   --transaction.nonce $NONCE \
