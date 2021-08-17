@@ -25,7 +25,7 @@ The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag
 ### Instructions - Voting
 
 {% hint style="warning" %}
-**Voting for the upgrade proposal will end at epoch 7876. We expect the Mainnet network to reach this epoch at around 2021-08-24 14:00 UTC**_**.**_
+**Voting for the upgrade proposal will end at epoch 7876. We expect the Mainnet network to reach this epoch at around 2021-08-24 12:00 UTC**_**.**_
 {% endhint %}
 
 {% hint style="info" %}
