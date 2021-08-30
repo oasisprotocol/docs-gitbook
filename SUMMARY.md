@@ -30,6 +30,7 @@
   * [Governance](run-a-node/set-up-your-node/governance.md)
   * [Sentry Node Architecture](run-a-node/set-up-your-node/sentry-node-architecture.md)
 * [Advanced](run-a-node/advanced/README.md)
+  * [Sync Node Using State Sync](run-a-node/advanced/sync-node-using-state-sync.md)
   * [Install Oasis Remote Signer Binary](run-a-node/advanced/install-oasis-remote-signer-binary.md)
   * [Using Ledger-backed Consensus Key with a Remote Signer](run-a-node/advanced/using-ledger-backed-consensus-key-with-a-remote-signer.md)
 * [Node Maintenance](run-a-node/maintenance-guides/README.md)
