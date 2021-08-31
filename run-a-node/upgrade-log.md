@@ -180,6 +180,54 @@ Since BadgerDB's on-disk format changed in v3, it requires on-disk state migrati
 
 * If the migration succeeds, Oasis Node will append the `.backup` suffix to all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and remove the `.migrate` suffix from all `<DATA-DIR>/**/*.badger.db.migrate` files \(Badger v3 files\).
 
+{% hint style="warning" %}
+The BadgerDB v2 to v3 migration is **very I/O intensive** \(both IOPS and throughput\) and **may take a couple of hours** to complete.
+
+To follow its progress, run:
+
+```text
+shopt -s globstar
+du -h <DATA-DIR>/**/*.badger.db* | sort -h -r
+```
+
+and observe the sizes of various `*.badger.db*` directories.
+
+For example, if it outputted the following:
+
+```text
+55G	data/tendermint/data/blockstore.badger.db
+37G	data/tendermint/abci-state/mkvs_storage.badger.db.backup
+32G	data/tendermint/abci-state/mkvs_storage.badger.db
+16G	data/tendermint/data/blockstore.badger.db.migration
+2.9G	data/tendermint/data/state.badger.db
+62M	data/persistent-store.badger.db.backup
+2.1M	data/tendermint/abci-state/mkvs_storage.badger.db.backup/checkpoints
+1.1M	data/tendermint/abci-state/mkvs_storage.badger.db.backup/checkpoints/4767601/ca51b06a054b69f2c18b9781ea42f0b00900de199c1937398514331b0d136ec3/chunks
+1.1M	data/tendermint/abci-state/mkvs_storage.badger.db.backup/checkpoints/4767601/ca51b06a054b69f2c18b9781ea42f0b00900de199c1937398514331b0d136ec3
+1.1M	data/tendermint/abci-state/mkvs_storage.badger.db.backup/checkpoints/4767601
+1.1M	data/tendermint/abci-state/mkvs_storage.badger.db.backup/checkpoints/4757601/2ec3a28b1f4a2fcce503f2e80eb5d77b6c0a4d1075e8a14d880ac390338a855e/chunks
+1.1M	data/tendermint/abci-state/mkvs_storage.badger.db.backup/checkpoints/4757601/2ec3a28b1f4a2fcce503f2e80eb5d77b6c0a4d1075e8a14d880ac390338a855e
+1.1M	data/tendermint/abci-state/mkvs_storage.badger.db.backup/checkpoints/4757601
+36K	data/persistent-store.badger.db
+20K	data/tendermint/data/evidence.badger.db
+```
+
+then the `mkvs_storage.badger.db` was already migrated:
+
+* old BadgerDB v2 directory: `37G data/tendermint/abci-state/mkvs_storage.badger.db.backup`
+* new BadgerDB v3 directory: `32G data/tendermint/abci-state/mkvs_storage.badger.db`
+
+and now the `blockstore.badger.db` is being migrated:
+
+* current BadgerDB v2 directory: 
+
+  `55G data/tendermint/data/blockstore.badger.db`
+
+* new BadgerDB v3 directory: `16G data/tendermint/data/blockstore.badger.db.migration`
+
+Note that usually, the new BadgerDB v3 directory is smaller due to less fragmentation.
+{% endhint %}
+
 #### Extra storage requirements
 
 Your node will thus need to have extra storage space to store both the old and the new BadgerDB files.
