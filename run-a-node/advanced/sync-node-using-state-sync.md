@@ -31,6 +31,10 @@ consensus:
       consensus_node:
         - "{{ node1_grpc_endpoint }}"
         - "{{ node2_grpc_endpoint }}"
+        
+        .. trimmed ...
+        
+        - "{{ noden_grpc_endpoint }}"
 
 ```
 
@@ -38,7 +42,9 @@ and replace the following variables in the configuration snippet:
 
 * `{{ trusted_height }}`: Trusted height defines the height at which your node should trust the chain.
 * `{{ trusted_height_hash }}`: Trusted height hash defines the hash of the block header corresponding to the trusted height.
-* `{{ node1_grpc_endpoint }}`, `{{ node2_grpc_endpoint }}` : Addresses of a Oasis Nodes' publicly exposed gRPC endpoints of the form `xAMjfJDcUFUcwgZGEQuOdux8gAdc+IFEqccB2LHdGjU=@34.86.145.181:9001`.
+* `{{ node1_grpc_endpoint }}`, `{{ node2_grpc_endpoint }}` , ..., 
+
+  `{{ noden_grpc_endpoint }}`: Addresses of a Oasis Nodes' publicly exposed gRPC endpoints of the form: `xAMjfJDcUFUcwgZGEQuOdux8gAdc+IFEqccB2LHdGjU=@34.86.145.181:9001`.
 
 {% hint style="warning" %}
 You need to provide publicly exposed gRPC endpoints for **at least 2 different consensus nodes** for the state sync to work.
