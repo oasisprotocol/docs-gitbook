@@ -8,6 +8,12 @@ description: This page describes how to run a ParaTime node on the Oasis Network
 These instructions are for setting up a _ParaTime_ node. If you want to run a _validator_ node instead, see the [instructions for running a validator node](run-validator.md). Similarly, if you want to run a non-validator node instead, see the [instructions for running a non-validator node](run-non-validator.md).
 {% endhint %}
 
+{% hint style="warning" %}
+For a production setup, we recommend running the ParaTime compute/storage node separately from the validator node \(if you run one\).
+
+Running ParaTime and validator nodes as separate Oasis nodes will prevent configuration mistakes and/or \(security\) issues affecting one node type from affecting the other one.
+{% endhint %}
+
 {% hint style="success" %}
 If you are looking for some concrete ParaTimes that you can run, see [the list of ParaTimes and their parameters](../../contribute-to-the-network/run-a-paratime-node.md).
 {% endhint %}
