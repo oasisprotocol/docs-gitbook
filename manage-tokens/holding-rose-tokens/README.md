@@ -4,7 +4,7 @@ description: >-
   supported by the Oasis Network for managing ROSE tokens.
 ---
 
-# Custody & Wallets
+# 3rd Party Custody & Wallets
 
 ## Summary
 

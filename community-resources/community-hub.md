@@ -69,8 +69,8 @@ In order to receive your ROSE tokens from the Oasis Foundation for any work you 
   
 We have a wide variety of wallet solutions available:
 
-* If you have a Ledger device, you can use one of our [Ledger-backed web wallets](../manage-tokens/web-wallets.md#ledger-backed-web-wallets). 
-* If you want an easy-to-use, beginner friendly wallet, you can use the [Bitpie wallet](../manage-tokens/mobile-wallets/) available on mobile devices. 
+* If you have a Ledger device, you can use one of our [Ledger-backed web wallets](../manage-tokens/holding-rose-tokens/web-wallets.md#ledger-backed-web-wallets). 
+* If you want an easy-to-use, beginner friendly wallet, you can use the [Bitpie wallet](../manage-tokens/holding-rose-tokens/mobile-wallets/) available on mobile devices. 
 
 ## 💰 Delegate Your ROSE Tokens & Earn Staking Rewards
 

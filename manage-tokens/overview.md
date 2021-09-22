@@ -10,9 +10,9 @@ This documentation will guide you on how to use your ROSE tokens, where to keep 
 
 {% page-ref page="holding-rose-tokens/custody-providers.md" %}
 
-{% page-ref page="web-wallets.md" %}
+{% page-ref page="holding-rose-tokens/web-wallets.md" %}
 
-{% page-ref page="mobile-wallets/" %}
+{% page-ref page="holding-rose-tokens/mobile-wallets/" %}
 
 {% page-ref page="oasis-cli-tools/" %}
 

@@ -3,7 +3,7 @@
 This section provides documentation on how to manage your ROSE tokens via different mobile wallets.
 
 {% hint style="warning" %}
-If you need features that are not yet supported, consider using the [Oasis CLI Tools](../oasis-cli-tools/).
+If you need features that are not yet supported, consider using the [Oasis CLI Tools](../../oasis-cli-tools/).
 {% endhint %}
 
 ## Bitpie Wallet

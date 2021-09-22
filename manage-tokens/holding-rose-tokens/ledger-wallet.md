@@ -40,7 +40,7 @@ Once installed, the Oasis app will use the [BIP 39](https://github.com/bitcoin/b
 
 This is a simpler option since it allows you to connect to your Ledger wallet via a web browser app.
 
-Follow the instructions in the [Web Wallets](../web-wallets.md#ledger-backed-web-wallets) doc.
+Follow the instructions in the [Web Wallets](web-wallets.md#ledger-backed-web-wallets) doc.
 
 ### Using Oasis CLI Tools
 

@@ -3,7 +3,7 @@
 This section provides documentation on how to manage your tokens via Oasis CLI tools.
 
 {% hint style="warning" %}
-If you are not familiar with the command line, we recommend using one of the available [Web Wallets](../web-wallets.md).
+If you are not familiar with the command line, we recommend using one of the available [Web Wallets](../holding-rose-tokens/web-wallets.md).
 {% endhint %}
 
 {% hint style="warning" %}
