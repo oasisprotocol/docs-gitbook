@@ -35,7 +35,7 @@ The Oasis Wallets currently support the following features:
 
 ## Frequently Asked Questions
 
-### How can I transfer ROSE tokens from my BitPie wallet to my Oasis Wallet?
+### How can I transfer ROSE tokens from my [BitPie wallet](../holding-rose-tokens/mobile-wallets/bitpie-wallet-guide/) to my Oasis Wallet?
 
 The easiest way would be to create a new wallet with an Oasis Wallet and just transfer the tokens from your old Oasis account to a new Oasis account. The cost \(i.e. transaction fee\) should be negligible.
 
