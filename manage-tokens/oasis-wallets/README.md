@@ -31,14 +31,19 @@ The Oasis Wallets currently support the following features:
 * Toggling between light mode and dark mode \(Web variant\)
 * Selecting a language for the UI \(currently, English and French fort the Web variant, English and Chinese for the Browser Extension variant\)
 * Staking and receiving staking rewards
+* Easily switching between different Oasis Wallets that use the same [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md) standard account key generation process
 
 ## Frequently Asked Questions
 
-### How can I transfer ROSE tokens from my BitPie Wallet to my Oasis Wallet?
+### How can I transfer ROSE tokens from my BitPie wallet to my Oasis Wallet?
 
 The easiest way would be to create a new wallet with an Oasis Wallet and just transfer the tokens from your old Oasis account to a new Oasis account. The cost \(i.e. transaction fee\) should be negligible.
 
 If your tokens are staked/delegated, then you would need to debond them first which will take approximately 14 days. Then you would transfer them to a new account with an Oasis Wallet and stake/delegate them via an Oasis Wallet again.
+
+{% hint style="warning" %}
+The BitPie wallet currently doesn't use the standard account key generation process specified in [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md), so it is **not possible to switch** your **BiePie wallet Oasis account to** an **Oasis Wallet** just by importing BiePie's mnemonic.
+{% endhint %}
 
 {% page-ref page="web.md" %}
 
