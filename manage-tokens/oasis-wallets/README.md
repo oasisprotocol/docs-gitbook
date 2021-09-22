@@ -42,7 +42,7 @@ The easiest way would be to create a new wallet with an Oasis Wallet and just tr
 If your tokens are staked/delegated, then you would need to debond them first which will take approximately 14 days. Then you would transfer them to a new account with an Oasis Wallet and stake/delegate them via an Oasis Wallet again.
 
 {% hint style="warning" %}
-The BitPie wallet currently doesn't use the standard account key generation process specified in [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md), so it is **not possible to switch** your **BiePie wallet Oasis account to** an **Oasis Wallet** just by importing BiePie's mnemonic.
+The BitPie wallet currently doesn't use the standard account key generation process specified in [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md), so it is **not possible to switch** your **BitPie wallet Oasis account to** an **Oasis Wallet** just by importing BitPie's mnemonic.
 {% endhint %}
 
 {% page-ref page="web.md" %}
