@@ -32,6 +32,14 @@ The Oasis Wallets currently support the following features:
 * Selecting a language for the UI \(currently, English and French fort the Web variant, English and Chinese for the Browser Extension variant\)
 * Staking and receiving staking rewards
 
+## Frequently Asked Questions
+
+### How can I transfer ROSE tokens from my BitPie Wallet to my Oasis Wallet?
+
+The easiest way would be to create a new wallet with an Oasis Wallet and just transfer the tokens from your old Oasis account to a new Oasis account. The cost \(i.e. transaction fee\) should be negligible.
+
+If your tokens are staked/delegated, then you would need to debond them first which will take approximately 14 days. Then you would transfer them to a new account with an Oasis Wallet and stake/delegate them via an Oasis Wallet again.
+
 {% page-ref page="web.md" %}
 
 {% page-ref page="browser-extension.md" %}
