@@ -37,6 +37,7 @@
   * [Wiping Node State](run-a-node/maintenance-guides/wiping-node-state.md)
   * [Handling Network Upgrades](run-a-node/maintenance-guides/handling-network-upgrades.md)
   * [Adding or Removing Nodes](run-a-node/maintenance-guides/adding-or-removing-nodes.md)
+  * [Refreshing Node Certificates](run-a-node/maintenance-guides/refreshing-certificates.md)
 * [Node Troubleshooting](run-a-node/troubleshooting.md)
 * [Upgrade Log](run-a-node/upgrade-log.md)
 
