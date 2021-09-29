@@ -71,6 +71,10 @@ worker:
 
 Restart your sentry node.
 
+{% hint style="success" %}
+The validator node will re-register itself automatically once it's connected to the network through the sentry again.
+{% endhint %}
+
 ## Refreshing TLS Certificate on the Sentry Node
 
 ### Steps on the Sentry Node
