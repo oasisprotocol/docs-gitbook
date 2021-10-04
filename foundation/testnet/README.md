@@ -30,7 +30,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8)
+  * [21.3](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
