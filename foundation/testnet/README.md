@@ -43,11 +43,11 @@ This section contains parameters for various ParaTimes known to be deployed on t
 ### Cipher ParaTime
 
 * Oasis Core version:
-  *  ****[21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8)
+  *  ****[21.3](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3)
 * Runtime identifier:
   * `0000000000000000000000000000000000000000000000000000000000000000`
 * Runtime binary: 
-  * [v0.1.0-alpha2](https://github.com/oasisprotocol/cipher-paratime/releases/tag/v0.1.0-alpha2)
+  * [v0.2.0-alpha2](https://github.com/oasisprotocol/cipher-paratime/releases/tag/v0.2.0-alpha2)
 * IAS proxy address:
   * `y4XO1ZETqgtHeZzLLmJLYAzpEfdGSJLvtd8bhIz+v3s=@34.86.197.181:8650`
 
