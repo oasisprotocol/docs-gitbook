@@ -52,6 +52,6 @@ This section contains parameters for various ParaTimes known to be deployed on t
   * `y4XO1ZETqgtHeZzLLmJLYAzpEfdGSJLvtd8bhIz+v3s=@34.86.197.181:8650`
 
 {% hint style="success" %}
-Feel free to use othre IAS proxies besides the one provided here or [run your own](../../run-a-node/set-up-your-node/run-an-ias-proxy.md).
+Feel free to use other IAS proxies besides the one provided here or [run your own](../../run-a-node/set-up-your-node/run-an-ias-proxy.md).
 {% endhint %}
 
