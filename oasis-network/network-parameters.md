@@ -15,7 +15,7 @@ These are the current parameters for the Mainnet:
 Genesis file is signed by [network's current maintainers](https://github.com/oasisprotocol/mainnet-artifacts/blob/master/README.md#pgp-keys-of-current-maintainers). To verify its authenticity, follow the [PGP verification instructions](https://github.com/oasisprotocol/mainnet-artifacts/blob/master/README.md#verifying-genesis-file-signatures).
 {% endhint %}
 
-* Genesis document's hash \([explanation](genesis-doc.md#genesis-file-vs-genesis-document)\):
+* Genesis document's hash ([explanation](genesis-doc.md#genesis-file-vs-genesis-document)):
   * `53852332637bacb61b91b6411ab4095168ba02a50be4c3f82448438826f23898`
 * Oasis seed node address:
   * `E27F6B7A350B4CC2B48A6CBE94B0A02B0DCB0BF3@35.199.49.168:26656`
@@ -35,3 +35,4 @@ The Oasis Node is part of the Oasis Core release.
 Do not use a newer version of Oasis Core since it likely contains changes that are incompatible with the version of Oasis Core used by other nodes.
 {% endhint %}
 
+If you want to join our Testnet, see the [Testnet](../foundation/testnet/) docs for the current Testnet parameters.
