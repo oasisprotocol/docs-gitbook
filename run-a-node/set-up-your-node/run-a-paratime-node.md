@@ -9,9 +9,9 @@ These instructions are for setting up a _ParaTime_ node. If you want to run a _v
 {% endhint %}
 
 {% hint style="warning" %}
-For a production setup, we recommend running the ParaTime compute/storage node separately from the validator node \(if you run one\).
+For a production setup, we recommend running the ParaTime compute/storage node separately from the validator node (if you run one).
 
-Running ParaTime and validator nodes as separate Oasis nodes will prevent configuration mistakes and/or \(security\) issues affecting one node type from affecting the other one.
+Running ParaTime and validator nodes as separate Oasis nodes will prevent configuration mistakes and/or (security) issues affecting one node type from affecting the other one.
 {% endhint %}
 
 {% hint style="success" %}
@@ -31,7 +31,7 @@ Before following this guide, make sure you've followed the [Prerequisites](../pr
 * Oasis Node binary installed and configured on your system.
 * The chosen top-level `/node/` working directory prepared. In addition to `etc` and `data` directories, also prepare the following directories:
   * `bin`: This will store binaries needed by Oasis Node for running the ParaTimes.
-  * `runtimes`: This will store the ParaTime binaries and their corresponding signatures \(if they are running in a Trusted Execution Environment\).
+  * `runtimes`: This will store the ParaTime binaries and their corresponding signatures (if they are running in a Trusted Execution Environment).
 
 {% hint style="success" %}
 Feel free to name your working directory as you wish, e.g. `/srv/oasis/`.
@@ -54,7 +54,7 @@ To see the staking requirements for different node roles, use the Oasis CLI tool
 {% hint style="success" %}
 Currently, both the Mainnet and the Testnet require 100 ROSE/TEST for each role type:
 
-```text
+```
 Staking threshold (entity): ROSE 100.0
 Staking threshold (node-validator): ROSE 100.0
 Staking threshold (node-compute): ROSE 100.0
@@ -67,16 +67,16 @@ Staking threshold (runtime-keymanager): ROSE 100.0
 
 To register a node that is both a validator and a ParaTime node, the entity for which the node is registered would need to satisfy the following:
 
-* Entity registration staking threshold \(currently 100 tokens\),
-* Validator node staking threshold \(currently 100 tokens\),
-* Compute node staking threshold \(currently 100 tokens\),
-* Storage node staking threshold \(currently 100 tokens\).
+* Entity registration staking threshold (currently 100 tokens),
+* Validator node staking threshold (currently 100 tokens),
+* Compute node staking threshold (currently 100 tokens),
+* Storage node staking threshold (currently 100 tokens).
 
 All together, there would need to be at least 400 tokens staked in your entity's escrow account.
 
 To stake the tokens, use our [Oasis CLI tools](../../manage-tokens/oasis-cli-tools/delegate-tokens.md).
 
-If everything was set up correctly, you should see something like below when running [Oasis Node Stake Account Info](../../manage-tokens/oasis-cli-tools/get-account-info.md) command for your entity's account \(this is an example for the Testnet\):
+If everything was set up correctly, you should see something like below when running [Oasis Node Stake Account Info](../../manage-tokens/oasis-cli-tools/get-account-info.md) command for your entity's account (this is an example for the Testnet):
 
 ```bash
 Balance:
@@ -117,7 +117,7 @@ Everything in this section should be done on the `localhost` as there are sensit
 
 If you will be running the ParaTime on a new Oasis Node, initialize a new node by following the [Initializing a Node](run-validator.md#initializing-a-node) instructions.
 
-Then update your entity descriptor by enumerating paths to all your node's descriptors \(existing and new ones\) in the `--entity.node.descriptor` flag. For example:
+Then update your entity descriptor by enumerating paths to all your node's descriptors (existing and new ones) in the `--entity.node.descriptor` flag. For example:
 
 ```bash
 oasis-node registry entity update \
@@ -151,11 +151,11 @@ For example:
 Then generate and submit the new/updated entity descriptor via the entity registration transaction by following the [Generating Entity Registration Transaction](run-validator.md#generating-entity-registration-transaction) instructions.
 
 {% hint style="warning" %}
-Make sure your entity descriptor \(i.e. `entity.json`\) is copied to your online server and saved as `/node/entity/entity.json` to ensure the [node's configuration](run-a-paratime-node.md#configuration) will find it.
+Make sure your entity descriptor (i.e. `entity.json`) is copied to your online server and saved as `/node/entity/entity.json` to ensure the [node's configuration](run-a-paratime-node.md#configuration) will find it.
 {% endhint %}
 
 {% hint style="success" %}
-You will [configure the node](run-a-paratime-node.md#configuration) to automatically register for the roles it has enabled \(i.e. storage and compute roles\) via the `worker.registration.entity` configuration flag.
+You will [configure the node](run-a-paratime-node.md#configuration) to automatically register for the roles it has enabled (i.e. storage and compute roles) via the `worker.registration.entity` configuration flag.
 
 No manual node registration is necessary.
 {% endhint %}
@@ -164,8 +164,14 @@ No manual node registration is necessary.
 
 In order to run a ParaTime node you need to obtain the following pieces of information first, both of these need to come from a trusted source:
 
-* \*\*\*\*[**The ParaTime Identifier**](https://docs.oasis.dev/oasis-core/high-level-components/index-1/identifiers) is a 256-bit unique identifier of a ParaTime on the Oasis Network. It provides a unique identity to the ParaTime and together with the [genesis document's hash](https://docs.oasis.dev/oasis-core/high-level-components/index/genesis#genesis-documents-hash) serves as a domain separation context for ParaTime transaction and cryptographic commitments.  It is usually represented in hexadecimal form, for example: `8000000000000000000000000000000000000000000000000000000000000000` 
-* **The ParaTime Binary** contains the executable code that implements the ParaTime itself. It is executed in a sandboxed environment by Oasis Node and its format depends on whether the ParaTime is running in a Trusted Execution Environment \(TEE\) or not.  In the non-TEE case this will be a regular Linux executable \(an [ELF binary](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format), usually without an extension\) and in the TEE case this will be an [SGXS binary](https://github.com/fortanix/rust-sgx/blob/master/doc/SGXS.md) \(usually with a `.sgxs` extension\) that describes a secure enclave together with a detached signature of the binary \(usually with a `.sig`extension\).
+* ****[**The ParaTime Identifier**](https://docs.oasis.dev/oasis-core/high-level-components/index-1/identifiers) is a 256-bit unique identifier of a ParaTime on the Oasis Network. It provides a unique identity to the ParaTime and together with the [genesis document's hash](https://docs.oasis.dev/oasis-core/high-level-components/index/genesis#genesis-documents-hash) serves as a domain separation context for ParaTime transaction and cryptographic commitments.\
+  \
+  It is usually represented in hexadecimal form, for example:\
+  `8000000000000000000000000000000000000000000000000000000000000000`\
+
+* **The ParaTime Binary** contains the executable code that implements the ParaTime itself. It is executed in a sandboxed environment by Oasis Node and its format depends on whether the ParaTime is running in a Trusted Execution Environment (TEE) or not.\
+  \
+  In the non-TEE case this will be a regular Linux executable (an [ELF binary](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format), usually without an extension) and in the TEE case this will be an [SGXS binary](https://github.com/fortanix/rust-sgx/blob/master/doc/SGXS.md) (usually with a `.sgxs` extension) that describes a secure enclave together with a detached signature of the binary (usually with a `.sig`extension).
 
 {% hint style="danger" %}
 Like the genesis document, make sure you obtain these from a trusted source.
@@ -183,7 +189,7 @@ When the ParaTime is running in a TEE, a different binary to what is registered 
 
 For ParaTimes running inside [Intel SGX Trusted Execution Environment](run-a-paratime-node.md#setting-up-trusted-execution-environment-tee), you will need to install the Oasis Core Runtime Loader.
 
-The Oasis Core Runtime Loader binary \(`oasis-core-runtime-loader`\) is part of Oasis Core binary releases, so make sure you download the appropriate version specified the [Network Parameters](../../oasis-network/network-parameters.md) page.
+The Oasis Core Runtime Loader binary (`oasis-core-runtime-loader`) is part of Oasis Core binary releases, so make sure you download the appropriate version specified the [Network Parameters](../../oasis-network/network-parameters.md) page.
 
 Install it to `bin` subdirectory of your node's working directory, e.g. `/node/bin/oasis-core-runtime-loader`.
 
@@ -197,7 +203,7 @@ For ParaTimes running inside a Trusted Execution Environment, you also need to o
 For example, for the [Cipher ParaTime](../../foundation/testnet/#cipher-paratime), you would have to obtain the `cipher-paratime.sgxs` binary and the `cipher-paratime.sig` detached signature and install them to `/node/runtimes/cipher-paratime.sgxs`and `/node/runtimes/cipher-paratime.sig`.
 {% endhint %}
 
-### Install Bubblewrap Sandbox \(at least version 0.3.3\)
+### Install Bubblewrap Sandbox (at least version 0.3.3)
 
 ParaTime compute nodes execute ParaTime binaries inside a sandboxed environment provided by [Bubblewrap](https://github.com/containers/bubblewrap). In order to install it, please follow these instructions, depending on your distribution:
 
@@ -241,24 +247,28 @@ Note that Oasis Node expects Bubblewrap to be installed under `/usr/bin/bwrap` b
 
 Ensure you have a new enough version by running:
 
-```text
+```
 bwrap --version
 ```
 
 {% hint style="warning" %}
-Ubuntu 18.04 LTS \(and earlier\) provide overly-old `bubblewrap`. Follow _Other Distributions_ section on those systems. 
+Ubuntu 18.04 LTS (and earlier) provide overly-old `bubblewrap`. Follow _Other Distributions_ section on those systems. 
 {% endhint %}
 
-## Setting up Trusted Execution Environment \(TEE\)
+## Setting up Trusted Execution Environment (TEE)
 
-If the ParaTime is configured to run in a TEE \(currently only [Intel SGX](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html)\), you must make sure that your system supports running SGX enclaves. This requires that your hardware has SGX support, that SGX support is enabled and that the additional driver and software components are properly installed and running.
+{% hint style="info" %}
+In case the ParaTime does not require the use of a TEE (e.g. Intel SGX) you may skip this section and continue with [Configuration](run-a-paratime-node.md#configuration) below.
+{% endhint %}
+
+If the ParaTime is configured to run in a TEE (currently only [Intel SGX](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html)), you must make sure that your system supports running SGX enclaves. This requires that your hardware has SGX support, that SGX support is enabled and that the additional driver and software components are properly installed and running.
 
 ### Install SGX Linux Driver
 
-Oasis Core currently only supports the legacy \(out-of-tree\) [Intel SGX Linux driver](https://github.com/intel/linux-sgx-driver).
+Oasis Core currently only supports the legacy (out-of-tree) [Intel SGX Linux driver](https://github.com/intel/linux-sgx-driver).
 
 {% hint style="info" %}
-Support for the new Intel SGX support in mainline Linux kernels since version 5.11 is being tracked in [oasis-core\#3651](https://github.com/oasisprotocol/oasis-core/issues/3651).
+Support for the new Intel SGX support in mainline Linux kernels since version 5.11 is being tracked in [oasis-core#3651](https://github.com/oasisprotocol/oasis-core/issues/3651).
 {% endhint %}
 
 #### Ubuntu 18.04/16.04
@@ -284,13 +294,13 @@ Some [Azure Confidential Computing instances](https://docs.microsoft.com/en-us/a
 
 To determine that, run `dmesg | grep -i sgx` and observe if a line like the following is shown:
 
-```text
+```
 [    4.991649] sgx: intel_sgx: Intel SGX DCAP Driver v1.33
 ```
 
 If that is the case, you need to blacklist the Intel SGX DCAP driver's module by running:
 
-```text
+```
 echo "blacklist intel_sgx" | sudo tee -a /etc/modprobe.d/blacklist-intel_sgx.conf >/dev/null
 ```
 {% endhint %}
@@ -301,7 +311,7 @@ A convenient way to install the SGX Linux driver on Fedora 34/33 systems is to u
 
 #### Other Distributions
 
-Go to [Intel SGX Downloads](https://01.org/intel-software-guard-extensions/downloads) page and find the latest "Intel SGX Linux Release" \(_not_ "Intel SGX DCAP Release"\) and download the "Intel \(R\) SGX Installers" for your distribution. The package will have `driver` in the name \(e.g., `sgx_linux_x64_driver_2.11.0_2d2b795.bin`\).
+Go to [Intel SGX Downloads](https://01.org/intel-software-guard-extensions/downloads) page and find the latest "Intel SGX Linux Release" (_not_ "Intel SGX DCAP Release") and download the "Intel (R) SGX Installers" for your distribution. The package will have `driver` in the name (e.g., `sgx_linux_x64_driver_2.11.0_2d2b795.bin`).
 
 #### Verification
 
@@ -311,33 +321,33 @@ After installing the driver and restarting your system, make sure that the `/dev
 
 Newer Linux distributions usually mount `/dev` with the `noexec` mount option. If that is the case, it will prevent the enclave loader from mapping executable pages.
 
-Ensure your `/dev` \(i.e. `devtmpfs`\) is not mounted with the `noexec` option. To check that, use:
+Ensure your `/dev` (i.e. `devtmpfs`) is not mounted with the `noexec` option. To check that, use:
 
-```text
+```
 cat /proc/mounts | grep devtmpfs
 ```
 
 To temporarily remove the `noexec` mount option for `/dev`, run:
 
-```text
+```
 sudo mount -o remount,exec /dev
 ```
 
 To permanently remove the `noexec` mount option for `/dev`, add the following to the system's `/etc/fstab` file:
 
-```text
+```
 devtmpfs        /dev        devtmpfs    defaults,exec 0 0
 ```
 
 {% hint style="info" %}
-This is the recommended way to modify mount options for virtual \(i.e. API\) file system as described in [systemd's API File Systems](https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems/) documentation.
+This is the recommended way to modify mount options for virtual (i.e. API) file system as described in [systemd's API File Systems](https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems/) documentation.
 {% endhint %}
 
 ### Install AESM Service
 
-To allow execution of SGX enclaves, several **Architectural Enclaves \(AE\)** are involved \(i.e. Launch Enclave, Provisioning Enclave, Provisioning Certificate Enclave, Quoting Enclave, Platform Services Enclaves\).
+To allow execution of SGX enclaves, several **Architectural Enclaves (AE)** are involved (i.e. Launch Enclave, Provisioning Enclave, Provisioning Certificate Enclave, Quoting Enclave, Platform Services Enclaves).
 
-Communication between application-spawned SGX enclaves and Intel-provided Architectural Enclaves is through **Application Enclave Service Manager \(AESM\)**. AESM runs as a daemon and provides a socket through which applications can facilitate various SGX services such as launch approval, remote attestation quote signing, etc.
+Communication between application-spawned SGX enclaves and Intel-provided Architectural Enclaves is through **Application Enclave Service Manager (AESM)**. AESM runs as a daemon and provides a socket through which applications can facilitate various SGX services such as launch approval, remote attestation quote signing, etc.
 
 #### Ubuntu 20.04/18.04/16.04
 
@@ -367,7 +377,7 @@ sudo systemctl status aesmd.service
 
 An easy way to install and run the AESM service on a [Docker](https://docs.docker.com/engine/)-enabled system is to use [Fortanix's AESM container image](https://hub.docker.com/r/fortanix/aesmd/).
 
-Executing the following command should \(always\) pull the latest version of Fortanix's AESM Docker container, map the `/dev/isgx` device and `/var/run/aesmd` directory and ensure AESM is running in the background \(also automatically started on boot\):
+Executing the following command should (always) pull the latest version of Fortanix's AESM Docker container, map the `/dev/isgx` device and `/var/run/aesmd` directory and ensure AESM is running in the background (also automatically started on boot):
 
 ```bash
 docker run \
@@ -382,7 +392,7 @@ docker run \
 
 #### Podman-enabled System
 
-Similarly to Docker-enabled systems, an easy way to install and run the AESM service on a [Podman](https://podman.io/)-enabled system is to use [Fortanix's AESM container image](https://hub.docker.com/r/fortanix/aesmd/).
+Similarly to Docker-enabled systems, an easy way to install and run the AESM service on a [Podman](https://podman.io)-enabled system is to use [Fortanix's AESM container image](https://hub.docker.com/r/fortanix/aesmd/).
 
 First, create the container with:
 
@@ -418,7 +428,7 @@ sudo systemctl status container-aesmd.service
 
 To see the logs of the AESM service, use:
 
-```text
+```
 sudo podman logs -t -f aesmd
 ```
 
@@ -436,34 +446,34 @@ sgxs-tools must be compiled with a nightly version of the Rust toolchain since t
 
 Make sure you have the following installed on your system:
 
-* [GCC](http://gcc.gnu.org/).
+* [GCC](http://gcc.gnu.org).
 * [Protobuf](https://github.com/protocolbuffers/protobuf) compiler.
 * [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config).
-* [OpenSSL](https://www.openssl.org/) development package.
+* [OpenSSL](https://www.openssl.org) development package.
 
 On Fedora, you can install all the above with:
 
-```text
+```
 sudo dnf install gcc protobuf-compiler pkg-config openssl-devel
 ```
 
 On Ubuntu, you can install all the above with:
 
-```text
+```
 sudo apt install gcc protobuf-compiler pkg-config libssl-dev
 ```
 
-#### Install [Rust](https://www.rust-lang.org/) Nightly
+#### Install [Rust](https://www.rust-lang.org) Nightly
 
-We follow [Rust upstream's recommendation](https://www.rust-lang.org/tools/install) on using [rustup](https://rustup.rs/) to install and manage Rust versions.
+We follow [Rust upstream's recommendation](https://www.rust-lang.org/tools/install) on using [rustup](https://rustup.rs) to install and manage Rust versions.
 
 {% hint style="warning" %}
-rustup cannot be installed alongside a distribution packaged Rust version. You will need to remove it \(if it's present\) before you can start using rustup.
+rustup cannot be installed alongside a distribution packaged Rust version. You will need to remove it (if it's present) before you can start using rustup.
 {% endhint %}
 
 Install rustup by running:
 
-```text
+```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
@@ -473,7 +483,7 @@ If you want to avoid directly executing a shell script fetched the internet, you
 
 Install Rust nightly with:
 
-```text
+```
 rustup install nightly
 ```
 
@@ -487,9 +497,9 @@ cargo +nightly install sgxs-tools
 
 After the installation completes, run `sgx-detect` to make sure that everything is set up correctly.
 
-When everything works, you should get output similar to the following \(some things depend on hardware features so your output may differ\):
+When everything works, you should get output similar to the following (some things depend on hardware features so your output may differ):
 
-```text
+```
 Detecting SGX, this may take a minute...
 ✔  SGX instruction set
   ✔  CPU support
@@ -513,7 +523,7 @@ Detecting SGX, this may take a minute...
     ✔  Production mode (Intel whitelisted)
 ```
 
-The important part is the checkbox under _Able to launch enclaves_ in both _Debug mode_ and _Production mode \(Intel whitelisted\)_.
+The important part is the checkbox under _Able to launch enclaves_ in both _Debug mode_ and _Production mode (Intel whitelisted)_.
 
 In case you encounter errors, see the [list of common SGX installation issues](https://edp.fortanix.com/docs/installation/help/) for help.
 
@@ -612,13 +622,13 @@ Before using this configuration you should collect the following information to 
 * `{{ runtime_id }}`: The [ParaTime identifier](run-a-paratime-node.md#the-paratime-identifier-and-binary).
   * You can find the current Oasis-supported ParaTime identifiers in the [Network Paramers](../../foundation/testnet/#paratimes).
 * `{{ runtime_bin_path }}`: Path to the [ParaTime binary](run-a-paratime-node.md#the-paratime-identifier-and-binary) of the form `/node/runtimes/foo-paratime.sgxs`.
-* `{{ runtime_sig_path }}`: Path to the [ParaTime detached signature](run-a-paratime-node.md#the-paratime-identifier-and-binary) \(for ParaTimes that require Intel SGX\) of the form `/node/runtimes/foo-paratime.sig`.
+* `{{ runtime_sig_path }}`: Path to the [ParaTime detached signature](run-a-paratime-node.md#the-paratime-identifier-and-binary) (for ParaTimes that require Intel SGX) of the form `/node/runtimes/foo-paratime.sig`.
 * `{{ ias_proxy_address }}`: The IAS proxy address in the form `ID@HOST:port`.
   * You can find the current Oasis IAS proxy address in the [Network Parameters](../../oasis-network/network-parameters.md).
   * If you want, you can also [run your own IAS proxy](run-an-ias-proxy.md).
 
 {% hint style="warning" %}
-Make sure the`worker.client.port` \(default: `30001`\) and `worker.p2p.port` \(default: `30002`\) ports are exposed and publicly accessible on the internet \(for`TCP`traffic\).
+Make sure the`worker.client.port` (default: `9100`) and `worker.p2p.port` (default: `9200`) ports are exposed and publicly accessible on the internet (for`TCP`traffic).
 {% endhint %}
 
 ## Starting the Oasis Node
@@ -649,7 +659,7 @@ Double check your installed `bubblewrap` version, and ensure is at least of vers
 
 If you are encountering the following error message in your node's logs:
 
-```text
+```
 failed to initialize TEE: error while getting quote info from AESMD: aesm: error 30
 ```
 
@@ -661,13 +671,13 @@ Double check your node entity satisfies the staking requirements for a ParaTime 
 
 ### Runtime Worker Ports
 
-Make sure the `worker.client.port` \(default: `30001`\) and `worker.p2p.port` \(default: `30002`\) ports are exposed and publicly accessible on the internet \(for `TCP` traffic\). Previous versions of this guide did not explicitly mention this requirement.
+Make sure the `worker.client.port` (default: `30001`) and `worker.p2p.port` (default: `30002`) ports are exposed and publicly accessible on the internet (for `TCP` traffic). Previous versions of this guide did not explicitly mention this requirement.
 
 ### Unable to Launch Enclaves
 
 If running `sgx-detect --verbose` reports:
 
-```text
+```
 🕮  SGX system software > Able to launch enclaves > Debug mode
 The enclave could not be launched.
 
@@ -678,4 +688,3 @@ debug: cause: Operation not permitted (os error 1)
 ```
 
 Ensure your system's [`/dev` is NOT mounted with the `noexec` mount option](run-a-paratime-node.md#ensure-dev-is-not-mounted-with-the-noexec-option).
-
