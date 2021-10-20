@@ -18,7 +18,6 @@ This page is meant to be kept up to date with the information from the currently
 
 * Latest Testnet version: **2021-04-13**
 * [Genesis file](https://github.com/oasisprotocol/testnet-artifacts/releases/download/2021-04-13/genesis.json):
-  * SHA1: `189fd6b295d2f4c1896d5515d133714f531ca11e`
   * SHA256: `ccac45fdf81f572c63e915a2dcb90b4281443020229a0df38d76018b55674489`
 * Genesis document's hash ([explanation](../../oasis-network/genesis-doc.md#genesis-file-vs-genesis-document)):
   * `5ba68bc5e01e06f755c4c044dd11ec508e4c17f1faf40c0e67874388437a9e55`
