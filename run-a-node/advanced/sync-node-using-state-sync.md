@@ -2,6 +2,10 @@
 
 The State Sync is a way to **quickly bootstrap** a **full Oasis node** (either a [validator node](../set-up-your-node/run-validator.md) or a [non-validator node](../set-up-your-node/run-non-validator.md)) by  using [Tendermint's Light Client protocol](https://docs.tendermint.com/master/spec/light-client/). It allows one to initialize a node from a trusted height, its corresponding block's header and a trusted validator set (given in the [genesis document](../../oasis-network/genesis-doc.md)). It does so by securely updating the node's trusted state by requesting and verifying a minimal set of data from the network's full nodes.
 
+{% hint style="info" %}
+If you have access to an Oasis Node that is synced with the latest height, another option to speed bootstraping a new Oasis Node is to [copy state from one node to the other](copy-state-from-one-node-to-the-other.md).
+{% endhint %}
+
 {% hint style="warning" %}
 Tendermint's Light Client protocol requires at least 1 full node to be correct to be able to [detect and submit evidence for a light client attack](https://docs.tendermint.com/master/spec/light-client/#attack-detection).
 {% endhint %}
