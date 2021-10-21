@@ -37,8 +37,6 @@ Do not use a newer version of Oasis Core since it likely contains changes that a
 
 If you want to join our Testnet, see the [Testnet](../foundation/testnet/) docs for the current Testnet parameters.
 
-If you want to join our Testnet, see the [Testnet](../foundation/testnet/) docs for the current Testnet parameters.
-
 ## ParaTimes
 
 This section contains parameters for various ParaTimes known to be deployed on the Mainnet.
