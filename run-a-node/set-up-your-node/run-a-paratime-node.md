@@ -45,6 +45,10 @@ Just make sure to use the correct working directory path in the instructions bel
 Reading the rest of the [validator node setup instructions](run-validator.md) may also be useful.
 {% endhint %}
 
+{% hint style="info" %}
+To speed up bootstraping your new node, we recommend [copying node's state from your existing node](../advanced/copy-state-from-one-node-to-the-other.md) or [syncing it using state sync](../advanced/sync-node-using-state-sync.md).
+{% endhint %}
+
 ### Stake Requirements
 
 To be able to register as a ParaTime node on the Oasis Network, you need to have enough tokens staked in your entity's escrow account.
@@ -171,7 +175,7 @@ In order to run a ParaTime node you need to obtain the following pieces of infor
 
 * **The ParaTime Binary** contains the executable code that implements the ParaTime itself. It is executed in a sandboxed environment by Oasis Node and its format depends on whether the ParaTime is running in a Trusted Execution Environment (TEE) or not.\
   \
-  In the non-TEE case this will be a regular Linux executable (an [ELF binary](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format), usually without an extension) and in the TEE case this will be an [SGXS binary](https://github.com/fortanix/rust-sgx/blob/master/doc/SGXS.md) (usually with a `.sgxs` extension) that describes a secure enclave together with a detached signature of the binary (usually with a `.sig`extension).
+  In the non-TEE case this will be a regular Linux executable (an [ELF binary](https://en.wikipedia.org/wiki/Executable\_and\_Linkable\_Format), usually without an extension) and in the TEE case this will be an [SGXS binary](https://github.com/fortanix/rust-sgx/blob/master/doc/SGXS.md) (usually with a `.sgxs` extension) that describes a secure enclave together with a detached signature of the binary (usually with a `.sig`extension).
 
 {% hint style="danger" %}
 Like the genesis document, make sure you obtain these from a trusted source.
@@ -252,7 +256,7 @@ bwrap --version
 ```
 
 {% hint style="warning" %}
-Ubuntu 18.04 LTS (and earlier) provide overly-old `bubblewrap`. Follow _Other Distributions_ section on those systems. 
+Ubuntu 18.04 LTS (and earlier) provide overly-old `bubblewrap`. Follow _Other Distributions_ section on those systems.&#x20;
 {% endhint %}
 
 ## Setting up Trusted Execution Environment (TEE)
@@ -273,7 +277,7 @@ Support for the new Intel SGX support in mainline Linux kernels since version 5.
 
 #### Ubuntu 18.04/16.04
 
-A convenient way to install the SGX Linux driver on Ubuntu 18.04/16.04 systems is to use the [Fortanix](https://edp.fortanix.com/docs/installation/guide/)'s APT repository and its [DKMS](https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support) package.
+A convenient way to install the SGX Linux driver on Ubuntu 18.04/16.04 systems is to use the [Fortanix](https://edp.fortanix.com/docs/installation/guide/)'s APT repository and its [DKMS](https://en.wikipedia.org/wiki/Dynamic\_Kernel\_Module\_Support) package.
 
 First add Fortanix's APT repository to your system:
 
@@ -351,7 +355,7 @@ Communication between application-spawned SGX enclaves and Intel-provided Archit
 
 #### Ubuntu 20.04/18.04/16.04
 
-A convenient way to install the AESM service on Ubuntu 20.04/18.04/16.04 systems is to use the Intel's [official Intel SGX APT repository](https://download.01.org/intel-sgx/sgx_repo/).
+A convenient way to install the AESM service on Ubuntu 20.04/18.04/16.04 systems is to use the Intel's [official Intel SGX APT repository](https://download.01.org/intel-sgx/sgx\_repo/).
 
 First add Intel SGX APT repository to your system:
 
