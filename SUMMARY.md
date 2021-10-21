@@ -31,6 +31,7 @@
   * [Sentry Node Architecture](run-a-node/set-up-your-node/sentry-node-architecture.md)
 * [Advanced](run-a-node/advanced/README.md)
   * [Sync Node Using State Sync](run-a-node/advanced/sync-node-using-state-sync.md)
+  * [Copy State from One Node to the Other](run-a-node/advanced/copy-state-from-one-node-to-the-other.md)
   * [Install Oasis Remote Signer Binary](run-a-node/advanced/install-oasis-remote-signer-binary.md)
   * [Using Ledger-backed Consensus Key with a Remote Signer](run-a-node/advanced/using-ledger-backed-consensus-key-with-a-remote-signer.md)
 * [Node Maintenance](run-a-node/maintenance-guides/README.md)
@@ -41,7 +42,7 @@
 * [Node Troubleshooting](run-a-node/troubleshooting.md)
 * [Upgrade Log](run-a-node/upgrade-log.md)
 
-## Manage Your ROSE Tokens <a id="manage-tokens"></a>
+## Manage Your ROSE Tokens <a href="manage-tokens" id="manage-tokens"></a>
 
 * [Overview](manage-tokens/overview.md)
 * [Terminology](manage-tokens/terminology.md)
@@ -84,7 +85,7 @@
 * [Previous Upgrades](mainnet/previous-upgrades/README.md)
   * [Upgrade to Mainnet](mainnet/previous-upgrades/mainnet-upgrade.md)
 
-## Oasis Protocol Foundation <a id="foundation"></a>
+## Oasis Protocol Foundation <a href="foundation" id="foundation"></a>
 
 * [The Testnet](foundation/testnet/README.md)
   * [Upgrade Log](foundation/testnet/upgrade-log.md)
@@ -102,7 +103,6 @@
 * [Community-Made Tools](community-resources/community-made-resources.md)
 * [Token Delivery & KYC Guide](community-resources/token-delivery-and-kyc.md)
 
-## Frequently Asked Questions <a id="faq"></a>
+## Frequently Asked Questions <a href="faq" id="faq"></a>
 
 * [Oasis Network FAQ](faq/oasis-network-faq.md)
-
