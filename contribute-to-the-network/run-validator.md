@@ -8,7 +8,7 @@ description: >-
 
 [Oasis Network](../oasis-network/overview.md)'s Consensus Layer is a decentralised set of validator nodes that maintain a proof-of-stake blockchain.
 
-Hence, it needs a set of distributed node operators that run different nodes \(including validator nodes\).
+Hence, it needs a set of distributed node operators that run different nodes (including validator nodes).
 
 ## Technical setup
 
@@ -33,13 +33,12 @@ Currently, you should have:
 
 * 100 ROSE staked for your entity's registration since that is the [current entity's staking threshold](../oasis-network/genesis-doc.md#node-and-paratime-token-thresholds).
 * 100 ROSE staked for your validator node's registration since that is the [current validator node's staking threshold](../oasis-network/genesis-doc.md#node-and-paratime-token-thresholds).
-* Enough ROSE staked to be in the top 100 entities \(by stake\) so your validator will be elected into the consensus committee.
+* Enough ROSE staked to be in the top 110 entities (by stake) so your validator will be elected into the consensus committee.
 
 {% hint style="info" %}
-The size of the consensus committee \(i.e. the validator set\) is configured by the [**max\_validators** consensus parameter](../oasis-network/genesis-doc.md#consensus).
+The size of the consensus committee (i.e. the validator set) is configured by the [**max\_validators** consensus parameter](../oasis-network/genesis-doc.md#consensus).
 {% endhint %}
 
 {% hint style="info" %}
 To determine if you are eligible to receive a delegation from the Oasis Protocol Foundation, see the [Delegation Policy](../foundation/delegation-policy.md) document.
 {% endhint %}
-
