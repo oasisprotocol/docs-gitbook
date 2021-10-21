@@ -6,9 +6,9 @@ description: >-
 
 # Upgrade Log
 
-## 2021-08-31 \(16:00 UTC\) - Parameter Update
+## 2021-08-31 (16:00 UTC) - Parameter Update
 
-* **Upgrade height:** upgrade is scheduled to happen at epoch **8049.**
+* **Upgrade height: **upgrade is scheduled to happen at epoch **8049.**
 
 {% hint style="info" %}
 We expect the Mainnet network to reach this epoch at around 2021-08-31 16:00 UTC.
@@ -16,11 +16,11 @@ We expect the Mainnet network to reach this epoch at around 2021-08-31 16:00 UTC
 
 ### Proposed Parameter Changes
 
-The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) release contains the [`consensus-params-update-2021-08` upgrade handler](https://github.com/oasisprotocol/oasis-core/blob/v21.2.8/go/upgrade/migrations/consensus_parameters.go) which will update the following parameters in the consensus layer:
+The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) release contains the [`consensus-params-update-2021-08` upgrade handler](https://github.com/oasisprotocol/oasis-core/blob/v21.2.8/go/upgrade/migrations/consensus\_parameters.go) which will update the following parameters in the consensus layer:
 
-* **`staking.params.max_allowances`** specifies the maximum number of allowances on account can store. It will be set to `16` \(default value is `0`\) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
-* **`staking.params.gas_costs`** , **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
-* **`scheduler.params.max_validators`** is the maximum size of the consensus committee \(i.e. the validator set\). It will be increased to`110` \(it was set to `100` previously\).
+* **`staking.params.max_allowances` **specifies the maximum number of allowances on account can store. It will be set to `16` (default value is `0`) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
+* **`staking.params.gas_costs` **, **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
+* **`scheduler.params.max_validators`** is the maximum size of the consensus committee (i.e. the validator set). It will be increased to`110` (it was set to `100` previously).
 
 ### Instructions - Voting
 
@@ -61,13 +61,13 @@ The Oasis Protocol Foundation has submitted an [upgrade governance proposal](htt
 }
 ```
 
- To view the proposal yourself, you can run the following command on your online Oasis Node:
+&#x20;To view the proposal yourself, you can run the following command on your online Oasis Node:
 
 ```bash
 oasis-node governance list_proposals -a $ADDR | jq
 ```
 
-where `$ADDR` represents the path to the internal Oasis Node UNIX socket prefixed with `unix:` \(e.g.`unix:/serverdir/node/internal.sock`\).
+where `$ADDR` represents the path to the internal Oasis Node UNIX socket prefixed with `unix:` (e.g.`unix:/serverdir/node/internal.sock`).
 
 The output should look like:
 
@@ -144,7 +144,7 @@ oasis-node consensus submit_tx \
 
 * This upgrade will upgrade **Oasis Core** to version **21.2.8** which:
   * Upgrades the BadgerDB database backend from v2 to v3. See [**BadgerDB v2 to v3 Migration**](upgrade-log.md#badgerdb-v2-to-v3-migration) section for required steps to be done before upgrade.
-  * Has a check that makes sure the **file descriptor limit** is set to an appropriately high value \(at least 50000\). While previous versions only warned in case the limit was set too low, this version will refuse to start. Follow the [File Descriptor Limit](prerequisites/system-configuration.md#file-descriptor-limit) documentation page for details on how to increase the limit on your system.
+  * Has a check that makes sure the **file descriptor limit** is set to an appropriately high value (at least 50000). While previous versions only warned in case the limit was set too low, this version will refuse to start. Follow the [File Descriptor Limit](prerequisites/system-configuration.md#file-descriptor-limit) documentation page for details on how to increase the limit on your system.
 * Stop your node, replace the old version of Oasis Node with version [21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) and restart your node.
 
 {% hint style="success" %}
@@ -160,7 +160,7 @@ For this upgrade, do NOT wipe state.
   * Otherwise, you need to upgrade your node to Oasis Core 21.2.8 first and then restart it.
 
 {% hint style="success" %}
-If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org/), you can configure it to restart the Oasis Node automatically.
+If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org), you can configure it to restart the Oasis Node automatically.
 {% endhint %}
 
 {% hint style="info" %}
@@ -169,23 +169,22 @@ The Mainnet's genesis file and the genesis document's hash will remain the same.
 
 ### BadgerDB v2 to v3 Migration
 
-This upgrade will upgrade Oasis Core to version **21.2.x** which includes the new [**BadgerDB**](https://github.com/dgraph-io/badger) **v3**.
+This upgrade will upgrade Oasis Core to version **21.2.x** which includes the new [**BadgerDB**](https://github.com/dgraph-io/badger)** v3**.
 
 Since BadgerDB's on-disk format changed in v3, it requires on-disk state migration. The migration process is done automatically and makes the following steps:
 
-* Upon startup, Oasis Node will start migrating all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and start writing Badger v3 DB to files with the `.migrate` suffix.
-* If the migration fails in the middle, Oasis Node will delete all `<DATA-DIR>/**/*.badger.db.migrate` files the next time it starts and start the migration \(of the remaining `<DATA-DIR>/**/*.badger.db`
+* Upon startup, Oasis Node will start migrating all `<DATA-DIR>/**/*.badger.db` files (Badger v2 files) and start writing Badger v3 DB to files with the `.migrate` suffix.
+*   If the migration fails in the middle, Oasis Node will delete all `<DATA-DIR>/**/*.badger.db.migrate` files the next time it starts and start the migration (of the remaining `<DATA-DIR>/**/*.badger.db`
 
-  files\) again.
-
-* If the migration succeeds, Oasis Node will append the `.backup` suffix to all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and remove the `.migrate` suffix from all `<DATA-DIR>/**/*.badger.db.migrate` files \(Badger v3 files\).
+    files) again.
+* If the migration succeeds, Oasis Node will append the `.backup` suffix to all `<DATA-DIR>/**/*.badger.db` files (Badger v2 files) and remove the `.migrate` suffix from all `<DATA-DIR>/**/*.badger.db.migrate` files (Badger v3 files).
 
 {% hint style="warning" %}
-The BadgerDB v2 to v3 migration is **very I/O intensive** \(both IOPS and throughput\) and **may take a couple of hours** to complete.
+The BadgerDB v2 to v3 migration is **very I/O intensive** (both IOPS and throughput) and **may take a couple of hours** to complete.
 
 To follow its progress, run:
 
-```text
+```
 shopt -s globstar
 du -h <DATA-DIR>/**/*.badger.db* | sort -h -r
 ```
@@ -194,7 +193,7 @@ and observe the sizes of various `*.badger.db*` directories.
 
 For example, if it outputted the following:
 
-```text
+```
 55G	data/tendermint/data/blockstore.badger.db
 37G	data/tendermint/abci-state/mkvs_storage.badger.db.backup
 32G	data/tendermint/abci-state/mkvs_storage.badger.db
@@ -219,10 +218,9 @@ then the `mkvs_storage.badger.db` was already migrated:
 
 and now the `blockstore.badger.db` is being migrated:
 
-* current BadgerDB v2 directory: 
+*   current BadgerDB v2 directory:&#x20;
 
-  `55G data/tendermint/data/blockstore.badger.db`
-
+    `55G data/tendermint/data/blockstore.badger.db`
 * new BadgerDB v3 directory: `16G data/tendermint/data/blockstore.badger.db.migration`
 
 Note that usually, the new BadgerDB v3 directory is smaller due to less fragmentation.
@@ -234,14 +232,14 @@ Your node will thus need to have extra storage space to store both the old and t
 
 To see estimate how much extra space the migration will need, use the `du` tool:
 
-```text
+```
 shopt -s globstar
 du -h <DATA-DIR>/**/*.badger.db | sort -h -r
 ```
 
 This is an example output from a Mainnet node that uses `/srv/oasis/node` as the `<DATA-DIR>`:
 
-```text
+```
 43G	/srv/oasis/node/tendermint/data/blockstore.badger.db
 28G	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db
 311M	/srv/oasis/node/tendermint/data/state.badger.db
@@ -264,11 +262,11 @@ After you've confirmed your node is up and running, you can safely delete all th
 
 BadgerDB v2 to v3 migration can use a number of Go routines to migrate different database files in parallel.
 
-However, this comes with a memory cost. For larger database files, it might need up to 4 GB of RAM per database, so we recommend lowering the number of Go routines BadgerDB uses during migration \(`badger.migrate.num_go_routines`\) if your node has less than 8 GB of RAM.
+However, this comes with a memory cost. For larger database files, it might need up to 4 GB of RAM per database, so we recommend lowering the number of Go routines BadgerDB uses during migration (`badger.migrate.num_go_routines`) if your node has less than 8 GB of RAM.
 
-If your node has less than 8 GB of RAM, set the number of Go routines BadgerDB uses during migration to 2 \(default is 8\) by adding the following to your node's `config.yml`:
+If your node has less than 8 GB of RAM, set the number of Go routines BadgerDB uses during migration to 2 (default is 8) by adding the following to your node's `config.yml`:
 
-```text
+```
 # BadgerDB configuration.
 badger:
   migrate:
@@ -296,22 +294,22 @@ First, make sure the firmware on your Nano S is up-to-date. At least [version 2.
 
 The manual installation process relies on some tooling that needs to be available on the system:
 
-* [Python](https://www.python.org/) 3.
+* [Python](https://www.python.org) 3.
 * [Python tools for Ledger Blue, Nano S and Nano X](https://github.com/LedgerHQ/blue-loader-python).
 
-Most systems should already have [Python](https://www.python.org/) pre-installed.
+Most systems should already have [Python](https://www.python.org) pre-installed.
 
 To install [Python tools for Ledger Blue, Nano S and Nano X](https://github.com/LedgerHQ/blue-loader-python), use [pip](https://pip.pypa.io/en/stable/):
 
-```text
+```
 pip3 install --upgrade ledgerblue
 ```
 
-You might want to install the packages to a [Python virtual environment](https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments) or via so-called [User install](https://pip.pypa.io/en/stable/user_guide/#user-installs) \(i.e. isolated to the current user\).
+You might want to install the packages to a [Python virtual environment](https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments) or via so-called [User install](https://pip.pypa.io/en/stable/user\_guide/#user-installs) (i.e. isolated to the current user).
 
 #### Download Oasis App 2.3.1
 
-Download the [Oasis App 2.3.1 installer for Nano S](https://github.com/Zondax/ledger-oasis/releases/download/v2.3.1/installer_s.sh) from [Zondax's Oasis App GitHub repo](https://github.com/Zondax/ledger-oasis).
+Download the [Oasis App 2.3.1 installer for Nano S](https://github.com/Zondax/ledger-oasis/releases/download/v2.3.1/installer\_s.sh) from [Zondax's Oasis App GitHub repo](https://github.com/Zondax/ledger-oasis).
 
 #### Install Oasis App 2.3.1
 
@@ -337,19 +335,19 @@ First review the public key and ensure it matches the `Generated random root pub
 Then double press the _Allow unsafe manager_ option.
 
 {% hint style="info" %}
-If there is an existing version of the _Oasis App_ installed on your Nano S, you will be prompted with the _Uninstall Oasis_ screen, followed by reviewing the _Identifier_ \(it will depend on the version of the Oasis App you have currently installed\) and finally confirming deletion on the _Confirm action_ screen.
+If there is an existing version of the _Oasis App_ installed on your Nano S, you will be prompted with the _Uninstall Oasis_ screen, followed by reviewing the _Identifier_ (it will depend on the version of the Oasis App you have currently installed) and finally confirming deletion on the _Confirm action_ screen.
 {% endhint %}
 
 After the new version of the Oasis App has finished loading, you will be prompted with the _Install app Oasis_ screen, followed by reviewing the _Version_, _Identifier_ and _Code Identifier_ screens_._ Ensure the values are as follows:
 
 * Version: 2.3.1
-* Identifier \(_Application full hash_ on the terminal\): `E0CB424D3B1C2A0F694BCB6E99C3B37C7685399D59DD12D7CF80AF4A487882B1`
+* Identifier (_Application full hash_ on the terminal): `E0CB424D3B1C2A0F694BCB6E99C3B37C7685399D59DD12D7CF80AF4A487882B1`
 * Code Identifier: `C17EBE7CD356D01411A02A81C64CDA3E81F193BDA09BEBBD0AEAF75AD7EC35E3`
 
 Finally, confirm installation of the new app by double pressing on the _Perform installation_ screen. Your Ledger device will ask for your PIN again.
 
 {% hint style="danger" %}
-Installing Oasis App 2.3.1 on a Nano S with the firmware version &lt; 2.0.0 \(e.g. 1.6.1\) will NOT fail. It will show a different _Identifier_ when installing the app which will NOT match the _Application full hash_ shown on the terminal. However, opening the app will not work and it will "freeze" your Nano S device.
+Installing Oasis App 2.3.1 on a Nano S with the firmware version < 2.0.0 (e.g. 1.6.1) will NOT fail. It will show a different _Identifier_ when installing the app which will NOT match the _Application full hash_ shown on the terminal. However, opening the app will not work and it will "freeze" your Nano S device.
 {% endhint %}
 
 #### Verify Installation
@@ -357,7 +355,7 @@ Installing Oasis App 2.3.1 on a Nano S with the firmware version &lt; 2.0.0 \(e.
 Open the Oasis App on your Nano S and ensure the _Version_ screen shows version 2.3.1.
 
 {% hint style="info" %}
-Starting the manually installed version of the Oasis App will always show the _This app is not genuine_ screen, followed by _Identifier_ \(which should match the Identifier value above\) screen. Finally, open the application by double pressing on the _Open application_ screen.
+Starting the manually installed version of the Oasis App will always show the _This app is not genuine_ screen, followed by _Identifier_ (which should match the Identifier value above) screen. Finally, open the application by double pressing on the _Open application_ screen.
 {% endhint %}
 
 {% hint style="success" %}
@@ -366,9 +364,9 @@ After you've signed your `governance.CastVote` transaction, you can safely downg
 To do that, just open Ledger Live's Manager and it will prompt you to install version 1.8.2.
 {% endhint %}
 
-## 2021-04-28 \(16:00 UTC\) - Cobalt Upgrade
+## 2021-04-28 (16:00 UTC) - Cobalt Upgrade
 
-* **Upgrade height:** upgrade is scheduled to happen at epoch **5046.**
+* **Upgrade height: **upgrade is scheduled to happen at epoch **5046.**
 
 {% hint style="info" %}
 We expect the Mainnet network to reach this epoch at around 2021-04-28 12:00 UTC.
@@ -383,16 +381,16 @@ We expect the Mainnet network to reach this epoch at around 2021-04-28 12:00 UTC
 Version **20.12.7** is backwards compatible with other **20.12.x** releases, so upgrade can be performed at any time by stopping the node and replacing the binary.
 {% endhint %}
 
-* To ensure your node will stop at epoch **5046** [submit the following upgrade descriptor](maintenance-guides/handling-network-upgrades.md#stop-the-node-at-specific-epoch) at any time before the upgrade: 
+*   To ensure your node will stop at epoch **5046** [submit the following upgrade descriptor](maintenance-guides/handling-network-upgrades.md#stop-the-node-at-specific-epoch) at any time before the upgrade:&#x20;
 
-  ```text
-  {
-    "name": "mainnet-upgrade-2021-04-28",
-    "method": "internal",
-    "identifier": "mainnet-upgrade-2021-04-28",
-    "epoch": 5046
-  }
-  ```
+    ```
+    {
+      "name": "mainnet-upgrade-2021-04-28",
+      "method": "internal",
+      "identifier": "mainnet-upgrade-2021-04-28",
+      "epoch": 5046
+    }
+    ```
 
 {% hint style="warning" %}
 The upgrade descriptor contains a non-existing upgrade handler and will be used to coordinate the network shutdown, the rest of the upgrade is manual.
@@ -408,15 +406,15 @@ This upgrade requires a runtime storage node migration to be performed **before 
 
 To prevent irrecoverable runtime storage data corruption/loss in case of a failed storage migration, backup your node's data directory.
 
-For example, to backup the `/serverdir/node` directory using the [rsync](https://rsync.samba.org/) tool, run:
+For example, to backup the `/serverdir/node` directory using the [rsync](https://rsync.samba.org) tool, run:
 
-```text
+```
 rsync -a /serverdir/node/ /serverdir/node-BACKUP/
 ```
 
-The storage database on all storage nodes needs to be migrated with the following command \(using the [21.1.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1.1) binary\):
+The storage database on all storage nodes needs to be migrated with the following command (using the [21.1.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1.1) binary):
 
-```text
+```
 oasis-node storage migrate \
   --datadir <NODE-DATADIR> \
   --runtime.supported <RUNTIME-ID>
@@ -424,7 +422,7 @@ oasis-node storage migrate \
 
 After the migration to v5 completes, you will see an output similar to:
 
-```text
+```
 ...
 - migrating from v4 to v5...
 - migrating version 24468...
@@ -442,12 +440,12 @@ Following steps should be performed on **2021-04-28** only after the network has
 * Download the genesis file published in the [Cobalt Upgrade release](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2021-04-28).
 
 {% hint style="info" %}
-Mainnet state at epoch **5046** will be exported and migrated to a 21.1.x compatible genesis file. Upgrade genesis file will be published on the above link soon after reaching the upgrade epoch.
+Mainnet state at epoch **5046 **will be exported and migrated to a 21.1.x compatible genesis file. Upgrade genesis file will be published on the above link soon after reaching the upgrade epoch.
 {% endhint %}
 
 * Verify the provided Cobalt upgrade genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
 * Replace the old genesis file with the new Cobalt upgrade genesis file.
-* Stop your node \(if you haven't stopped it already by submitting the upgrade descriptor\).
+* Stop your node (if you haven't stopped it already by submitting the upgrade descriptor).
 * Replace the old version of Oasis Node with version [21.1.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1.1).
 * [Wipe state](maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
 * Start your node.
@@ -458,7 +456,7 @@ For more detailed instructions, see the [Handling Network Upgrades](maintenance-
 
 ### Additional notes
 
-Examine the [Change Log](https://github.com/oasisprotocol/oasis-core/blob/v21.1.1/CHANGELOG.md) of the 21.1.1 \(and 21.0\) releases.
+Examine the [Change Log](https://github.com/oasisprotocol/oasis-core/blob/v21.1.1/CHANGELOG.md) of the 21.1.1 (and 21.0) releases.
 
 **Runtime operators**
 
@@ -472,7 +470,7 @@ Due to the changes in the default access policy on storage nodes, at least one o
 Otherwise, external runtime clients wont be able to connect to any storage nodes.
 {% endhint %}
 
-## 2020-11-18 \(16:00 UTC\) - Mainnet
+## 2020-11-18 (16:00 UTC) - Mainnet
 
 * **Block height** when Mainnet Beta network stops: **702000.**
 
@@ -487,9 +485,9 @@ We expect the Mainnet Beta network to reach this block height at around 2020-11-
 ### Instructions
 
 * Download [Oasis Node](prerequisites/oasis-node.md) version [20.12.2](https://github.com/oasisprotocol/oasis-core/releases/tag/v20.12.2), while continuing to run version 20.10.x.
-* \(optional\) Use Oasis Node version 20.12.2 to dump network state at the specified block height. It will connect to the running version 20.10.x node.
+* (optional) Use Oasis Node version 20.12.2 to dump network state at the specified block height. It will connect to the running version 20.10.x node.
 * Download the Mainnet genesis file published in the [2020-11-18 release](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-11-18).
-* \(optional\) Verify the provided Mainnet genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
+* (optional) Verify the provided Mainnet genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
 * Replace the old Mainnet Beta genesis file with the Mainnet genesis file.
 * Stop your node.
 * Remove the old 20.10.x version of Oasis Node.
@@ -577,4 +575,3 @@ For more detailed instructions, see the [Handling Network Upgrades](maintenance-
 ### Instructions
 
 * This is the initial deployment.
-

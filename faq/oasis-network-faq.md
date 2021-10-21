@@ -25,7 +25,7 @@ Designed for the next generation of blockchain, the Oasis Network is the first p
 
 ### **Is the Oasis Protocol Foundation still taking grant applications for projects that are building new dApps?**
 
-Yes! We are still taking grant applications. You can apply any time [here](https://medium.com/oasis-protocol-project/oasis-foundation-grant-wishlist-3ad73b723d7%20).
+Yes! We are still taking grant applications. You can apply any time [here](https://medium.com/oasis-protocol-project/oasis-foundation-grant-wishlist-3ad73b723d7).
 
 ## **Architecture**
 
@@ -38,9 +38,9 @@ The Oasis Network is a Layer 1 blockchain protocol using a BFT, proof-of-stake c
 The Oasis Network is a Layer 1, proof-of-stake, decentralized network. It has two main components, the Consensus Layer and the ParaTime Layer.
 
 1. The **Consensus Layer** is a scalable, high-throughput, secure, proof-of-stake consensus run by a decentralized set of validator nodes.
-2. The **ParaTime Layer** hosts many parallel runtimes \(ParaTimes\), each representing a replicated compute environment with shared state.
+2. The **ParaTime Layer** hosts many parallel runtimes (ParaTimes), each representing a replicated compute environment with shared state.
 
-![](../.gitbook/assets/image%20%281%29%20%281%29%20%281%29%20%281%29%20%283%29.png)
+![](<../.gitbook/assets/image (1) (1) (1) (1) (3).png>)
 
 ### **How is a ParaTime different from a Parachain?**
 
@@ -48,15 +48,15 @@ Unlike a Parachain, a ParaTime does not need to do consensus itself, making them
 
 ### **Who will be running all of these ParaTimes? Can anyone run a ParaTime?**
 
-The network is agnostic in this regard. Anyone can run a ParaTime. It is completely left up to the devs and users to see which ones provide the functionality that they need. Examples of ParaTimes in development include the Oasis Labs Data Sovereignty ParaTime and the [Second State Virtual Machine](https://medium.com/oasis-protocol-project/ethereum-support-on-the-oasis-blockchain-3add9e13556?source=collection_home---4------0-----------------------), an EVM compatible Runtime.
+The network is agnostic in this regard. Anyone can run a ParaTime. It is completely left up to the devs and users to see which ones provide the functionality that they need. Examples of ParaTimes in development include the Oasis Labs Data Sovereignty ParaTime and the [Second State Virtual Machine](https://medium.com/oasis-protocol-project/ethereum-support-on-the-oasis-blockchain-3add9e13556?source=collection\_home---4------0-----------------------), an EVM compatible Runtime.
 
 ### **What consensus mechanism are you running? Is it BFT?**
 
-The Oasis Network uses Tendermint as its BFT consensus protocol. Given that the consensus layer uses a BFT protocol, the Oasis Network offers instant finality, meaning that once a block is finalized, it cannot be reverted \(at least not for full nodes\). A ParaTime commitment goes into a block and as such the ParaTime state is also finalized and cannot be reverted once a block is finalized.
+The Oasis Network uses Tendermint as its BFT consensus protocol. Given that the consensus layer uses a BFT protocol, the Oasis Network offers instant finality, meaning that once a block is finalized, it cannot be reverted (at least not for full nodes). A ParaTime commitment goes into a block and as such the ParaTime state is also finalized and cannot be reverted once a block is finalized.
 
 ### **Why doesn’t the Oasis Network do sharding? Does that mean it’s slow?**
 
-The Oasis Network does not use sharding. Instead, Oasis leverages a discrepancy detection model leading up to roothash updates, giving the network the same scalability benefits that sharding offers but with added benefits that come from a design that is much simpler to implement in practice. Sharding is a nice idea in theory but comes with a lot of complexity and costs that make it harder to implement in practice. From a security perspective, the complexity of sharding also makes it harder to audit and inherently more vulnerable to security breaches The Oasis Network’s discrepancy detection-based approach provides the same benefits as sharding through a cleaner, simpler, more efficient implementation. Ultimately, the Oasis Network’s unique scalability mechanism ensures that the network is not only fast \(like sharding networks purport to be\) but also versatile and secure enough to support a wide range of real-world workloads.
+The Oasis Network does not use sharding. Instead, Oasis leverages a discrepancy detection model leading up to roothash updates, giving the network the same scalability benefits that sharding offers but with added benefits that come from a design that is much simpler to implement in practice. Sharding is a nice idea in theory but comes with a lot of complexity and costs that make it harder to implement in practice. From a security perspective, the complexity of sharding also makes it harder to audit and inherently more vulnerable to security breaches The Oasis Network’s discrepancy detection-based approach provides the same benefits as sharding through a cleaner, simpler, more efficient implementation. Ultimately, the Oasis Network’s unique scalability mechanism ensures that the network is not only fast (like sharding networks purport to be) but also versatile and secure enough to support a wide range of real-world workloads.
 
 ### **How does storage work on the Oasis Network? Do you use IPFS?**
 
@@ -74,7 +74,7 @@ The terms “Open Finance” and “DeFi” are interchangeable. However, we bel
 
 ### **Will Oasis provide oracle solutions for use in DeFi applications?**
 
-Oasis recently announced a partnership with [Chainlink](https://medium.com/oasis-protocol-project/oasis-network-chainlink-integrating-secure-and-reliable-oracles-for-access-to-off-chain-data-5d31e6e4591c?source=collection_home---4------1-----------------------) as the preferred oracle provider of the Oasis Network. This integration is ongoing.
+Oasis recently announced a partnership with [Chainlink](https://medium.com/oasis-protocol-project/oasis-network-chainlink-integrating-secure-and-reliable-oracles-for-access-to-off-chain-data-5d31e6e4591c?source=collection\_home---4------1-----------------------) as the preferred oracle provider of the Oasis Network. This integration is ongoing.
 
 ### **What aspects of DeFi require privacy? How can the Oasis Network’s focus on privacy help with DeFi applications?**
 
@@ -82,7 +82,7 @@ In the current generation of DeFi, some miners and traders are leveraging the in
 
 ### **How does privacy help create a new system of Open Finance?**
 
-Existing financial systems and data systems are not open at all. They are only accessible to a select few. Privacy has a much broader meaning than just keeping something private. Thanks to privacy-preserving computation, users can retain ownership of their information and grant others access to compute on their data without actually revealing \(or transferring\) their data. This will enable users to accrue data yields by essentially staking their data on the blockchain, unlocking a wide range of new financial opportunities.
+Existing financial systems and data systems are not open at all. They are only accessible to a select few. Privacy has a much broader meaning than just keeping something private. Thanks to privacy-preserving computation, users can retain ownership of their information and grant others access to compute on their data without actually revealing (or transferring) their data. This will enable users to accrue data yields by essentially staking their data on the blockchain, unlocking a wide range of new financial opportunities.
 
 Open Finance refers to the idea that status, wealth, and geography won't block you from accessing a certain financial product. Adherence to a programmable set of parameters will determine whether someone can participate or not, making new financial opportunities open to more people around the world. For example, services such as lending protocols could offer different interest rates depending on the history of that user. What's game changing for the world of finance is that companies would not have to rely on a centralized score such as FICO - they would be able to build their own models.
 
@@ -100,7 +100,7 @@ The ROSE token will be used for transaction fees, staking, and delegation at the
 
 ### **How does the Oasis Network achieve privacy and confidentiality? Is it through homomorphic encryption?**
 
-There are many ways to achieve confidentiality. Using Trusted Execution Environments \(TEEs\) is one way. This is what we do. In effect, we provide end-to-end confidentiality for transactions where state and payload are encrypted at rest, in motion, and, more importantly, in compute. homomorphic encryption is another technique for confidentiality. At this time, anyone can build a ParaTime on the Oasis Network that uses homomorphic encryption to provide confidentiality. We are not prescriptive about what approach developers should take.
+There are many ways to achieve confidentiality. Using Trusted Execution Environments (TEEs) is one way. This is what we do. In effect, we provide end-to-end confidentiality for transactions where state and payload are encrypted at rest, in motion, and, more importantly, in compute. homomorphic encryption is another technique for confidentiality. At this time, anyone can build a ParaTime on the Oasis Network that uses homomorphic encryption to provide confidentiality. We are not prescriptive about what approach developers should take.
 
 Something worth noting is that privacy and confidentiality are not equivalent. Privacy implies confidentiality but not the other way around. For privacy, there are techniques such as differential privacy that can be implemented.
 
@@ -109,4 +109,3 @@ Something worth noting is that privacy and confidentiality are not equivalent. P
 ### **Can you run Ethereum smart contracts on the Oasis Network? Or if not directly run smart contracts, could you access a bridge between Ethereum ERC20 assets and Oasis?**
 
 In short, yes! The Oasis Network supports EVM-compatible ParaTimes which will support a wide range of applications.
-
