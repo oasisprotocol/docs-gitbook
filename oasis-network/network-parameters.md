@@ -41,7 +41,7 @@ If you want to join our Testnet, see the [Testnet](../foundation/testnet/) docs 
 
 This section contains parameters for various ParaTimes known to be deployed on the Mainnet.
 
-### Cipher ParaTime (Upcoming)
+### Cipher ParaTime
 
 * Oasis Core version:
   * [21.3.3](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.3)
