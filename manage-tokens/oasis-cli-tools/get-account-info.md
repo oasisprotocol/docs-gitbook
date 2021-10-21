@@ -42,14 +42,14 @@ Escrow Account:
 
 We can observe that:
 
-* General account's **balance**, the amount of tokens that are available to the account owner, is \~377 tokens.
+* General account's **balance**, the amount of tokens that are available to the account owner, is ~377 tokens.
 * General account's **nonce**, the incremental number that must be unique for each account's transaction, is 0. That means there haven't been any transactions made with this account as the source. Therefore, the next transaction should have nonce equal to 0.
 
 ## Escrow Account
 
 We can observe that:
 
-* The amount of tokens that are **actively bounded** to the escrow account is \~10529 tokens.
+* The amount of tokens that are **actively bounded** to the escrow account is ~10529 tokens.
 * The total number of **shares** for the tokens actively bounded to the escrow account is 10 trillion.
 * The amount of tokens that are currently **debonding** is 0.
 * The total number of **shares** for the tokens that are currently debonding is 0.
@@ -64,27 +64,27 @@ Each escrow account also has a corresponding stake accumulator. It stores **stak
 
 We can observe that the stake accumulator currently has two claims:
 
-*   The `registry.RegisterEntity` claim is for registering an entity.
+* The `registry.RegisterEntity` claim is for registering an entity.
 
 
 
-    It needs to satisfy the global threshold for registering an entity (`entity`) which is defined by the staking consensus parameters.
+  It needs to satisfy the global threshold for registering an entity \(`entity`\) which is defined by the staking consensus parameters.
 
 
 
-    To see the value of the `entity` global staking threshold, run the `oasis-node stake info` command as described in [Common Staking Info](common-staking-info.md) doc.
+  To see the value of the `entity` global staking threshold, run the `oasis-node stake info` command as described in [Common Staking Info](common-staking-info.md) doc.
+
+* The `registry.RegisterNode.9Epy5pYPGa91IJlJ8Ivb5iby+2ii8APXdfQoMZDEIDc=` claim is for registering the node with ID `9Epy5pYPGa91IJlJ8Ivb5iby+2ii8APXdfQoMZDEIDc=`.  
 
 
-*   The `registry.RegisterNode.9Epy5pYPGa91IJlJ8Ivb5iby+2ii8APXdfQoMZDEIDc=` claim is for registering the node with ID `9Epy5pYPGa91IJlJ8Ivb5iby+2ii8APXdfQoMZDEIDc=`.\
+  It needs to satisfy the global staking threshold for registering a validator node \(`node-validator`\) which is defined by the staking consensus parameters.  
 
 
-    It needs to satisfy the global staking threshold for registering a validator node (`node-validator`) which is defined by the staking consensus parameters.\
+  To see the value of the `node-validator` global staking threshold, run the `oasis-node stake info` command as described in [Common Staking Info](common-staking-info.md) doc.  
 
 
-    To see the value of the `node-validator` global staking threshold, run the `oasis-node stake info` command as described in [Common Staking Info](common-staking-info.md) doc.\
+  In addition to the global thresholds, each runtime the node is registering for may define their own thresholds. In case the node is registering for multiple runtimes, it needs to satisfy the sum of thresholds of all the runtimes it is registering for.  
 
 
-    In addition to the global thresholds, each runtime the node is registering for may define their own thresholds. In case the node is registering for multiple runtimes, it needs to satisfy the sum of thresholds of all the runtimes it is registering for.\
+  For more details, see [Oasis Core Developer Docs on registering a node](https://github.com/oasisprotocol/oasis-core/blob/master/docs/consensus/registry.md#register-node).
 
-
-    For more details, see [Oasis Core Developer Docs on registering a node](https://github.com/oasisprotocol/oasis-core/blob/master/docs/consensus/registry.md#register-node).

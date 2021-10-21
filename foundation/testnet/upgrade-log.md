@@ -16,16 +16,16 @@ We expect the Testnet network to reach this epoch at around 2021-08-11 08:50 UTC
 
 ### Proposed Parameter Changes
 
-The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) release contains the [`consensus-params-update-2021-08` upgrade handler](https://github.com/oasisprotocol/oasis-core/blob/v21.2.8/go/upgrade/migrations/consensus\_parameters.go) which will update the following parameters in the consensus layer:
+The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) release contains the [`consensus-params-update-2021-08` upgrade handler](https://github.com/oasisprotocol/oasis-core/blob/v21.2.8/go/upgrade/migrations/consensus_parameters.go) which will update the following parameters in the consensus layer:
 
-* **`staking.params.max_allowances` **specifies the maximum number of allowances on account can store. It will be set to `16` (default value is `0`) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime. _Note that this has already been the case on Testnet since the _[_2021-06-23 upgrade_](upgrade-log.md#2021-06-23-upgrade)_._
-* **`staking.params.gas_costs` **, **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
-* **`scheduler.params.max_validators`** is the maximum size of the consensus committee (i.e. the validator set). It will be increased to`110` (it was set to `100` previously).
+* **`staking.params.max_allowances`** specifies the maximum number of allowances on account can store. It will be set to `16` \(default value is `0`\) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime. _Note that this has already been the case on Testnet since the_ [_2021-06-23 upgrade_](upgrade-log.md#2021-06-23-upgrade)_._
+* **`staking.params.gas_costs`** , **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
+* **`scheduler.params.max_validators`** is the maximum size of the consensus committee \(i.e. the validator set\). It will be increased to`110` \(it was set to `100` previously\).
 
 ### Instructions - Before Upgrade System Preparation
 
 * This upgrade will upgrade **Oasis Core** to version **21.2.8** which:
-  * Has a check that makes sure the **file descriptor limit** is set to an appropriately high value (at least 50000). While previous versions only warned in case the limit was set too low, this version will refuse to start. Follow the [File Descriptor Limit](../../run-a-node/prerequisites/system-configuration.md#file-descriptor-limit) documentation page for details on how to increase the limit on your system.
+  * Has a check that makes sure the **file descriptor limit** is set to an appropriately high value \(at least 50000\). While previous versions only warned in case the limit was set too low, this version will refuse to start. Follow the [File Descriptor Limit](../../run-a-node/prerequisites/system-configuration.md#file-descriptor-limit) documentation page for details on how to increase the limit on your system.
 * Stop your node, replace the old version of Oasis Node with version [21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) and restart your node.
 
 {% hint style="success" %}
@@ -41,7 +41,7 @@ For this upgrade, do NOT wipe state.
   * Otherwise, you need to upgrade your node to Oasis Core 21.2.8 first and then restart it.
 
 {% hint style="success" %}
-If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org), you can configure it to restart the Oasis Node automatically.
+If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org/), you can configure it to restart the Oasis Node automatically.
 {% endhint %}
 
 {% hint style="info" %}
@@ -59,10 +59,10 @@ We expect the Testnet network to reach this epoch at around 2021-06-23 14:30 UTC
 ### Instructions
 
 * See [Before upgrade](upgrade-log.md#before-upgrade) section for required steps to be done before upgrade.
-* (optional) Vote for the upgrade. On 2021-06-21, an upgrade proposal will be proposed which (if accepted) will schedule the upgrade on epoch **7553. **See the [Governance documentation](../../run-a-node/set-up-your-node/governance.md) for details on voting for proposals.
+* \(optional\) Vote for the upgrade. On 2021-06-21, an upgrade proposal will be proposed which \(if accepted\) will schedule the upgrade on epoch **7553.** See the [Governance documentation](../../run-a-node/set-up-your-node/governance.md) for details on voting for proposals.
 
 {% hint style="info" %}
-The upgrade proposal contains the `"consensus-max-allowances-16"` upgrade handler whose only purpose is to set the**`staking.params.min_delegation`** consensus parameter to 16 (default value is 0) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
+The upgrade proposal contains the `"consensus-max-allowances-16"` upgrade handler whose only purpose is to set the**`staking.params.min_delegation`** consensus parameter to 16 \(default value is 0\) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
 {% endhint %}
 
 * Stop your node, replace the old version of Oasis Node with version [21.2.4](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.4) and restart your node.
@@ -80,7 +80,7 @@ For this upgrade, do NOT wipe state.
   * Otherwise, you need to upgrade your node to Oasis Core 21.2.4 first and then restart it.
 
 {% hint style="success" %}
-If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org), you can configure it to restart the Oasis Node automatically.
+If you use a process manager like [systemd](https://github.com/systemd/systemd) or [Supervisor](http://supervisord.org/), you can configure it to restart the Oasis Node automatically.
 {% endhint %}
 
 {% hint style="info" %}
@@ -89,15 +89,16 @@ The Testnet's genesis file and the genesis document's hash will remain the same.
 
 ### Before upgrade
 
-This upgrade will upgrade Oasis Core to version **21.2.x** which includes the new [**BadgerDB**](https://github.com/dgraph-io/badger)** v3**.
+This upgrade will upgrade Oasis Core to version **21.2.x** which includes the new [**BadgerDB**](https://github.com/dgraph-io/badger) **v3**.
 
 Since BadgerDB's on-disk format changed in v3, it requires on-disk state migration. The migration process is done automatically and makes the following steps:
 
-* Upon startup, Oasis Node will start migrating all `<DATA-DIR>/**/*.badger.db` files (Badger v2 files) and start writing Badger v3 DB to files with the `.migrate` suffix.
-*   If the migration fails in the middle, Oasis Node will delete all `<DATA-DIR>/**/*.badger.db.migrate` files the next time it starts and start the migration (of the remaining `<DATA-DIR>/**/*.badger.db`
+* Upon startup, Oasis Node will start migrating all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and start writing Badger v3 DB to files with the `.migrate` suffix.
+* If the migration fails in the middle, Oasis Node will delete all `<DATA-DIR>/**/*.badger.db.migrate` files the next time it starts and start the migration \(of the remaining `<DATA-DIR>/**/*.badger.db`
 
-    files) again.
-* If the migration succeeds, Oasis Node will append the `.backup` suffix to all `<DATA-DIR>/**/*.badger.db` files (Badger v2 files) and remove the `.migrate` suffix from all `<DATA-DIR>/**/*.badger.db.migrate` files (Badger v3 files).
+  files\) again.
+
+* If the migration succeeds, Oasis Node will append the `.backup` suffix to all `<DATA-DIR>/**/*.badger.db` files \(Badger v2 files\) and remove the `.migrate` suffix from all `<DATA-DIR>/**/*.badger.db.migrate` files \(Badger v3 files\).
 
 #### Extra storage requirements
 
@@ -105,14 +106,14 @@ Your node will thus need to have extra storage space to store both the old and t
 
 To see estimate how much extra space the migration will need, use the `du` tool:
 
-```
+```text
 shopt -s globstar
 du -h <DATA-DIR>/**/*.badger.db | sort -h -r
 ```
 
 This is an example output from a Testnet node that uses `/srv/oasis/node` as the `<DATA-DIR>`:
 
-```
+```text
 6.3G	/srv/oasis/node/tendermint/data/blockstore.badger.db
 2.7G	/srv/oasis/node/tendermint/abci-state/mkvs_storage.badger.db
 1.4G	/srv/oasis/node/tendermint/data/state.badger.db
@@ -135,11 +136,11 @@ After you've confirmed your node is up and running, you can safely delete all th
 
 BadgerDB v2 to v3 migration can use a number of Go routines to migrate different database files in parallel.
 
-However, this comes with a memory cost. For larger database files, it might need up to 4 GB of RAM per database, so we recommend lowering the number of Go routines BadgerDB uses during migration (`badger.migrate.num_go_routines`) if your node has less than 8 GB of RAM.
+However, this comes with a memory cost. For larger database files, it might need up to 4 GB of RAM per database, so we recommend lowering the number of Go routines BadgerDB uses during migration \(`badger.migrate.num_go_routines`\) if your node has less than 8 GB of RAM.
 
-If your node has less than 8 GB of RAM, set the number of Go routines BadgerDB uses during migration to 2 (default is 8) by adding the following to your node's `config.yml`:
+If your node has less than 8 GB of RAM, set the number of Go routines BadgerDB uses during migration to 2 \(default is 8\) by adding the following to your node's `config.yml`:
 
-```
+```text
 # BadgerDB configuration.
 badger:
   migrate:
@@ -160,7 +161,7 @@ We expect the Testnet network to reach this epoch at around 2021-04-13 12:00 UTC
 ### Instructions
 
 * Runtime operators see [Before upgrade](upgrade-log.md#before-upgrade) section for required steps to be done before upgrade.
-* (optional) Vote for the upgrade. On 2021-04-12 an upgrade proposal will be proposed which (if accepted) will schedule a network shutdown on epoch **5662. **See the [Governance documentation](../../run-a-node/set-up-your-node/governance.md) for details on voting for proposals.
+* \(optional\) Vote for the upgrade. On 2021-04-12 an upgrade proposal will be proposed which \(if accepted\) will schedule a network shutdown on epoch **5662.** See the [Governance documentation](../../run-a-node/set-up-your-node/governance.md) for details on voting for proposals.
 
 {% hint style="warning" %}
 The upgrade proposal contains a non-existing upgrade handler and will be used to coordinate the network shutdown, the rest of the upgrade is manual.
@@ -171,7 +172,7 @@ Following steps should be performed only after the network has reached the upgra
 * Download the Testnet genesis file published in the [Testnet 2021-04-13 release](https://github.com/oasisprotocol/testnet-artifacts/releases/tag/2021-04-13).
 
 {% hint style="info" %}
-Testnet state at epoch **5662 **will be exported and migrated to a 21.1.x compatible genesis file. Upgrade genesis file will be published on the above link soon after reaching the upgrade epoch.
+Testnet state at epoch **5662** will be exported and migrated to a 21.1.x compatible genesis file. Upgrade genesis file will be published on the above link soon after reaching the upgrade epoch.
 {% endhint %}
 
 * Replace the old genesis file with the new Testnet genesis file.
@@ -192,14 +193,14 @@ To prevent irrecoverable runtime storage data corruption/loss in case of a faile
 
 For example, to backup the `/serverdir/node` directory using the rsync tool, run:
 
-```
+```text
 rsync -a /serverdir/node/ /serverdir/node-BACKUP/
 ```
 {% endhint %}
 
-The storage database on all storage nodes needs to be migrated with the following command (using the [21.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1) binary):
+The storage database on all storage nodes needs to be migrated with the following command \(using the [21.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.1) binary\):
 
-```
+```text
 oasis-node storage migrate \
   --datadir <NODE-DATADIR> \
   --runtime.supported <RUNTIME-ID>
@@ -207,7 +208,7 @@ oasis-node storage migrate \
 
 After the migration to v5 completes, you will see an output similar to:
 
-```
+```text
 ...
 - migrating from v4 to v5...
 - migrating version 24468...
@@ -228,25 +229,26 @@ We expect the Testnet network to reach this epoch at around 2021-03-24 11:30 UTC
 
 ### Instructions
 
-*   (optional) To ensure your node will stop at epoch **5128** [submit the following upgrade descriptor](../../run-a-node/maintenance-guides/handling-network-upgrades.md#stop-the-node-at-specific-epoch) at any time before the upgrade:&#x20;
+* \(optional\) To ensure your node will stop at epoch **5128** [submit the following upgrade descriptor](../../run-a-node/maintenance-guides/handling-network-upgrades.md#stop-the-node-at-specific-epoch) at any time before the upgrade: 
 
-    ```
-    {
-      "name": "testnet-upgrade-2021-03-24",
-      "method": "internal",
-      "identifier": "testnet-upgrade-2021-03-24",
-      "epoch": 5128
-    }
-    ```
+  ```text
+  {
+    "name": "testnet-upgrade-2021-03-24",
+    "method": "internal",
+    "identifier": "testnet-upgrade-2021-03-24",
+    "epoch": 5128
+  }
+  ```
+
 * Download the Testnet genesis file published in the [Testnet 2021-03-24 release](https://github.com/oasisprotocol/testnet-artifacts/releases/tag/2021-03-24).
 
 {% hint style="info" %}
-Testnet state at epoch **5128 **will be exported and migrated to a 21.0.x compatible genesis file. Upgrade genesis file will be published on the above link soon after reaching the upgrade epoch.
+Testnet state at epoch **5128** will be exported and migrated to a 21.0.x compatible genesis file. Upgrade genesis file will be published on the above link soon after reaching the upgrade epoch.
 {% endhint %}
 
-* (optional) Verify the provided Testnet genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](../../run-a-node/maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
+* \(optional\) Verify the provided Testnet genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](../../run-a-node/maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
 * Replace the old genesis file with the new Testnet genesis file.
-* Stop your node (if you haven't stopped it already by submitting the upgrade descriptor).
+* Stop your node \(if you haven't stopped it already by submitting the upgrade descriptor\).
 * Replace the old version of Oasis Node with version [21.0.1](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.0.1).
 * Update your node's configuration or perform any additional needed steps as per [Additional Steps](./#additional-steps) below.
 * [Wipe state](../../run-a-node/maintenance-guides/wiping-node-state.md#state-wipe-and-keep-node-identity).
@@ -271,14 +273,14 @@ To prevent irrecoverable runtime storage data corruption/loss in case of a faile
 
 For example, to backup the `/serverdir/node` directory using the rsync tool, run:
 
-```
+```text
 rsync -a /serverdir/node/ /serverdir/node-BACKUP/
 ```
 {% endhint %}
 
-For this upgrade, the runtime node operators need to perform an additional migration of the storage nodes. **Before starting the upgraded node and before wiping state**, the storage database on all storage nodes needs to be migrated with the following command (using the 21.0.1 binary):
+For this upgrade, the runtime node operators need to perform an additional migration of the storage nodes. **Before starting the upgraded node and before wiping state**, the storage database on all storage nodes needs to be migrated with the following command \(using the 21.0.1 binary\):
 
-```
+```text
 oasis-node storage migrate \
   --datadir <NODE-DATADIR> \
   --runtime.supported <RUNTIME-ID>
@@ -291,3 +293,4 @@ Due to the changes in the default access policy on storage nodes, at least one o
 
 Otherwise, external runtime clients wont be able to connect to any storage nodes.
 {% endhint %}
+

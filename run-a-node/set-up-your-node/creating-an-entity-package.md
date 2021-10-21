@@ -8,7 +8,7 @@ In order to join at the beginning of the Mainnet, we require that you send an En
 
 ## Details
 
-To create an Entity Package you must create a tarball (`.tar.gz`) that contains the following files:
+To create an Entity Package you must create a tarball \(`.tar.gz`\) that contains the following files:
 
 * `entity/entity_genesis.json` - This is the `entity_genesis.json` from the entity you initialized.
 * `entity/entity.json` - This is the `entity.json` file from the entity you initialized.
@@ -20,14 +20,14 @@ During genesis creation we will only accept a single node.
 
 The following commands should be executed on your local system, where you [initialized your Entity and Node](run-validator.md#initializing-an-entity):
 
-```
+```text
 mkdir -p package/entity package/node
 cp /localhostdir/entity/*.json package/entity
 cp /localhostdir/node/node_genesis.json package/node
 cd package && tar -zcvf ../<YOUR-GITHUB-USERNAME>-entity.tar.gz entity node
 ```
 
-## Submitting Your Entity Package (For Mainnet)
+## Submitting Your Entity Package \(For Mainnet\)
 
 {% hint style="warning" %}
 The deadline for Mainnet Entity Packages is 2020-09-03T23:59:00 UTC.
@@ -37,11 +37,12 @@ To submit your Entity Package, we've created a repository that will consume and 
 
 1. Fork the [oasisprotocol/mainnet-entities](https://github.com/oasisprotocol/mainnet-entities) repository.
 2. Add your Entity Package to the `entities/` directory of the repository.
-3.  Create a pull request against the `master` branch of the [oasisprotocol/mainnet-entities](https://github.com/oasisprotocol/mainnet-entities) repository.\
+3. Create a pull request against the `master` branch of the [oasisprotocol/mainnet-entities](https://github.com/oasisprotocol/mainnet-entities) repository.  
 
 
-    Once your Entity Package passes all validation checks we will handle the merging of your pull request.
+   Once your Entity Package passes all validation checks we will handle the merging of your pull request.
 
 {% hint style="info" %}
 If there are any issues, you can always resubmit your entity package.
 {% endhint %}
+

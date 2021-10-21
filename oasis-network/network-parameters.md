@@ -36,3 +36,24 @@ Do not use a newer version of Oasis Core since it likely contains changes that a
 {% endhint %}
 
 If you want to join our Testnet, see the [Testnet](../foundation/testnet/) docs for the current Testnet parameters.
+
+If you want to join our Testnet, see the [Testnet](../foundation/testnet/) docs for the current Testnet parameters.
+
+## ParaTimes
+
+This section contains parameters for various ParaTimes known to be deployed on the Mainnet.
+
+### Cipher ParaTime (Upcoming)
+
+* Oasis Core version:
+  * [21.3.3](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.3)
+* Runtime identifier:
+  * `000000000000000000000000000000000000000000000000e199119c992377cb`
+* Runtime binary version:
+  * [1.0.0](https://github.com/oasisprotocol/cipher-paratime/releases/tag/v1.0.0)
+* IAS proxy address:
+  * `tnTwXvGbbxqlFoirBDj63xWtZHS20Lb3fCURv0YDtYw=@34.86.108.137:8650`
+
+{% hint style="success" %}
+Feel free to use other IAS proxies besides the one provided here or [run your own](../run-a-node/set-up-your-node/run-an-ias-proxy.md).
+{% endhint %}

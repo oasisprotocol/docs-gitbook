@@ -9,7 +9,7 @@ description: >-
 ## **How to use the Oasis Wallet - Browser Extension**
 
 {% hint style="info" %}
-Currently, [Oasis Wallet - Browser Extension](https://github.com/oasisprotocol/oasis-wallet-ext) **only supports **[**Chrome**](https://www.google.com/chrome/) or other [Chromium](https://www.chromium.org/Home)-based browsers.
+Currently, [Oasis Wallet - Browser Extension](https://github.com/oasisprotocol/oasis-wallet-ext) **only supports** [**Chrome**](https://www.google.com/chrome/) or other [Chromium](https://www.chromium.org/Home)-based browsers.
 {% endhint %}
 
 ### Install the Oasis Wallet via Chrome Web Store
@@ -19,7 +19,7 @@ You can install the [Oasis Wallet - Browser Extension](https://github.com/oasisp
 ### Create a new wallet
 
 {% hint style="warning" %}
-Your mnemonic phrase is required to access your wallet. Be sure to store it in a secure location. If you lose or forget your mnemonic phrase, you will lose access to your wallet and any token funds contained in it.** **
+Your mnemonic phrase is required to access your wallet. Be sure to store it in a secure location. If you lose or forget your mnemonic phrase, you will lose access to your wallet and any token funds contained in it. ****
 {% endhint %}
 
 {% hint style="warning" %}
@@ -58,20 +58,21 @@ Click ‘Receive’ on the Account page, and you’ll get the QR code as well as
 1. Plug your Ledger device into your computer and log into the Oasis app on-device
 2. Open the Oasis Chrome Extension Wallet and click the account icon on the top right
 
-![](https://lh5.googleusercontent.com/G-VEJxeQE5bGT4a\_qp90nfNXYzILJCIE06rebBL-Vn84vM7wYePH1t6HXg0ftYExh3om0h1U1bQKdb2ugH5lAsp13U3Sey6GYLHqZOhyrCJpvyb\_TQSqgbHWv3McJ1RRFOlSaNXe=s0)
+![](https://lh5.googleusercontent.com/G-VEJxeQE5bGT4a_qp90nfNXYzILJCIE06rebBL-Vn84vM7wYePH1t6HXg0ftYExh3om0h1U1bQKdb2ugH5lAsp13U3Sey6GYLHqZOhyrCJpvyb_TQSqgbHWv3McJ1RRFOlSaNXe=s0)
 
-3\. Select Ledger on the bottom right of the app
+3. Select Ledger on the bottom right of the app
 
-![](https://lh5.googleusercontent.com/YeL\_fvzjKgYYyAW7n23bhNG\_fMuH7GCZipCHjmU54JS6x1aYqZQt3U6IWIX6MH37lXWAgp0JkNQhFEiUz6wbXbvQnznxRIlU1IfIiLwWhMlXE1l7cCS3tyxd-SigkWh3wCaEi5XW=s0)
+![](https://lh5.googleusercontent.com/YeL_fvzjKgYYyAW7n23bhNG_fMuH7GCZipCHjmU54JS6x1aYqZQt3U6IWIX6MH37lXWAgp0JkNQhFEiUz6wbXbvQnznxRIlU1IfIiLwWhMlXE1l7cCS3tyxd-SigkWh3wCaEi5XW=s0)
 
-4\. Follow user onboarding flow clicking "Next" as you move forward with set up.&#x20;
+4. Follow user onboarding flow clicking "Next" as you move forward with set up. 
 
-5\. You'll see a pop-up in your Chrome Browser asking you to select  which device to connect. Click on your Ledger device. Then click "Connect". _NOTE: You may need to resize the pop up window to see all buttons._
+5. You'll see a pop-up in your Chrome Browser asking you to select  which device to connect. Click on your Ledger device. Then click "Connect". _NOTE: You may need to resize the pop up window to see all buttons._
 
-![](https://lh4.googleusercontent.com/fsF76p-M1qFVV5\_xR4-HbAWesQ\_CoLQCmdYV0Lh76zSnKgpPdvaJdLDRwr-Ul8-BE7\_h4YyXurvo4pVS\_dn\_IccPFKDi9ZLllqpOXE6Frt-IwjaRn2A0z7Uuz7YZ6FaUizwU3ju4=s0)
+![](https://lh4.googleusercontent.com/fsF76p-M1qFVV5_xR4-HbAWesQ_CoLQCmdYV0Lh76zSnKgpPdvaJdLDRwr-Ul8-BE7_h4YyXurvo4pVS_dn_IccPFKDi9ZLllqpOXE6Frt-IwjaRn2A0z7Uuz7YZ6FaUizwU3ju4=s0)
 
-6\. Follow the next onboarding steps to upload the correct Ledger account, clicking "Confirm" when complete.&#x20;
+6. Follow the next onboarding steps to upload the correct Ledger account, clicking "Confirm" when complete. 
 
 ![](https://lh3.googleusercontent.com/OBNIGOlGe5xD3FRO20OHcBPqAG4wSkTly60Ye8N5fRod06AgqDVVtj5mfPvvdifC9xxw6ENFS0ZzQrOaD3v53f42xOhdwijV97w2HDRDY2a1SzP9CRP9mohRuVRcIxpRmYA5otka=s0)
 
-7\. Use your Ledger to send, receive and stake on the Oasis Network!&#x20;
+7. Use your Ledger to send, receive and stake on the Oasis Network! 
+
