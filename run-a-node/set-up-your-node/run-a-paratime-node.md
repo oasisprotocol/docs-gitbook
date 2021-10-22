@@ -53,7 +53,7 @@ To speed up bootstraping your new node, we recommend [copying node's state from 
 
 To be able to register as a ParaTime node on the Oasis Network, you need to have enough tokens staked in your entity's escrow account.
 
-To see the staking requirements for different node roles, use the Oasis CLI tools as described in [Common Staking Info](../../manage-tokens/oasis-cli-tools/common-staking-info.md).
+To see the staking requirements for different node roles, use the Oasis CLI tools as described in [Common Staking Info](../../manage-tokens/advanced/oasis-cli-tools/common-staking-info.md).
 
 {% hint style="success" %}
 Currently, both the Mainnet and the Testnet require 100 ROSE/TEST for each role type:
@@ -78,9 +78,9 @@ To register a node that is both a validator and a ParaTime node, the entity for 
 
 All together, there would need to be at least 400 tokens staked in your entity's escrow account.
 
-To stake the tokens, use our [Oasis CLI tools](../../manage-tokens/oasis-cli-tools/delegate-tokens.md).
+To stake the tokens, use our [Oasis CLI tools](../../manage-tokens/advanced/oasis-cli-tools/delegate-tokens.md).
 
-If everything was set up correctly, you should see something like below when running [Oasis Node Stake Account Info](../../manage-tokens/oasis-cli-tools/get-account-info.md) command for your entity's account (this is an example for the Testnet):
+If everything was set up correctly, you should see something like below when running [Oasis Node Stake Account Info](../../manage-tokens/advanced/oasis-cli-tools/get-account-info.md) command for your entity's account (this is an example for the Testnet):
 
 ```bash
 Balance:

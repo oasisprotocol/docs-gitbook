@@ -4,10 +4,10 @@ Make sure you have installed everything described in the [Prerequisites](prerequ
 
 ## Server commands
 
-To run a command that requires a connection to an online Oasis node \(i.e. the `server`\), you need to either:
+To run a command that requires a connection to an online Oasis node (i.e. the `server`), you need to either:
 
-* change the working directory to where the internal Oasis node UNIX socket is located \(e.g. `/serverdir/node/`\) before executing the command, or
-* pass the `-a $ADDR` flag where `ADDR` represents the path to the internal Oasis node UNIX socket prefixed with `unix:` \(e.g.`unix:/serverdir/node/internal.sock`\).
+* change the working directory to where the internal Oasis node UNIX socket is located (e.g. `/serverdir/node/`) before executing the command, or
+* pass the `-a $ADDR` flag where `ADDR` represents the path to the internal Oasis node UNIX socket prefixed with `unix:` (e.g.`unix:/serverdir/node/internal.sock`).
 
 Here are some examples of Oasis Node CLI commands that need a connection to an online Oasis node:
 
@@ -18,7 +18,7 @@ Here are some examples of Oasis Node CLI commands that need a connection to an o
 
 ## Local commands
 
-The following commands are intended to be run on your local machine and only need access to the [network's current genesis file](../../oasis-network/network-parameters.md) and your signer's private key:
+The following commands are intended to be run on your local machine and only need access to the [network's current genesis file](../../../oasis-network/network-parameters.md) and your signer's private key:
 
 * `oasis-node stake account gen_transfer`
 * `oasis-node stake account gen_escrow`
@@ -28,7 +28,7 @@ The following commands are intended to be run on your local machine and only nee
 {% hint style="danger" %}
 We strongly suggest that you do not use any entity/staking account that is generated with the file-based signer on the Mainnet.
 
-In case you need to use the file-based signer, make sure you only use it on an [offline/air-gapped machine](https://en.wikipedia.org/wiki/Air_gap_%28networking%29). Gaining access to your entity's/staking account's private key can compromise your tokens.
+In case you need to use the file-based signer, make sure you only use it on an [offline/air-gapped machine](https://en.wikipedia.org/wiki/Air\_gap\_\(networking\)). Gaining access to your entity's/staking account's private key can compromise your tokens.
 {% endhint %}
 
 ## JSON pretty-printing
@@ -47,7 +47,7 @@ Hence, we recommend avoiding its usage until this issue is resolved.
 
 All commands for generating and signing transactions need the following base flags set:
 
-* `--genesis.file`: Path to the genesis file, e.g. `/localhostdir/genesis.json`. 
+* `--genesis.file`: Path to the genesis file, e.g. `/localhostdir/genesis.json`.&#x20;
 
 For convenience, set the `GENESIS_FILE` environment value to its value, e.g.:
 
@@ -55,29 +55,28 @@ For convenience, set the `GENESIS_FILE` environment value to its value, e.g.:
   GENESIS_FILE=/localhostdir/genesis.json
 ```
 
-* `--signer.dir`: Path to entity's artifacts directory, e.g. `entity-$LEDGER_INDEX`
+*   `--signer.dir`: Path to entity's artifacts directory, e.g. `entity-$LEDGER_INDEX`
 
-  or `/localhostdir/entity/`
+    or `/localhostdir/entity/`
 
 ### Signer Flags
 
 Currently, we provide two options for signing transactions:
 
-* **Ledger-based signer.**
+*   **Ledger-based signer.**
 
-  You will need to set it up as described in our [Oasis Core Ledger](https://docs.oasis.dev/oasis-core-ledger/usage/transactions) docs.
+    You will need to set it up as described in our [Oasis Core Ledger](https://docs.oasis.dev/oasis-core-ledger/usage/transactions) docs.
+*   **File-based signer.**
 
-* **File-based signer.**
+    You will need to create your Entity as described in [Running a Node on the Network](../../../run-a-node/set-up-your-node/run-validator.md#creating-your-entity) docs and set the following flags:
 
-  You will need to create your Entity as described in [Running a Node on the Network](../../run-a-node/set-up-your-node/run-validator.md#creating-your-entity) docs and set the following flags:
-
-  * `--signer.backend file`: Specifies use of the file signer.
+    * `--signer.backend file`: Specifies use of the file signer.
 
 ### Storing Base and Signer flags in an Environment Variable
 
 To make the transaction commands shorter and avoid typing errors, one can create an environment variable, e.g. `TX_FLAGS`, with all the [Base Flags](setup.md#base-flags) and [Signer Flags](setup.md#signer-flags) configured for his particular set up.
 
-For example, one could set `TX_FLAGS` for a Ledger device like below \(make sure all `LEDGER_*` environment variables are set appropriately\):
+For example, one could set `TX_FLAGS` for a Ledger device like below (make sure all `LEDGER_*` environment variables are set appropriately):
 
 ```bash
 TX_FLAGS=(--genesis.file "$GENESIS_FILE"
@@ -102,15 +101,13 @@ TX_FLAGS=(--genesis.file "$GENESIS_FILE"
 When generating a transaction, one needs to set the following transaction flags as appropriate for a given transaction:
 
 * `--stake.amount`: Amount of base units to transfer, escrow, burn, etc.
-* `--transaction.file`: Path to the file where to store the generated
+*   `--transaction.file`: Path to the file where to store the generated
 
-  transaction.
+    transaction.
+*   `--transaction.nonce`: Incremental number that must be unique for each account's transaction.
 
-* `--transaction.nonce`: Incremental number that must be unique for each account's transaction.
-
-  To get your current account's nonce, see [Checking Your Account nonce](https://github.com/oasisprotocol/docs/tree/7c514a939e438d8687207aa6cc95cca71d8e350e/manage-tokens/oasis-cli-tools/maintenance/checking-account-nonce.md) doc.
-
-* `--transaction.fee.gas`: Maximum amount of gas \(in _gas units_\) a transaction can spend.
+    To get your current account's nonce, see [Checking Your Account nonce](https://github.com/oasisprotocol/docs/tree/7c514a939e438d8687207aa6cc95cca71d8e350e/manage-tokens/oasis-cli-tools/maintenance/checking-account-nonce.md) doc.
+* `--transaction.fee.gas`: Maximum amount of gas (in _gas units_) a transaction can spend.
 
 Gas costs for different staking transactions are specified by the `staking.params.gas_costs` consensus parameter.
 
@@ -124,19 +121,18 @@ To obtain its value from the genesis file, run:
 
 * `--transaction.fee.amount`: Amount of base units we will pay as a fee for a transaction.
 
-Note that specifying a transaction's fee amount \(via `--transaction.fee.amount`\) and maximum gas amount \(via `--transaction.fee.gas`\) implicitly defines the _gas price_ \(in base units\):
+Note that specifying a transaction's fee amount (via `--transaction.fee.amount`) and maximum gas amount (via `--transaction.fee.gas`) implicitly defines the _gas price_ (in base units):
 
-```text
+```
 gas_price = fee_amount / gas_amount
 ```
 
 Gas price tells how much base units we are willing to pay for one gas unit.
 
-Consensus validators can configure their own _minimum gas price_ \(via `consensus.tendermint.min_gas_price` configuration flag\) and will refuse to process transactions that have their gas price set below their minimum gas price.
+Consensus validators can configure their own _minimum gas price_ (via `consensus.tendermint.min_gas_price` configuration flag) and will refuse to process transactions that have their gas price set below their minimum gas price.
 
 {% hint style="info" %}
 Currently, there is no mechanism to discover what minimum gas prices are used by validators.
 
-For more details, see [Oasis Core \#2526](https://github.com/oasisprotocol/oasis-core/issues/2526).
+For more details, see [Oasis Core #2526](https://github.com/oasisprotocol/oasis-core/issues/2526).
 {% endhint %}
-

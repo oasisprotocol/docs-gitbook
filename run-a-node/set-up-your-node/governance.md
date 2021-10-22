@@ -1,7 +1,7 @@
 # Governance
 
 {% hint style="info" %}
-This example assumes you have read and followed the instructions in the [Prerequisites](../../manage-tokens/oasis-cli-tools/prerequisites.md) and [Setup](../../manage-tokens/oasis-cli-tools/setup.md) sections of the _Use Your Tokens_ docs.
+This example assumes you have read and followed the instructions in the [Prerequisites](../../manage-tokens/advanced/oasis-cli-tools/prerequisites.md) and [Setup](../../manage-tokens/advanced/oasis-cli-tools/setup.md) sections of the _Use Your Tokens_ docs.
 {% endhint %}
 
 ## Listing Active Proposals
@@ -39,7 +39,7 @@ In case there are currently any active proposals this should return a list of th
 
 ## View Votes for a Proposal
 
- To view votes for a given proposal, you can use the following command:
+&#x20;To view votes for a given proposal, you can use the following command:
 
 ```bash
 oasis-node governance proposal_votes -a $ADDR --proposal.id <PROPOSAL-ID>
@@ -114,11 +114,10 @@ and ask you for confirmation.
 
 ## Submit the Transaction
 
-To submit the generated transaction, we need to copy `tx_cast_vote.json` to the online Oasis node \(i.e. the `server`\) and submit it from there:
+To submit the generated transaction, we need to copy `tx_cast_vote.json` to the online Oasis node (i.e. the `server`) and submit it from there:
 
 ```bash
 oasis-node consensus submit_tx \
   -a $ADDR \
   --transaction.file tx_cast_vote.json
 ```
-

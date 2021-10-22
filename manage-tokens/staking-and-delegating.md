@@ -12,16 +12,17 @@ The Oasis Network is supported by an amazing community of validators and infrast
 
 ### Tools to use for Staking and Delegation
 
-In addition to using the [Oasis CLI](oasis-cli-tools/), there are number of wallets, Ledger GUIs and Custodians support staking and delegation on the Oasis Network. Those include:
+In addition to using the [Oasis CLI](advanced/oasis-cli-tools/), there are number of (non-custodial) wallets and custodians that support staking and delegation on the Oasis Network. Those include:
 
-* [Chorus One Anthem](https://anthem.chorus.one/) \(Ledger GUI\)
-* [Bitpie](https://bitpie.com/) \(mobile wallet\)
-* [Anchorage](https://anchorage.com/) \(custodian\)
-* [Finoa](https://finoa.io/) \(custodian\)
+* [Oasis Wallet - Web](oasis-wallets/web.md)
+* [Oasis Wallet - Browser Extension](oasis-wallets/browser-extension.md)
+* [Copper.co](staking-and-delegating.md#rewards-and-tokenonomics) (custodian)
+* [Anchorage](https://anchorage.com) (custodian)
+* [Finoa](https://finoa.io) (custodian)
 
 ### Oasis Validators and Infrastructure Providers
 
-A summary of validators interested in delegations or providing infrastructure support to token holders is [here](https://airtable.com/shrPKNSKjc8rkAhEn) \(including contact info and a bit more detail about the team and project\). Please feel free to reach out to the teams directly for more information on staking and delegation logistics, fees and more.
+A summary of validators interested in delegations or providing infrastructure support to token holders is [here](https://airtable.com/shrPKNSKjc8rkAhEn) (including contact info and a bit more detail about the team and project). Please feel free to reach out to the teams directly for more information on staking and delegation logistics, fees and more.
 
 Many can also help you set up delegations directly as well.
 
@@ -31,5 +32,4 @@ The validator registry is in alphabetical order and includes information provide
 
 ### Run your own Node
 
-Instead, if you're interested in running your own node you can get started [here](../run-a-node/node-operator-overview.md). Be sure to also [join the **\#nodeoperator** channel on Slack and sign up for the node operator mailing list](../oasis-network/connect-with-us.md#social-media-channels)!
-
+Instead, if you're interested in running your own node you can get started [here](../run-a-node/node-operator-overview.md). Be sure to also [join the **#nodeoperator** channel on Slack and sign up for the node operator mailing list](../oasis-network/connect-with-us.md#social-media-channels)!

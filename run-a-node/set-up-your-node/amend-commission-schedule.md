@@ -1,10 +1,10 @@
 # Amend Commission Schedule
 
 {% hint style="info" %}
-This example assumes you have read and followed the instructions in the [Prerequisites](../../manage-tokens/oasis-cli-tools/prerequisites.md) and [Setup](../../manage-tokens/oasis-cli-tools/setup.md) sections of the _Use Your Tokens_ docs.
+This example assumes you have read and followed the instructions in the [Prerequisites](../../manage-tokens/advanced/oasis-cli-tools/prerequisites.md) and [Setup](../../manage-tokens/advanced/oasis-cli-tools/setup.md) sections of the _Use Your Tokens_ docs.
 {% endhint %}
 
-We can configure our account to take a commission on staking rewards given to our node\(s\). The **commission rate** must be within **commission rate bounds**, which we can also configure.
+We can configure our account to take a commission on staking rewards given to our node(s). The **commission rate** must be within **commission rate bounds**, which we can also configure.
 
 Let's assume:
 
@@ -38,7 +38,7 @@ For our example network this returns:
 }
 ```
 
-This means that we must submit a commission rate bound at least 336 epochs in advance \(`rate_bound_lead`\) and that we can change it on every epoch \(`rate_change_interval`\).
+This means that we must submit a commission rate bound at least 336 epochs in advance (`rate_bound_lead`) and that we can change it on every epoch (`rate_change_interval`).
 
 The `max_rate_steps` and `max_bound_steps` determine the maximum number of commission rate steps and rate bound steps, respectively.
 
@@ -53,7 +53,7 @@ oasis-node stake account info \
 ```
 
 {% hint style="info" %}
-For a detailed explanation on querying account information, see the [Get Info](../../manage-tokens/oasis-cli-tools/get-account-info.md) section of the _Use Your Tokens_ docs.
+For a detailed explanation on querying account information, see the [Get Info](../../manage-tokens/advanced/oasis-cli-tools/get-account-info.md) section of the _Use Your Tokens_ docs.
 {% endhint %}
 
 Before the transaction, this outputs:
@@ -123,7 +123,7 @@ and ask you for confirmation.
 
 ## Submit the Transaction
 
-To submit the generated transaction, we need to copy `tx_amend_commission_schedule.json` to the online Oasis node \(i.e. the `server`\) and submit it from there:
+To submit the generated transaction, we need to copy `tx_amend_commission_schedule.json` to the online Oasis node (i.e. the `server`) and submit it from there:
 
 ```bash
 oasis-node consensus submit_tx \
@@ -166,7 +166,7 @@ For more information on how commissions work in general, see the [Commission](..
 
 It is also possible to set multiple commission rate steps and rate bound steps by passing the `--stake.commission_schedule.rates` and `--stake.commission_schedule.bounds` CLI flags multiple times.
 
-For example, setting multiple commission rate steps and rate bound steps \(for the same account as in the previous example\) as follows:
+For example, setting multiple commission rate steps and rate bound steps (for the same account as in the previous example) as follows:
 
 ```
 oasis-node stake account gen_amend_commission_schedule \
@@ -186,7 +186,7 @@ oasis-node stake account gen_amend_commission_schedule \
 
 would result in the following commission schedule being printed out in [our account's info](amend-commission-schedule.md#query-our-accounts-info):
 
-```text
+```
 ...
 Escrow Account:
   ...
@@ -218,6 +218,5 @@ Escrow Account:
 ```
 
 {% hint style="info" %}
-To troubleshoot an amendment that's rejected, consult our [compendium of 23 common ways for a commission schedule amendment to fail](https://github.com/oasisprotocol/oasis-core/blob/0dee03d75b3e8cfb36293fbf8ecaaec6f45dd3a5/go/staking/api/commission_test.go#L61-L610).
+To troubleshoot an amendment that's rejected, consult our [compendium of 23 common ways for a commission schedule amendment to fail](https://github.com/oasisprotocol/oasis-core/blob/0dee03d75b3e8cfb36293fbf8ecaaec6f45dd3a5/go/staking/api/commission\_test.go#L61-L610).
 {% endhint %}
-

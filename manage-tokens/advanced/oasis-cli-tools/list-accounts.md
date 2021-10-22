@@ -12,7 +12,7 @@ oasis-node stake list -a $ADDR
 
 This will list all accounts' addresses, e.g.:
 
-```text
+```
 oasis1qqqfalz4xars9nxn0mjy8fcf9quqg8ml0szm5ped
 oasis1qqqd4wrmk8z9p3hz0vyc6zy3khx3gqnckywyg2s5
 oasis1qqqul8678xs9tnj74x54k8ch2qdh7jveeswqf67j
@@ -35,5 +35,4 @@ oasis1qq2rlaz3yjfk8gtdhnrfkrz5rrxjnnrzeq7mst0r
 ... output trimmed ...
 ```
 
-For more information on account's address format, see the [Terminology](../terminology.md#address) doc.
-
+For more information on account's address format, see the [Terminology](../../terminology.md#address) doc.
