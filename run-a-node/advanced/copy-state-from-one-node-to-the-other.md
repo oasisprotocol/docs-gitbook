@@ -22,10 +22,12 @@ Before starting your new Oasis Node, do the following:
 If an Oasis Node is **not stopped** before its state is copied, its on-disk state might not be consistent and up-to-date. This can lead to **state corruption** and inability to use the state with your new Oasis Node.
 {% endhint %}
 
-* Copy the `tendermint/abci-state` and `tendermint/data` directories from your synced Oasis Node's working directory (e.g. `/node/`, `/srv/oasis/node`, `/serverdir/node`) to your new Oasis Node's working directory.
+* Copy the following directories from your synced Oasis Node's working directory (e.g. `/node/`, `/srv/oasis/node`, `/serverdir/node`) to your new Oasis Node's working directory:
+  * `tendermint/abci-state`
+  * `tendermint/data`
 
 {% hint style="warning" %}
-You could also copy the whole `tendermint` directory from your synced Oasis Node's working directory. in this case, you must **omit** the **`oasis_priv_validator.json` file**, otherwise starting your new Oasis Node with fail with something like:
+You could also copy the whole `tendermint` directory from your synced Oasis Node's working directory. In that case, you must **omit** the **`oasis_priv_validator.json` file**, otherwise starting your new Oasis Node with fail with something like:
 
 ```
 {"caller":"node.go:696","err":"tendermint/crypto: public key mismatch, state corruption?: %!w(<nil>)","level":"error","module":"oasis-node","msg":"failed to initialize tendermint service","ts":"2021-09-25T14:13:17.919296668Z"}
