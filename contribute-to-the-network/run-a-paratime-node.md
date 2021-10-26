@@ -27,27 +27,28 @@ An Oasis Foundation developed ParaTime that will enable WebAssembly-based confid
 ### Overview&#x20;
 
 * **Leading Developer: **[Oasis Protocol Foundation](http://oasisprotocol.org)
-* **Status: **Deployed on Testnet
+* **Status: **Deployed on Mainnet and Testnet
 * **Tesnet Launch Date: **June 2021
 * **Mainnet Launch Date: **October 2021
 * **Slack Channel: **[**#**cipher-paratime](../oasis-network/connect-with-us.md#social-media-channels)
 * **Requires SGX**: Yes
 * **Parameters:**
+  * [Mainnet](../oasis-network/network-parameters.md#cipher-paratime)
   * [Testnet](../foundation/testnet/#cipher-paratime)
 
 ### Features
 
-* Fully decentralized with node operators distributed across the world
-* Oasis **ROSE **tokens will be the native token used in the ParaTime for gas fees
-* Support for WebAssembly smart contracts
-* Support for confidential compute
+* Fully decentralized with node operators distributed across the world.
+* Oasis **ROSE **tokens will be the native token used in the ParaTime for gas fees.
+* Support for WebAssembly smart contracts.
+* Support for confidential compute.
 
 ### Rewards
 
 * The ParaTime will release tokens on-chain to reward nodes for participation.
 * The reward program is 2 years long, and tokens will be released per epoch.
-* The reward will be 10\~20 ROSE tokens per entity per epoch, where the Oasis Protocol Foundation will make the final decision on the reward size upon the testnet launch.
-* Incentivized testnet with ROSE tokens delegated by the Oasis Protocol Foundation to testnet participants based on performance (rewards can be found [here](https://oasis-foundation.medium.com/oasis-cipher-paratime-c9f40ae64946)).
+* The reward will be 10\~20 ROSE tokens per entity per epoch, where the Oasis Protocol Foundation will make the final decision on the reward size upon the Cipher's Mainnet launch.
+* Incentivized Testnet with ROSE tokens delegated by the Oasis Protocol Foundation to Testnet participants based on performance (rewards can be found [here](https://oasis-foundation.medium.com/oasis-cipher-paratime-c9f40ae64946)).
 {% endtab %}
 
 {% tab title="Emerald ParaTime" %}
@@ -68,8 +69,8 @@ An EVM-compatible Oasis Foundation developed ParaTime that enables the use of EV
 
 ### Features
 
-* Fully decentralized with node operators distributed across the world
-* Oasis **ROSE** tokens will be the native token used in the ParaTime for gas fees
+* Fully decentralized with node operators distributed across the world.
+* Oasis **ROSE** tokens will be the native token used in the ParaTime for gas fees.
 {% endtab %}
 {% endtabs %}
 
