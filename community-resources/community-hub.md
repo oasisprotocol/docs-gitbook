@@ -67,10 +67,13 @@ This token distribution process can take several weeks from start to finish. To 
 
 In order to receive your ROSE tokens from the Oasis Foundation for any work you have contributed to the network, you need to set up a ROSE wallet. \
 \
-We have a wide variety of wallet solutions available:
+The recommended way is to use one of the official [Oasis Wallets](../manage-tokens/oasis-wallets/), either the web wallet at [wallet.oasisprotocol.org](https://wallet.oasisprotocol.org) or the browser extension wallet [available in the Chrome Web Store](https://chrome.google.com/webstore/detail/oasis-wallet/ppdadbejkmjnefldpcdjhnkpbjkikoip).
 
-* If you have a Ledger device, you can use one of our [Ledger-backed web wallets](broken-reference).&#x20;
-* If you want an easy-to-use, beginner friendly wallet, you can use the [Bitpie wallet](broken-reference) available on mobile devices.&#x20;
+{% hint style="success" %}
+Both Oasis Wallets also support connecting to your Ledger-backed ROSE wallet.
+{% endhint %}
+
+If you need more options, take a look our [3rd Party Custody & Wallets](../manage-tokens/holding-rose-tokens/) guide.
 
 ## 💰 Delegate Your ROSE Tokens & Earn Staking Rewards
 
@@ -78,12 +81,9 @@ Did you know you grow your ROSE holdings over time, while also contributing to t
 \
 Anyone who has ROSE tokens can delegate their tokens to a validator and start earning a slice of that validator's staking rewards, based on how many ROSE tokens are delegated. \
 \
-You can use the following wallets to delegate your ROSE tokens to validators:
+You can use one of the official [Oasis Wallets](../manage-tokens/oasis-wallets/) to delegate your ROSE tokens to validators. Additionally, [3rd party custody providers and wallets](../manage-tokens/holding-rose-tokens/) also offer you the option of delegating your ROSE tokens.
 
-* If you have a Ledger device , you can use the [Chorus One Anthem](https://anthem.chorus.one) wallet.
-* If you prefer to use a simple, beginner friendly wallet, you can use the [Bitpie](https://bitpie.com) mobile wallet.&#x20;
-
-You can review the list of active Oasis Network validators via the [Oasis Scan](https://www.oasisscan.com/validators) web tool. You're welcome to delegate your ROSE tokens to any of the active validators. \
+You can review the list of active Oasis Network validators via the [Oasis Scan](https://www.oasisscan.com/validators) or [Oasis Monitor](https://oasismonitor.com/validators) block explorers or use the built-in facilities of your wallet. You're welcome to delegate your ROSE tokens to any of the active validators. \
 \
 As you're deciding which validator to delegate to, keep in mind the following information for each validator:
 
