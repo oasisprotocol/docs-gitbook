@@ -29,7 +29,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [21.3.3](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.3)
+  * [21.3.4](./#paratimes)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
@@ -42,7 +42,7 @@ This section contains parameters for various ParaTimes known to be deployed on t
 ### Cipher ParaTime
 
 * Oasis Core version:
-  * [21.3.3](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.3)
+  * [21.3.4](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.4)
 * Runtime identifier:
   * `0000000000000000000000000000000000000000000000000000000000000000`
 * Runtime binary version:
@@ -57,7 +57,7 @@ Feel free to use other IAS proxies besides the one provided here or [run your ow
 ### Emerald ParaTime
 
 * Oasis Core version:
-  * [21.3.3](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.3)
+  * [21.3.4](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.4)
 * Runtime identifier:
   * `00000000000000000000000000000000000000000000000072c8215e60d5bca7`
 * Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/blob/v1.0.0-alpha/README.md#building)):
