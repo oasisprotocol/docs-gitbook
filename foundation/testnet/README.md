@@ -60,5 +60,5 @@ Feel free to use other IAS proxies besides the one provided here or [run your ow
   * [21.3.5](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.5)
 * Runtime identifier:
   * `00000000000000000000000000000000000000000000000072c8215e60d5bca7`
-* Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/blob/v2.0.0-alpha/README.md#building)):
-  * [2.0.0-alpha](https://github.com/oasisprotocol/emerald-paratime/releases/tag/v2.0.0-alpha)
+* Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/tree/v3.0.0-alpha#building)):
+  * [3.0.0-alpha](https://github.com/oasisprotocol/emerald-paratime/releases/tag/v3.0.0-alpha)
