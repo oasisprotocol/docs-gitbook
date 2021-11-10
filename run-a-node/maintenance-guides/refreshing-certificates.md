@@ -6,37 +6,37 @@
 
 Go to your validator node's data directory, e.g. `/srv/oasis`, `/node`, `/serverdir/node`:
 
-```text
+```
 cd <PATH-TO-DATADIR>
 ```
 
 {% hint style="warning" %}
-We recommend backing up your validator's private and public keys \(i.e. all `*.pem` files\) in your node's data directory before continuing.
+We recommend backing up your validator's private and public keys (i.e. all `*.pem` files) in your node's data directory before continuing.
 {% endhint %}
 
 Remove the validator's current sentry client TLS private key and certificate by running:
 
-```text
+```
 rm sentry_client_tls_identity.pem sentry_client_tls_identity_cert.pem
 ```
 
 Re-generate node's keys by running:
 
-```text
+```
 oasis-node identity init --datadir ./
 ```
 
 {% hint style="success" %}
-This should keep all your other node's keys \(i.e. `beacon.pem`, `consensus.pem`, `consensus_pub.pem`, `identity.pem`, `identity_pub.pem`, ...\) intact.
+This should keep all your other node's keys (i.e. `beacon.pem`, `consensus.pem`, `consensus_pub.pem`, `identity.pem`, `identity_pub.pem`, ...) intact.
 {% endhint %}
 
 Then run:
 
-```text
+```
 oasis-node identity show-sentry-client-pubkey --datadir ./
 ```
 
-to obtain the value the validator's new sentry client TLS public key in Base64-encoding that can be put in sentry node's configuration under `control.authorized_pubkey` list.
+to obtain the value of the validator's new sentry client TLS public key in Base64-encoding that can be put in sentry node's configuration under `control.authorized_pubkey` list.
 
 Restart your validator node.
 
@@ -46,9 +46,9 @@ After generating a new sentry client TLS private key and certificate on the vali
 
 Before using the below sentry node configuration snippet, replace the following variables:
 
-* `{{ validator_sentry_client_grpc_public_key }}`: The validator node's new sentry client TLS public key encoded in Base64-encoding \(e.g. `KjVEdeGbtdxffQaSxIkLE+kW0sINI5/5YR/lgUkuEcw=`\).
+* `{{ validator_sentry_client_grpc_public_key }}`: The validator node's new sentry client TLS public key encoded in Base64-encoding (e.g. `KjVEdeGbtdxffQaSxIkLE+kW0sINI5/5YR/lgUkuEcw=`).
 
-```text
+```
 ... trimmed ...
 
 # Worker configuration.
@@ -81,28 +81,28 @@ The validator node will re-register itself automatically once it's connected to 
 
 Go to your sentry node's data directory, e.g. `/srv/oasis`, `/node`, `/serverdir/node`:
 
-```text
+```
 cd <PATH-TO-DATADIR>
 ```
 
 {% hint style="warning" %}
-We recommend backing up your sentry's private and public keys \(i.e. all `*.pem` files\) in your node's data directory before continuing.
+We recommend backing up your sentry's private and public keys (i.e. all `*.pem` files) in your node's data directory before continuing.
 {% endhint %}
 
 Remove the sentry's current TLS private key and certificate by running:
 
-```text
+```
 rm tls_identity.pem tls_identity_cert.pem
 ```
 
 Re-generate node's keys by running:
 
-```text
+```
 oasis-node identity init --datadir ./
 ```
 
 {% hint style="success" %}
-This should keep all your other node's keys \(i.e. `beacon.pem`, `consensus.pem`, `consensus_pub.pem`, `identity.pem`, `identity_pub.pem`, ...\) intact.
+This should keep all your other node's keys (i.e. `beacon.pem`, `consensus.pem`, `consensus_pub.pem`, `identity.pem`, `identity_pub.pem`, ...) intact.
 {% endhint %}
 
 Then run:
@@ -111,7 +111,7 @@ Then run:
 oasis-node identity show-tls-pubkey --datadir ./
 ```
 
-to obtain the value the sentry's new TLS public key in Base64-encoding that can be put in validator node's configuration under `worker.sentry.address` list.
+to obtain the value of the sentry's new TLS public key in Base64-encoding that can be put in validator node's configuration under `worker.sentry.address` list.
 
 Restart your sentry node.
 
@@ -121,10 +121,10 @@ After generating a new TLS private key and certificate on the sentry node, set t
 
 Before using the below validator node configuration snippet, replace the following variables:
 
-* `{{ sentry_node_grpc_public_key }}`: The sentry node's new TLS public key encoded in Base64-encoding \(e.g. `1dA4/NuYPSWXYaKpLhaofrZscIb2FDKtJclCMnVC0Xc=`\).
+* `{{ sentry_node_grpc_public_key }}`: The sentry node's new TLS public key encoded in Base64-encoding (e.g. `1dA4/NuYPSWXYaKpLhaofrZscIb2FDKtJclCMnVC0Xc=`).
 * `{{ sentry_node_private_ip }}`: The private IP address of the sentry node over which sentry node should be accessible to the validator.
 
-```text
+```
 ... trimmed ...
 
 worker:
@@ -140,4 +140,3 @@ worker:
 ```
 
 Restart your validator node.
-
