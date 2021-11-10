@@ -22,7 +22,7 @@ Follow Ledger's instructions for updating the firmware on your Ledger wallet:
 
 To find the Oasis app in the Ledger Live app store, go to the App catalog's search bar and type in _Oasis:_
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (2).png>)
 
 {% hint style="warning" %}
 Make sure you install at least version 1.8.1 of the Oasis app.
