@@ -55,3 +55,12 @@ This section contains parameters for various ParaTimes known to be deployed on t
 {% hint style="success" %}
 Feel free to use other IAS proxies besides the one provided here or [run your own](../run-a-node/set-up-your-node/run-an-ias-proxy.md).
 {% endhint %}
+
+### Emerald ParaTime
+
+* Oasis Core version:
+  * [21.3.6](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.6)
+* Runtime identifier:
+  * `000000000000000000000000000000000000000000000000e2eaa99fc008f87f`
+* Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/tree/v4.0.0#building)):
+  * [4.0.0](https://github.com/oasisprotocol/emerald-paratime/releases/tag/v4.0.0)
