@@ -92,6 +92,8 @@
 
 ## Developer Resources
 
+* [Overview](developer-resources/overview.md)
+* [Emerald ParaTime](developer-resources/emerald-paratime.md)
 * [Oasis Core Documentation](https://docs.oasis.dev/oasis-core)
 * [Oasis SDK Documentation](https://docs.oasis.dev/oasis-sdk)
 * [GitHub](https://github.com/oasisprotocol)
