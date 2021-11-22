@@ -5,7 +5,7 @@ description: This page describes how to run a ParaTime client node on the Oasis 
 # Run a ParaTime Client Node
 
 {% hint style="info" %}
-These instructions are for setting up a _ParaTime client_ node. If you want to run a _ParaTime_ node instead, see the [instructions for running a ParaTime node](run-a-paratime-node.md). Similarly, if you want to run a _validator_ or a _non-validator_ node instead, see the [instructions for running a validator node](run-validator.md) or [instructions for running a non-validator node](run-non-validator.md).
+These instructions are for setting up a _ParaTime client_ node which only observes ParaTime activity and can submit transactions. If you want to run a _ParaTime_ node instead, see the [instructions for running a ParaTime node](run-a-paratime-node.md). Similarly, if you want to run a _validator_ or a _non-validator_ node instead, see the [instructions for running a validator node](run-validator.md) or [instructions for running a non-validator node](run-non-validator.md).
 {% endhint %}
 
 {% hint style="success" %}
@@ -67,7 +67,7 @@ In order to run a ParaTime node you need to obtain the following pieces of infor
 *   **The ParaTime Binary** contains the executable code that implements the ParaTime itself. It is executed in a sandboxed environment by Oasis Node and its format depends on whether the ParaTime is running in a Trusted Execution Environment (TEE) or not.\
 
 
-    For ParaTime client nodes, one doesn't need to run the SGXS binary, even for ParaTimes running in a TEE. ParaTime client node always runs the regular Linux executable (an [ELF binary](https://en.wikipedia.org/wiki/Executable\_and\_Linkable\_Format), usually without an extension)
+    For ParaTime client nodes, one _does not_ need to run the SGXS binary, even for ParaTimes running in a TEE. ParaTime client node always runs the regular Linux executable (an [ELF binary](https://en.wikipedia.org/wiki/Executable\_and\_Linkable\_Format), usually without an extension).
 
 {% hint style="danger" %}
 Like the genesis document, make sure you obtain these from a trusted source.
@@ -77,8 +77,6 @@ Like the genesis document, make sure you obtain these from a trusted source.
 #### **Compiling the ParaTime Binary from Source Code**
 
 In case you decide to build the ParaTime binary from source yourself, make sure that you follow our [guidelines for deterministic compilation](https://docs.oasis.dev/oasis-sdk/guide/reproducing) to ensure that you receive the exact same binary.
-
-When the ParaTime is running in a TEE, a different binary to what is registered in the consensus layer will not work and will be rejected by the network.
 {% endhint %}
 
 ### Install ParaTime Binary
@@ -172,6 +170,11 @@ runtime:
     "{{ runtime_id }}": {{ non-sgx_runtime_bin_path }}
 
 worker:
+
+  storage:
+    enabled: true
+    checkpoint_sync:
+      disabled: true
   
   p2p:
     # External P2P configuration.
