@@ -41,7 +41,7 @@ By joining our Oasis Ambassador Program, you will have the opportunity to:&#x20;
 * **Earn Rewards:** Receive grants for doing your part and for completing specific tasks.
 * **Be Part of the Extended Team:** Be part of a larger community of privacy enthusiasts and will be a key contributor to the Oasis Foundation.
 * **Connect with other Oasis community members**: Discuss network updates with others contributing code on the network and give first-hand feedback to developers working on the network based on what you’re hearing in the field.
-* **Gain real-world experience and build a name for yourself: **Build real-world experience in the blockchain field and gain new marketable skills to help you in your career. As an ambassador, we’ll post your picture and bio on our website too!
+* **Gain real-world experience and build a name for yourself:** Build real-world experience in the blockchain field and gain new marketable skills to help you in your career. As an ambassador, we’ll post your picture and bio on our website too!
 
 {% hint style="success" %}
 Oasis Ambassadors have already earned **over 500,000 ROSE tokens** to-date through the Oasis Ambassador Program.

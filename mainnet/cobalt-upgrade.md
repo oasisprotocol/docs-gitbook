@@ -50,7 +50,7 @@ The **`epochtime`**object will be removed since it became obsolete with the new 
 
 ### **Registry**
 
-*   **`registry.params.enable_runtime_governance_models` **is a new parameter that specifies the set of [runtime governance models](https://docs.oasis.dev/oasis-core/high-level-components/index/services/registry#runtimes) that are allowed to be used when creating/updating registrations. It will be set to:
+*   **`registry.params.enable_runtime_governance_models` ** is a new parameter that specifies the set of [runtime governance models](https://docs.oasis.dev/oasis-core/high-level-components/index/services/registry#runtimes) that are allowed to be used when creating/updating registrations. It will be set to:
 
     ```
     {
@@ -72,12 +72,12 @@ Deregistered entities can always re-register by submitting the [entity registrat
 
 ### **Root Hash**
 
-* **`roothash.params.max_runtime_messages` **is a new parameter that specifies the global limit on the number of [messages](https://docs.oasis.dev/oasis-core/high-level-components/index-1/messages) that can be emitted in each round by the runtime. It will be set to `256`.
+* **`roothash.params.max_runtime_messages` ** is a new parameter that specifies the global limit on the number of [messages](https://docs.oasis.dev/oasis-core/high-level-components/index-1/messages) that can be emitted in each round by the runtime. It will be set to `256`.
 * **`roothash.params.max_evidence_age`** is a new parameter that specifies the maximum age (in the number of rounds) of submitted evidence for [compute node slashing](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0005-runtime-compute-slashing.md). It will be set to `100`.
 
 ### **Staking**
 
-* **`staking.governance_deposits` **are the tokens** **collected from governance proposal deposits**.** The initial balance** **will be set to `"0"`.
+* **`staking.governance_deposits` ** are the tokens **** collected from governance proposal deposits**.** The initial balance **** will be set to `"0"`.
 * **`staking.params.allow_escrow_messages`** is a new parameter indicating whether to enable support for the newly added `AddEscrow` and `ReclaimEscrow` [runtime messages](https://docs.oasis.dev/oasis-core/high-level-components/index-1/messages) . It will be set to`true`.
 * **`staking.params.slashing.0`** will be renamed to **`staking.params.slashing.consensus-equivocation`**.
 * **`staking.params.slashing.consensus-light-client-attack.amount`** is a new parameter controlling how much to slash for light client attack. It will be set to `"100000000000"` (i.e. 100,000,000,000 base units, or 100 ROSE tokens).
@@ -125,7 +125,7 @@ The **`governance`** object contains parameters controlling the network's [on-ch
 
 ### Other
 
-*   **`extra_data`** will be set back to the value in the [Mainnet genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-11-18)** **to include the Oasis network's genesis quote: _”_[_Quis custodiet ipsos custodes?_](https://en.wikipedia.org/wiki/Quis\_custodiet\_ipsos\_custodes%3F)_” \[submitted by Oasis Community Member Daniyar Borangaziyev]: _
+*   **`extra_data`** will be set back to the value in the [Mainnet genesis file](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2020-11-18) **** to include the Oasis network's genesis quote: _”_[_Quis custodiet ipsos custodes?_](https://en.wikipedia.org/wiki/Quis\_custodiet\_ipsos\_custodes%3F)_” \[submitted by Oasis Community Member Daniyar Borangaziyev]:_&#x20;
 
     ```
     "extra_data": {

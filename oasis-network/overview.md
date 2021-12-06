@@ -9,7 +9,7 @@ The Oasis Network is a Layer 1 decentralized blockchain network designed to be u
 The Network has two main architectural components, the Consensus Layer and the ParaTime Layer.
 
 1. The **Consensus Layer** is a scalable, high-throughput, secure, proof-of-stake consensus run by a decentralized set of validator nodes.
-2. The **ParaTime Layer **hosts many parallel runtimes (ParaTimes), each representing a replicated compute environment with shared state.
+2. The **ParaTime Layer** hosts many parallel runtimes (ParaTimes), each representing a replicated compute environment with shared state.
 
 ![Oasis architectural design including ParaTime and Consensus Layers](https://lh4.googleusercontent.com/xGCkDb7ZW8EGOTrO7BDgKm9VRM03nTvkwwAJV-w2r8j67gICC7UIBbk0wARSccSVhAmQ25rhpwNLQCgNh7cl5OGkwSR\_TFHt9J9jZZdM7fnzuJZOAzHuTKHJ3ajUAOVuzcRUYFkh)
 
@@ -19,7 +19,7 @@ The Network has two main architectural components, the Consensus Layer and the P
 
 * Separation of consensus and execution allows **multiple ParaTimes to process transactions in parallel**, meaning complex workloads processed on one ParaTime won’t slow down faster, simpler transactions on another.\
 
-* The ParaTime Layer is entirely decentralized, allowing** anyone to develop and build their own ParaTime**. Each ParaTime can be developed in isolation to meet the needs of a specific application, such as confidential compute, open or closed committees, and more.\
+* The ParaTime Layer is entirely decentralized, allowing **anyone to develop and build their own ParaTime**. Each ParaTime can be developed in isolation to meet the needs of a specific application, such as confidential compute, open or closed committees, and more.\
 
 * The network’s sophisticated discrepancy detection makes Oasis **more efficient than sharding and parachains** — requiring a smaller replication factor for the same level of security.\
 

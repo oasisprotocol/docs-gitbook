@@ -83,6 +83,6 @@ On the "ROSE System" interface, click on the "Transfer" button. This takes you t
 ![](<../../.gitbook/assets/Screen Shot 2020-11-19 at 1.06.58 PM.png>)
 
 {% hint style="info" %}
-For additional troubleshooting and to provide any feedback on your Bitpie Wallet experience, please reach out to the Bitpie team directly at **support@bitpie.com **or via [their website](https://www.bitpiehk.com).
+For additional troubleshooting and to provide any feedback on your Bitpie Wallet experience, please reach out to the Bitpie team directly at **support@bitpie.com** or via [their website](https://www.bitpiehk.com).
 {% endhint %}
 

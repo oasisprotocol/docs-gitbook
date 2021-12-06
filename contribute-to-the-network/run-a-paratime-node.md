@@ -26,11 +26,11 @@ An Oasis Foundation developed ParaTime that will enable WebAssembly-based confid
 
 ### Overview&#x20;
 
-* **Leading Developer: **[Oasis Protocol Foundation](http://oasisprotocol.org)
-* **Status: **Deployed on Mainnet and Testnet
-* **Tesnet Launch Date: **June 2021
-* **Mainnet Launch Date: **October 2021
-* **Slack Channel: **[**#**cipher-paratime](../oasis-network/connect-with-us.md#social-media-channels)
+* **Leading Developer:** [Oasis Protocol Foundation](http://oasisprotocol.org)
+* **Status:** Deployed on Mainnet and Testnet
+* **Tesnet Launch Date:** June 2021
+* **Mainnet Launch Date:** October 2021
+* **Slack Channel:** [**#**cipher-paratime](../oasis-network/connect-with-us.md#social-media-channels)
 * **Requires SGX**: Yes
 * **Parameters:**
   * [Mainnet](../oasis-network/network-parameters.md#cipher-paratime)
@@ -39,7 +39,7 @@ An Oasis Foundation developed ParaTime that will enable WebAssembly-based confid
 ### Features
 
 * Fully decentralized with node operators distributed across the world.
-* Oasis **ROSE **tokens will be the native token used in the ParaTime for gas fees.
+* Oasis **ROSE** tokens will be the native token used in the ParaTime for gas fees.
 * Support for WebAssembly smart contracts.
 * Support for confidential compute.
 

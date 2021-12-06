@@ -12,11 +12,11 @@ description: >-
 
 You can access the [Oasis Wallet - Web](https://github.com/oasisprotocol/oasis-wallet-web/) by heading to [https://wallet.oasisprotocol.org](https://wallet.oasisprotocol.org). For the best performance, we recommend using [Chrome](https://www.google.com/chrome/) or any other [Chromium](https://www.chromium.org/Home)-based browser.
 
-### **Create a new wallet**
+### **Create a New Wallet**
 
 If you do not currently have an existing Oasis wallet address, you can create a new wallet address directly from the Oasis Wallet's home screen. Click on the “Create wallet” button.
 
-![](<../../.gitbook/assets/01 - Create a new wallet.png>)
+![](<../../.gitbook/assets/01 - Home.png>)
 
 The next page contains information about your mnemonic (an ordered list of words representing your keyphrase), which you will need in order to retrieve your wallet later. Review the information on this page very carefully. Save your mnemonic in the right order in a secure location.
 
@@ -36,21 +36,62 @@ Next, you will need to confirm your mnemonic by filling in some missing words. Y
 
 ![](<../../.gitbook/assets/03 - Confirm your mnemonic.png>)
 
-After you correctly enter all of the missing words, you will be taken to your Oasis Wallet home screen, containing information about your account balance and more.** **
+After you correctly enter all of the missing words, you will be taken to your Oasis Wallet home screen, containing information about your account balance and more. ****&#x20;
 
-### **Access an existing wallet**
+### **Access an Existing Wallet**
 
 If you already have an existing Oasis wallet address, you can open it in the web wallet by clicking the “Open wallet” button on the home screen.&#x20;
 
-![](<../../.gitbook/assets/04 - Access an existing wallet.png>)
+![](<../../.gitbook/assets/01 - Home.png>)
 
-Next, you should select whether you want to open your wallet via a mnemonic, a private key, or a Ledger hardware wallet. Select the respective button corresponding to the retrieval method you want to use.\
-\
-To open your wallet via a mnemonic or a private key, make sure you have that information readily available. To open your wallet via a Ledger hardware wallet, make sure you have your Ledger device readily available and have familiarized yourself with the [Oasis-specific Ledger usage instructions](../holding-rose-tokens/ledger-wallet.md).&#x20;
+Next, you should select whether you want to open your wallet via a mnemonic, a private key, or a Ledger hardware wallet. Select the respective button corresponding to the retrieval method you want to use.
+
+![](<../../.gitbook/assets/04 - How to open your wallet.png>)
+
+#### Open Wallet via Mnemonic
+
+In the _Enter your keyphrase_ field, enter each word of your mnemonic separated by a space. Afterwards, hit the "Open my wallet" button.
+
+![](<../../.gitbook/assets/05.1 - Open with mnemonics.png>)
+
+{% hint style="info" %}
+Oasis Wallet - Web uses English mnemonic phrase words as defined in [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). You can find a complete list of all valid phrase words [here](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt). If you misspelled a word, the wallet will warn you.
+{% endhint %}
+
+{% hint style="warning" %}
+Oasis Wallet mnemonics are incompatible with BitPie mnemonics. Check our [FAQ](./#frequently-asked-questions) for more information.
+{% endhint %}
+
+#### Open Wallet via Private Key
+
+Paste your Base64-encoded Ed25519 private key in the _Enter your private key_ field and then click on the "Open my wallet" button.
+
+![](<../../.gitbook/assets/05.2 - Open with private key.png>)
+
+{% hint style="info" %}
+The Ed25519 private key format that is used is 64 bytes long and consists of two 32-byte parts:
+
+1. First 32 bytes are **** the **private key seed** which is used to derive the private key that is then used for signing the transactions (i.e. sending tokens from your wallet).
+2. Last 32 bytes **** are the **public key** which is used to compute your account's address of the form `oasis1...`.
+{% endhint %}
+
+{% hint style="danger" %}
+If you typed in the private key manually, make sure you do not mix similar characters like the big O and 0 or big I and 1!
+
+Currently, there is no error detection on the inputted private key, so the wallet cannot warn you of a mistyped character. **It is imperative that you correctly input the private key, otherwise you will not be able to access your funds!**
+
+We suggest that you perform a test transaction the first time you import your wallet from the private key so you can rest assured the key is valid.
+{% endhint %}
+
+#### Open wallet with Ledger
+
+To open your wallet via a Ledger hardware wallet, make sure you have your Ledger device readily available and have familiarized yourself with the [Oasis-specific Ledger usage instructions](../holding-rose-tokens/ledger-wallet.md).&#x20;
 
 Follow the instructions on the screens that follow to open your existing wallet address.
 
-![](<../../.gitbook/assets/05 - How to open your wallet.png>)
+{% hint style="warning" %}
+To date, only Chromium-based browsers support WebUSB component which is required to access your Ledger device.
+{% endhint %}
 
 After you complete the instructions, you will be taken to your Oasis Wallet home screen, containing information about your account balance and more.&#x20;
 

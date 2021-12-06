@@ -9,7 +9,7 @@ description: >-
 ## **How to use the Oasis Wallet - Browser Extension**
 
 {% hint style="info" %}
-Currently, [Oasis Wallet - Browser Extension](https://github.com/oasisprotocol/oasis-wallet-ext) **only supports **[**Chrome**](https://www.google.com/chrome/) or other [Chromium](https://www.chromium.org/Home)-based browsers.
+Currently, [Oasis Wallet - Browser Extension](https://github.com/oasisprotocol/oasis-wallet-ext) **only supports** [**Chrome**](https://www.google.com/chrome/) or other [Chromium](https://www.chromium.org/Home)-based browsers.
 {% endhint %}
 
 ### Install the Oasis Wallet via Chrome Web Store
@@ -19,7 +19,7 @@ You can install the [Oasis Wallet - Browser Extension](https://github.com/oasisp
 ### Create a new wallet
 
 {% hint style="warning" %}
-Your mnemonic phrase is required to access your wallet. Be sure to store it in a secure location. If you lose or forget your mnemonic phrase, you will lose access to your wallet and any token funds contained in it.** **
+Your mnemonic phrase is required to access your wallet. Be sure to store it in a secure location. If you lose or forget your mnemonic phrase, you will lose access to your wallet and any token funds contained in it. ****&#x20;
 {% endhint %}
 
 {% hint style="warning" %}

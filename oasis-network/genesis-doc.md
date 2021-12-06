@@ -65,7 +65,7 @@ The **`epochtime.params.interval`** specifies the number of blocks in an _epoch_
 Within the **`registry`** object, there are a broad range of parameters that specify the initial set of node operators and their corresponding initial node statuses.
 
 * **`registry.params.max_node_expiration`** The maximum duration (in epochs) that node registrations last. The starting value is set to 2 in order to ensure that a node is continuously online, since the node’s registration would expire each time 2 epochs pass, requiring the node to re-register.
-* **`registry.params.enable_runtime_governance_models` **The set of [runtime governance models](https://docs.oasis.dev/oasis-core/high-level-components/index/services/registry#runtimes) that are allowed to be used when creating/updating registrations. It is set to `{"entity": true, "runtime": true}` which means a runtime can choose between **entity governance** and **runtime-defined governance**.
+* **`registry.params.enable_runtime_governance_models` ** The set of [runtime governance models](https://docs.oasis.dev/oasis-core/high-level-components/index/services/registry#runtimes) that are allowed to be used when creating/updating registrations. It is set to `{"entity": true, "runtime": true}` which means a runtime can choose between **entity governance** and **runtime-defined governance**.
 * **`registry.entities`** The entity registrations for initial node operators, including public key and signature information.
 * **`registry.runtimes`** The runtime registrations for initial node operators. Each item describes a runtime's operational parameters, including its identifier, kind, admission policy, committee scheduling, storage, governance model, etc. For a full description of the runtime descriptor see the [`Runtime` structure](https://pkg.go.dev/github.com/oasisprotocol/oasis-core/go/registry/api?tab=doc#Runtime) documentation.
 * **`registry.suspended_runtimes`** The suspended runtime registrations for initial node operators. Each item describes a suspended runtime's operational parameters, including its identifier, kind, admission policy, committee scheduling, storage, governance model, etc. For a full description of the runtime descriptor see the [`Runtime` structure](https://pkg.go.dev/github.com/oasisprotocol/oasis-core/go/registry/api?tab=doc#Runtime) documentation.
@@ -108,7 +108,7 @@ For example, a staking transfer transaction of size 230 bytes would have a total
 
 The **`roothash`** object contains parameters related to the [Root Hash service](https://docs.oasis.dev/oasis-core/high-level-components/index/services/roothash) and a minimal state related to the runtimes.
 
-* **`roothash.params.max_runtime_messages` **The global limit on the number of [messages](https://docs.oasis.dev/oasis-core/high-level-components/index-1/messages) that can be emitted in each round by the runtime. The value is set to 256.
+* **`roothash.params.max_runtime_messages` ** The global limit on the number of [messages](https://docs.oasis.dev/oasis-core/high-level-components/index-1/messages) that can be emitted in each round by the runtime. The value is set to 256.
 * **`roothash.params.max_evidence_age`** The maximum age (in the number of rounds) of submitted evidence for [compute node slashing](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0005-runtime-compute-slashing.md). The value is set to 100.
 
 ### Staking
@@ -121,14 +121,14 @@ The following parameters specify the total token supply, total token pool reserv
 
 * **`staking.total_supply`** The total token supply (in base units) for the network. This is fixed at 10 billion ROSE tokens (the value is set to 10,000,000,000,000,000,000 base units).
 * **`staking.common_pool`** The tokens (in base units) reserved for staking rewards to be paid out over time.
-* **`staking.governance_deposits` **The tokens (in base units) collected from governance proposal deposits.
+* **`staking.governance_deposits` ** The tokens (in base units) collected from governance proposal deposits.
 * **`staking.ledger`** The staking ledger, encoding all accounts and corresponding account balances on the network at the time of genesis, including accounts for initial operators, backers, custodial wallets, etc.
 * **`staking.delegations`** The encoding of the initial delegations at the time of genesis.
 
 {% hint style="info" %}
 **Interpreting your account balance in the `staking.ledger`**
 
-Your account's **`general.balance`** includes all of your tokens that have not been staked or delegated. **Within your account's **`escrow`** field, the **`active.balance`holds the total amount of tokens are (actively) delegated to you.
+Your account's **`general.balance`** includes all of your tokens that have not been staked or delegated. **Within your account's** `escrow` **field, the** `active.balance`holds the total amount of tokens are (actively) delegated to you.
 {% endhint %}
 
 #### Delegations
@@ -200,7 +200,7 @@ These parameters control the behavior of the new [improved random beacon](https:
 * **`beacon.params.pvss_parameters.threshold`** The minimum number of participants which must successfully contribute entropy for the final output to be considered valid. The value is set to 10.
 * **`beacon.params.pvss_parameters.commit_interval`** The duration of the Commit phase (in blocks). The value is set to 400.
 * **`beacon.params.pvss_parameters.reveal_interval`** The duration of the Reveal phase (in blocks). The value is set to 196.
-* **`beacon.params.pvss_parameters.transition_delay`**_ _The duration of the post Reveal phase (in blocks). The value is set to 4.
+* **`beacon.params.pvss_parameters.transition_delay`** __ The duration of the post Reveal phase (in blocks). The value is set to 4.
 
 ### **Governance**
 
@@ -208,7 +208,7 @@ The **`governance`** object contains parameters controlling the network's [on-ch
 
 * **`governance.params.min_proposal_deposit`** The amount of tokens (in base units) that are deposited when creating a new proposal. The value is set to 10,000,000,000,000 base units, or 10,000 ROSE tokens.
 * **`governance.params.voting_period`** The number of epochs after which the voting for a proposal is closed and the votes are tallied. The value is set to 168, which is expected to be approximately 7 days.
-*   **`governance.params.quorum` **The minimum percentage of voting power that needs to be cast on a proposal for the result to be valid. The value is set to 75 (i.e. 75%).
+*   **`governance.params.quorum` ** The minimum percentage of voting power that needs to be cast on a proposal for the result to be valid. The value is set to 75 (i.e. 75%).
 
     **`governance.params.threshold`** The minimum percentage of `VoteYes` votes in order for a proposal to be accepted. The value is set to 90 (i.e. 90%).
 *   **`governance.params.upgrade_min_epoch_diff`** The minimum number of epochs between the current epoch and the proposed upgrade epoch for the upgrade proposal to be valid. Additionally, it specifies the minimum number of epochs between two consecutive pending upgrades.

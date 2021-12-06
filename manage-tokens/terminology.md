@@ -2,7 +2,7 @@
 
 ### Account
 
-A staking** account** is an entry in the staking ledger.
+A staking **account** is an entry in the staking ledger.
 
 It has two (sub)accounts:
 
@@ -19,7 +19,7 @@ It has two (sub)accounts:
 
 ### Address
 
-A staking account** address** is represented by a truncated hash of a corresponding entity's public key, prefixed by a 1 byte address version.
+A staking account **address** is represented by a truncated hash of a corresponding entity's public key, prefixed by a 1 byte address version.
 
 It uses [Bech32 encoding](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki#bech32) for text serialization with `oasis` as its human readable part (HRP) prefix.
 

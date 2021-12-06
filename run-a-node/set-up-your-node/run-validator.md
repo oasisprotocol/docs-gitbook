@@ -100,7 +100,7 @@ oasis-node registry entity init
 
 This will generate three files in `/localhostdir/entity`:
 
-* `entity.pem`: The private key of the entity.** NEVER SHARE THIS AS IT CAN BE USED TO TRANSFER STAKE.**
+* `entity.pem`: The private key of the entity. **NEVER SHARE THIS AS IT CAN BE USED TO TRANSFER STAKE.**
 * `entity.json`: The entity descriptor. This is the JSON of the unsigned information to be sent to the registry application on the network.
 * `entity_genesis.json`: This JSON object contains the entity descriptor that has been signed with entity's private key, i.e. `entity.pem`. This is meant to be shared for inclusion in the Genesis block.
 

@@ -8,7 +8,7 @@ description: >-
 
 ## 2021-08-31 (16:00 UTC) - Parameter Update
 
-* **Upgrade height: **upgrade is scheduled to happen at epoch **8049.**
+* **Upgrade height:** upgrade is scheduled to happen at epoch **8049.**
 
 {% hint style="info" %}
 We expect the Mainnet network to reach this epoch at around 2021-08-31 16:00 UTC.
@@ -18,8 +18,8 @@ We expect the Mainnet network to reach this epoch at around 2021-08-31 16:00 UTC
 
 The [Oasis Core 21.2.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.2.8) release contains the [`consensus-params-update-2021-08` upgrade handler](https://github.com/oasisprotocol/oasis-core/blob/v21.2.8/go/upgrade/migrations/consensus\_parameters.go) which will update the following parameters in the consensus layer:
 
-* **`staking.params.max_allowances` **specifies the maximum number of allowances on account can store. It will be set to `16` (default value is `0`) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
-* **`staking.params.gas_costs` **, **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
+* **`staking.params.max_allowances` ** specifies the maximum number of allowances on account can store. It will be set to `16` (default value is `0`) to enable support for beneficiary allowances which are required to transfer tokens into a ParaTime.
+* **`staking.params.gas_costs` ** , **`governance.params.gas_costs`** and **`roothash.params.gas_costs`** specify gas costs for various types of staking, governance and roothash transactions. Gas costs for transactions that were missing gas costs will be added.
 * **`scheduler.params.max_validators`** is the maximum size of the consensus committee (i.e. the validator set). It will be increased to`110` (it was set to `100` previously).
 
 ### Instructions - Voting
@@ -169,7 +169,7 @@ The Mainnet's genesis file and the genesis document's hash will remain the same.
 
 ### BadgerDB v2 to v3 Migration
 
-This upgrade will upgrade Oasis Core to version **21.2.x** which includes the new [**BadgerDB**](https://github.com/dgraph-io/badger)** v3**.
+This upgrade will upgrade Oasis Core to version **21.2.x** which includes the new [**BadgerDB**](https://github.com/dgraph-io/badger) **v3**.
 
 Since BadgerDB's on-disk format changed in v3, it requires on-disk state migration. The migration process is done automatically and makes the following steps:
 
@@ -366,7 +366,7 @@ To do that, just open Ledger Live's Manager and it will prompt you to install ve
 
 ## 2021-04-28 (16:00 UTC) - Cobalt Upgrade
 
-* **Upgrade height: **upgrade is scheduled to happen at epoch **5046.**
+* **Upgrade height:** upgrade is scheduled to happen at epoch **5046.**
 
 {% hint style="info" %}
 We expect the Mainnet network to reach this epoch at around 2021-04-28 12:00 UTC.
@@ -440,7 +440,7 @@ Following steps should be performed on **2021-04-28** only after the network has
 * Download the genesis file published in the [Cobalt Upgrade release](https://github.com/oasisprotocol/mainnet-artifacts/releases/tag/2021-04-28).
 
 {% hint style="info" %}
-Mainnet state at epoch **5046 **will be exported and migrated to a 21.1.x compatible genesis file. Upgrade genesis file will be published on the above link soon after reaching the upgrade epoch.
+Mainnet state at epoch **5046** will be exported and migrated to a 21.1.x compatible genesis file. Upgrade genesis file will be published on the above link soon after reaching the upgrade epoch.
 {% endhint %}
 
 * Verify the provided Cobalt upgrade genesis file by comparing it to network state dump. See instructions in the [Handling Network Upgrades](maintenance-guides/handling-network-upgrades.md#download-and-verify-the-provided-genesis-file) guide.
