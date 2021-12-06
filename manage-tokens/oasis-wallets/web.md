@@ -16,7 +16,7 @@ You can access the [Oasis Wallet - Web](https://github.com/oasisprotocol/oasis-w
 
 If you do not currently have an existing Oasis wallet address, you can create a new wallet address directly from the Oasis Wallet's home screen. Click on the “Create wallet” button.
 
-![](<../../.gitbook/assets/01 - Home.png>)
+![](<../../.gitbook/assets/01 - Home (1).png>)
 
 The next page contains information about your mnemonic (an ordered list of words representing your keyphrase), which you will need in order to retrieve your wallet later. Review the information on this page very carefully. Save your mnemonic in the right order in a secure location.
 
@@ -42,11 +42,11 @@ After you correctly enter all of the missing words, you will be taken to your Oa
 
 If you already have an existing Oasis wallet address, you can open it in the web wallet by clicking the “Open wallet” button on the home screen.&#x20;
 
-![](<../../.gitbook/assets/01 - Home.png>)
+![](<../../.gitbook/assets/01 - Home (1).png>)
 
 Next, you should select whether you want to open your wallet via a mnemonic, a private key, or a Ledger hardware wallet. Select the respective button corresponding to the retrieval method you want to use.
 
-![](<../../.gitbook/assets/04 - How to open your wallet.png>)
+![](<../../.gitbook/assets/05 - How to open your wallet.png>)
 
 #### Open Wallet via Mnemonic
 
