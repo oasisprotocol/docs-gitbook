@@ -62,8 +62,8 @@ Feel free to use other IAS proxies besides the one provided here or [run your ow
   * [21.3.6](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.6)
 * Runtime identifier:
   * `000000000000000000000000000000000000000000000000e2eaa99fc008f87f`
-* Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/tree/v5.0.0#building)):
-  * [5.0.0](https://github.com/oasisprotocol/emerald-paratime/releases/tag/v5.0.0)
+* Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/tree/v6.0.0#building)):
+  * [6.0.0](https://github.com/oasisprotocol/emerald-paratime/releases/tag/v6.0.0)
 
 {% hint style="info" %}
 Check the [Emerald ParaTime page](../developer-resources/emerald-paratime.md#web3-gateway) on how to access the public Web3 gateway.
