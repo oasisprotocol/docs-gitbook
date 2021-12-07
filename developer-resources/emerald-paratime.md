@@ -10,7 +10,7 @@ As the official EVM compatible ParaTime on the Oasis Network, Emerald allows for
 * Low-cost — 99%+ lower fees than Ethereum
 * Cross-chain bridge to enable cross-chain interoperability (upcoming)
 
-## ParaTime Incentives <a href="1b5b" id="1b5b"></a>
+## ParaTime Incentives <a href="#1b5b" id="1b5b"></a>
 
 Emerald is fully decentralized with node operators distributed globally, and Oasis ROSE will be the native token used for gas fees.
 
@@ -26,8 +26,8 @@ To get started building on our Emerald ParaTime, you can use our public Web3 gat
 
 ### Mainnet
 
-* RPC HTTP endpoint: [https://emerald.oasis.dev/](https://testnet.emerald.oasis.dev)
-* RPC WebSockets endpoint: [https://emerald.oasis.dev/ws](https://testnet.emerald.oasis.dev/ws)
+* RPC HTTP endpoint: [https://emerald.oasis.dev/](https://emerald.oasis.dev)
+* RPC WebSockets endpoint: [https://emerald.oasis.dev/ws](https://emerald.oasis.dev/ws)
 * Chain ID:
   * Hex: 0xa516
   * Decimal: 42262
