@@ -35,7 +35,7 @@ The Oasis Wallets currently support the following features:
 
 ## Frequently Asked Questions
 
-This has moved to a separate [FAQ section](./#frequently-asked-questions).
+This has moved to a separate [FAQ section](../faq.md).
 
 {% content-ref url="web.md" %}
 [web.md](web.md)
