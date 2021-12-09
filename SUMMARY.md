@@ -44,7 +44,7 @@
 * [Node Troubleshooting](run-a-node/troubleshooting.md)
 * [Upgrade Log](run-a-node/upgrade-log.md)
 
-## Manage Your ROSE Tokens <a href="manage-tokens" id="manage-tokens"></a>
+## Manage Your ROSE Tokens <a href="#manage-tokens" id="manage-tokens"></a>
 
 * [Overview](manage-tokens/overview.md)
 * [Terminology](manage-tokens/terminology.md)
@@ -56,6 +56,7 @@
   * [Custody Providers](manage-tokens/holding-rose-tokens/custody-providers.md)
   * [Bitpie Mobile Wallet](manage-tokens/holding-rose-tokens/bitpie-wallet.md)
   * [Self-Custody With Ledger](manage-tokens/holding-rose-tokens/ledger-wallet.md)
+* [Frequently Asked Questions](manage-tokens/faq.md)
 * [Advanced](manage-tokens/advanced/README.md)
   * [Oasis File-Based Signer](manage-tokens/advanced/file-based-signer.md)
   * [Oasis CLI Tools](manage-tokens/advanced/oasis-cli-tools/README.md)
@@ -85,7 +86,7 @@
 * [Previous Upgrades](mainnet/previous-upgrades/README.md)
   * [Upgrade to Mainnet](mainnet/previous-upgrades/mainnet-upgrade.md)
 
-## Oasis Protocol Foundation <a href="foundation" id="foundation"></a>
+## Oasis Protocol Foundation <a href="#foundation" id="foundation"></a>
 
 * [The Testnet](foundation/testnet/README.md)
   * [Upgrade Log](foundation/testnet/upgrade-log.md)
@@ -105,6 +106,6 @@
 * [Community-Made Tools](community-resources/community-made-resources.md)
 * [Token Delivery & KYC Guide](community-resources/token-delivery-and-kyc.md)
 
-## Frequently Asked Questions <a href="faq" id="faq"></a>
+## Frequently Asked Questions <a href="#faq" id="faq"></a>
 
 * [Oasis Network FAQ](faq/oasis-network-faq.md)
