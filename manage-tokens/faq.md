@@ -42,7 +42,3 @@ Yes. Starting from Oasis app for Ledger v2.3.1 a standardized key derivation pat
 {% hint style="info" %}
 Versions of Oasis app for Ledger prior to v2.3.1 used a non-standard key derivation path. Mnemonics could be imported to Ledger, but the generated wallet address and the private key used to send your funds would be invalid.
 {% endhint %}
-
-&#x20;derivation path standardized in . This derivation path is also .
-
-Note that previous versions of Oasis app for Ledger used a different derivation path and importing of mnemonics was not possible.
