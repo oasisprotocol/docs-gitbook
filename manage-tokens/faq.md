@@ -35,10 +35,10 @@ BitPie wallet will now ask you to enter your PIN to access the private key.
 
 Finally, your account's private key will be shown to you encoded in Base64 format (e.g. `YgwGOfrHG1TVWSZBs8WM4w0BUjLmsbk7Gqgd7IGeHfSqdbeQokEhFEJxtc3kVQ4KqkdZTuD0bY7LOlhdEKevaQ==`) which you can [import into Oasis Wallet](oasis-wallets/web.md#access-an-existing-wallet).
 
-### Can I use my Oasis Wallet mnemonics in Ledger?
+### How can I use my Oasis Wallet mnemonics in Ledger?
 
-Yes. Starting from Oasis app for Ledger v2.3.1 a standardized key derivation path as defined in [ADR 8](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md) is supported. You can import the same mnemonics used by the Oasis Wallet - Web and Chrome extension to Ledger. Ledger will then generate the same Oasis wallet address and can be used to sign transactions and send funds.
+Starting from Oasis app for Ledger v2.3.1 a standardized key derivation path as defined in [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md) is supported. You can import the same mnemonics used by the Oasis Wallet - Web and Chrome extension to Ledger directly. Ledger will then generate the same Oasis wallet address and can be used to sign transactions and send funds.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Versions of Oasis app for Ledger prior to v2.3.1 used a non-standard key derivation path. Mnemonics could be imported to Ledger, but the generated wallet address and the private key used to send your funds would be invalid.
 {% endhint %}
