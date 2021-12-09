@@ -46,7 +46,7 @@ This section contains parameters for various ParaTimes known to be deployed on t
 * Runtime identifier:
   * `0000000000000000000000000000000000000000000000000000000000000000`
 * Runtime binary version:
-  * [2.0.0-alpha2](https://github.com/oasisprotocol/cipher-paratime/releases/tag/v2.0.0-alpha2)
+  * [2.0.0-alpha3](https://github.com/oasisprotocol/cipher-paratime/releases/tag/v2.0.0-alpha3)
 * IAS proxy address:
   * `y4XO1ZETqgtHeZzLLmJLYAzpEfdGSJLvtd8bhIz+v3s=@34.86.197.181:8650`
 
