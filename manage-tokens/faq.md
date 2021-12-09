@@ -18,8 +18,8 @@ If your tokens are staked/delegated, then you need to debond them first which wi
 
 **Alternatively** however, if you do not want to transfer the tokens over the network, you can export the private key from your BitPie wallet and import it in Oasis Wallet in 2 steps:
 
-* [Export your BitPie wallet's Oasis account private key](faq.md#how-can-i-export-my-bitpie-wallets-oasis-account-private-key)
-* [Open your Oasis wallet via exported private key in Oasis Wallet - Web](https://docs.oasis.dev/general/manage-tokens/oasis-wallets/web#open-wallet-via-private-key)
+1. [Export your BitPie wallet's Oasis account private key](faq.md#how-can-i-export-my-bitpie-wallets-oasis-account-private-key)
+2. [Open your Oasis wallet via exported private key in Oasis Wallet - Web](https://docs.oasis.dev/general/manage-tokens/oasis-wallets/web#open-wallet-via-private-key)
 
 ### How can I export my [BitPie wallet](holding-rose-tokens/bitpie-wallet.md)'s Oasis account private key?
 
