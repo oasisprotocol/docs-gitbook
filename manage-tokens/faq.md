@@ -37,8 +37,26 @@ Finally, your account's private key will be shown to you encoded in Base64 forma
 
 ### How can I use my Oasis Wallet mnemonics in Ledger?
 
-Starting from Oasis app for Ledger v2.3.1 a standardized key derivation path as defined in [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md) is supported. You can import the same mnemonics used by the Oasis Wallet - Web and Chrome extension to Ledger directly. Ledger will then generate the same Oasis wallet address and can be used to sign transactions and send funds.
+Starting from Oasis app for Ledger v2.3.1 a standardized key derivation path as defined in [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md) is supported. This means that you can copy the mnemonics keyphrase you use in the Oasis Wallet - Web or in the Chrome extension directly to your Ledger device. Ledger will then derive the same Oasis wallet address and can be used to sign transactions and send funds. Similarly, you can export your keyphrase from Ledger and use it the Oasis Wallets.
 
 {% hint style="warning" %}
-Versions of Oasis app for Ledger prior to v2.3.1 used a non-standard key derivation path. Mnemonics could be imported to Ledger, but the generated wallet address and the private key used to send your funds would be invalid.
+Versions of Oasis app for Ledger prior to v2.3.1 used a non-standard key derivation path. Mnemonics could be imported to Ledger, but the derived wallet address and the private key would be different compared to the Oasis Wallets.
 {% endhint %}
+
+### The wallet gives me _Invalid keyphrase_ error when importing my wallet from mnemonics. How do I solve it?
+
+Please check that:
+
+* All mnemonics were spelled correctly. Oasis Wallets use English mnemonic phrase words as defined in BIP39. You can find a complete list of valid phrase words [here](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt).
+* The mnemonics were input in correct order.
+* All mnemonics were provided. The keyphrase should be either 12, 15, 18, 21, or 24 words long.
+
+If you checked all of the above and the keyphrase still cannot be imported, please contact Oasis support.
+
+### I imported my wallet with mnemonics. The wallet should contain funds, but the balance is empty. What can I do?
+
+First, check your wallet address. If the address equals the one that you expected your funds on, then the key derivation from mnemonics worked correctly. Make sure you have a working internet connection so that the wallet can fetch the latest balance. Then check that the correct network (Mainnet or Testnet) is selected. These are completely separated networks and although the wallet address can be the same, the transactions and consequently the balances may differ. Finally, there might be a temporary problem with the [Oasis Monitor service](https://oasismonitor.com) itself which observes the network and indexes transactions. Oasis Wallets rely on that service and once it is back up and running, you should be able to see the correct balance.
+
+If your wallet address is different than the one you used to transfer your funds to, then you used one of the wallets that don't implement the standardized key derivation path defined in [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md). If you were using the BitPie wallet see [this question](faq.md#how-can-i-export-my-bitpie-wallets-oasis-account-private-key). Ledger hardware wallet users should refer to [this question](faq.md#how-can-i-use-my-oasis-wallet-mnemonics-in-ledger).
+
+If you still cannot access your funds, please contact Oasis support.
