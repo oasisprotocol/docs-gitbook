@@ -44,7 +44,7 @@ This section contains parameters for various ParaTimes known to be deployed on t
 ### Cipher ParaTime
 
 * Oasis Core version:
-  * [21.3.6](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.6)
+  * [21.3.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.7)
 * Runtime identifier:
   * `000000000000000000000000000000000000000000000000e199119c992377cb`
 * Runtime binary version:
@@ -59,7 +59,7 @@ Feel free to use other IAS proxies besides the one provided here or [run your ow
 ### Emerald ParaTime
 
 * Oasis Core version:
-  * [21.3.6](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.6)
+  * [21.3.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.7)
 * Runtime identifier:
   * `000000000000000000000000000000000000000000000000e2eaa99fc008f87f`
 * Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/tree/v6.0.0#building)):
