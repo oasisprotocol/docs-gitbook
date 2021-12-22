@@ -39,3 +39,4 @@ To get started building on our Emerald ParaTime, you can use our public Web3 gat
 * Chain ID:
   * Hex: 0xa515
   * Decimal: 42261
+* Block explorer: [https://testnet.explorer.emerald.oasis.dev](https://testnet.explorer.emerald.oasis.dev)
