@@ -26,16 +26,16 @@ To get started building on our Emerald ParaTime, you can use our public Web3 gat
 
 ### Mainnet
 
-* RPC HTTP endpoint: [https://emerald.oasis.dev/](https://emerald.oasis.dev)
-* RPC WebSockets endpoint: [https://emerald.oasis.dev/ws](https://emerald.oasis.dev/ws)
+* RPC HTTP endpoint: `https://emerald.oasis.dev`
+* RPC WebSockets endpoint: `wss://emerald.oasis.dev/ws`
 * Chain ID:
   * Hex: 0xa516
   * Decimal: 42262
 
 ### Testnet
 
-* RPC HTTP endpoint: [https://testnet.emerald.oasis.dev/](https://testnet.emerald.oasis.dev)
-* RPC WebSockets endpoint: [https://testnet.emerald.oasis.dev/ws](https://testnet.emerald.oasis.dev/ws)
+* RPC HTTP endpoint: `https://testnet.emerald.oasis.dev`
+* RPC WebSockets endpoint: `wss://testnet.emerald.oasis.dev/ws`
 * Chain ID:
   * Hex: 0xa515
   * Decimal: 42261
