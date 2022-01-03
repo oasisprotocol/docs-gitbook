@@ -39,7 +39,7 @@ An Oasis Foundation developed ParaTime that will enable WebAssembly-based confid
 ### Features
 
 * Fully decentralized with node operators distributed across the world.
-* Oasis **ROSE** tokens will be the native token used in the ParaTime for gas fees.
+* Oasis **ROSE** tokens are the native token used in the ParaTime for gas fees.
 * Support for WebAssembly smart contracts.
 * Support for confidential compute.
 
@@ -65,12 +65,13 @@ An EVM-compatible Oasis Foundation developed ParaTime that enables the use of EV
 * **Slack Channel:** [**#**emerald-paratime](../oasis-network/connect-with-us.md#social-media-channels)
 * **Requires SGX:** No
 * **Parameters:**
+  * [Mainnet](../oasis-network/network-parameters.md#emerald-paratime)
   * [Testnet](../foundation/testnet/#emerald-paratime)
 
 ### Features
 
 * Fully decentralized with node operators distributed across the world.
-* Oasis **ROSE** tokens will be the native token used in the ParaTime for gas fees.
+* Oasis **ROSE** tokens are the native token used in the ParaTime for gas fees.
 {% endtab %}
 {% endtabs %}
 
