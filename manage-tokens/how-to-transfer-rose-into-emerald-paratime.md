@@ -78,7 +78,7 @@ At the time of writing, depositing and withdrawing ROSE to and from ParaTimes wo
 
 ### Verifying ROSE balance on Emerald ParaTime
 
-If everything went well, your entered amount of ROSE was sent to the Ethereum-compatible address in Emerald. You have three ways to verify that your ROSE are on your Emerald Ethereum wallet.
+If everything went well, your entered amount of ROSE was sent to the Ethereum-compatible address in Emerald. Let's verify that your ROSE safely arrived on your Emerald Ethereum wallet.
 
 #### Wallet Browser Extension
 
