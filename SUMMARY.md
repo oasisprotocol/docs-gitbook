@@ -56,6 +56,7 @@
   * [Custody Providers](manage-tokens/holding-rose-tokens/custody-providers.md)
   * [Bitpie Mobile Wallet](manage-tokens/holding-rose-tokens/bitpie-wallet.md)
   * [Self-Custody With Ledger](manage-tokens/holding-rose-tokens/ledger-wallet.md)
+* [How to transfer ROSE into Emerald ParaTime](manage-tokens/how-to-transfer-rose-into-emerald-paratime.md)
 * [Frequently Asked Questions](manage-tokens/faq.md)
 * [Advanced](manage-tokens/advanced/README.md)
   * [Oasis File-Based Signer](manage-tokens/advanced/file-based-signer.md)
