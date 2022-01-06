@@ -72,3 +72,16 @@ First, check your wallet address. If the address equals the one that you expecte
 If your wallet address is different than the one you used to transfer your funds to, then you used one of the wallets that don't implement the standardized key derivation path defined in [ADR 0008](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0008-standard-account-key-generation.md). If you were using the BitPie wallet see [this question](faq.md#how-can-i-export-my-bitpie-wallets-oasis-account-private-key). Ledger hardware wallet users should refer to [this question](faq.md#how-can-i-use-my-oasis-wallet-mnemonics-in-ledger).
 
 If you still cannot access your funds, please contact Oasis support.
+
+
+
+### I sent my ROSE to BinanceStaking address.  Are they staked? Are they lost? What can I do?
+
+If you just make a **Send** transaction to BinanceStaking address `oasis1qqekv2ymgzmd8j2s2u7g0hhc7e77e654kvwqtjwm` then your ROSE coins are not staked. They are now owned by BinanceStaking, which means they are not lost but only owned and managed by them. In this case, you should contact Binance via their [Support Center](https://www.binance.com/en/support) or [Submit a request](https://www.binance.com/en/chat).
+
+{% hint style="info" %}
+Send transaction is different compared to Escrow**.** With Escrow transaction you lend your ROSE coins to chosen Validator and you are rewarded for that. Send transaction actually sends your ROSE coins to receiving address you enter and only person who owns private key (mnemonics) of that receiving address can access and manage these coins and nobody else.
+{% endhint %}
+
+
+
