@@ -56,22 +56,25 @@ Click ‘Receive’ on the Account page, and you’ll get the QR code as well as
 ### **Use an Account on your Ledger Wallet**
 
 1. Plug your Ledger device into your computer and log into the Oasis app on-device
-2. Open the Oasis Chrome Extension Wallet and click the account icon on the top right
 
-![](https://lh5.googleusercontent.com/G-VEJxeQE5bGT4a\_qp90nfNXYzILJCIE06rebBL-Vn84vM7wYePH1t6HXg0ftYExh3om0h1U1bQKdb2ugH5lAsp13U3Sey6GYLHqZOhyrCJpvyb\_TQSqgbHWv3McJ1RRFOlSaNXe=s0)
+![Oasis App Ready on Ledger Nano S connected to your device](../../.gitbook/assets/Ledger\_Oasis\_App.jpeg)
+
+2\. Open the Oasis Chrome Extension Wallet and click the account icon on the top right
+
+![Unlock your Oasis Wallet Extension](../../.gitbook/assets/Open\_Oasis\_Ext\_Wallet.png)
 
 3\. Select Ledger on the bottom right of the app
 
-![](https://lh5.googleusercontent.com/YeL\_fvzjKgYYyAW7n23bhNG\_fMuH7GCZipCHjmU54JS6x1aYqZQt3U6IWIX6MH37lXWAgp0JkNQhFEiUz6wbXbvQnznxRIlU1IfIiLwWhMlXE1l7cCS3tyxd-SigkWh3wCaEi5XW=s0)
+![Import Oasis Ledger Account](../../.gitbook/assets/Oasis\_Ext\_Accounts\_Ledger.png)
 
 4\. Follow user onboarding flow clicking "Next" as you move forward with set up.&#x20;
 
 5\. You'll see a pop-up in your Chrome Browser asking you to select  which device to connect. Click on your Ledger device. Then click "Connect". _NOTE: You may need to resize the pop up window to see all buttons._
 
-![](https://lh4.googleusercontent.com/fsF76p-M1qFVV5\_xR4-HbAWesQ\_CoLQCmdYV0Lh76zSnKgpPdvaJdLDRwr-Ul8-BE7\_h4YyXurvo4pVS\_dn\_IccPFKDi9ZLllqpOXE6Frt-IwjaRn2A0z7Uuz7YZ6FaUizwU3ju4=s0)
+![Confirm your Ledger device and Import](../../.gitbook/assets/Ledger\_Device\_Import\_Oasis\_Ext.png)
 
 6\. Follow the next onboarding steps to upload the correct Ledger account, clicking "Confirm" when complete.&#x20;
 
-![](https://lh3.googleusercontent.com/OBNIGOlGe5xD3FRO20OHcBPqAG4wSkTly60Ye8N5fRod06AgqDVVtj5mfPvvdifC9xxw6ENFS0ZzQrOaD3v53f42xOhdwijV97w2HDRDY2a1SzP9CRP9mohRuVRcIxpRmYA5otka=s0)
+![Confirm your account(s) from Ledger for Import](../../.gitbook/assets/Ledger\_Import\_Oasis\_Account.png)
 
 7\. Use your Ledger to send, receive and stake on the Oasis Network!&#x20;
