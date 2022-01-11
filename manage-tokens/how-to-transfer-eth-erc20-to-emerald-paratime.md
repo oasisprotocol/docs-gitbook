@@ -30,7 +30,7 @@ First, get your assets ready in your MetaMask to be transferred over to Oasis. T
 
 Now you can select an asset from all available assets in your wallet, e.g. ETH, to be transferred to Oasis.
 
-![Select the asset to be bridged/wrapped](../.gitbook/assets/select\_source\_dest\_amount)
+![Select the asset to be transferred](../.gitbook/assets/select\_source\_dest\_amount)
 
 {% hint style="warning" %}
 Make sure, that you always have enough ETH (or other assets) for paying gas fees, not only to transfer (i.e. bridge) the assets to Oasis, but also to redeem any assets back to Ethereum.
@@ -44,7 +44,7 @@ The recipient address defaults to the source address on the Ethereum network. Yo
 
 Next, confirm the recipient address and the amount of WETH tokens to be transferred (i.e. bridged) and click _Next_.
 
-![Confirm your target details](../.gitbook/assets/switch\_to\_emerald.png)
+![Confirm your recipient address](../.gitbook/assets/switch\_to\_emerald.png)
 
 **Step 3 (Send tokens)** is to transfer the tokens to the Wormhole Bridge. MetaMask will ask you to switch back to the Ethereum Mainnet so you will be able to confirm your transaction and commence the transfer. Click _Transfer_.
 
@@ -56,7 +56,7 @@ If you chose to transfer your ETH into a different destination Ethereum account,
 
 Confirm the Transfer of ETH from Ethereum to wETH on Oasis Emerald by clicking _Confirm_.
 
-![Confirm the Transfer ETH->WETH](../.gitbook/assets/confirm\_transaction\_ETH\_WETH.png)
+![Confirm the transfer ETH->WETH](../.gitbook/assets/confirm\_transaction\_ETH\_WETH.png)
 
 {% hint style="warning" %}
 If you use a Ledger hardware wallet backed Ethereum account, you will need to enable "Blind signing" or "Contract data" in the Ethereum Ledger app's settings to be able to sign the transaction.
