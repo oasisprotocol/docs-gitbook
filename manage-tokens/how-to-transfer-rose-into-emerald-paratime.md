@@ -4,7 +4,7 @@ description: >-
   Browser Extension.
 ---
 
-# How to transfer ROSE into Emerald ParaTime
+# How to Transfer ROSE into Emerald ParaTime
 
 ## About
 
@@ -26,7 +26,7 @@ Once done, you will see your balance on the **Oasis consensus layer**. Next, we 
 
 In the top-right corner, click your account icon to open the Account management menu.
 
-![Account Management - Importing Accounts](https://lh4.googleusercontent.com/pBozgt7okw-wvJLNtTHWkkojcmqU99OTWq7iY92GXFwAdTwf1JFME5IyVrzTgR2O5iyrkrnEc0fEksN68txpJoxmU2tYpq7oju\_k3ZvpafYf6jE5j1WeXeFvvDGf6P4P\_1IpOKZc)
+![Account Management - Importing Accounts](<../.gitbook/assets/Screenshot 2022-01-12 at 18.00.26.png>)
 
 Click "Import" and select "Ethereum-compatible Private Key" to import your existing Ethereum Account address.
 
@@ -53,12 +53,10 @@ You will need to import **the** **private key and** **not the mnemonics**. You c
 Your newly imported Ethereum account will appear under the "Ethereum-compatible Account" section in the Account Management screen. Check that the Ethereum address shown at the bottom matches the address that was shown to you when you generated the Ethereum key.
 
 {% hint style="danger" %}
-Beside the Ethereum-compatible address starting with 0x you will also notice the Oasis bech32-encoded version of the address. This address is only used internally for setting the allowance policy. **Never send your ROSE on the consensus layer to that address directly or your tokens will be lost due to incompatible signature schemes (ECDSA versus ed25519)!**
+In older versions of the Oasis Wallet Browser Extension there was also a bech32-encoded version of the Ethereum address shown in the Ethereum-compatible wallet. This address is only used internally for setting the allowance policy on the Oasis network. **If you encounter this, you should immediately update your Wallet Extension! The bech32-encoded address of the Ethereum-compatible account must never be used for transferring ROSE to. The signature schemes are incompatible (ECDSA versus ed25519) and those tokens would not be accessible anymore!**
 {% endhint %}
 
-![Account Management - Accounts Overview](https://lh5.googleusercontent.com/1UxW3rBOf3B5pehepidp-PVfcUC8QVAzODX4iYG27OFjUsxNRZezOgdVGO4Ez5pFSJ6oL2f-9yqnaq3B8DNojOyMOPW8PGFweqdGFqWQBf2vZ8uOsSBcFADHfhGYokC0aGQlxkMM)
-
-
+![Account Management - Accounts Overview](<../.gitbook/assets/Screenshot 2022-01-12 at 18.00.58.png>)
 
 ### Depositing ROSE To Emerald ParaTime
 
