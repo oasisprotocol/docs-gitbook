@@ -99,3 +99,7 @@ Brave wallet network configuration requires you to enter Chain's currency decima
 ### Withdrawing ROSE from Emerald ParaTime
 
 You can withdraw your ROSE from Emerald back to your Oasis wallet by first selecting your Ethereum-compatible account in the Account Management screen. Next, switch to ParaTimes tab and click on the "To Consensus" button near the Emerald entry. Fill in the "Amount" and your bech32-encoded Oasis wallet address and confirm the withdrawal. In a few moments you will have your ROSE accessible on the consensus layer.
+
+{% hint style="danger" %}
+If you want to transfer ROSE to an exchange and you currently have them deposited on Emerald ParaTime, **always withdraw ROSE to your Oasis wallet first and then perform a regular token transfer to your Oasis address on the exchange!** The ParaTime's withdrawal action is a special transaction which involves block events and not all exchanges support this mechanism.
+{% endhint %}
