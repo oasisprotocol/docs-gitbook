@@ -44,7 +44,7 @@
 * [Node Troubleshooting](run-a-node/troubleshooting.md)
 * [Upgrade Log](run-a-node/upgrade-log.md)
 
-## Manage Your ROSE Tokens <a href="#manage-tokens" id="manage-tokens"></a>
+## Manage Your Tokens <a href="#manage-tokens" id="manage-tokens"></a>
 
 * [Overview](manage-tokens/overview.md)
 * [Terminology](manage-tokens/terminology.md)
