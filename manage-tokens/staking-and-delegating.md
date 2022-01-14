@@ -2,7 +2,7 @@
 
 Staking and Delegation on the Oasis Network is a wonderful way to hold your ROSE tokens. A few key resources to get started!
 
-## Rewards and Tokenonomics
+## Rewards and Tokenomics
 
 Mining rewards vary over the course of the Network. In the first four years rewards will range between 20-2% over time. More [here](https://docs.oasis.dev/oasis-network-primer/token-metrics-and-distribution#staking-incentives).
 
@@ -20,13 +20,13 @@ In addition to using the [Oasis CLI](advanced/oasis-cli-tools/), there are numbe
 * [Anchorage](https://anchorage.com) (custodian)
 * [Finoa](https://finoa.io) (custodian)
 
-You can obtain the list of active validators including their fee and contact information at Oasis block explorers such as the [Oasis Scan](https://www.oasisscan.com/validators) or the [Oasis Monitor](https://oasismonitor.com/validators). The wallets will also obtain that list from one the block explorers so you can easily browse through the validators and select the one that you prefer.
+You can obtain the list of active validators including their fee and contact information at Oasis block explorers such as the [Oasis Scan](https://www.oasisscan.com/validators) or the [Oasis Monitor](https://oasismonitor.com/validators). The wallets will also obtain that list from one of the block explorers so you can easily browse through the validators and select the one that you prefer.
 
 {% hint style="info" %}
 Some validators prefer anonymity and they do not list their name or any contact information. In this case only their entity's Oasis address is shown.
 {% endhint %}
 
-You can stop staking and reclaim your tokens at any time. This can be done with a CLI tool or any of the wallets mentioned above. After sending the corresponding `staking.ReclaimEscrow` transaction, your tokens will, to ensure the network security and robustness, enter the **debonding period** defined in the [genesis](../oasis-network/network-parameters.md) document. Currently, this period is 336 epochs (around 14 days) and no staking rewards are earned for the duration of this period. Afterwards your ROSE will be ready to use.
+You can stop staking and reclaim your tokens at any time. This can be done with a CLI tool or any of the wallets mentioned above. After sending the corresponding `staking.ReclaimEscrow` transaction, your tokens will, to ensure the network security and robustness, enter the **debonding period** defined in the [genesis](../oasis-network/network-parameters.md) document. Currently, this period is 336 epochs (around 14 days) and no staking rewards are earned for the duration of this period. Afterwards your ROSE will be free to use.
 
 {% hint style="danger" %}
 **Staking your ROSE is a different transaction than sending them!** When you stake your tokens, you can reclaim them at any time. Sending your tokens on the other hand means that the **receiver will own the tokens and there is no way of retrieving that tokens back**.
