@@ -80,8 +80,10 @@ If you still cannot access your funds, please contact Oasis support.
 If you just make a **Send** transaction to BinanceStaking address `oasis1qqekv2ymgzmd8j2s2u7g0hhc7e77e654kvwqtjwm` then your ROSE coins are not staked. They are now owned by BinanceStaking, which means they are not lost but only owned and managed by them. In this case, you should contact Binance via their [Support Center](https://www.binance.com/en/support) or [Submit a request](https://www.binance.com/en/chat).
 
 {% hint style="info" %}
-Send transaction is different compared to Escrow**.** With Escrow transaction you lend your ROSE coins to chosen Validator and you are rewarded for that. Send transaction actually sends your ROSE coins to receiving address you enter and only person who owns private key (mnemonics) of that receiving address can access and manage these coins and nobody else.
+Sending ROSE is different than staking it! With the staking transaction you **lend** your ROSE to the chosen validator and you are rewarded for that. **Sending** your ROSE to the receiving address you enter means that only the person who owns the private key (e.g. mnemonics) of that receiving address can manage these tokens and no one else. To learn more, read the [Staking and Delegating chapter](staking-and-delegating.md).
 {% endhint %}
 
+### I withdrew ROSE from Emerald to an exchange (Binance, KuCoin), but my deposit is not there. What should I do?
 
+Withdrawals from Emerald are slightly different from regular `staking.Transfer` transactions used to send ROSE on the consensus layer. If you withdrew your ROSE directly to an exchange and you were not funded there, contact the exchange support and provide them the link to your account on the [Oasis Scan](https://www.oasisscan.com) where they can verify all transactions. To learn more about this issue, read the [How to Transfer ROSE to Emerald chapter](how-to-transfer-rose-into-emerald-paratime.md).
 
