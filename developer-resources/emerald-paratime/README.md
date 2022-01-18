@@ -42,6 +42,6 @@ To get started building on our Emerald ParaTime, you can use our public Web3 gat
   * Decimal: 42261
 * Block explorer: [https://testnet.explorer.emerald.oasis.dev](https://testnet.explorer.emerald.oasis.dev)
 
-{% content-ref url="../manage-tokens/how-to-transfer-rose-into-emerald-paratime.md" %}
-[how-to-transfer-rose-into-emerald-paratime.md](../manage-tokens/how-to-transfer-rose-into-emerald-paratime.md)
+{% content-ref url="../../manage-tokens/how-to-transfer-rose-into-emerald-paratime.md" %}
+[how-to-transfer-rose-into-emerald-paratime.md](../../manage-tokens/how-to-transfer-rose-into-emerald-paratime.md)
 {% endcontent-ref %}

@@ -66,5 +66,5 @@ Feel free to use other IAS proxies besides the one provided here or [run your ow
   * [6.0.0](https://github.com/oasisprotocol/emerald-paratime/releases/tag/v6.0.0)
 
 {% hint style="info" %}
-Check the [Emerald ParaTime page](../developer-resources/emerald-paratime.md#web3-gateway) on how to access the public Web3 gateway.
+Check the [Emerald ParaTime page](../developer-resources/emerald-paratime/#web3-gateway) on how to access the public Web3 gateway.
 {% endhint %}

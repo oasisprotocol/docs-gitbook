@@ -8,7 +8,7 @@ description: >-
 
 ## About
 
-[Emerald](../developer-resources/emerald-paratime.md) is an EVM-compatible blockchain running inside the Oasis ParaTime. Because the balance of your ROSE wallet is stored on the consensus layer - outside of ParaTime's reach - there is a special mechanism for Emerald to access your tokens. Namely, the _Deposit_ action will create the allowance policy for the provided ParaTime to access the specific amount of your ROSE and to be used by the provided Ethereum-compatible wallet. The _Withdrawal_ action in contrast transfers ROSE back from the ParaTime to your wallet on the consensus layer and removes the allowance.
+[Emerald](../developer-resources/emerald-paratime/) is an EVM-compatible blockchain running inside the Oasis ParaTime. Because the balance of your ROSE wallet is stored on the consensus layer - outside of ParaTime's reach - there is a special mechanism for Emerald to access your tokens. Namely, the _Deposit_ action will create the allowance policy for the provided ParaTime to access the specific amount of your ROSE and to be used by the provided Ethereum-compatible wallet. The _Withdrawal_ action in contrast transfers ROSE back from the ParaTime to your wallet on the consensus layer and removes the allowance.
 
 Currently, only the Oasis Wallet Browser Extension supports a graphical user interface to perform deposit and withdrawal actions.
 
@@ -84,9 +84,9 @@ You can check the balance in the Oasis Wallet extension by opening the "Account 
 
 ![ROSE balance in Emerald](<../.gitbook/assets/Screenshot 2021-12-23 at 18.16.48.png>)
 
-#### Metamask (or Brave browser built-in wallet)
+#### Metamask
 
-You can verify your balance in [Metamask](https://metamask.io). First, install the extension in your favorite browser and add the Emerald Network (refer to the Web3 gateway parameters [here](https://docs.oasis.dev/general/developer-resources/emerald-paratime#web3-gateway) for either Emerald Mainnet or Testnet). Then, import your Ethereum keypair and your balance should immediately be visible.
+You can verify your balance in [Metamask](https://metamask.io) (or a built-in wallet in the Brave browser). First, install the extension in your favorite browser and add the Emerald Network (refer to the Web3 gateway parameters [here](https://docs.oasis.dev/general/developer-resources/emerald-paratime#web3-gateway) for either Emerald Mainnet or Testnet). Then, import your Ethereum keypair and your balance should immediately be visible.
 
 {% hint style="info" %}
 Brave wallet network configuration requires you to enter Chain's currency decimals for ROSE: 18)
@@ -103,6 +103,10 @@ You can withdraw your ROSE from Emerald back to your Oasis wallet by first selec
 {% hint style="danger" %}
 If you want to transfer ROSE to an exchange and you currently have them deposited on Emerald ParaTime, **always withdraw ROSE to your Oasis wallet first and then perform a regular token transfer to your Oasis address on the exchange!** The ParaTime's withdrawal action is a special transaction which involves block events and not all exchanges support this mechanism.
 {% endhint %}
+
+{% content-ref url="../developer-resources/emerald-paratime/writing-dapps-on-emerald.md" %}
+[writing-dapps-on-emerald.md](../developer-resources/emerald-paratime/writing-dapps-on-emerald.md)
+{% endcontent-ref %}
 
 ### Verifying Emerald ParaTime deposits and withdrawals
 
