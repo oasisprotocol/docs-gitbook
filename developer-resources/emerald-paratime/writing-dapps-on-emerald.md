@@ -146,7 +146,7 @@ No need to generate any newer typings.
 Greeter deployed to: 0x6e8e9e0DBCa4EF4a65eBCBe4032e7C2a6fb7C623
 ```
 
-## Create dApp with Truffle
+## Create dApp on Emerald with Truffle
 
 An alternative, yet widely used development tool, is Truffle and its accompanying [web3.js](https://web3js.readthedocs.io/en/v1.5.2/) library. Let's follow [the official Truffle's quickstart guide](https://trufflesuite.com/docs/truffle/quickstart.html) and unbox the MetaCoin example:
 
@@ -362,7 +362,7 @@ Summary
 
 In our example, the MetaCoin cotract has been successfully deployed to address `0x5a1C04012bc233c898aebb8BB4353F80D96f3dD2` on the Mainnet.
 
-### Create dApp with Remix - Ethereum IDE
+## Create dApp on Emerald with Remix - Ethereum IDE
 
 [Remix](writing-dapps-on-emerald.md#testnet-and-mainnet) is a popular web IDE for swift development, deployment and testing smart contracts on the Ethereum network. When you open Remix for the first time, it automatically creates an example project. Open one of the contracts and compile it in the "Solidity compiler" tab.
 
