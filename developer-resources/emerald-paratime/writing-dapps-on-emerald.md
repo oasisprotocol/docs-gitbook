@@ -392,7 +392,7 @@ Emerald validators, similar to Ethereum ones, order the execution of transaction
 
 ### Deployment of my contract failed. How do I debug what went wrong?
 
-First, try to debug your transaction by finding it on the Emerald block explorer ([Mainnet](https://exprer), [Testnet](https://testnet.explorer.emerald.oasis.dev)):
+First, try to debug your transaction by finding it on the Emerald block explorer ([Mainnet](https://explorer.emerald.oasis.dev), [Testnet](https://testnet.explorer.emerald.oasis.dev)):
 
 ![Emerald block explorer showing a failed transaction](<../../.gitbook/assets/image (7).png>)
 
