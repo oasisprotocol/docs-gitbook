@@ -38,7 +38,7 @@ For our example network this returns:
 }
 ```
 
-This means that we must submit a commission rate bound at least 336 epochs in advance (`rate_bound_lead`) and that we can change it on every epoch (`rate_change_interval`).
+This means that we must submit a commission rate bound at least 336 epochs in advance (`rate_bound_lead`) and that we can change a commission rate on every epoch (`rate_change_interval`).
 
 The `max_rate_steps` and `max_bound_steps` determine the maximum number of commission rate steps and rate bound steps, respectively.
 
