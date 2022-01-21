@@ -101,12 +101,8 @@ Brave wallet network configuration requires you to enter Chain's currency decima
 You can withdraw your ROSE from Emerald back to your Oasis wallet by first selecting your Ethereum-compatible account in the Account Management screen. Next, switch to ParaTimes tab and click on the "To Consensus" button near the Emerald entry. Fill in the "Amount" and your bech32-encoded Oasis wallet address and confirm the withdrawal. In a few moments you will have your ROSE accessible on the consensus layer.
 
 {% hint style="danger" %}
-If you want to transfer ROSE to an exchange and you currently have them deposited on Emerald ParaTime, **always withdraw ROSE to your Oasis wallet first and then perform a regular token transfer to your Oasis address on the exchange!** The ParaTime's withdrawal action is a special transaction which involves block events and not all exchanges support this mechanism.
+If you want to transfer ROSE to an exchange and you currently have them deposited on Emerald ParaTime, **we strongly recommend that you withdraw ROSE to your Oasis wallet first and then perform a regular token transfer to your Oasis address on the exchange!** The ParaTime's withdrawal action is a special transaction (`consensus.Withdraw` compared to `staking.Transfer`) and some exchanges may not recognize this transaction as valid transaction for funding your account on the exchange.
 {% endhint %}
-
-{% content-ref url="../developer-resources/emerald-paratime/writing-dapps-on-emerald.md" %}
-[writing-dapps-on-emerald.md](../developer-resources/emerald-paratime/writing-dapps-on-emerald.md)
-{% endcontent-ref %}
 
 ### Verifying Emerald ParaTime deposits and withdrawals
 
@@ -121,3 +117,7 @@ Furthermore, you can click on Tx Hash of any transaction you see on the list. Yo
 {% hint style="info" %}
 Be aware that the [Oasis Scan Blockchain Explorer](https://www.oasisscan.com) is built for Consensus layer. If you want to explore Emerald ParaTime (0x addresses, Token Transfers, Contract Calls, etc.), you have to use [Emerald Blockchain Explorer](https://explorer.emerald.oasis.dev).
 {% endhint %}
+
+{% content-ref url="../developer-resources/emerald-paratime/writing-dapps-on-emerald.md" %}
+[writing-dapps-on-emerald.md](../developer-resources/emerald-paratime/writing-dapps-on-emerald.md)
+{% endcontent-ref %}
