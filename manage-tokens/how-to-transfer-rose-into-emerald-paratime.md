@@ -1,16 +1,20 @@
 ---
 description: >-
-  Transferring ROSE from Oasis Consensus to Emerald ParaTime using Oasis Wallet
-  Browser Extension.
+  Transferring ROSE from Oasis Consensus to Emerald ParaTime using the Oasis
+  Wallet Browser Extension.
 ---
 
 # How to Transfer ROSE into Emerald ParaTime
 
 ## About
 
-[Emerald](../developer-resources/emerald-paratime/) is an EVM-compatible blockchain running inside the Oasis ParaTime. Because the balance of your ROSE wallet is stored on the consensus layer - outside of ParaTime's reach - there is a special mechanism for Emerald to access your tokens. Namely, the _Deposit_ action will create the allowance policy for the provided ParaTime to access the specific amount of your ROSE and to be used by the provided Ethereum-compatible wallet. The _Withdrawal_ action in contrast transfers ROSE back from the ParaTime to your wallet on the consensus layer and removes the allowance.
+[Emerald](../developer-resources/emerald-paratime/) is an EVM-compatible blockchain running inside the Oasis ParaTime. Because the balance of your ROSE wallet is stored on the consensus layer - outside of ParaTime's reach - there are special mechanisms for Emerald to access your tokens (formally defined in [ADR 0003](https://github.com/oasisprotocol/oasis-core/blob/master/docs/adr/0003-consensus-runtime-token-transfer.md)).
 
-Currently, only the Oasis Wallet Browser Extension supports a graphical user interface to perform deposit and withdrawal actions.
+The _Deposit_ procedure will first create the allowance policy for the provided ParaTime (in our case Emerald) to access a specific amount of your ROSE. Then, the `Deposit` transaction will be executed inside the ParaTime and tokens will be implicitly transferred on the consensus layer from your account to the ParaTime. Finally, if that transaction succeeds, Emerald will mint the same amount of ROSE on its blockchain and fill the provided Ethereum-compatible account address.
+
+The _Withdrawal_ procedure executes the `Withdraw` transaction inside the ParaTime which locks your ROSE and implicitly transfers the same amount of ROSE on the consensus layer from the ParaTime to the provided Oasis address. If the transaction succeeds, Emerald will then burn the locked tokens inside the ParaTime.
+
+Currently, only the Oasis Wallet Browser Extension supports a graphical user interface to perform deposits and withdrawals to and from ParaTimes.
 
 ## Managing your Emerald account with Oasis Wallet Browser Extension
 
@@ -101,7 +105,7 @@ Brave wallet network configuration requires you to enter Chain's currency decima
 You can withdraw your ROSE from Emerald back to your Oasis wallet by first selecting your Ethereum-compatible account in the Account Management screen. Next, switch to ParaTimes tab and click on the "To Consensus" button near the Emerald entry. Fill in the "Amount" and your bech32-encoded Oasis wallet address and confirm the withdrawal. In a few moments you will have your ROSE accessible on the consensus layer.
 
 {% hint style="danger" %}
-If you want to transfer ROSE to an exchange and you currently have them deposited on Emerald ParaTime, **we strongly recommend that you withdraw ROSE to your Oasis wallet first and then perform a regular token transfer to your Oasis address on the exchange!** The ParaTime's withdrawal action is a special transaction (`consensus.Withdraw` compared to `staking.Transfer`) and some exchanges may not recognize this transaction as valid transaction for funding your account on the exchange.
+If you want to transfer ROSE to an exchange and you currently have them deposited on Emerald ParaTime, **we strongly recommend that you withdraw ROSE to your Oasis wallet first and then perform a regular token transfer to your Oasis address on the exchange!** The ParaTime's withdrawal procedure involves a number of steps as described in the introduction and some exchanges may not recognize this transaction as a valid transaction for funding your account on the exchange.
 {% endhint %}
 
 ### Verifying Emerald ParaTime deposits and withdrawals

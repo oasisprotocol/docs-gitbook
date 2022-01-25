@@ -388,9 +388,17 @@ Congratulations! Now you can start developing your own smart contracts on the Oa
 
 ### Deployment of my contract timed out
 
+### Deployment of my contract timed out
+
+Emerald validators, similar to Ethereum ones, order the execution of transactions by gas price. When deploying a contract and the deployment times out, first wait another few rounds to make sure that the contract will not be deployed eventually.
+
 Emerald validators, similar to Ethereum ones, order the execution of transactions by gas price. When deploying a contract and the deployment times out, first wait another few rounds to make sure that the contract will not be deployed eventually.
 
 Next, check that your `gasPrice` **is at least 10 nROSE** which is a minimum required gas price on Emerald. This value should already be propagated automatically by the web3 endpoint, but your deployment configuration might have ignored it.
+
+Next, check that your `gasPrice` **is at least 10 nROSE** which is a minimum required gas price on Emerald. This value should already be propagated automatically by the web3 endpoint, but your deployment configuration might have ignored it.
+
+Finally, consider increasing the `gasPrice` parameter in Hardhat/Truffle config files by a fraction (e.g. 10% or 20%). This will require more ROSE from your wallet to deploy the contract, but you will also increase the chance of your transaction being included in the block.
 
 Finally, consider increasing the `gasPrice` parameter in Hardhat/Truffle config files by a fraction (e.g. 10% or 20%). This will require more ROSE from your wallet to deploy the contract, but you will also increase the chance of your transaction being included in the block.
 
