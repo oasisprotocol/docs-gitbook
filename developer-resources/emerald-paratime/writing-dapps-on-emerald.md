@@ -364,7 +364,7 @@ In our example, the MetaCoin cotract has been successfully deployed to address `
 
 ## Create dApp on Emerald with Remix - Ethereum IDE
 
-[Remix](writing-dapps-on-emerald.md#testnet-and-mainnet) is a popular web IDE for swift development, deployment and testing smart contracts on the Ethereum network. When you open Remix for the first time, it automatically creates an example project. Open one of the contracts and compile it in the "Solidity compiler" tab.
+[Remix](https://remix.ethereum.org/) is a popular web IDE for swift development, deployment and testing smart contracts on the Ethereum network. When you open Remix for the first time, it automatically creates an example project. Open one of the contracts and compile it in the "Solidity compiler" tab.
 
 ![The initial example project in Remix - Ethereum IDE](<../../.gitbook/assets/image (8).png>)
 
