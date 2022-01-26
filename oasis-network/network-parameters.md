@@ -25,7 +25,7 @@ Feel free to use other seed nodes besides the one provided here.
 {% endhint %}
 
 * [Oasis Core](https://github.com/oasisprotocol/oasis-core) version:
-  * [21.3.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.7)
+  * [21.3.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.8)
 
 {% hint style="info" %}
 The Oasis Node is part of the Oasis Core release.
@@ -44,7 +44,7 @@ This section contains parameters for various ParaTimes known to be deployed on t
 ### Cipher ParaTime
 
 * Oasis Core version:
-  * [21.3.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.7)
+  * [21.3.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.8)
 * Runtime identifier:
   * `000000000000000000000000000000000000000000000000e199119c992377cb`
 * Runtime binary version:
@@ -59,11 +59,11 @@ Feel free to use other IAS proxies besides the one provided here or [run your ow
 ### Emerald ParaTime
 
 * Oasis Core version:
-  * [21.3.7](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.7)
+  * [21.3.8](https://github.com/oasisprotocol/oasis-core/releases/tag/v21.3.8)
 * Runtime identifier:
   * `000000000000000000000000000000000000000000000000e2eaa99fc008f87f`
-* Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/tree/v6.0.0#building)):
-  * [6.0.0](https://github.com/oasisprotocol/emerald-paratime/releases/tag/v6.0.0)
+* Runtime binary version (or [build your own](https://github.com/oasisprotocol/emerald-paratime/tree/v6.1.0#building)):
+  * [6.1.0](https://github.com/oasisprotocol/emerald-paratime/releases/tag/v6.1.0)
 
 {% hint style="info" %}
 Check the [Emerald ParaTime page](../developer-resources/emerald-paratime/#web3-gateway) on how to access the public Web3 gateway.
