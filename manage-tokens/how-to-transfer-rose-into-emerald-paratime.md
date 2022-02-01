@@ -108,6 +108,10 @@ You can withdraw your ROSE from Emerald back to your Oasis wallet by first selec
 If you want to transfer ROSE to an exchange and you currently have them deposited on Emerald ParaTime, **we strongly recommend that you withdraw ROSE to your Oasis wallet first and then perform a regular token transfer to your Oasis address on the exchange!** The ParaTime's withdrawal procedure involves a number of steps as described in the introduction and some exchanges may not recognize this transaction as a valid transaction for funding your account on the exchange.
 {% endhint %}
 
+{% hint style="info" %}
+Advanced users (e.g. those running Emerald ParaTime [compute nodes](../run-a-node/set-up-your-node/run-a-paratime-node.md)) may need to withdraw ROSE stored in their `oasis1` Emerald account. Oasis Wallet Browser Extension does not support such withdrawals. Read the [Oasis CLI Deposit/Withdraw Tokens to/from ParaTime chapter](advanced/oasis-cli-tools/deposit-withdraw-tokens-to-from-paratime.md) to learn how to use Oasis CLI instead.
+{% endhint %}
+
 ### Verifying Emerald ParaTime deposits and withdrawals
 
 To verify and validate your transactions (deposits, withdrawals) on Emerald you can use our official [Oasis Scan](https://www.oasisscan.com) block explorer. Enter your oasis1 address and press Search. Then navigate to Transactions section and press "ParaTime" button next to Consensus. You will be able to see all transactions made from Ethereum compatible address (`0x`) you used in Emerald to your Consensus (`oasis1`) address where you sent your ROSE to.

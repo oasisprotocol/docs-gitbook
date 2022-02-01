@@ -72,6 +72,7 @@
     * [Transfer Tokens](manage-tokens/advanced/oasis-cli-tools/transfer-tokens.md)
     * [Delegate/Stake Tokens](manage-tokens/advanced/oasis-cli-tools/delegate-tokens.md)
     * [Reclaim Delegated/Staked Tokens](manage-tokens/advanced/oasis-cli-tools/reclaim-tokens.md)
+    * [Deposit/Withdraw Tokens to/from ParaTime](manage-tokens/advanced/oasis-cli-tools/deposit-withdraw-tokens-to-from-paratime.md)
     * [Gas Costs](manage-tokens/advanced/oasis-cli-tools/gas-costs.md)
 
 ## Contribute to the Network

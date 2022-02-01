@@ -164,6 +164,10 @@ You will [configure the node](run-a-paratime-node.md#configuration) to automatic
 No manual node registration is necessary.
 {% endhint %}
 
+{% hint style="info" %}
+ParaTime rewards for running the compute node will be sent to your entity address **inside the ParaTime**. To access the rewards on the consensus layer, you will need to withdraw them first. Read the [Deposit/Withdraw Tokens to/from ParaTime](../../manage-tokens/advanced/oasis-cli-tools/deposit-withdraw-tokens-to-from-paratime.md) chapter to learn more.
+{% endhint %}
+
 ### The ParaTime Identifier and Binary
 
 In order to run a ParaTime node you need to obtain the following pieces of information first, both of these need to come from a trusted source:
