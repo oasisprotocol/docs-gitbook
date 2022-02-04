@@ -201,6 +201,10 @@ Waiting for deposit result...
 Deposit succeeded.
 ```
 
+{% hint style="warning" %}
+The current version of the Cipher ParaTime running on Mainnet does not support gas estimation yet. If oasis CLI returns the `Error: failed to estimate gas: invalid argument: missing field` message, try enforcing the gas limit to a reasonable size, for example by adding `--gas-limit 12000` flag.
+{% endhint %}
+
 ## Withdraw
 
 To withdraw 100 ROSE from your ParaTime account to the same account on the consensus layer, run:
