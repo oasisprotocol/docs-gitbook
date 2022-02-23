@@ -32,7 +32,7 @@
   * [Governance](run-a-node/set-up-your-node/governance.md)
   * [Sentry Node Architecture](run-a-node/set-up-your-node/sentry-node-architecture.md)
 * [Advanced](run-a-node/advanced/README.md)
-  * [Sync Node Using State Sync](run-a-node/advanced/sync-node-using-state-sync.md)
+  * [Using State Sync for Quick Bootstraping](run-a-node/advanced/sync-node-using-state-sync.md)
   * [Copy State from One Node to the Other](run-a-node/advanced/copy-state-from-one-node-to-the-other.md)
   * [Install Oasis Remote Signer Binary](run-a-node/advanced/install-oasis-remote-signer-binary.md)
   * [Using Ledger-backed Consensus Key with a Remote Signer](run-a-node/advanced/using-ledger-backed-consensus-key-with-a-remote-signer.md)

@@ -1,4 +1,4 @@
-# Sync Node Using State Sync
+# Using State Sync for Quick Bootstraping
 
 The State Sync is a way to **quickly bootstrap** a **full Oasis node** (either a [validator node](../set-up-your-node/run-validator.md) or a [non-validator node](../set-up-your-node/run-non-validator.md)) by  using [Tendermint's Light Client protocol](https://docs.tendermint.com/master/spec/light-client/). It allows one to initialize a node from a trusted height, its corresponding block's header and a trusted validator set (given in the [genesis document](../../oasis-network/genesis-doc.md)). It does so by securely updating the node's trusted state by requesting and verifying a minimal set of data from the network's full nodes.
 
@@ -11,7 +11,7 @@ Tendermint's Light Client protocol requires at least 1 full node to be correct t
 {% endhint %}
 
 \
-To configure your node to use the state sync, amend your node's configuration (i.e. `config.yml`) with:
+To configure your node to use the state sync, amend your node's configuration (i.e. `config.yml`) with  (non-relevant fields omitted):
 
 ```yaml
 ... trimmed ...
@@ -39,6 +39,8 @@ consensus:
         .. trimmed ...
         
         - "{{ noden_grpc_endpoint }}"
+
+... trimmed ...
 
 ```
 
@@ -81,10 +83,10 @@ Browse to one of our block explorers (e.g. [OASIS SCAN](https://www.oasisscan.co
 If you have an existing node that you trust, you can use its status output to retrieve the current block height and hash by running:
 
 ```
-oasis-node control status -a unix:/srv/oasis/node/internal.sock
+oasis-node control status -a $ADDR
 ```
 
-replacing `/srv/oasis/node/internal.sock` with the path to your node's internal UNIX socket.
+replacing `$ADDR` with the path to your node's internal UNIX socket (e.g. `/srv/oasis/node/internal.sock`).
 
 This will give you output like the following (non-relevant fields omitted):
 
@@ -126,60 +128,17 @@ To find the addresses of Oasis Node's publicly exposed gRPC endpoints, use one o
 
 #### List Registered Nodes' Descriptors via Oasis CLI from the Local Oasis Node
 
-Run the following:
+If you already have a local Oasis Node set up, you can list the descriptors of all registered nodes via Oasis CLI.
 
-```
-oasis-node registry node list -v -a unix:/srv/oasis/node/internal.sock | jq
-```
-
-replacing `/srv/oasis/node/internal.sock` with the path to your node's internal UNIX socket.
+You need to search for the nodes that implement the `consensus-rpc` role.
 
 The publicly exposed gRPC endpoint addresses are found under the node descriptor's `tls.addresses` key.
 
-For example, if a node has the following descriptor:
-
-```json
-{
-  "v": 1,
-  "id": "+8Deo8sLL/YsP6IonNRsbmO1YonQuoAUYLjVQxZTgP8=",
-  "entity_id": "kupW3Pt0XMeERSkdDWyZMU4oZrk0wGysVXVyqX3rylc=",
-  "expiration": 8032,
-  "tls": {
-    "pub_key": "xqDPSoR2Pq7bJOhHG9ZlDpVKH9JKiVotVmOJHaLPR6g=",
-    "next_pub_key": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
-    "addresses": [
-      "xqDPSoR2Pq7bJOhHG9ZlDpVKH9JKiVotVmOJHaLPR6g=@217.160.95.75:9100"
-    ]
-  },
-  "p2p": {
-    "id": "EE9EMKdzE6/1h8HPre1FKdeqYyRpUskNz28lsf0u/iM=",
-    "addresses": [
-      "217.160.95.75:9200"
-    ]
-  },
-  "consensus": {
-    "id": "65SvYJ2OBwKr7cE+4tgKFvYqKI4jQIbPfnqah+cog+c=",
-    "addresses": null
-  },
-  "beacon": {
-    "point": "BKWYECVavUZd0+kG0ngi0McLhAivtt7jmDrG1LtPmIFQvxRTYUueMWUEqvMQL7CAdiQb6SaxgM2NU3HdypJhWhM="
-  },
-  "runtimes": [
-    {
-      "id": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wQ=",
-      "version": {
-        "minor": 3
-      },
-      "capabilities": {},
-      "extra_info": null
-    }
-  ],
-  "roles": "validator,consensus-rpc"
-}
-```
-
-Then its publicly exposed gRPC endpoint address is:
+You can list the relevant addresses by running:
 
 ```
-"xqDPSoR2Pq7bJOhHG9ZlDpVKH9JKiVotVmOJHaLPR6g=@217.160.95.75:9100"
+oasis-node registry node list -v -a $ADDR | \
+  jq 'select(.roles | contains("consensus-rpc")) | .tls.addresses'
 ```
+
+replacing `$ADDR` with the path to your node's internal UNIX socket (e.g. `/srv/oasis/node/internal.sock`).
