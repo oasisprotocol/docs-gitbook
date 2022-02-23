@@ -11,7 +11,7 @@ The Network has two main architectural components, the Consensus Layer and the P
 1. The **Consensus Layer** is a scalable, high-throughput, secure, proof-of-stake consensus run by a decentralized set of validator nodes.
 2. The **ParaTime Layer** hosts many parallel runtimes (ParaTimes), each representing a replicated compute environment with shared state.
 
-![Oasis architectural design including ParaTime and Consensus Layers](https://lh4.googleusercontent.com/xGCkDb7ZW8EGOTrO7BDgKm9VRM03nTvkwwAJV-w2r8j67gICC7UIBbk0wARSccSVhAmQ25rhpwNLQCgNh7cl5OGkwSR\_TFHt9J9jZZdM7fnzuJZOAzHuTKHJ3ajUAOVuzcRUYFkh)
+![Oasis architectural design including ParaTime and Consensus Layers](../.gitbook/assets/5fb18cf10025cd8a011c1d98\_Technology-Scalibility.svg)
 
 ## Technology Highlights
 

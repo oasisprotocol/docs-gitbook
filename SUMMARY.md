@@ -100,6 +100,7 @@
 * [Overview](developer-resources/overview.md)
 * [Emerald ParaTime](developer-resources/emerald-paratime/README.md)
   * [Writing dApps on Emerald](developer-resources/emerald-paratime/writing-dapps-on-emerald.md)
+  * [Integrating BAND oracle smart contract](developer-resources/emerald-paratime/integrating-band-oracle-smart-contract.md)
 * [Oasis Core Documentation](https://docs.oasis.dev/oasis-core)
 * [Oasis SDK Documentation](https://docs.oasis.dev/oasis-sdk)
 * [GitHub](https://github.com/oasisprotocol)
